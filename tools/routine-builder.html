@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build Your Routine — Free Morning &amp; Night Checklist</title>
+<meta name="description" content="Free routine builder: pick skin type, hair type, and goal for a simple morning + night checklist. General steps only, no products, nothing stored.">
+<link rel="canonical" href="https://lookauramax.com/tools/routine-builder.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Build Your Routine — Free Morning &amp; Night Checklist">
+<meta property="og:description" content="Free routine builder: pick your skin type, hair type, and goal, and get a simple morning and night checklist. General steps only, no products, nothing stored.">
+<meta property="og:url" content="https://lookauramax.com/tools/routine-builder.html">
+<meta property="og:image" content="https://lookauramax.com/images/routine.svg">
+<meta property="og:image:alt" content="Build Your Routine — Lookauramax free tool illustration">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Build Your Routine — Free Morning &amp; Night Checklist">
+<meta name="twitter:description" content="Free routine builder: pick your skin type, hair type, and goal, and get a simple morning and night checklist.">
+<meta name="twitter:image" content="https://lookauramax.com/images/routine.svg">
+<meta name="twitter:image:alt" content="Build Your Routine — Lookauramax free tool illustration">
+<meta name="author" content="Lookauramax Team">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How many steps should a daily routine have?","acceptedAnswer":{"@type":"Answer","text":"As few as you will actually do every day. A simple routine — cleanse, moisturise, sunscreen in the morning; cleanse, moisturise at night — beats a 10-step routine you quit in a week. Add steps only after the basics are a habit."}},
+{"@type":"Question","name":"Do I need different products for morning and night?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily different products, but different jobs: mornings are about protection (sunscreen), nights are about cleansing the day off and moisturising. This builder keeps the steps general — it never recommends specific products."}},
+{"@type":"Question","name":"How long before a routine shows results?","acceptedAnswer":{"@type":"Answer","text":"Skin and hair habits take weeks, not days. Give a simple routine at least 4–6 weeks of consistency before judging it. Switching products every few days makes it impossible to tell what helped."}},
+{"@type":"Question","name":"Does this builder store my answers?","acceptedAnswer":{"@type":"Answer","text":"No. Everything runs in your browser. Nothing is sent, stored, or tracked."}}
+]}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:#FFD14E}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid rgba(255,255,255,.1);padding:18px 0}
+header a{color:#F7F3EA;text-decoration:none;font-weight:900;letter-spacing:.18em}
+header a span{color:#E19A2D}
+.crumb{font-size:13px;color:#A9A29A;margin:28px 0 8px}
+.crumb a{color:#A9A29A;text-decoration:none}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+h2{font-size:26px;margin:36px 0 10px}
+h3{font-size:19px;margin:24px 0 8px;color:#FFD14E}
+p{margin:0 0 14px;color:#D9D2C4}
+ul,ol{margin:0 0 16px 22px;color:#D9D2C4}
+li{margin:6px 0}
+.lede{font-size:19px;color:#A9A29A}
+.cta{background:linear-gradient(180deg,#1C1505,#121210);border:1px solid rgba(225,154,45,.45);border-radius:16px;padding:26px;margin:32px 0}
+.cta h2{margin-top:0}
+.btn{display:inline-block;background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:13px 26px;border-radius:999px;text-decoration:none;margin-top:8px}
+.faq{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:12px}
+.faq h2{margin-bottom:4px}
+.faq details{background:#121214;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 20px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700}
+.faq p{margin-top:10px}
+.disclaimer{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 20px;color:#A9A29A;font-size:14px;margin:28px 0}
+.related{margin:28px 0}
+.related a{display:block;margin:6px 0}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A29A;font-size:14px}
+.post-hero{margin:22px 0 6px}.post-hero img{width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.1);display:block}.post-hero figcaption{color:#8A8272;font-size:12.5px;margin-top:8px}.byline{color:#8A8272;font-size:13px;margin:10px 0 20px}
+.tool{background:#121214;border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:26px;margin:28px 0}
+.tool label{display:block;font-weight:700;margin:18px 0 6px}
+.tool label:first-child{margin-top:0}
+.tool input,.tool select{width:100%;background:#050505;border:1px solid rgba(255,255,255,.2);border-radius:10px;color:#F7F3EA;padding:12px 14px;font-size:16px}
+.tool input:focus,.tool select:focus{outline:2px solid #E19A2D;border-color:#E19A2D}
+.tool button{background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;border:0;border-radius:999px;padding:13px 26px;font-size:16px;cursor:pointer;margin-top:20px}
+.tool button:hover{filter:brightness(1.08)}
+.err{color:#FF9A8A;font-size:14px;margin-top:10px;min-height:20px}
+.result{display:none;background:#1C1505;border:1px solid rgba(225,154,45,.5);border-radius:14px;padding:22px;margin-top:22px}
+.result .big{font-size:30px;font-weight:900;color:#FFD14E}
+.privacy-note{font-size:13px;color:#A9A29A;margin-top:14px}
+.checklist{list-style:none;margin-left:0}
+.checklist li{padding-left:30px;position:relative;margin:10px 0}
+.checklist li::before{content:"☐";position:absolute;left:0;color:#FFD14E;font-size:18px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://lookauramax.com/">LOOK<span>AURA</span>MAX</a> · <a href="https://lookauramax.com/tools/" style="letter-spacing:0;font-weight:700;color:#A9A29A">Tools</a></div></header>
+<main class="wrap">
+<p class="crumb"><a href="https://lookauramax.com/tools/">Free Tools</a> / Routine Builder</p>
+<h1>Build Your Routine</h1>
+<figure class="post-hero"><img src="/images/routine.svg" alt="Build Your Routine — Lookauramax free tool illustration" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Lookauramax free tool — Build Your Routine</figcaption></figure>
+<p class="byline">By <a href="https://lookauramax.com/about.html">Lookauramax Team</a> · Published 17 Oct 2026 · General information, not medical advice.</p>
+<p class="lede">Pick your skin type, hair type, and how complete you want your routine — and get a simple morning + night checklist with general steps only. No product recommendations, no 10-step nonsense. Everything runs in your browser. Nothing is sent anywhere, stored, or tracked.</p>
+
+<div class="tool" aria-label="Routine builder">
+<label for="skin">Skin type</label>
+<select id="skin">
+<option value="">Choose…</option>
+<option value="dry">Dry — feels tight, flaky, or dull</option>
+<option value="oily">Oily — shiny, visible pores</option>
+<option value="combo">Combination — oily T-zone, normal/dry elsewhere</option>
+<option value="sensitive">Sensitive-leaning — reacts easily</option>
+<option value="unsure">Not sure yet</option>
+</select>
+<label for="hair">Hair type</label>
+<select id="hair">
+<option value="">Choose…</option>
+<option value="straight">Straight</option>
+<option value="wavy">Wavy</option>
+<option value="curly">Curly / coily</option>
+<option value="oily">Gets oily quickly</option>
+<option value="dry">Dry / frizzy</option>
+</select>
+<label for="goal">How complete?</label>
+<select id="goal">
+<option value="simple">Simple — the essentials only (best for beginners)</option>
+<option value="complete">Complete — a fuller routine</option>
+</select>
+<button type="button" onclick="buildRoutine()">Build my routine</button>
+<p class="err" id="err" role="alert"></p>
+<div class="result" id="result" aria-live="polite"></div>
+<p class="privacy-note">🔒 Private by design: this tool runs 100% in your browser. Your choices are never sent, stored, or tracked.</p>
+</div>
+
+<h2>The rule behind every good routine</h2>
+<p>Consistency beats complexity. A 3-step routine you do every day outperforms a 10-step routine you abandon in a week. Start simple, make it a habit, and only add a step once the basics are automatic. Give any routine 4–6 weeks before judging it — skin and hair change slowly.</p>
+
+<div class="cta">
+<h2>Build your aura, one day at a time</h2>
+<p>Lookauramax gives you an honest starting point: an on-device AuraScan, a 90-day plan, and a daily routine. Join and claim your one-time Join Reward — 1 scan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser. No card needed.</p>
+<a class="btn" href="https://lookauramax.com/#pricing">See plans &amp; free trial →</a>
+</div>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<details open><summary>How many steps should a daily routine have?</summary><p>As few as you will actually do every day. A simple routine — cleanse, moisturise, sunscreen in the morning; cleanse, moisturise at night — beats a 10-step routine you quit in a week. Add steps only after the basics are a habit.</p></details>
+<details><summary>Do I need different products for morning and night?</summary><p>Not necessarily different products, but different jobs: mornings are about protection (sunscreen), nights are about cleansing the day off and moisturising. This builder keeps the steps general — it never recommends specific products.</p></details>
+<details><summary>How long before a routine shows results?</summary><p>Skin and hair habits take weeks, not days. Give a simple routine at least 4–6 weeks of consistency before judging it. Switching products every few days makes it impossible to tell what helped.</p></details>
+<details><summary>Does this builder store my answers?</summary><p>No. Everything runs in your browser. Nothing is sent, stored, or tracked.</p></details>
+</div>
+
+<p class="disclaimer"><strong>Disclaimer:</strong> General information, not medical advice. No product recommendations. Skin conditions need a dermatologist.</p>
+
+<div class="related">
+<h3>Keep reading</h3>
+<a href="https://lookauramax.com/blog/skincare-routine-beginners.html">→ Skincare Routine for Beginners: The Simple Version</a>
+<a href="https://lookauramax.com/blog/aura-routine-daily.html">→ The Aura Routine: What a Good Daily Routine Looks Like</a>
+<a href="https://lookauramax.com/blog/hair-grooming-guide.html">→ Hair Grooming Guide: Cuts, Care, and Everyday Habits</a>
+</div>
+</main>
+<footer><div class="wrap"><p><a href="https://lookauramax.com/">Lookauramax</a> · <a href="https://lookauramax.com/tools/">Tools</a> · <a href="https://lookauramax.com/blog/">Blog</a> · <a href="https://lookauramax.com/privacy">Privacy</a> · <a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></footer>
+<script>
+function buildRoutine(){
+  var err=document.getElementById('err'), res=document.getElementById('result');
+  err.textContent=''; res.style.display='none'; res.innerHTML='';
+  var skin=document.getElementById('skin').value, hair=document.getElementById('hair').value, goal=document.getElementById('goal').value;
+  if(!skin||!hair){ err.textContent='Please choose your skin type and hair type.'; return; }
+  var skinNote={
+    dry:'Dry skin: use a gentle cleanser and a richer moisturiser. Avoid hot water and harsh scrubs.',
+    oily:'Oily skin: use a gentle cleanser and a lightweight gel moisturiser. Do not skip moisturiser entirely.',
+    combo:'Combination skin: lighter products on the oily T-zone, richer ones on dry areas.',
+    sensitive:'Sensitive-leaning skin: keep products few and fragrance-free. Patch-test anything new first.',
+    unsure:'Not sure about your skin type? Try the <a href="skin-type-quiz.html">skin type quiz</a> first, then come back here.'
+  };
+  var hairNote={
+    straight:'Straight hair: wash when it looks or feels oily; avoid heavy products that flatten it.',
+    wavy:'Wavy hair: gentle shampoo, conditioner on mid-lengths and ends; avoid rough towel-drying.',
+    curly:'Curly / coily hair: wash less often, condition generously, detangle gently when wet.',
+    oily:'Hair that gets oily quickly: wash when needed, keep conditioner off the roots.',
+    dry:'Dry / frizzy hair: condition every wash, wash less often, protect from heat.'
+  };
+  var am=['Gentle cleanse','Moisturise (suited to your skin type)','Sunscreen — every morning, even on cloudy days'];
+  var pm=['Cleanse the day off (gentle cleanser)','Moisturise','Change into clean sleepwear; clean pillowcase regularly'];
+  if(goal==='complete'){
+    am.push('Lip care (plain balm if lips feel dry)','Tidy brows / grooming check (2 minutes)');
+    pm.push('Hair: brush gently / detangle before bed','Weekly (1–2×): gentle exfoliation — only if your skin tolerates it','Weekly (1×): deep-condition hair if dry or curly');
+  }
+  function list(a){ return '<ul class="checklist">'+a.map(function(i){return '<li>'+i+'</li>';}).join('')+'</ul>'; }
+  res.innerHTML='<p class="big">Your '+ (goal==='simple'?'Simple':'Complete') +' Routine</p><p>'+skinNote[skin]+'</p><p>'+hairNote[hair]+'</p><h3>Morning</h3>'+list(am)+'<h3>Night</h3>'+list(pm)+'<p><em>General steps only — no product recommendations. Give the routine 4–6 weeks of consistency before judging it.</em></p>';
+  res.style.display='block';
+}
+</script>
+</body>
+</html>

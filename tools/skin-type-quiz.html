@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find Your Skin Type Quiz — Free, 6 Questions</title>
+<meta name="description" content="Free skin type quiz: answer 6 questions about how your skin feels and get your likely type + a care checklist. No sign-up, nothing stored.">
+<link rel="canonical" href="https://lookauramax.com/tools/skin-type-quiz.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Find Your Skin Type Quiz — Free, 6 Questions">
+<meta property="og:description" content="Free skin type quiz: answer 6 simple questions about how your skin feels and looks, and get your likely skin type plus a general care checklist.">
+<meta property="og:url" content="https://lookauramax.com/tools/skin-type-quiz.html">
+<meta property="og:image" content="https://lookauramax.com/images/skin.svg">
+<meta property="og:image:alt" content="Find Your Skin Type Quiz — Lookauramax free tool illustration">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Find Your Skin Type Quiz — Free, 6 Questions">
+<meta name="twitter:description" content="Free skin type quiz: answer 6 simple questions about how your skin feels and looks, and get your likely skin type plus a general care checklist.">
+<meta name="twitter:image" content="https://lookauramax.com/images/skin.svg">
+<meta name="twitter:image:alt" content="Find Your Skin Type Quiz — Lookauramax free tool illustration">
+<meta name="author" content="Lookauramax Team">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What are the main skin types?","acceptedAnswer":{"@type":"Answer","text":"The common categories are dry, oily, combination, and sensitive-leaning. Combination means oily in some zones (often the T-zone) and normal or dry elsewhere. Sensitive-leaning skin reacts easily to products, weather, or friction."}},
+{"@type":"Question","name":"Can my skin type change over time?","acceptedAnswer":{"@type":"Answer","text":"Yes. Age, seasons, hormones, climate, products, and health can all shift how your skin behaves. Re-checking every few months is normal — a quiz result is a snapshot, not a permanent label."}},
+{"@type":"Question","name":"Is this quiz a diagnosis?","acceptedAnswer":{"@type":"Answer","text":"No. This quiz gives general information based on how you describe your skin. It does not diagnose acne, eczema, rosacea, or any skin condition. Persistent or painful skin problems need a dermatologist."}},
+{"@type":"Question","name":"What should I do after learning my skin type?","acceptedAnswer":{"@type":"Answer","text":"Start with the basics for your type: gentle cleansing, moisturiser suited to how your skin feels, and daily sunscreen. Introduce one new product at a time and stop anything that stings, burns, or causes a rash."}}
+]}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:#FFD14E}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid rgba(255,255,255,.1);padding:18px 0}
+header a{color:#F7F3EA;text-decoration:none;font-weight:900;letter-spacing:.18em}
+header a span{color:#E19A2D}
+.crumb{font-size:13px;color:#A9A29A;margin:28px 0 8px}
+.crumb a{color:#A9A29A;text-decoration:none}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+h2{font-size:26px;margin:36px 0 10px}
+h3{font-size:19px;margin:24px 0 8px;color:#FFD14E}
+p{margin:0 0 14px;color:#D9D2C4}
+ul,ol{margin:0 0 16px 22px;color:#D9D2C4}
+li{margin:6px 0}
+.lede{font-size:19px;color:#A9A29A}
+.cta{background:linear-gradient(180deg,#1C1505,#121210);border:1px solid rgba(225,154,45,.45);border-radius:16px;padding:26px;margin:32px 0}
+.cta h2{margin-top:0}
+.btn{display:inline-block;background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:13px 26px;border-radius:999px;text-decoration:none;margin-top:8px}
+.faq{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:12px}
+.faq h2{margin-bottom:4px}
+.faq details{background:#121214;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 20px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700}
+.faq p{margin-top:10px}
+.disclaimer{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 20px;color:#A9A29A;font-size:14px;margin:28px 0}
+.related{margin:28px 0}
+.related a{display:block;margin:6px 0}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A29A;font-size:14px}
+.post-hero{margin:22px 0 6px}.post-hero img{width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.1);display:block}.post-hero figcaption{color:#8A8272;font-size:12.5px;margin-top:8px}.byline{color:#8A8272;font-size:13px;margin:10px 0 20px}
+.tool{background:#121214;border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:26px;margin:28px 0}
+.tool button{background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;border:0;border-radius:999px;padding:13px 26px;font-size:16px;cursor:pointer;margin-top:20px}
+.tool button:hover{filter:brightness(1.08)}
+.err{color:#FF9A8A;font-size:14px;margin-top:10px;min-height:20px}
+.result{display:none;background:#1C1505;border:1px solid rgba(225,154,45,.5);border-radius:14px;padding:22px;margin-top:22px}
+.result .big{font-size:30px;font-weight:900;color:#FFD14E}
+.privacy-note{font-size:13px;color:#A9A29A;margin-top:14px}
+.q{margin:22px 0}
+.q p{font-weight:700;color:#F7F3EA;margin-bottom:8px}
+.q label{display:block;background:#050505;border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:10px 14px;margin:6px 0;cursor:pointer;color:#D9D2C4}
+.q label:hover{border-color:#E19A2D}
+.q input{margin-right:10px;accent-color:#E19A2D}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://lookauramax.com/">LOOK<span>AURA</span>MAX</a> · <a href="https://lookauramax.com/tools/" style="letter-spacing:0;font-weight:700;color:#A9A29A">Tools</a></div></header>
+<main class="wrap">
+<p class="crumb"><a href="https://lookauramax.com/tools/">Free Tools</a> / Skin Type Quiz</p>
+<h1>Find Your Skin Type</h1>
+<figure class="post-hero"><img src="/images/skin.svg" alt="Find Your Skin Type Quiz — Lookauramax free tool illustration" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Lookauramax free tool — Find Your Skin Type</figcaption></figure>
+<p class="byline">By <a href="https://lookauramax.com/about.html">Lookauramax Team</a> · Published 17 Oct 2026 · General information, not medical advice.</p>
+<p class="lede">Answer 6 simple questions about how your skin feels and looks, and get your likely skin type — Dry, Oily, Combination, or Sensitive-leaning — plus a short general care checklist. Everything runs in your browser. Nothing is sent anywhere, stored, or tracked.</p>
+
+<div class="tool" aria-label="Skin type quiz">
+<div class="q"><p>1. How does your skin feel by midday?</p>
+<label><input type="radio" name="q1" value="dry"> Tight, dry, or flaky</label>
+<label><input type="radio" name="q1" value="oily"> Shiny or greasy, especially on the forehead and nose</label>
+<label><input type="radio" name="q1" value="combo"> Shiny in some areas, normal or dry in others</label>
+<label><input type="radio" name="q1" value="sensitive"> Easily irritated, red, or stinging</label></div>
+<div class="q"><p>2. How visible are your pores?</p>
+<label><input type="radio" name="q2" value="dry"> Barely visible</label>
+<label><input type="radio" name="q2" value="oily"> Clearly visible, especially on the nose and cheeks</label>
+<label><input type="radio" name="q2" value="combo"> Visible in the T-zone, small elsewhere</label>
+<label><input type="radio" name="q2" value="sensitive"> Hard to tell — redness or reactions stand out more</label></div>
+<div class="q"><p>3. After washing your face with lukewarm water (no products), how does it feel after 30 minutes?</p>
+<label><input type="radio" name="q3" value="dry"> Tight and dry</label>
+<label><input type="radio" name="q3" value="oily"> Back to shiny fairly quickly</label>
+<label><input type="radio" name="q3" value="combo"> Comfortable on cheeks, shiny on forehead/nose</label>
+<label><input type="radio" name="q3" value="sensitive"> Red, tight, or irritated</label></div>
+<div class="q"><p>4. How often does your skin react to new products or weather changes?</p>
+<label><input type="radio" name="q4" value="dry"> Rarely — dryness is the main issue</label>
+<label><input type="radio" name="q4" value="oily"> Rarely — oiliness is the main issue</label>
+<label><input type="radio" name="q4" value="combo"> Sometimes, in certain areas</label>
+<label><input type="radio" name="q4" value="sensitive"> Often — redness, itching, or stinging</label></div>
+<div class="q"><p>5. How does your skin look in photos taken in natural light?</p>
+<label><input type="radio" name="q5" value="dry"> Dull or flaky patches</label>
+<label><input type="radio" name="q5" value="oily"> Shiny, especially on the forehead and nose</label>
+<label><input type="radio" name="q5" value="combo"> Shiny T-zone, matte cheeks</label>
+<label><input type="radio" name="q5" value="sensitive"> Redness or blotchiness is the first thing I notice</label></div>
+<div class="q"><p>6. How does moisturiser usually feel on your skin?</p>
+<label><input type="radio" name="q6" value="dry"> Absorbed quickly — skin still feels dry</label>
+<label><input type="radio" name="q6" value="oily"> Heavy or greasy — I often skip it</label>
+<label><input type="radio" name="q6" value="combo"> Fine on cheeks, too heavy on the T-zone</label>
+<label><input type="radio" name="q6" value="sensitive"> Often stings or causes redness</label></div>
+<button type="button" onclick="quizSkin()">See my skin type</button>
+<p class="err" id="err" role="alert"></p>
+<div class="result" id="result" aria-live="polite"></div>
+<p class="privacy-note">🔒 Private by design: this tool runs 100% in your browser. Your answers are never sent, stored, or tracked.</p>
+</div>
+
+<h2>What to do with your result</h2>
+<p>Your skin type is a starting point, not a verdict. The basics are the same for everyone: gentle cleansing, a moisturiser that suits how your skin feels, and daily sunscreen. The differences are in texture and strength — dry skin usually wants richer creams, oily skin usually wants lighter gels, and sensitive-leaning skin wants fewer products and a patch test first.</p>
+<p>Introduce one new product at a time, and stop anything that stings, burns, or causes a rash. Skin also changes with seasons, climate, age, and health — re-check every few months instead of treating one result as permanent.</p>
+
+<div class="cta">
+<h2>Build your aura, one day at a time</h2>
+<p>Lookauramax gives you an honest starting point: an on-device AuraScan, a 90-day plan, and a daily routine. Join and claim your one-time Join Reward — 1 scan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser. No card needed.</p>
+<a class="btn" href="https://lookauramax.com/#pricing">See plans &amp; free trial →</a>
+</div>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<details open><summary>What are the main skin types?</summary><p>The common categories are dry, oily, combination, and sensitive-leaning. Combination means oily in some zones (often the T-zone) and normal or dry elsewhere. Sensitive-leaning skin reacts easily to products, weather, or friction.</p></details>
+<details><summary>Can my skin type change over time?</summary><p>Yes. Age, seasons, hormones, climate, products, and health can all shift how your skin behaves. Re-checking every few months is normal — a quiz result is a snapshot, not a permanent label.</p></details>
+<details><summary>Is this quiz a diagnosis?</summary><p>No. This quiz gives general information based on how you describe your skin. It does not diagnose acne, eczema, rosacea, or any skin condition. Persistent or painful skin problems need a dermatologist.</p></details>
+<details><summary>What should I do after learning my skin type?</summary><p>Start with the basics for your type: gentle cleansing, moisturiser suited to how your skin feels, and daily sunscreen. Introduce one new product at a time and stop anything that stings, burns, or causes a rash.</p></details>
+</div>
+
+<p class="disclaimer"><strong>Disclaimer:</strong> General information, not a diagnosis. Skin conditions need a dermatologist. This quiz never prescribes treatments for acne, eczema, rosacea, or any other condition.</p>
+
+<div class="related">
+<h3>Keep reading</h3>
+<a href="https://lookauramax.com/blog/skincare-routine-beginners.html">→ Skincare Routine for Beginners: The Simple Version</a>
+<a href="https://lookauramax.com/blog/clear-skin-guide.html">→ How to Get Clear Skin: The Honest Guide That Works</a>
+<a href="https://lookauramax.com/blog/oily-skin-guide.html">→ Oily Skin Guide: What Actually Helps</a>
+</div>
+</main>
+<footer><div class="wrap"><p><a href="https://lookauramax.com/">Lookauramax</a> · <a href="https://lookauramax.com/tools/">Tools</a> · <a href="https://lookauramax.com/blog/">Blog</a> · <a href="https://lookauramax.com/privacy">Privacy</a> · <a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></footer>
+<script>
+function quizSkin(){
+  var err=document.getElementById('err'), res=document.getElementById('result');
+  err.textContent=''; res.style.display='none'; res.innerHTML='';
+  var scores={dry:0,oily:0,combo:0,sensitive:0};
+  for(var i=1;i<=6;i++){
+    var sel=document.querySelector('input[name="q'+i+'"]:checked');
+    if(!sel){ err.textContent='Please answer all 6 questions — question '+i+' is still empty.'; return; }
+    scores[sel.value]++;
+  }
+  var order=['dry','oily','combo','sensitive'], best=order[0];
+  order.forEach(function(k){ if(scores[k]>scores[best]) best=k; });
+  var data={
+    dry:{t:'Dry skin',d:'Your answers point to dry skin — it tends to feel tight, look dull, and absorb moisturiser quickly. Focus on gentle cleansing, richer moisturisers, lukewarm (not hot) water, and daily sunscreen. Avoid over-washing and harsh scrubs, which strip the little oil dry skin has.',c:['Gentle, fragrance-free cleanser','Richer cream moisturiser, morning and night','Daily sunscreen','Lukewarm water, not hot','Pat dry — do not rub']},
+    oily:{t:'Oily skin',d:'Your answers point to oily skin — shine and visible pores, especially on the forehead and nose. Focus on gentle cleansing, lightweight gel moisturisers, and daily sunscreen. Do not skip moisturiser entirely: over-drying can make skin produce more oil.',c:['Gentle cleanser, morning and night','Lightweight gel moisturiser','Daily sunscreen (gel or matte formulas)','Blotting paper for midday shine','Avoid harsh scrubs and over-washing']},
+    combo:{t:'Combination skin',d:'Your answers point to combination skin — oily in the T-zone (forehead, nose, chin) and normal or dry elsewhere. You may need different care in different zones: lighter products on the T-zone, richer ones on dry cheeks.',c:['Gentle cleanser','Light moisturiser on the T-zone, richer on dry areas','Daily sunscreen','One new product at a time','Adjust with the seasons']},
+    sensitive:{t:'Sensitive-leaning skin',d:'Your answers point to sensitive-leaning skin — it reacts easily to products, weather, or friction. Keep the routine minimal: few products, fragrance-free, patch-test anything new on a small area first. If reactions are frequent or severe, see a dermatologist.',c:['Minimal routine — few products','Fragrance-free, gentle formulas','Patch-test new products first','Daily sunscreen for sensitive skin','Stop anything that stings or burns']}
+  };
+  var x=data[best];
+  res.innerHTML='<p>Your likely skin type:</p><p class="big">'+x.t+'</p><p>'+x.d+'</p><h3>General care checklist</h3><ul>'+x.c.map(function(i){return '<li>'+i+'</li>';}).join('')+'</ul><p><em>General information, not a diagnosis. Skin conditions need a dermatologist.</em></p>';
+  res.style.display='block';
+}
+</script>
+</body>
+</html>

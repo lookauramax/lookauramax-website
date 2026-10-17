@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Habit Streak Tracker: Build Daily Habits</title>
+<meta name="description" content="Track up to 5 daily habits free: tap to check off each day and watch your streaks grow. Your data stays in this browser only — no account, no sync, delete anytime.">
+<link rel="canonical" href="https://lookauramax.com/tools/habit-streak-tracker.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Habit Streak Tracker: Build Daily Habits">
+<meta property="og:description" content="Track up to 5 daily habits free: tap to check off each day and watch your streaks grow. Your data stays in this browser only — no account, no sync, delete anytime.">
+<meta property="og:url" content="https://lookauramax.com/tools/habit-streak-tracker.html">
+<meta property="og:image" content="https://lookauramax.com/images/routine.svg">
+<meta property="og:image:alt" content="Free Habit Streak Tracker — Lookauramax tool illustration">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Habit Streak Tracker: Build Daily Habits">
+<meta name="twitter:description" content="Track up to 5 daily habits free: tap to check off each day and watch your streaks grow. Your data stays in this browser only — no account, no sync, delete anytime.">
+<meta name="twitter:image" content="https://lookauramax.com/images/routine.svg">
+<meta name="twitter:image:alt" content="Free Habit Streak Tracker — Lookauramax tool illustration">
+<meta name="author" content="Lookauramax Team">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Where is my habit data stored?","acceptedAnswer":{"@type":"Answer","text":"Only in this browser, using localStorage on your own device. Nothing is sent to any server, no account is created, and no one else can see your habits. Use the Clear all data button to delete everything at any time."}},
+{"@type":"Question","name":"How is a streak counted?","acceptedAnswer":{"@type":"Answer","text":"A streak is the number of consecutive days up to today on which you checked off the habit. If you miss a day, the streak resets to zero — that is normal, and the goal is to start a new streak the next day."}},
+{"@type":"Question","name":"What happens if I clear my browser data?","acceptedAnswer":{"@type":"Answer","text":"Your habits and check-ins are deleted, because they live only in this browser. The tracker has no backup and no sync, by design — your data never leaves your device."}},
+{"@type":"Question","name":"How many habits can I track?","acceptedAnswer":{"@type":"Answer","text":"Up to 5 habits. Fewer, well-chosen habits work better than a long list — start with one or two you can actually do every day, then add more once they feel easy."}}
+]}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:#FFD14E}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid rgba(255,255,255,.1);padding:18px 0}
+header a{color:#F7F3EA;text-decoration:none;font-weight:900;letter-spacing:.18em}
+header a span{color:#E19A2D}
+.crumb{font-size:13px;color:#A9A29A;margin:28px 0 8px}
+.crumb a{color:#A9A29A;text-decoration:none}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+h2{font-size:26px;margin:36px 0 10px}
+h3{font-size:19px;margin:24px 0 8px;color:#FFD14E}
+p{margin:0 0 14px;color:#D9D2C4}
+ul,ol{margin:0 0 16px 22px;color:#D9D2C4}
+li{margin:6px 0}
+.lede{font-size:19px;color:#A9A29A}
+.cta{background:linear-gradient(180deg,#1C1505,#121210);border:1px solid rgba(225,154,45,.45);border-radius:16px;padding:26px;margin:32px 0}
+.cta h2{margin-top:0}
+.btn{display:inline-block;background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:13px 26px;border-radius:999px;text-decoration:none;margin-top:8px}
+.faq{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:12px}
+.faq h2{margin-bottom:4px}
+.faq details{background:#121214;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 20px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700}
+.faq p{margin-top:10px}
+.disclaimer{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 20px;color:#A9A29A;font-size:14px;margin:28px 0}
+.related{margin:28px 0}
+.related a{display:block;margin:6px 0}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A29A;font-size:14px}
+.post-hero{margin:22px 0 6px}.post-hero img{width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.1);display:block}.post-hero figcaption{color:#8A8272;font-size:12.5px;margin-top:8px}.byline{color:#8A8272;font-size:13px;margin:10px 0 20px}
+.tool{background:#121214;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:26px;margin:24px 0}
+.privacy-note{background:#050505;border:1px solid rgba(225,154,45,.4);border-radius:12px;padding:14px 18px;color:#D9D2C4;font-size:14px;margin-bottom:18px}
+.addrow{display:flex;gap:10px;flex-wrap:wrap}
+.addrow input{flex:1;min-width:180px;background:#050505;color:#F7F3EA;border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:11px 14px;font-size:16px}
+.tool button{background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:12px 22px;border:0;border-radius:999px;cursor:pointer;font-size:16px}
+.tool button:hover{filter:brightness(1.08)}
+button.ghost{background:none;border:1px solid rgba(255,255,255,.3);color:#D9D2C4;border-radius:999px;padding:9px 16px;cursor:pointer;font-size:14px}
+button.ghost:hover{border-color:#FFD14E;color:#FFD14E}
+button.danger{background:none;border:1px solid rgba(255,120,120,.5);color:#FF9A9A;border-radius:999px;padding:9px 16px;cursor:pointer;font-size:14px}
+button.danger:hover{border-color:#FF9A9A}
+.error{color:#FF9A9A;font-weight:700;margin-top:10px}
+.habit{border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 18px;margin:14px 0;background:#050505}
+.habit-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.habit-top strong{font-size:18px}
+.streak{color:#FFD14E;font-size:15px}
+.dots{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 4px}
+.dot{width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:11px;color:#A9A29A}
+.dot.done{background:linear-gradient(135deg,#FFE9A3,#E19A2D);color:#171100;border-color:#E19A2D;font-weight:800}
+.dot.today{border-color:#FFD14E;color:#FFD14E}
+.empty{color:#A9A29A;margin:14px 0}
+.note{color:#A9A29A;font-size:14px}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Free Habit Streak Tracker: Build Daily Habits","description":"Track up to 5 daily habits free: tap to check off each day and watch your streaks grow. Your data stays in this browser only — no account, no sync, delete anytime.","image":"https://lookauramax.com/images/routine.svg","author":{"@type":"Organization","name":"Lookauramax","url":"https://lookauramax.com/"},"publisher":{"@type":"Organization","name":"Lookauramax","url":"https://lookauramax.com/","logo":{"@type":"ImageObject","url":"https://lookauramax.com/logo.png"}},"mainEntityOfPage":"https://lookauramax.com/tools/habit-streak-tracker.html","datePublished":"2026-10-17","dateModified":"2026-10-17","inLanguage":"en"}
+</script>
+</head>
+<body>
+<header><div class="wrap"><a href="https://lookauramax.com/">LOOK<span>AURA</span>MAX</a> · <a href="https://lookauramax.com/tools/" style="letter-spacing:0;font-weight:700;color:#A9A29A">Tools</a></div></header>
+<main class="wrap">
+<p class="crumb"><a href="https://lookauramax.com/tools/">Tools</a> / Habit Streak Tracker</p>
+<h1>Free Habit Streak Tracker</h1>
+<figure class="post-hero"><img src="/images/routine.svg" alt="Free Habit Streak Tracker — Lookauramax tool illustration" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Lookauramax tool — Free Habit Streak Tracker</figcaption></figure>
+<p class="byline">By <a href="https://lookauramax.com/about.html">Lookauramax Team</a> · Published 17 Oct 2026 · General information, not medical advice.</p>
+<p class="lede">Small habits, repeated daily, are the whole secret of a glow-up. Add up to 5 habits, tap to check each one off, and watch your streaks grow — with zero accounts, zero tracking, and zero data leaving this browser.</p>
+
+<div class="tool">
+<p class="privacy-note"><strong>Your data stays in this browser.</strong> Habits and check-ins are saved only on this device (browser localStorage). Nothing is sent to any server, no account is created, and no one else can see them. <button type="button" class="danger" onclick="clearAll()">Clear all data</button></p>
+<div class="addrow">
+<input type="text" id="habitName" maxlength="60" placeholder="e.g. Wash face, 10-minute walk, Read 10 pages" aria-label="New habit name">
+<button type="button" onclick="addHabit()">Add habit</button>
+</div>
+<p class="error" id="habitError" role="alert"></p>
+<div id="habitList" aria-live="polite"></div>
+<p class="note" id="habitHint"></p>
+</div>
+
+<h2>How to make streaks actually work</h2>
+<p>Pick habits so small you cannot fail them. "Ten-minute walk" beats "one hour at the gym." "Wash face" beats "full 8-step routine." A streak works because it makes skipping visible — one missed day costs you the number you were proud of. But a broken streak is not a failure: the goal is to start a new one the next day, not to punish yourself for the miss.</p>
+<p>Keep the list short. Five habits is the maximum here for a reason — most people who try to track ten habits quit all of them by week two. One or two habits done every day for a month will change more than ten habits done for three days.</p>
+
+<div class="cta">
+<h2>Want habits with a plan behind them?</h2>
+<p>Lookauramax gives you a daily Aura Routine, streaks, and reminders inside the app — plus an on-device AuraScan to start from. Join and claim your one-time Join Reward — 1 scan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser. No card needed.</p>
+<a class="btn" href="https://lookauramax.com/#pricing">See plans &amp; free trial →</a>
+</div>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<details open><summary>Where is my habit data stored?</summary><p>Only in this browser, using localStorage on your own device. Nothing is sent to any server, no account is created, and no one else can see your habits. Use the Clear all data button to delete everything at any time.</p></details>
+<details><summary>How is a streak counted?</summary><p>A streak is the number of consecutive days up to today on which you checked off the habit. If you miss a day, the streak resets to zero — that is normal, and the goal is to start a new streak the next day.</p></details>
+<details><summary>What happens if I clear my browser data?</summary><p>Your habits and check-ins are deleted, because they live only in this browser. The tracker has no backup and no sync, by design — your data never leaves your device.</p></details>
+<details><summary>How many habits can I track?</summary><p>Up to 5 habits. Fewer, well-chosen habits work better than a long list — start with one or two you can actually do every day, then add more once they feel easy.</p></details>
+</div>
+
+<p class="disclaimer"><strong>Disclaimer:</strong> This tool is a simple habit checklist with general information only. It does not diagnose, treat, or promise any physical or social outcome. For health concerns, speak to a qualified professional.</p>
+
+<div class="related">
+<h3>Keep reading</h3>
+<a href="https://lookauramax.com/blog/aura-routine-daily.html">→ Aura Routine: What a Good Daily Routine Actually Looks Like</a>
+<a href="https://lookauramax.com/blog/how-to-become-better.html">→ How to Become Better: Small Habits, Real Change</a>
+<a href="https://lookauramax.com/blog/glow-up-guide-90-days.html">→ The Honest 90-Day Glow-Up Guide (No Shortcuts)</a>
+</div>
+</main>
+<footer><div class="wrap"><p><a href="https://lookauramax.com/">Lookauramax</a> · <a href="https://lookauramax.com/tools/">Tools</a> · <a href="https://lookauramax.com/blog/">Blog</a> · <a href="https://lookauramax.com/privacy">Privacy</a> · <a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></footer>
+<script>
+var KEY="lookauramax_habits_v1";
+function dayKey(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+function load(){try{var raw=localStorage.getItem(KEY);if(!raw)return[];var arr=JSON.parse(raw);return Array.isArray(arr)?arr.filter(function(h){return h&&typeof h.name==="string"&&h.days&&typeof h.days==="object";}):[];}catch(e){return[];}}
+function save(arr){try{localStorage.setItem(KEY,JSON.stringify(arr));}catch(e){}}
+function streakOf(h){
+  var s=0,d=new Date();
+  if(!h.days[dayKey(d)]){d.setDate(d.getDate()-1);if(!h.days[dayKey(d)])return 0;}
+  while(h.days[dayKey(d)]){s++;d.setDate(d.getDate()-1);}
+  return s;
+}
+function esc(t){return t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+function render(){
+  var habits=load(), list=document.getElementById("habitList"), hint=document.getElementById("habitHint");
+  if(!habits.length){list.innerHTML="<p class='empty'>No habits yet. Add your first one above — start with something tiny you can do every day.</p>";hint.textContent="";return;}
+  var html="";
+  habits.forEach(function(h,idx){
+    var st=streakOf(h), total=Object.keys(h.days).length, today=dayKey(new Date());
+    html+="<div class='habit'><div class='habit-top'><div><strong>"+esc(h.name)+"</strong><div class='streak'>🔥 "+st+"-day streak · "+total+" total check-in"+(total===1?"":"s")+"</div></div><button type='button' class='ghost' onclick='removeHabit("+idx+")'>Remove</button></div>";
+    html+="<div class='dots'>";
+    for(var i=13;i>=0;i--){var d=new Date();d.setDate(d.getDate()-i);var k=dayKey(d);var cls="dot";if(h.days[k])cls+=" done";if(k===today)cls+=" today";html+="<span class='"+cls+"' title='"+k+"'>"+d.getDate()+"</span>";}
+    html+="</div>";
+    html+="<button type='button' onclick='toggleToday("+idx+")'>"+(h.days[today]?"✓ Done today — tap to undo":"Mark done today")+"</button></div>";
+  });
+  list.innerHTML=html;
+  hint.textContent="Showing the last 14 days. Your data stays in this browser only.";
+}
+function addHabit(){
+  var err=document.getElementById("habitError"), input=document.getElementById("habitName");
+  err.textContent="";
+  var name=input.value.trim();
+  if(!name){err.textContent="Please type a habit name first.";return;}
+  if(name.length>60){err.textContent="Please keep the habit name under 60 characters.";return;}
+  var habits=load();
+  if(habits.length>=5){err.textContent="You already have 5 habits — the maximum. Remove one to add another.";return;}
+  if(habits.some(function(h){return h.name.toLowerCase()===name.toLowerCase();})){err.textContent="That habit is already on your list.";return;}
+  habits.push({name:name,days:{}});
+  save(habits); input.value=""; render();
+}
+function toggleToday(idx){
+  var habits=load(); if(!habits[idx])return;
+  var k=dayKey(new Date());
+  if(habits[idx].days[k])delete habits[idx].days[k]; else habits[idx].days[k]=true;
+  save(habits); render();
+}
+function removeHabit(idx){
+  var habits=load(); if(!habits[idx])return;
+  if(!confirm("Remove '"+habits[idx].name+"' and all its check-ins?"))return;
+  habits.splice(idx,1); save(habits); render();
+}
+function clearAll(){
+  if(!confirm("Delete ALL habits and check-ins from this browser? This cannot be undone."))return;
+  try{localStorage.removeItem(KEY);}catch(e){}
+  render();
+}
+document.getElementById("habitName").addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();addHabit();}});
+render();
+</script>
+</body>
+</html>

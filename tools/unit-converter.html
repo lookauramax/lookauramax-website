@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Height &amp; Weight Converter — cm, Feet, kg, lbs</title>
+<meta name="description" content="Free height and weight converter: convert cm to feet and inches, feet to cm, kg to lbs, and lbs to kg instantly. Two-way, no sign-up, nothing stored.">
+<link rel="canonical" href="https://lookauramax.com/tools/unit-converter.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Height &amp; Weight Converter — cm, Feet, kg, lbs">
+<meta property="og:description" content="Free height and weight converter: convert cm to feet and inches, feet to cm, kg to lbs, and lbs to kg instantly. Two-way, no sign-up, nothing stored.">
+<meta property="og:url" content="https://lookauramax.com/tools/unit-converter.html">
+<meta property="og:image" content="https://lookauramax.com/images/fitness.svg">
+<meta property="og:image:alt" content="Height and Weight Converter — Lookauramax free tool illustration">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Height &amp; Weight Converter — cm, Feet, kg, lbs">
+<meta name="twitter:description" content="Free height and weight converter: convert cm to feet and inches, feet to cm, kg to lbs, and lbs to kg instantly.">
+<meta name="twitter:image" content="https://lookauramax.com/images/fitness.svg">
+<meta name="twitter:image:alt" content="Height and Weight Converter — Lookauramax free tool illustration">
+<meta name="author" content="Lookauramax Team">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I convert cm to feet and inches?","acceptedAnswer":{"@type":"Answer","text":"Divide cm by 2.54 to get total inches, then divide by 12 for feet. The remainder is inches. For example, 175 cm is 68.9 inches, which is 5 feet 9 inches. This converter does it instantly."}},
+{"@type":"Question","name":"How do I convert kg to lbs?","acceptedAnswer":{"@type":"Answer","text":"Multiply kg by 2.20462 to get pounds. For example, 70 kg is about 154.3 lbs. To go back, divide lbs by 2.20462."}},
+{"@type":"Question","name":"Is this converter accurate?","acceptedAnswer":{"@type":"Answer","text":"Yes — it uses the exact definitions: 1 inch = 2.54 cm and 1 kg = 2.20462 lbs. Results are rounded for readability."}},
+{"@type":"Question","name":"Does this converter store my height or weight?","acceptedAnswer":{"@type":"Answer","text":"No. All conversion happens in your browser. Nothing is sent, stored, or tracked."}}
+]}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:#FFD14E}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid rgba(255,255,255,.1);padding:18px 0}
+header a{color:#F7F3EA;text-decoration:none;font-weight:900;letter-spacing:.18em}
+header a span{color:#E19A2D}
+.crumb{font-size:13px;color:#A9A29A;margin:28px 0 8px}
+.crumb a{color:#A9A29A;text-decoration:none}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+h2{font-size:26px;margin:36px 0 10px}
+h3{font-size:19px;margin:24px 0 8px;color:#FFD14E}
+p{margin:0 0 14px;color:#D9D2C4}
+ul,ol{margin:0 0 16px 22px;color:#D9D2C4}
+li{margin:6px 0}
+.lede{font-size:19px;color:#A9A29A}
+.cta{background:linear-gradient(180deg,#1C1505,#121210);border:1px solid rgba(225,154,45,.45);border-radius:16px;padding:26px;margin:32px 0}
+.cta h2{margin-top:0}
+.btn{display:inline-block;background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:13px 26px;border-radius:999px;text-decoration:none;margin-top:8px}
+.faq{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:12px}
+.faq h2{margin-bottom:4px}
+.faq details{background:#121214;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 20px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700}
+.faq p{margin-top:10px}
+.disclaimer{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 20px;color:#A9A29A;font-size:14px;margin:28px 0}
+.related{margin:28px 0}
+.related a{display:block;margin:6px 0}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A29A;font-size:14px}
+.post-hero{margin:22px 0 6px}.post-hero img{width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.1);display:block}.post-hero figcaption{color:#8A8272;font-size:12.5px;margin-top:8px}.byline{color:#8A8272;font-size:13px;margin:10px 0 20px}
+.tool{background:#121214;border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:26px;margin:28px 0}
+.tool label{display:block;font-weight:700;margin:18px 0 6px}
+.tool label:first-child{margin-top:0}
+.tool input,.tool select{width:100%;background:#050505;border:1px solid rgba(255,255,255,.2);border-radius:10px;color:#F7F3EA;padding:12px 14px;font-size:16px}
+.tool input:focus,.tool select:focus{outline:2px solid #E19A2D;border-color:#E19A2D}
+.tool button{background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;border:0;border-radius:999px;padding:13px 26px;font-size:16px;cursor:pointer;margin-top:20px}
+.tool button:hover{filter:brightness(1.08)}
+.err{color:#FF9A8A;font-size:14px;margin-top:10px;min-height:20px}
+.result{display:none;background:#1C1505;border:1px solid rgba(225,154,45,.5);border-radius:14px;padding:22px;margin-top:22px}
+.result .big{font-size:30px;font-weight:900;color:#FFD14E}
+.privacy-note{font-size:13px;color:#A9A29A;margin-top:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://lookauramax.com/">LOOK<span>AURA</span>MAX</a> · <a href="https://lookauramax.com/tools/" style="letter-spacing:0;font-weight:700;color:#A9A29A">Tools</a></div></header>
+<main class="wrap">
+<p class="crumb"><a href="https://lookauramax.com/tools/">Free Tools</a> / Height &amp; Weight Converter</p>
+<h1>Height &amp; Weight Converter</h1>
+<figure class="post-hero"><img src="/images/fitness.svg" alt="Height and Weight Converter — Lookauramax free tool illustration" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Lookauramax free tool — Height &amp; Weight Converter</figcaption></figure>
+<p class="byline">By <a href="https://lookauramax.com/about.html">Lookauramax Team</a> · Published 17 Oct 2026 · Pure utility, no health claims.</p>
+<p class="lede">Convert height and weight instantly, both ways: centimetres ↔ feet and inches, kilograms ↔ pounds. Type in either side and the other updates. Everything runs in your browser. Nothing is sent anywhere, stored, or tracked.</p>
+
+<div class="tool" aria-label="Height and weight converter">
+<h3 style="margin-top:0">Height</h3>
+<div class="row">
+<div><label for="cm">Centimetres (cm)</label><input id="cm" type="number" inputmode="decimal" min="50" max="300" step="0.1" placeholder="e.g. 175" oninput="fromCm()"></div>
+<div><label for="ft">Feet + inches</label><div class="row"><input id="ft" type="number" inputmode="numeric" min="1" max="9" step="1" placeholder="ft" oninput="fromFtIn()"><input id="inch" type="number" inputmode="decimal" min="0" max="11.99" step="0.1" placeholder="in" oninput="fromFtIn()"></div></div>
+</div>
+<p class="err" id="errH" role="alert"></p>
+<h3>Weight</h3>
+<div class="row">
+<div><label for="kg">Kilograms (kg)</label><input id="kg" type="number" inputmode="decimal" min="10" max="500" step="0.1" placeholder="e.g. 70" oninput="fromKg()"></div>
+<div><label for="lbs">Pounds (lbs)</label><input id="lbs" type="number" inputmode="decimal" min="22" max="1100" step="0.1" placeholder="e.g. 154.3" oninput="fromLbs()"></div>
+</div>
+<p class="err" id="errW" role="alert"></p>
+<div class="result" id="result" aria-live="polite"></div>
+<p class="privacy-note">🔒 Private by design: this tool runs 100% in your browser. Your numbers are never sent, stored, or tracked.</p>
+</div>
+
+<h2>Quick reference</h2>
+<ul>
+<li><strong>1 inch = 2.54 cm</strong> (exact)</li>
+<li><strong>1 foot = 12 inches = 30.48 cm</strong></li>
+<li><strong>1 kg = 2.20462 lbs</strong></li>
+<li><strong>1 lb = 0.453592 kg</strong></li>
+</ul>
+<p>Example: 175 cm = 5 ft 9 in. 70 kg = 154.3 lbs. 6 ft 0 in = 182.9 cm.</p>
+
+<div class="cta">
+<h2>Build your aura, one day at a time</h2>
+<p>Lookauramax gives you an honest starting point: an on-device AuraScan, a 90-day plan, and a daily routine. Join and claim your one-time Join Reward — 1 scan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser. No card needed.</p>
+<a class="btn" href="https://lookauramax.com/#pricing">See plans &amp; free trial →</a>
+</div>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<details open><summary>How do I convert cm to feet and inches?</summary><p>Divide cm by 2.54 to get total inches, then divide by 12 for feet. The remainder is inches. For example, 175 cm is 68.9 inches, which is 5 feet 9 inches. This converter does it instantly.</p></details>
+<details><summary>How do I convert kg to lbs?</summary><p>Multiply kg by 2.20462 to get pounds. For example, 70 kg is about 154.3 lbs. To go back, divide lbs by 2.20462.</p></details>
+<details><summary>Is this converter accurate?</summary><p>Yes — it uses the exact definitions: 1 inch = 2.54 cm and 1 kg = 2.20462 lbs. Results are rounded for readability.</p></details>
+<details><summary>Does this converter store my height or weight?</summary><p>No. All conversion happens in your browser. Nothing is sent, stored, or tracked.</p></details>
+</div>
+
+<p class="disclaimer"><strong>Note:</strong> This is a pure unit converter. It makes no health claims and gives no health advice.</p>
+
+<div class="related">
+<h3>Keep reading</h3>
+<a href="https://lookauramax.com/blog/height-truth.html">→ Height: The Honest Truth (What You Can and Cannot Change)</a>
+<a href="https://lookauramax.com/blog/look-taller-guide.html">→ How to Look Taller: Honest Style &amp; Posture Tips</a>
+<a href="https://lookauramax.com/blog/protein-guide.html">→ Protein Guide: How Much Do You Really Need?</a>
+</div>
+</main>
+<footer><div class="wrap"><p><a href="https://lookauramax.com/">Lookauramax</a> · <a href="https://lookauramax.com/tools/">Tools</a> · <a href="https://lookauramax.com/blog/">Blog</a> · <a href="https://lookauramax.com/privacy">Privacy</a> · <a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></footer>
+<script>
+function showResult(){
+  var cm=document.getElementById('cm').value, kg=document.getElementById('kg').value, res=document.getElementById('result');
+  var parts=[];
+  if(cm) parts.push('<strong>'+cm+' cm</strong> = '+document.getElementById('ft').value+' ft '+document.getElementById('inch').value+' in');
+  if(kg) parts.push('<strong>'+kg+' kg</strong> = '+document.getElementById('lbs').value+' lbs');
+  if(parts.length){ res.innerHTML='<p>'+parts.join(' &nbsp;·&nbsp; ')+'</p>'; res.style.display='block'; }
+  else res.style.display='none';
+}
+function fromCm(){
+  var e=document.getElementById('errH'); e.textContent='';
+  var cm=parseFloat(document.getElementById('cm').value);
+  if(isNaN(cm)){ document.getElementById('ft').value=''; document.getElementById('inch').value=''; showResult(); return; }
+  if(cm<50||cm>300){ e.textContent='Please enter a height between 50 and 300 cm.'; return; }
+  var total=cm/2.54, ft=Math.floor(total/12), inch=total-ft*12;
+  document.getElementById('ft').value=ft; document.getElementById('inch').value=inch.toFixed(1);
+  showResult();
+}
+function fromFtIn(){
+  var e=document.getElementById('errH'); e.textContent='';
+  var ft=parseFloat(document.getElementById('ft').value)||0, inch=parseFloat(document.getElementById('inch').value)||0;
+  if(!ft&&!inch){ document.getElementById('cm').value=''; showResult(); return; }
+  if(ft<1||ft>9||inch<0||inch>=12){ e.textContent='Please enter feet 1–9 and inches 0–11.9.'; return; }
+  document.getElementById('cm').value=((ft*12+inch)*2.54).toFixed(1);
+  showResult();
+}
+function fromKg(){
+  var e=document.getElementById('errW'); e.textContent='';
+  var kg=parseFloat(document.getElementById('kg').value);
+  if(isNaN(kg)){ document.getElementById('lbs').value=''; showResult(); return; }
+  if(kg<10||kg>500){ e.textContent='Please enter a weight between 10 and 500 kg.'; return; }
+  document.getElementById('lbs').value=(kg*2.20462).toFixed(1);
+  showResult();
+}
+function fromLbs(){
+  var e=document.getElementById('errW'); e.textContent='';
+  var lbs=parseFloat(document.getElementById('lbs').value);
+  if(isNaN(lbs)){ document.getElementById('kg').value=''; showResult(); return; }
+  if(lbs<22||lbs>1100){ e.textContent='Please enter a weight between 22 and 1100 lbs.'; return; }
+  document.getElementById('kg').value=(lbs/2.20462).toFixed(1);
+  showResult();
+}
+</script>
+</body>
+</html>
