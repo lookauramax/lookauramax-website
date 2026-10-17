@@ -65,10 +65,10 @@ h2{font-size:clamp(30px,4vw,44px);line-height:1.12;font-weight:700}
 .btn-ghost{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.03);color:var(--txt)}
 /* header — simple, quiet */
 header{position:sticky;top:0;z-index:50;background:rgba(8,7,6,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.head{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1060px;margin:0 auto;padding:14px 24px}
+.head{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1060px;margin:0 auto;padding:14px 24px;flex-wrap:nowrap}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
-.brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,209,78,.6)}
-.brand b{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.14em;font-size:14px}
+.brand img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,209,78,.6);flex-shrink:0}
+.brand b{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.12em;font-size:20px;white-space:nowrap}
 .brand b em{font-style:normal;color:var(--gold)}
 .hlinks{display:flex;gap:26px;font-size:14px;color:var(--mut)}
 .hlinks a{text-decoration:none}.hlinks a:hover{color:#fff}
@@ -131,7 +131,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;color:var(--mut);fon
 .foot a{text-decoration:none;color:var(--mut)}.foot a:hover{color:var(--txt)}
 .foot-brand{display:flex;align-items:center;gap:11px}.foot-brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(225,154,45,.6)}
 @media(max-width:900px){.grid3,.steps{grid-template-columns:1fr 1fr}.pricing{grid-template-columns:1fr 1fr}.hlinks{display:none}}
-@media(max-width:560px){section{padding:64px 0}.grid3,.steps,.pricing{grid-template-columns:1fr}.hero{padding:56px 0}.trust{gap:28px}}
+@media(max-width:560px){section{padding:64px 0}.grid3,.steps,.pricing{grid-template-columns:1fr}.hero{padding:56px 0}.trust{gap:28px}.brand b{font-size:16px;letter-spacing:.10em}.brand img{width:38px;height:38px}.head{padding:12px 16px;gap:10px}}
 /* tasteful motion — subtle only */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
