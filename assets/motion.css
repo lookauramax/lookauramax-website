@@ -1,0 +1,52 @@
+/* Lookauramax shared motion — tasteful only. No clutter, no layout shift.
+   Every animation is transform/opacity (compositor-only, CLS stays 0).
+   Reveal defaults to VISIBLE: JS only adds animation classes; if JS fails,
+   nothing is ever hidden. All motion dies under prefers-reduced-motion. */
+
+html{scroll-behavior:smooth}
+
+/* --- Reveal on scroll (namespaced; landing keeps its own .reveal system) --- */
+.lm-reveal{opacity:0;transform:translateY(10px);transition:opacity .55s ease,transform .55s ease}
+.lm-reveal.lm-visible{opacity:1;transform:none}
+
+/* --- Card hover lift: -2px + soft shadow --- */
+.card,.step,.pcard,.tool,.cta{transition:transform .25s ease,box-shadow .25s ease}
+.card:hover,.step:hover,.pcard:hover,.tool:hover,.cta:hover{
+  transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.35)}
+
+/* --- Buttons: hover glow + press scale --- */
+.btn:hover,.calcbtn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(225,154,45,.35)}
+.btn:active,.calcbtn:active{transform:scale(.98)}
+
+/* --- Primary CTA: slow gold shimmer sweep (CSS only, subtle) --- */
+.btn-gold,.cta .btn,.calcbtn{position:relative;overflow:hidden}
+.btn-gold::after,.cta .btn::after,.calcbtn::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%);
+  transform:translateX(-130%);animation:lm-shimmer 6s ease-in-out infinite}
+@keyframes lm-shimmer{0%,55%{transform:translateX(-130%)}85%,100%{transform:translateX(130%)}}
+
+/* --- Section heading: small gold underline grows on reveal --- */
+section h2{position:relative}
+section h2::after{content:"";position:absolute;left:0;bottom:-9px;width:56px;height:3px;
+  border-radius:2px;background:linear-gradient(90deg,#FFD14E,#E19A2D);
+  transform:scaleX(0);transform-origin:left;transition:transform .6s ease}
+section.lm-visible h2::after,section.visible h2::after{transform:scaleX(1)}
+
+/* --- Link hover underline (content links only) --- */
+main a:not(.btn):not(.calcbtn):hover{text-decoration:underline;text-underline-offset:3px}
+
+/* --- FAQ <details>: smooth open (content fades/slides in) --- */
+details[open] > :not(summary){animation:lm-fadein .3s ease}
+@keyframes lm-fadein{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+/* --- Input focus: gold ring --- */
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{
+  outline:2px solid #E19A2D;outline-offset:2px}
+
+/* --- Reduced motion: everything off, content fully visible --- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .lm-reveal{opacity:1!important;transform:none!important}
+}

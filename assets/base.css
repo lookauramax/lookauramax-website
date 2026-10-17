@@ -1,0 +1,68 @@
+/* Lookauramax shared base — consistency + robustness.
+   Visual-only normalization. Never changes copy, pricing, links, or colors.
+   Loaded after each page's inline <style>, so it only fills gaps. */
+
+/* --- Robustness: no horizontal overflow, no clipped media --- */
+html,body{overflow-x:clip}
+img,svg,video,canvas,iframe{max-width:100%;height:auto}
+table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+pre,code{overflow-wrap:break-word;white-space:pre-wrap}
+p,li,h1,h2,h3,h4,td,th{overflow-wrap:break-word}
+a{overflow-wrap:break-word}
+
+/* --- Buttons: one layout language (colors stay per-page) --- */
+.btn,.calcbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border-radius:999px;font-weight:800;text-decoration:none;cursor:pointer;
+  padding:13px 26px;line-height:1.25;transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+.btn:not(.btn-ghost):not(.btn-gold){
+  background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100}
+button{font:inherit}
+input,select,textarea{font:inherit;max-width:100%}
+input,select,textarea,.tool input,.tool select{min-height:44px}
+
+/* --- Tap targets: 44px minimum (excludes the tiny dismiss ×) --- */
+button:not(.sticky-bar .x),[role="button"],summary,.toggle button,.demo-chips button{min-height:44px}
+summary{display:flex;align-items:center}
+
+/* --- Shared containers breathe the same on small screens --- */
+@media(max-width:768px){
+  .wrap,.head{padding-left:16px;padding-right:16px}
+  table{font-size:14px}
+}
+
+/* --- Premium cards (shared): blog hub, landing featured cards, tool cards.
+   Visual-only. Component styles are scoped under .card so other
+   elements (e.g. pricing .tag inside .pcard) are untouched. --- */
+.card{position:relative;background:linear-gradient(180deg,#171512,#0D0C0A);
+  border:1px solid rgba(225,154,45,.25);border-radius:18px;
+  box-shadow:0 8px 24px rgba(0,0,0,.35);overflow:hidden;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-3px);border-color:rgba(255,209,78,.55);
+  box-shadow:0 16px 32px rgba(0,0,0,.45)}
+.card.featured{border-color:rgba(255,209,78,.65);
+  box-shadow:0 12px 32px rgba(0,0,0,.45),0 0 0 1px rgba(255,209,78,.25)}
+.card .ribbon{position:absolute;top:14px;left:14px;z-index:2;
+  background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);
+  color:#171100;font-size:11px;font-weight:800;letter-spacing:.12em;
+  text-transform:uppercase;padding:6px 12px;border-radius:999px;
+  box-shadow:0 4px 12px rgba(0,0,0,.4)}
+.card-thumb{margin:0;aspect-ratio:16/9;overflow:hidden;background:#121110}
+.card-thumb img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .35s ease}
+.card:hover .card-thumb img{transform:scale(1.03)}
+.card-body{padding:20px 22px 22px}
+.card .tag{display:inline-block;background:rgba(225,154,45,.14);
+  border:1px solid rgba(225,154,45,.35);color:#FFD14E;font-size:11px;
+  letter-spacing:.14em;font-weight:800;text-transform:uppercase;
+  padding:5px 10px;border-radius:999px;margin:0 0 12px}
+.card h2{font-size:22px;line-height:1.25;margin:0 0 8px}
+.card h2 a{color:#FFFDF6;text-decoration:none}
+.card h2 a:hover{color:#FFD14E}
+.card-desc{color:#CFC7B8;font-size:15px;margin:0 0 14px}
+.card .read{margin:0}
+.card .read a{color:#FFD14E;font-weight:800;text-decoration:none}
+.card .read a:hover{text-decoration:underline}
+@media (prefers-reduced-motion: reduce){
+  .card,.card:hover,.card-thumb img,.card:hover .card-thumb img{
+    transform:none;transition:none}
+}
