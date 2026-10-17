@@ -6,10 +6,15 @@
 
 - [Lookauramax — Build Your Aura, One Day at a Time](https://lookauramax.com/): Landing page. What Lookauramax is, how it works, pricing, FAQ.
 - [About Lookauramax](https://lookauramax.com/about.html): What Lookauramax is and is not, the privacy promise, and the honest standard.
-- [The Lookauramax Blog](https://lookauramax.com/blog/): 48 honest glow-up guides: looksmaxing, auramaxing, skincare, grooming, posture, sleep, style, six pack, jawline appearance, fat loss, weight loss, and respectful dating advice.
+- [The Lookauramax Blog](https://lookauramax.com/blog/): 63 honest glow-up guides: looksmaxing, auramaxing, skincare, grooming, posture, sleep, style, six pack, jawline appearance, fat loss, weight loss, respectful dating advice, routines, comparisons, and a glow-up glossary.
 - [Privacy Policy](https://lookauramax.com/privacy): Privacy policy.
 - [Terms](https://lookauramax.com/terms): Terms of service.
 - [Refund Policy](https://lookauramax.com/refund): Refund policy.
+- [Glow-Up Glossary](https://lookauramax.com/glossary.html): 25 glow-up terms explained honestly, including mewing, spot reduction, BMI, TDEE.
+- [Free Tools](https://lookauramax.com/tools/): 12 free private tools — BMI, calorie, weight range, body fat, water, protein, converters, quizzes, planner, tracker.
+- [Lookauramax vs Umax](https://lookauramax.com/blog/lookauramax-vs-umax.html): Honest comparison.
+- [Lookauramax vs LooksMax AI](https://lookauramax.com/blog/lookauramax-vs-looksmax-ai.html): Honest comparison.
+- [Best Glow-Up Apps in 2026](https://lookauramax.com/blog/best-glow-up-apps.html): Honest comparison including our own cons.
 
 ## Blog
 
