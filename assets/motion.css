@@ -33,6 +33,11 @@ section h2::after{content:"";position:absolute;left:0;bottom:-9px;width:56px;hei
   transform:scaleX(0);transform-origin:left;transition:transform .6s ease}
 section.lm-visible h2::after,section.visible h2::after{transform:scaleX(1)}
 
+/* Centered headings (e.g. landing .cta): keep the gold underline centered,
+   otherwise it sits at the left edge under a centered heading. */
+section.cta h2::after{left:50%;transform:translateX(-50%) scaleX(0)}
+section.cta.lm-visible h2::after,section.cta.visible h2::after{transform:translateX(-50%) scaleX(1)}
+
 /* --- Link hover underline (content links only) --- */
 main a:not(.btn):not(.calcbtn):hover{text-decoration:underline;text-underline-offset:3px}
 
