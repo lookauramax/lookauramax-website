@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Body Fat Percentage Calculator — Free Estimate</title>
+<meta name="description" content="Estimate body fat percentage with the US Navy tape-measure method. Free, private, all math in your browser. A rough estimate — not a medical measurement.">
+<link rel="canonical" href="https://lookauramax.com/tools/body-fat-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Body Fat Percentage Calculator — Free Estimate">
+<meta property="og:description" content="Estimate body fat percentage with the US Navy tape-measure method. Free, private, all math in your browser. A rough estimate — not a medical measurement.">
+<meta property="og:url" content="https://lookauramax.com/tools/body-fat-calculator.html">
+<meta property="og:image" content="https://lookauramax.com/images/fitness.svg">
+<meta property="og:image:alt" content="Body Fat Percentage Calculator — Lookauramax tool illustration">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Body Fat Percentage Calculator — Free Estimate">
+<meta name="twitter:description" content="Estimate body fat percentage with the US Navy tape-measure method. Free, private, all math in your browser. A rough estimate — not a medical measurement.">
+<meta name="twitter:image" content="https://lookauramax.com/images/fitness.svg">
+<meta name="twitter:image:alt" content="Body Fat Percentage Calculator — Lookauramax tool illustration">
+<meta name="author" content="Lookauramax Team">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How accurate is the US Navy body fat method?","acceptedAnswer":{"@type":"Answer","text":"It is a rough estimate. Tape-measure methods can be off by several percentage points versus lab methods like DEXA, because tape cannot separate fat from muscle and results depend on exactly where and how tightly you measure. Use it to track trends, not as a precise reading."}},
+{"@type":"Question","name":"What is a healthy body fat percentage?","acceptedAnswer":{"@type":"Answer","text":"Typical healthy ranges are roughly 10–20% for adult men and 18–28% for adult women, with wide individual variation by age and build. Athletes often sit lower; older adults often sit higher. These are broad reference bands, not personal targets."}},
+{"@type":"Question","name":"How do I measure correctly for this calculator?","acceptedAnswer":{"@type":"Answer","text":"Use a flexible tape, standing relaxed, not holding your breath. Neck: just below the Adam's apple, tape flat. Waist: at the narrowest point, or at the navel if unsure — be consistent. Hip (women): widest point of the buttocks. Measure in the morning and repeat the same way each time."}},
+{"@type":"Question","name":"Is this body fat calculator private?","acceptedAnswer":{"@type":"Answer","text":"Yes. All math runs in your browser. Nothing you enter is sent anywhere, stored, or tracked."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Body Fat Percentage Calculator (US Navy)","url":"https://lookauramax.com/tools/body-fat-calculator.html","applicationCategory":"HealthApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Lookauramax","url":"https://lookauramax.com/"},"inLanguage":"en"}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:#FFD14E}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid rgba(255,255,255,.1);padding:18px 0}
+header a{color:#F7F3EA;text-decoration:none;font-weight:900;letter-spacing:.18em}
+header a span{color:#E19A2D}
+.crumb{font-size:13px;color:#A9A29A;margin:28px 0 8px}
+.crumb a{color:#A9A29A;text-decoration:none}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+h2{font-size:26px;margin:36px 0 10px}
+h3{font-size:19px;margin:24px 0 8px;color:#FFD14E}
+p{margin:0 0 14px;color:#D9D2C4}
+ul,ol{margin:0 0 16px 22px;color:#D9D2C4}
+li{margin:6px 0}
+.lede{font-size:19px;color:#A9A29A}
+.tool{background:#121214;border:1px solid rgba(225,154,45,.45);border-radius:16px;padding:26px;margin:28px 0}
+.tool label{display:block;font-weight:700;margin:16px 0 6px}
+.tool label:first-of-type{margin-top:0}
+.tool input,.tool select{width:100%;background:#050505;color:#F7F3EA;border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:12px 14px;font-size:16px}
+.tool input:focus,.tool select:focus{outline:2px solid #E19A2D;border-color:#E19A2D}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.row{grid-template-columns:1fr}}
+.calcbtn{display:inline-block;background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:13px 26px;border-radius:999px;border:none;font-size:16px;cursor:pointer;margin-top:20px}
+.calcbtn:hover{filter:brightness(1.07)}
+.result{display:none;background:#1C1505;border:1px solid rgba(225,154,45,.45);border-radius:14px;padding:22px;margin-top:22px}
+.result.show{display:block}
+.result .bignum{font-size:44px;font-weight:900;color:#FFD14E;line-height:1.1}
+.error{display:none;color:#FF8A8A;font-weight:700;margin-top:14px}
+.error.show{display:block}
+.privacy{font-size:13px;color:#A9A29A;margin-top:16px}
+.notice{border:1px solid rgba(255,209,78,.55);background:#1C1505;border-radius:12px;padding:16px 20px;color:#F7F3EA;font-size:15px;margin:20px 0}
+.cta{background:linear-gradient(180deg,#1C1505,#121210);border:1px solid rgba(225,154,45,.45);border-radius:16px;padding:26px;margin:32px 0}
+.cta h2{margin-top:0}
+.btn{display:inline-block;background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:13px 26px;border-radius:999px;text-decoration:none;margin-top:8px}
+.faq{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:12px}
+.faq details{background:#121214;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 20px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700}
+.faq p{margin-top:10px}
+.disclaimer{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 20px;color:#A9A29A;font-size:14px;margin:28px 0}
+.related{margin:28px 0}
+.related a{display:block;margin:6px 0}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A29A;font-size:14px}
+.post-hero{margin:22px 0 6px}.post-hero img{width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.1);display:block}.post-hero figcaption{color:#8A8272;font-size:12.5px;margin-top:8px}.byline{color:#8A8272;font-size:13px;margin:10px 0 20px}</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://lookauramax.com/">LOOK<span>AURA</span>MAX</a> · <a href="https://lookauramax.com/tools/" style="letter-spacing:0;font-weight:700;color:#A9A29A">Tools</a></div></header>
+<main class="wrap">
+<p class="crumb"><a href="https://lookauramax.com/">Home</a> / <a href="https://lookauramax.com/tools/">Tools</a> / Body Fat Calculator</p>
+<h1>Body Fat Percentage Calculator</h1>
+<figure class="post-hero"><img src="/images/fitness.svg" alt="Body Fat Percentage Calculator — Lookauramax tool illustration" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Lookauramax tool — Body Fat Percentage Calculator</figcaption></figure>
+<p class="byline">By <a href="https://lookauramax.com/about.html">Lookauramax Team</a> · Published 17 Oct 2026 · General information, not medical advice.</p>
+<p class="lede">This calculator estimates body fat percentage from a few tape measurements using the US Navy method — the same formula the US military has used for decades. It is free, private, and best used to track a trend over time.</p>
+
+<p class="notice"><strong>⚠️ Rough estimate:</strong> tape-measure methods can be off by several percentage points versus lab methods like DEXA. This is <strong>not</strong> a medical measurement — treat the result as an approximate trend, not a precise reading.</p>
+
+<div class="tool" role="region" aria-label="Body fat calculator">
+<label for="sex">Sex (the formula differs by sex)</label>
+<select id="sex" onchange="toggleHip()">
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+<label for="unit">Measurement unit</label>
+<select id="unit">
+<option value="cm">Centimetres (cm)</option>
+<option value="in">Inches (in)</option>
+</select>
+<label for="height">Height</label>
+<input id="height" type="number" inputmode="decimal" min="100" max="250" placeholder="cm (e.g. 175) or inches (e.g. 69)">
+<label for="neck">Neck circumference (just below the Adam's apple)</label>
+<input id="neck" type="number" inputmode="decimal" min="20" max="70" placeholder="e.g. 38">
+<label for="waist">Waist circumference (narrowest point, or at navel)</label>
+<input id="waist" type="number" inputmode="decimal" min="40" max="200" placeholder="e.g. 85">
+<div id="hipWrap" style="display:none">
+<label for="hip">Hip circumference (widest point)</label>
+<input id="hip" type="number" inputmode="decimal" min="50" max="220" placeholder="e.g. 100">
+</div>
+<button class="calcbtn" type="button" onclick="calcBF()">Estimate my body fat →</button>
+<p class="error" id="err" role="alert"></p>
+<div class="result" id="result" aria-live="polite">
+<p style="color:#A9A29A;margin-bottom:4px">Estimated body fat</p>
+<div class="bignum" id="bfOut">–</div>
+<p id="bandOut" style="margin-bottom:0"></p>
+<p style="margin-bottom:0;color:#A9A29A;font-size:14px">Rough estimate — tape methods can be off by several percentage points. Compare repeat measurements taken the same way, not single readings.</p>
+</div>
+<p class="privacy">🔒 Private: all math runs in your browser. Nothing is sent anywhere, stored, or tracked.</p>
+</div>
+
+<h2>How to measure (consistency matters more than perfection)</h2>
+<ul>
+<li><strong>Use a flexible tape</strong>, standing relaxed, breathing normally — do not suck in or hold your breath.</li>
+<li><strong>Neck:</strong> just below the Adam's apple, tape flat against the skin, not tight.</li>
+<li><strong>Waist:</strong> at the narrowest point of the torso, or at the navel if you are unsure. Use the same spot every time.</li>
+<li><strong>Hip (women):</strong> at the widest point of the buttocks.</li>
+<li><strong>Measure in the morning</strong> and repeat the same way each time — trends beat single readings.</li>
+</ul>
+
+<div class="cta">
+<h2>Turn one estimate into a daily plan</h2>
+<p>Join Lookauramax for your one-time Join Reward: 1 AuraScan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser — no card.</p>
+<a class="btn" href="https://lookauramax.com/#pricing">See plans &amp; free trial →</a>
+</div>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<details open><summary>How accurate is the US Navy body fat method?</summary><p>It is a rough estimate. Tape-measure methods can be off by several percentage points versus lab methods like DEXA, because tape cannot separate fat from muscle and results depend on exactly where and how tightly you measure. Use it to track trends, not as a precise reading.</p></details>
+<details><summary>What is a healthy body fat percentage?</summary><p>Typical healthy ranges are roughly 10–20% for adult men and 18–28% for adult women, with wide individual variation by age and build. Athletes often sit lower; older adults often sit higher. These are broad reference bands, not personal targets.</p></details>
+<details><summary>How do I measure correctly for this calculator?</summary><p>Use a flexible tape, standing relaxed, not holding your breath. Neck: just below the Adam's apple, tape flat. Waist: at the narrowest point, or at the navel if unsure — be consistent. Hip (women): widest point of the buttocks. Measure in the morning and repeat the same way each time.</p></details>
+<details><summary>Is this body fat calculator private?</summary><p>Yes. All math runs in your browser. Nothing you enter is sent anywhere, stored, or tracked.</p></details>
+</div>
+
+<p class="disclaimer"><strong>Disclaimer:</strong> Rough estimate — tape-measure methods can be off by several percentage points. Not a medical measurement, diagnosis, or treatment guide. Not medical advice — talk to a clinician for personal guidance.</p>
+
+<div class="related">
+<h3>Keep reading</h3>
+<a href="https://lookauramax.com/blog/fat-loss-guide.html">→ Fat Loss: The Honest Guide That Actually Works</a>
+<a href="https://lookauramax.com/blog/build-muscle-guide.html">→ How to Build Muscle: The Honest Beginner Guide</a>
+<a href="https://lookauramax.com/tools/bmi-calculator.html">→ Free BMI Calculator</a>
+</div>
+</main>
+<footer><div class="wrap"><p><a href="https://lookauramax.com/">Lookauramax</a> · <a href="https://lookauramax.com/blog/">Blog</a> · <a href="https://lookauramax.com/privacy">Privacy</a> · <a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></footer>
+<script>
+function toggleHip(){
+  var f = document.getElementById('sex').value === 'female';
+  document.getElementById('hipWrap').style.display = f ? 'block' : 'none';
+}
+function showErr(msg){
+  var e = document.getElementById('err');
+  e.textContent = msg; e.classList.add('show');
+  document.getElementById('result').classList.remove('show');
+}
+function calcBF(){
+  var err = document.getElementById('err'); err.classList.remove('show');
+  var sex = document.getElementById('sex').value;
+  var unit = document.getElementById('unit').value;
+  var h = parseFloat(document.getElementById('height').value);
+  var neck = parseFloat(document.getElementById('neck').value);
+  var waist = parseFloat(document.getElementById('waist').value);
+  var hip = parseFloat(document.getElementById('hip').value);
+  if (unit === 'cm'){
+    if (!isFinite(h) || h < 100 || h > 250){ showErr('Please enter a height between 100 and 250 cm.'); return; }
+    if (!isFinite(neck) || neck < 20 || neck > 70){ showErr('Please enter a neck measurement between 20 and 70 cm.'); return; }
+    if (!isFinite(waist) || waist < 40 || waist > 200){ showErr('Please enter a waist measurement between 40 and 200 cm.'); return; }
+    if (sex === 'female' && (!isFinite(hip) || hip < 50 || hip > 220)){ showErr('Please enter a hip measurement between 50 and 220 cm.'); return; }
+  } else {
+    if (!isFinite(h) || h < 40 || h > 100){ showErr('Please enter a height between 40 and 100 inches.'); return; }
+    if (!isFinite(neck) || neck < 8 || neck > 28){ showErr('Please enter a neck measurement between 8 and 28 inches.'); return; }
+    if (!isFinite(waist) || waist < 16 || waist > 80){ showErr('Please enter a waist measurement between 16 and 80 inches.'); return; }
+    if (sex === 'female' && (!isFinite(hip) || hip < 20 || hip > 88)){ showErr('Please enter a hip measurement between 20 and 88 inches.'); return; }
+  }
+  var toIn = function(v){ return unit === 'cm' ? v / 2.54 : v; };
+  var hIn = toIn(h), nIn = toIn(neck), wIn = toIn(waist), hipIn = toIn(hip);
+  var bf;
+  if (sex === 'male'){
+    if (wIn <= nIn){ showErr('Waist must be larger than neck for this formula — please re-check your measurements.'); return; }
+    bf = 86.010 * Math.log10(wIn - nIn) - 70.041 * Math.log10(hIn) + 36.76;
+  } else {
+    if (wIn + hipIn <= nIn){ showErr('Waist + hip must be larger than neck for this formula — please re-check your measurements.'); return; }
+    bf = 163.205 * Math.log10(wIn + hipIn - nIn) - 97.684 * Math.log10(hIn) - 78.387;
+  }
+  if (!isFinite(bf) || bf < 1 || bf > 70){ showErr('Those measurements do not produce a plausible result — please re-check each number and try again.'); return; }
+  var band;
+  if (sex === 'male'){
+    band = bf < 10 ? 'Below the typical healthy band (roughly 10–20% for adult men) — very low body fat can be unhealthy without professional guidance.' :
+           bf <= 20 ? 'Within the typical healthy band for adult men (roughly 10–20%) — a broad reference band, not a personal target.' :
+           bf <= 25 ? 'Above the typical healthy band — often described as the fitness/acceptable range. Steady training and nutrition move this gradually.' :
+           'Above the typical healthy band. A clinician can help you build a safe, sustainable plan — steady progress wins over extreme measures.';
+  } else {
+    band = bf < 18 ? 'Below the typical healthy band (roughly 18–28% for adult women) — very low body fat can be unhealthy without professional guidance.' :
+           bf <= 28 ? 'Within the typical healthy band for adult women (roughly 18–28%) — a broad reference band, not a personal target.' :
+           bf <= 32 ? 'Above the typical healthy band — often described as the fitness/acceptable range. Steady training and nutrition move this gradually.' :
+           'Above the typical healthy band. A clinician can help you build a safe, sustainable plan — steady progress wins over extreme measures.';
+  }
+  document.getElementById('bfOut').textContent = bf.toFixed(1) + '%';
+  document.getElementById('bandOut').textContent = band;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+</body>
+</html>

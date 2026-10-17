@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Calorie Calculator — Daily Calorie Needs (TDEE)</title>
+<meta name="description" content="Free calorie calculator — estimate your daily calorie needs (TDEE) from age, height, weight and activity. Private in-browser math, estimates only.">
+<link rel="canonical" href="https://lookauramax.com/tools/calorie-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Calorie Calculator — Daily Calorie Needs (TDEE)">
+<meta property="og:description" content="Free calorie calculator — estimate your daily calorie needs (TDEE) from age, height, weight and activity. Private in-browser math, estimates only.">
+<meta property="og:url" content="https://lookauramax.com/tools/calorie-calculator.html">
+<meta property="og:image" content="https://lookauramax.com/images/nutrition.svg">
+<meta property="og:image:alt" content="Free Calorie Calculator — Lookauramax tool illustration">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Calorie Calculator — Daily Calorie Needs (TDEE)">
+<meta name="twitter:description" content="Free calorie calculator — estimate your daily calorie needs (TDEE) from age, height, weight and activity. Private in-browser math, estimates only.">
+<meta name="twitter:image" content="https://lookauramax.com/images/nutrition.svg">
+<meta name="twitter:image:alt" content="Free Calorie Calculator — Lookauramax tool illustration">
+<meta name="author" content="Lookauramax Team">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is TDEE?","acceptedAnswer":{"@type":"Answer","text":"TDEE (Total Daily Energy Expenditure) is an estimate of the calories you burn in a day, including basic body functions plus activity. Eating around your TDEE roughly maintains your weight; eating below it tends to reduce weight over time, and eating above it tends to increase it."}},
+{"@type":"Question","name":"How accurate is this calorie calculator?","acceptedAnswer":{"@type":"Answer","text":"It is an estimate based on the Mifflin-St Jeor equation, which is the most widely validated formula for resting metabolism. Real needs vary with body composition, hormones, medication, and daily activity. Treat the result as a starting point and adjust based on real-world results over 2 to 4 weeks."}},
+{"@type":"Question","name":"How many calories should I eat to lose weight safely?","acceptedAnswer":{"@type":"Answer","text":"A commonly suggested approach is a modest deficit of roughly 300–500 kcal per day below maintenance, combined with protein and strength training. Very low intakes — below about 1,200 kcal per day for women or 1,500 for men — need professional supervision and are not recommended on your own."}},
+{"@type":"Question","name":"Is this calorie calculator private?","acceptedAnswer":{"@type":"Answer","text":"Yes. All math runs in your browser. Nothing you enter is sent anywhere, stored, or tracked."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Free Calorie Calculator (TDEE)","url":"https://lookauramax.com/tools/calorie-calculator.html","applicationCategory":"HealthApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Lookauramax","url":"https://lookauramax.com/"},"inLanguage":"en"}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:#FFD14E}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid rgba(255,255,255,.1);padding:18px 0}
+header a{color:#F7F3EA;text-decoration:none;font-weight:900;letter-spacing:.18em}
+header a span{color:#E19A2D}
+.crumb{font-size:13px;color:#A9A29A;margin:28px 0 8px}
+.crumb a{color:#A9A29A;text-decoration:none}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+h2{font-size:26px;margin:36px 0 10px}
+h3{font-size:19px;margin:24px 0 8px;color:#FFD14E}
+p{margin:0 0 14px;color:#D9D2C4}
+ul,ol{margin:0 0 16px 22px;color:#D9D2C4}
+li{margin:6px 0}
+.lede{font-size:19px;color:#A9A29A}
+.tool{background:#121214;border:1px solid rgba(225,154,45,.45);border-radius:16px;padding:26px;margin:28px 0}
+.tool label{display:block;font-weight:700;margin:16px 0 6px}
+.tool label:first-of-type{margin-top:0}
+.tool input,.tool select{width:100%;background:#050505;color:#F7F3EA;border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:12px 14px;font-size:16px}
+.tool input:focus,.tool select:focus{outline:2px solid #E19A2D;border-color:#E19A2D}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.row{grid-template-columns:1fr}}
+.calcbtn{display:inline-block;background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:13px 26px;border-radius:999px;border:none;font-size:16px;cursor:pointer;margin-top:20px}
+.calcbtn:hover{filter:brightness(1.07)}
+.result{display:none;background:#1C1505;border:1px solid rgba(225,154,45,.45);border-radius:14px;padding:22px;margin-top:22px}
+.result.show{display:block}
+.result .bignum{font-size:44px;font-weight:900;color:#FFD14E;line-height:1.1}
+.error{display:none;color:#FF8A8A;font-weight:700;margin-top:14px}
+.error.show{display:block}
+.privacy{font-size:13px;color:#A9A29A;margin-top:16px}
+.cta{background:linear-gradient(180deg,#1C1505,#121210);border:1px solid rgba(225,154,45,.45);border-radius:16px;padding:26px;margin:32px 0}
+.cta h2{margin-top:0}
+.btn{display:inline-block;background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:13px 26px;border-radius:999px;text-decoration:none;margin-top:8px}
+.faq{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:12px}
+.faq details{background:#121214;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 20px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700}
+.faq p{margin-top:10px}
+.disclaimer{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 20px;color:#A9A29A;font-size:14px;margin:28px 0}
+.related{margin:28px 0}
+.related a{display:block;margin:6px 0}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A29A;font-size:14px}
+.post-hero{margin:22px 0 6px}.post-hero img{width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.1);display:block}.post-hero figcaption{color:#8A8272;font-size:12.5px;margin-top:8px}.byline{color:#8A8272;font-size:13px;margin:10px 0 20px}</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://lookauramax.com/">LOOK<span>AURA</span>MAX</a> · <a href="https://lookauramax.com/tools/" style="letter-spacing:0;font-weight:700;color:#A9A29A">Tools</a></div></header>
+<main class="wrap">
+<p class="crumb"><a href="https://lookauramax.com/">Home</a> / <a href="https://lookauramax.com/tools/">Tools</a> / Calorie Calculator</p>
+<h1>Free Calorie Calculator (TDEE)</h1>
+<figure class="post-hero"><img src="/images/nutrition.svg" alt="Free Calorie Calculator — Lookauramax tool illustration" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Lookauramax tool — Free Calorie Calculator</figcaption></figure>
+<p class="byline">By <a href="https://lookauramax.com/about.html">Lookauramax Team</a> · Published 17 Oct 2026 · General information, not medical advice.</p>
+<p class="lede">Your maintenance calories (TDEE) are the calories you burn in a typical day. This calculator estimates them from the Mifflin-St Jeor equation — the most widely validated formula for resting metabolism — plus your activity level. Everything runs in your browser; nothing you type ever leaves this page.</p>
+
+<div class="tool" role="region" aria-label="Calorie calculator">
+<label for="age">Age (years)</label>
+<input id="age" type="number" inputmode="numeric" min="10" max="100" placeholder="e.g. 24">
+<label for="sex">Sex (optional — used only for the BMR formula)</label>
+<select id="sex">
+<option value="avg">Prefer not to say (uses the average)</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+<label for="heightCm">Height (cm)</label>
+<input id="heightCm" type="number" inputmode="decimal" min="100" max="250" placeholder="e.g. 175">
+<label for="weightUnit">Weight unit</label>
+<select id="weightUnit">
+<option value="kg">Kilograms (kg)</option>
+<option value="lbs">Pounds (lbs)</option>
+</select>
+<label for="weight">Weight</label>
+<input id="weight" type="number" inputmode="decimal" min="25" max="400" placeholder="e.g. 70">
+<label for="activity">Activity level</label>
+<select id="activity">
+<option value="1.2">Sedentary — desk job, little exercise</option>
+<option value="1.375">Lightly active — light exercise 1–3 days/week</option>
+<option value="1.55">Moderately active — moderate exercise 3–5 days/week</option>
+<option value="1.725">Very active — hard exercise 6–7 days/week</option>
+<option value="1.9">Extra active — physical job + hard training</option>
+</select>
+<button class="calcbtn" type="button" onclick="calcTDEE()">Calculate my calories →</button>
+<p class="error" id="err" role="alert"></p>
+<div class="result" id="result" aria-live="polite">
+<p style="color:#A9A29A;margin-bottom:4px">Your estimated maintenance calories</p>
+<div class="bignum" id="tdeeOut">–</div>
+<p><strong>BMR (at complete rest):</strong> <span id="bmrOut">–</span> kcal/day</p>
+<p><strong>Safe range to explore:</strong> <span id="rangeOut">–</span> kcal/day — a modest deficit of roughly 300–500 kcal below maintenance for gradual fat loss, or a modest surplus of roughly 200–300 kcal above maintenance for gradual muscle gain.</p>
+<p style="margin-bottom:0">Very low intakes — below about 1,200 kcal/day for women or 1,500 kcal/day for men — need professional supervision. Never chase extreme deficits.</p>
+</div>
+<p class="privacy">🔒 Private: all math runs in your browser. Nothing is sent anywhere, stored, or tracked.</p>
+</div>
+
+<h2>How to use your number</h2>
+<p>Your TDEE is a starting point, not a prescription. Track your weight and energy for 2–4 weeks eating near maintenance: if your weight is steady, the estimate is close. If it drifts, adjust by 100–200 kcal at a time. The most reliable "diet" is the one you can actually repeat — protein at each meal, vegetables, water, sleep, and daily movement beat any extreme plan that lasts a week.</p>
+
+<div class="cta">
+<h2>Turn calories into a daily plan</h2>
+<p>Join Lookauramax for your one-time Join Reward: 1 AuraScan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser — no card.</p>
+<a class="btn" href="https://lookauramax.com/#pricing">See plans &amp; free trial →</a>
+</div>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<details open><summary>What is TDEE?</summary><p>TDEE (Total Daily Energy Expenditure) is an estimate of the calories you burn in a day, including basic body functions plus activity. Eating around your TDEE roughly maintains your weight; eating below it tends to reduce weight over time, and eating above it tends to increase it.</p></details>
+<details><summary>How accurate is this calorie calculator?</summary><p>It is an estimate based on the Mifflin-St Jeor equation, which is the most widely validated formula for resting metabolism. Real needs vary with body composition, hormones, medication, and daily activity. Treat the result as a starting point and adjust based on real-world results over 2 to 4 weeks.</p></details>
+<details><summary>How many calories should I eat to lose weight safely?</summary><p>A commonly suggested approach is a modest deficit of roughly 300–500 kcal per day below maintenance, combined with protein and strength training. Very low intakes — below about 1,200 kcal per day for women or 1,500 for men — need professional supervision and are not recommended on your own.</p></details>
+<details><summary>Is this calorie calculator private?</summary><p>Yes. All math runs in your browser. Nothing you enter is sent anywhere, stored, or tracked.</p></details>
+</div>
+
+<p class="disclaimer"><strong>Disclaimer:</strong> Estimates only, not medical advice. Calorie needs vary with body composition, health conditions, medication, pregnancy, and more. Very low intakes need professional supervision. If you have a medical condition or an eating disorder history, talk to a clinician or dietitian before changing your intake.</p>
+
+<div class="related">
+<h3>Keep reading</h3>
+<a href="https://lookauramax.com/blog/protein-guide.html">→ Protein: How Much You Actually Need</a>
+<a href="https://lookauramax.com/blog/weight-loss-guide.html">→ Weight Loss: The Honest Guide That Actually Works</a>
+<a href="https://lookauramax.com/blog/gain-weight-guide.html">→ How to Gain Weight in a Healthy Way</a>
+</div>
+</main>
+<footer><div class="wrap"><p><a href="https://lookauramax.com/">Lookauramax</a> · <a href="https://lookauramax.com/blog/">Blog</a> · <a href="https://lookauramax.com/privacy">Privacy</a> · <a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></footer>
+<script>
+function showErr(msg){
+  var e = document.getElementById('err');
+  e.textContent = msg; e.classList.add('show');
+  document.getElementById('result').classList.remove('show');
+}
+function calcTDEE(){
+  var err = document.getElementById('err'); err.classList.remove('show');
+  var age = parseFloat(document.getElementById('age').value);
+  var hCm = parseFloat(document.getElementById('heightCm').value);
+  var w = parseFloat(document.getElementById('weight').value);
+  var wUnit = document.getElementById('weightUnit').value;
+  var sex = document.getElementById('sex').value;
+  var act = parseFloat(document.getElementById('activity').value);
+  if (!isFinite(age) || age < 10 || age > 100){ showErr('Please enter an age between 10 and 100.'); return; }
+  if (!isFinite(hCm) || hCm < 100 || hCm > 250){ showErr('Please enter a height between 100 and 250 cm.'); return; }
+  if (!isFinite(w) || w <= 0){ showErr('Please enter your weight.'); return; }
+  var wKg = (wUnit === 'kg') ? w : w * 0.45359237;
+  if (wKg < 25 || wKg > 400){ showErr('Please enter a weight between 25 and 400 kg (55–880 lbs).'); return; }
+  var base = 10 * wKg + 6.25 * hCm - 5 * age;
+  var bmrMale = base + 5, bmrFemale = base - 161;
+  var bmr = (sex === 'male') ? bmrMale : (sex === 'female') ? bmrFemale : (bmrMale + bmrFemale) / 2;
+  var tdee = bmr * act;
+  var lo = Math.round(tdee - 500), hi = Math.round(tdee + 300);
+  document.getElementById('bmrOut').textContent = Math.round(bmr).toLocaleString('en-US');
+  document.getElementById('tdeeOut').textContent = Math.round(tdee).toLocaleString('en-US') + ' kcal/day';
+  document.getElementById('rangeOut').textContent = lo.toLocaleString('en-US') + ' – ' + hi.toLocaleString('en-US');
+  document.getElementById('result').classList.add('show');
+}
+</script>
+</body>
+</html>

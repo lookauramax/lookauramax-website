@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Water Intake Calculator — Free Hydration Guide</title>
+<meta name="description" content="How much water should you drink a day? Get a general daily water guide from your weight and activity. Free, private, in-browser. Not a prescription.">
+<link rel="canonical" href="https://lookauramax.com/tools/water-intake-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Daily Water Intake Calculator — Free Hydration Guide">
+<meta property="og:description" content="How much water should you drink a day? Get a general daily water guide from your weight and activity. Free, private, in-browser. Not a prescription.">
+<meta property="og:url" content="https://lookauramax.com/tools/water-intake-calculator.html">
+<meta property="og:image" content="https://lookauramax.com/images/routine.svg">
+<meta property="og:image:alt" content="Daily Water Intake Calculator — Lookauramax tool illustration">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daily Water Intake Calculator — Free Hydration Guide">
+<meta name="twitter:description" content="How much water should you drink a day? Get a general daily water guide from your weight and activity. Free, private, in-browser. Not a prescription.">
+<meta name="twitter:image" content="https://lookauramax.com/images/routine.svg">
+<meta name="twitter:image:alt" content="Daily Water Intake Calculator — Lookauramax tool illustration">
+<meta name="author" content="Lookauramax Team">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How much water should I drink per day?","acceptedAnswer":{"@type":"Answer","text":"A common general guide is roughly 30–35 ml per kilogram of body weight per day, plus extra for exercise and heat. For a 70 kg adult, that is about 2.1–2.5 litres. Needs vary widely with climate, activity, health conditions, and medication."}},
+{"@type":"Question","name":"Can you drink too much water?","acceptedAnswer":{"@type":"Answer","text":"Yes. Drinking far more water than your body needs can dilute blood sodium (hyponatremia), which is dangerous. Do not force extreme volumes — spread intake through the day and let thirst and urine colour guide you."}},
+{"@type":"Question","name":"Does coffee or tea count as water?","acceptedAnswer":{"@type":"Answer","text":"Mostly yes. Coffee, tea, and other unsweetened drinks hydrate you, and food provides roughly a fifth of daily water. Alcohol does not count — it increases fluid loss."}},
+{"@type":"Question","name":"Is this water calculator private?","acceptedAnswer":{"@type":"Answer","text":"Yes. All math runs in your browser. Nothing you enter is sent anywhere, stored, or tracked."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Daily Water Intake Calculator","url":"https://lookauramax.com/tools/water-intake-calculator.html","applicationCategory":"HealthApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Lookauramax","url":"https://lookauramax.com/"},"inLanguage":"en"}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:#FFD14E}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid rgba(255,255,255,.1);padding:18px 0}
+header a{color:#F7F3EA;text-decoration:none;font-weight:900;letter-spacing:.18em}
+header a span{color:#E19A2D}
+.crumb{font-size:13px;color:#A9A29A;margin:28px 0 8px}
+.crumb a{color:#A9A29A;text-decoration:none}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+h2{font-size:26px;margin:36px 0 10px}
+h3{font-size:19px;margin:24px 0 8px;color:#FFD14E}
+p{margin:0 0 14px;color:#D9D2C4}
+ul,ol{margin:0 0 16px 22px;color:#D9D2C4}
+li{margin:6px 0}
+.lede{font-size:19px;color:#A9A29A}
+.tool{background:#121214;border:1px solid rgba(225,154,45,.45);border-radius:16px;padding:26px;margin:28px 0}
+.tool label{display:block;font-weight:700;margin:16px 0 6px}
+.tool label:first-of-type{margin-top:0}
+.tool input,.tool select{width:100%;background:#050505;color:#F7F3EA;border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:12px 14px;font-size:16px}
+.tool input:focus,.tool select:focus{outline:2px solid #E19A2D;border-color:#E19A2D}
+.calcbtn{display:inline-block;background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:13px 26px;border-radius:999px;border:none;font-size:16px;cursor:pointer;margin-top:20px}
+.calcbtn:hover{filter:brightness(1.07)}
+.result{display:none;background:#1C1505;border:1px solid rgba(225,154,45,.45);border-radius:14px;padding:22px;margin-top:22px}
+.result.show{display:block}
+.result .bignum{font-size:36px;font-weight:900;color:#FFD14E;line-height:1.15}
+.error{display:none;color:#FF8A8A;font-weight:700;margin-top:14px}
+.error.show{display:block}
+.privacy{font-size:13px;color:#A9A29A;margin-top:16px}
+.cta{background:linear-gradient(180deg,#1C1505,#121210);border:1px solid rgba(225,154,45,.45);border-radius:16px;padding:26px;margin:32px 0}
+.cta h2{margin-top:0}
+.btn{display:inline-block;background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:13px 26px;border-radius:999px;text-decoration:none;margin-top:8px}
+.faq{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:12px}
+.faq details{background:#121214;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 20px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700}
+.faq p{margin-top:10px}
+.disclaimer{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 20px;color:#A9A29A;font-size:14px;margin:28px 0}
+.related{margin:28px 0}
+.related a{display:block;margin:6px 0}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A29A;font-size:14px}
+.post-hero{margin:22px 0 6px}.post-hero img{width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.1);display:block}.post-hero figcaption{color:#8A8272;font-size:12.5px;margin-top:8px}.byline{color:#8A8272;font-size:13px;margin:10px 0 20px}</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://lookauramax.com/">LOOK<span>AURA</span>MAX</a> · <a href="https://lookauramax.com/tools/" style="letter-spacing:0;font-weight:700;color:#A9A29A">Tools</a></div></header>
+<main class="wrap">
+<p class="crumb"><a href="https://lookauramax.com/">Home</a> / <a href="https://lookauramax.com/tools/">Tools</a> / Water Intake Calculator</p>
+<h1>Daily Water Intake Calculator</h1>
+<figure class="post-hero"><img src="/images/routine.svg" alt="Daily Water Intake Calculator — Lookauramax tool illustration" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Lookauramax tool — Daily Water Intake Calculator</figcaption></figure>
+<p class="byline">By <a href="https://lookauramax.com/about.html">Lookauramax Team</a> · Published 17 Oct 2026 · General information, not medical advice.</p>
+<p class="lede">There is no one-size-fits-all water number — but there is a sensible starting range. This calculator gives a general daily water guide from your weight and activity. Everything runs in your browser; nothing you type ever leaves this page.</p>
+
+<div class="tool" role="region" aria-label="Water intake calculator">
+<label for="weightUnit">Weight unit</label>
+<select id="weightUnit">
+<option value="kg">Kilograms (kg)</option>
+<option value="lbs">Pounds (lbs)</option>
+</select>
+<label for="weight">Weight</label>
+<input id="weight" type="number" inputmode="decimal" min="25" max="400" placeholder="e.g. 70">
+<label for="activity">Daily activity / exercise</label>
+<select id="activity">
+<option value="0">Light — mostly sitting, little exercise</option>
+<option value="250">Moderate — some exercise or active work</option>
+<option value="500">High — hard training, physical job, or hot climate</option>
+</select>
+<button class="calcbtn" type="button" onclick="calcWater()">Show my water guide →</button>
+<p class="error" id="err" role="alert"></p>
+<div class="result" id="result" aria-live="polite">
+<p style="color:#A9A29A;margin-bottom:4px">General daily water guide</p>
+<div class="bignum" id="waterOut">–</div>
+<p id="cupsOut" style="margin-bottom:0"></p>
+<p style="margin-bottom:0;color:#A9A29A;font-size:14px">Includes water from food and other drinks. Spread intake through the day — do not force it all at once.</p>
+</div>
+<p class="privacy">🔒 Private: all math runs in your browser. Nothing is sent anywhere, stored, or tracked.</p>
+</div>
+
+<h2>How to actually hit it</h2>
+<ul>
+<li><strong>Start the day with a glass</strong> — overnight you lose fluid through breathing and sweat.</li>
+<li><strong>Keep water visible</strong> — a bottle on your desk beats willpower.</li>
+<li><strong>Drink with meals</strong> — it is the easiest habit anchor there is.</li>
+<li><strong>Check the colour test:</strong> pale straw urine usually means you are hydrated; dark yellow means drink more. Clear-as-water every time can mean you are overdoing it.</li>
+<li><strong>Exercise days:</strong> drink during and after training, and replace what you sweated out — do not wait until you are very thirsty.</li>
+</ul>
+
+<div class="cta">
+<h2>Turn hydration into a daily habit</h2>
+<p>Join Lookauramax for your one-time Join Reward: 1 AuraScan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser — no card.</p>
+<a class="btn" href="https://lookauramax.com/#pricing">See plans &amp; free trial →</a>
+</div>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<details open><summary>How much water should I drink per day?</summary><p>A common general guide is roughly 30–35 ml per kilogram of body weight per day, plus extra for exercise and heat. For a 70 kg adult, that is about 2.1–2.5 litres. Needs vary widely with climate, activity, health conditions, and medication.</p></details>
+<details><summary>Can you drink too much water?</summary><p>Yes. Drinking far more water than your body needs can dilute blood sodium (hyponatremia), which is dangerous. Do not force extreme volumes — spread intake through the day and let thirst and urine colour guide you.</p></details>
+<details><summary>Does coffee or tea count as water?</summary><p>Mostly yes. Coffee, tea, and other unsweetened drinks hydrate you, and food provides roughly a fifth of daily water. Alcohol does not count — it increases fluid loss.</p></details>
+<details><summary>Is this water calculator private?</summary><p>Yes. All math runs in your browser. Nothing you enter is sent anywhere, stored, or tracked.</p></details>
+</div>
+
+<p class="disclaimer"><strong>Disclaimer:</strong> General guide, not a prescription. Needs vary with climate, activity, health conditions, and medication — follow your clinician's advice if you have kidney or heart conditions, or if you take medication that affects fluid balance.</p>
+
+<div class="related">
+<h3>Keep reading</h3>
+<a href="https://lookauramax.com/blog/sleep-glow-up.html">→ Sleep and Your Skin: What Actually Helps</a>
+<a href="https://lookauramax.com/blog/aura-routine-daily.html">→ The Aura Routine: Your Daily Glow-Up Checklist</a>
+<a href="https://lookauramax.com/tools/calorie-calculator.html">→ Free Calorie Calculator (TDEE)</a>
+</div>
+</main>
+<footer><div class="wrap"><p><a href="https://lookauramax.com/">Lookauramax</a> · <a href="https://lookauramax.com/blog/">Blog</a> · <a href="https://lookauramax.com/privacy">Privacy</a> · <a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></footer>
+<script>
+function showErr(msg){
+  var e = document.getElementById('err');
+  e.textContent = msg; e.classList.add('show');
+  document.getElementById('result').classList.remove('show');
+}
+function calcWater(){
+  var err = document.getElementById('err'); err.classList.remove('show');
+  var w = parseFloat(document.getElementById('weight').value);
+  var wUnit = document.getElementById('weightUnit').value;
+  var extra = parseFloat(document.getElementById('activity').value);
+  if (!isFinite(w) || w <= 0){ showErr('Please enter your weight.'); return; }
+  var wKg = (wUnit === 'kg') ? w : w * 0.45359237;
+  if (wKg < 25 || wKg > 400){ showErr('Please enter a weight between 25 and 400 kg (55–880 lbs).'); return; }
+  var loMl = Math.round(wKg * 30 + extra);
+  var hiMl = Math.round(wKg * 35 + extra);
+  var fmtL = function(ml){ return (ml / 1000).toFixed(1) + ' L'; };
+  var cups = function(ml){ return (ml / 240).toFixed(1); };
+  document.getElementById('waterOut').textContent = fmtL(loMl) + ' – ' + fmtL(hiMl) + ' per day';
+  document.getElementById('cupsOut').textContent = 'About ' + cups(loMl) + '–' + cups(hiMl) + ' cups (240 ml) per day, including water from food and other drinks.';
+  document.getElementById('result').classList.add('show');
+}
+</script>
+</body>
+</html>

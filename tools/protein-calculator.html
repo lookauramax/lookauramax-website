@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Daily Protein Calculator — How Much Do You Need?</title>
+<meta name="description" content="Free protein calculator: enter weight + activity level for an honest daily protein range in g/day, plus food examples. No sign-up, nothing stored.">
+<link rel="canonical" href="https://lookauramax.com/tools/protein-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Daily Protein Calculator — How Much Protein Do You Need?">
+<meta property="og:description" content="Free daily protein calculator: enter your weight and activity level to get an honest protein range in grams per day, plus simple food examples. No sign-up, nothing stored.">
+<meta property="og:url" content="https://lookauramax.com/tools/protein-calculator.html">
+<meta property="og:image" content="https://lookauramax.com/images/nutrition.svg">
+<meta property="og:image:alt" content="Daily Protein Calculator — Lookauramax free tool illustration">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Daily Protein Calculator — How Much Protein Do You Need?">
+<meta name="twitter:description" content="Free daily protein calculator: enter your weight and activity level to get an honest protein range in grams per day, plus simple food examples.">
+<meta name="twitter:image" content="https://lookauramax.com/images/nutrition.svg">
+<meta name="twitter:image:alt" content="Daily Protein Calculator — Lookauramax free tool illustration">
+<meta name="author" content="Lookauramax Team">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How much protein do I need per day?","acceptedAnswer":{"@type":"Answer","text":"It depends on your body weight and activity level. General guidance is roughly 0.8 g per kg of body weight for sedentary adults, rising to around 1.2–2.0 g per kg for active people and those doing strength training. This calculator gives you a range, not a single exact number."}},
+{"@type":"Question","name":"Is more protein always better?","acceptedAnswer":{"@type":"Answer","text":"No. Beyond your body's needs, extra protein does not build extra muscle — training, sleep, and overall diet matter more. Very high intakes can also be hard on digestion and are not suitable for everyone."}},
+{"@type":"Question","name":"Can I get enough protein without supplements?","acceptedAnswer":{"@type":"Answer","text":"Yes, for most people. Everyday foods — lentils, beans, eggs, dairy, chicken, fish, tofu, nuts — cover typical protein needs. Supplements are optional, not required."}},
+{"@type":"Question","name":"Who should not use this calculator's result as advice?","acceptedAnswer":{"@type":"Answer","text":"People with kidney conditions, pregnant or breastfeeding people, teenagers, and anyone with a medical condition or prescribed diet should follow their clinician's or dietitian's guidance instead of a general calculator."}}
+]}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:#FFD14E}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid rgba(255,255,255,.1);padding:18px 0}
+header a{color:#F7F3EA;text-decoration:none;font-weight:900;letter-spacing:.18em}
+header a span{color:#E19A2D}
+.crumb{font-size:13px;color:#A9A29A;margin:28px 0 8px}
+.crumb a{color:#A9A29A;text-decoration:none}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+h2{font-size:26px;margin:36px 0 10px}
+h3{font-size:19px;margin:24px 0 8px;color:#FFD14E}
+p{margin:0 0 14px;color:#D9D2C4}
+ul,ol{margin:0 0 16px 22px;color:#D9D2C4}
+li{margin:6px 0}
+.lede{font-size:19px;color:#A9A29A}
+.cta{background:linear-gradient(180deg,#1C1505,#121210);border:1px solid rgba(225,154,45,.45);border-radius:16px;padding:26px;margin:32px 0}
+.cta h2{margin-top:0}
+.btn{display:inline-block;background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:13px 26px;border-radius:999px;text-decoration:none;margin-top:8px}
+.faq{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:12px}
+.faq h2{margin-bottom:4px}
+.faq details{background:#121214;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 20px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700}
+.faq p{margin-top:10px}
+.disclaimer{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 20px;color:#A9A29A;font-size:14px;margin:28px 0}
+.related{margin:28px 0}
+.related a{display:block;margin:6px 0}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A29A;font-size:14px}
+.post-hero{margin:22px 0 6px}.post-hero img{width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.1);display:block}.post-hero figcaption{color:#8A8272;font-size:12.5px;margin-top:8px}.byline{color:#8A8272;font-size:13px;margin:10px 0 20px}
+.tool{background:#121214;border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:26px;margin:28px 0}
+.tool label{display:block;font-weight:700;margin:18px 0 6px}
+.tool label:first-child{margin-top:0}
+.tool input,.tool select{width:100%;background:#050505;border:1px solid rgba(255,255,255,.2);border-radius:10px;color:#F7F3EA;padding:12px 14px;font-size:16px}
+.tool input:focus,.tool select:focus{outline:2px solid #E19A2D;border-color:#E19A2D}
+.tool button{background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;border:0;border-radius:999px;padding:13px 26px;font-size:16px;cursor:pointer;margin-top:20px}
+.tool button:hover{filter:brightness(1.08)}
+.err{color:#FF9A8A;font-size:14px;margin-top:10px;min-height:20px}
+.result{display:none;background:#1C1505;border:1px solid rgba(225,154,45,.5);border-radius:14px;padding:22px;margin-top:22px}
+.result .big{font-size:30px;font-weight:900;color:#FFD14E}
+.privacy-note{font-size:13px;color:#A9A29A;margin-top:14px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://lookauramax.com/">LOOK<span>AURA</span>MAX</a> · <a href="https://lookauramax.com/tools/" style="letter-spacing:0;font-weight:700;color:#A9A29A">Tools</a></div></header>
+<main class="wrap">
+<p class="crumb"><a href="https://lookauramax.com/tools/">Free Tools</a> / Daily Protein Calculator</p>
+<h1>Daily Protein Calculator</h1>
+<figure class="post-hero"><img src="/images/nutrition.svg" alt="Daily Protein Calculator — Lookauramax free tool illustration" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Lookauramax free tool — Daily Protein Calculator</figcaption></figure>
+<p class="byline">By <a href="https://lookauramax.com/about.html">Lookauramax Team</a> · Published 17 Oct 2026 · General information, not medical advice.</p>
+<p class="lede">How much protein do you actually need? Enter your weight and activity level, and this free calculator gives you an honest range in grams per day — plus simple food examples. Everything runs in your browser. Nothing is sent anywhere, stored, or tracked.</p>
+
+<div class="tool" role="form" aria-label="Daily protein calculator">
+<label for="weight">Your weight (kg)</label>
+<input id="weight" type="number" inputmode="decimal" min="20" max="300" step="0.1" placeholder="e.g. 70">
+<label for="activity">Activity level</label>
+<select id="activity">
+<option value="sedentary">Sedentary — mostly sitting, little exercise</option>
+<option value="active">Active — regular exercise, 3–5 days a week</option>
+<option value="strength">Strength training — lifting / muscle building focus</option>
+</select>
+<button type="button" onclick="calcProtein()">Calculate my protein range</button>
+<p class="err" id="err" role="alert"></p>
+<div class="result" id="result" aria-live="polite"></div>
+<p class="privacy-note">🔒 Private by design: this tool runs 100% in your browser. Your weight is never sent, stored, or tracked.</p>
+</div>
+
+<h2>What the numbers mean</h2>
+<p>Protein needs scale with body weight and activity. General guidance used here: <strong>0.8 g/kg</strong> for sedentary adults, <strong>1.2–1.6 g/kg</strong> for active people, and <strong>1.6–2.0 g/kg</strong> for people focused on strength training. The calculator shows a range because no single number fits everyone — appetite, total calories, training, and health all shift it.</p>
+<p>Chasing extreme protein numbers is not the goal. Hitting a reasonable range from ordinary food, consistently, beats any perfect number you follow for three days and quit.</p>
+
+<h2>Simple food examples</h2>
+<ul>
+<li><strong>Lentils / dal (1 cooked cup):</strong> ~18 g protein</li>
+<li><strong>Eggs (2 large):</strong> ~12 g protein</li>
+<li><strong>Greek yoghurt / curd (1 cup):</strong> ~15–20 g protein</li>
+<li><strong>Chicken breast (100 g cooked):</strong> ~30 g protein</li>
+<li><strong>Tofu (100 g):</strong> ~17 g protein</li>
+<li><strong>Peanuts (a small handful, ~30 g):</strong> ~7 g protein</li>
+</ul>
+<p>You do not need supplements to reach a normal range. Supplements are optional convenience, not a requirement.</p>
+
+<div class="cta">
+<h2>Build your aura, one day at a time</h2>
+<p>Lookauramax gives you an honest starting point: an on-device AuraScan, a 90-day plan, and a daily routine. Join and claim your one-time Join Reward — 1 scan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser. No card needed.</p>
+<a class="btn" href="https://lookauramax.com/#pricing">See plans &amp; free trial →</a>
+</div>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<details open><summary>How much protein do I need per day?</summary><p>It depends on your body weight and activity level. General guidance is roughly 0.8 g per kg of body weight for sedentary adults, rising to around 1.2–2.0 g per kg for active people and those doing strength training. This calculator gives you a range, not a single exact number.</p></details>
+<details><summary>Is more protein always better?</summary><p>No. Beyond your body's needs, extra protein does not build extra muscle — training, sleep, and overall diet matter more. Very high intakes can also be hard on digestion and are not suitable for everyone.</p></details>
+<details><summary>Can I get enough protein without supplements?</summary><p>Yes, for most people. Everyday foods — lentils, beans, eggs, dairy, chicken, fish, tofu, nuts — cover typical protein needs. Supplements are optional, not required.</p></details>
+<details><summary>Who should not use this calculator's result as advice?</summary><p>People with kidney conditions, pregnant or breastfeeding people, teenagers, and anyone with a medical condition or prescribed diet should follow their clinician's or dietitian's guidance instead of a general calculator.</p></details>
+</div>
+
+<p class="disclaimer"><strong>Disclaimer:</strong> General nutrition information, not a personal diet prescription. People with kidney conditions or medical needs should follow clinician guidance. This tool does not diagnose, treat, or prescribe anything.</p>
+
+<div class="related">
+<h3>Keep reading</h3>
+<a href="https://lookauramax.com/blog/protein-guide.html">→ Protein Guide: How Much Do You Really Need?</a>
+<a href="https://lookauramax.com/blog/gain-weight-guide.html">→ How to Gain Weight the Healthy Way</a>
+<a href="https://lookauramax.com/blog/build-muscle-guide.html">→ How to Build Muscle: The Honest Beginner Guide</a>
+</div>
+</main>
+<footer><div class="wrap"><p><a href="https://lookauramax.com/">Lookauramax</a> · <a href="https://lookauramax.com/tools/">Tools</a> · <a href="https://lookauramax.com/blog/">Blog</a> · <a href="https://lookauramax.com/privacy">Privacy</a> · <a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></footer>
+<script>
+function calcProtein(){
+  var err=document.getElementById('err'), res=document.getElementById('result');
+  err.textContent=''; res.style.display='none'; res.innerHTML='';
+  var w=parseFloat(document.getElementById('weight').value);
+  if(isNaN(w)||w<20||w>300){ err.textContent='Please enter a weight between 20 and 300 kg.'; return; }
+  var a=document.getElementById('activity').value, lo, hi, label;
+  if(a==='sedentary'){ lo=0.8; hi=1.0; label='Sedentary'; }
+  else if(a==='active'){ lo=1.2; hi=1.6; label='Active'; }
+  else { lo=1.6; hi=2.0; label='Strength training'; }
+  var gLo=Math.round(w*lo), gHi=Math.round(w*hi);
+  res.innerHTML='<p>For '+w+' kg · '+label+'</p><p class="big">'+gLo+'–'+gHi+' g protein / day</p><p>That is roughly '+(gLo/3|0)+'–'+(gHi/3|0)+' g per meal across 3 meals. Spread protein through the day, drink water, and keep the rest of your diet balanced — protein alone does not build muscle; training and sleep do the rest.</p>';
+  res.style.display='block';
+}
+</script>
+</body>
+</html>
