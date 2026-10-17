@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How AuraScan Works: Rule-Based Scores, Not AI Ratings</title>
+<meta name="description" content="How AuraScan works: on-device, rule-based estimates from photo signals. Bands, confidence, fairness gate — and what it never scores.">
+<link rel="canonical" href="https://lookauramax.com/blog/how-aurascan-works.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is AuraScan AI?","acceptedAnswer":{"@type":"Answer","text":"No. AuraScan is a rule-based estimate, not AI. It uses transparent heuristics from measured photo signals, and every result says so plainly."}},
+{"@type":"Question","name":"What does AuraScan score?","acceptedAnswer":{"@type":"Answer","text":"Only actionable traits: skin, hair, brows, opt-in beard, smile, posture, and photo quality. Results show bands — Needs Work, Good, Great — plus Why, Action, and confidence."}},
+{"@type":"Question","name":"Does AuraScan upload my photo?","acceptedAnswer":{"@type":"Answer","text":"No. The photo is analysed on your device and never uploaded or stored in the cloud. Only small data like scores and progress syncs."}},
+{"@type":"Question","name":"Why did AuraScan give no score?","acceptedAnswer":{"@type":"Answer","text":"Low confidence means no score. If the photo is too dark, blurry, or poorly framed, the honest answer is to retake it — not to invent a number."}}
+]}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:#FFD14E}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid rgba(255,255,255,.1);padding:18px 0}
+header a{color:#F7F3EA;text-decoration:none;font-weight:900;letter-spacing:.18em}
+header a span{color:#E19A2D}
+.crumb{font-size:13px;color:#A9A29A;margin:28px 0 8px}
+.crumb a{color:#A9A29A;text-decoration:none}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+h2{font-size:26px;margin:36px 0 10px}
+h3{font-size:19px;margin:24px 0 8px;color:#FFD14E}
+p{margin:0 0 14px;color:#D9D2C4}
+ul,ol{margin:0 0 16px 22px;color:#D9D2C4}
+li{margin:6px 0}
+.lede{font-size:19px;color:#A9A29A}
+.cta{background:linear-gradient(180deg,#1C1505,#121210);border:1px solid rgba(225,154,45,.45);border-radius:16px;padding:26px;margin:32px 0}
+.cta h2{margin-top:0}
+.btn{display:inline-block;background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:13px 26px;border-radius:999px;text-decoration:none;margin-top:8px}
+.faq{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:12px}
+.faq details{background:#121214;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 20px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700}
+.faq p{margin-top:10px}
+.disclaimer{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 20px;color:#A9A29A;font-size:14px;margin:28px 0}
+.related{margin:28px 0}
+.related a{display:block;margin:6px 0}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A29A;font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="https://lookauramax.com/">LOOK<span>AURA</span>MAX</a> · <a href="https://lookauramax.com/blog/" style="letter-spacing:0;font-weight:700;color:#A9A29A">Blog</a></div></header>
+<main class="wrap">
+<p class="crumb"><a href="https://lookauramax.com/blog/">Blog</a> / How AuraScan Works</p>
+<h1>How AuraScan Works: Rule-Based Scores, Not AI Ratings</h1>
+<p class="lede">AuraScan is not an AI judge. It is a transparent, on-device, rule-based estimate that measures only what you can act on — and refuses to guess when the photo is not good enough.</p>
+
+<p>Most face apps hide their method behind "AI." That word sounds impressive, but it tells you nothing: what was measured, how, and how confident the result is. Lookauramax does the opposite. AuraScan's method is deliberately simple and explainable: it measures photo signals on your device, applies published-style rules, and shows you bands, reasons, and confidence. If you cannot understand a score, you cannot trust it — and if you cannot trust it, it should not be shown to you.</p>
+
+<h2>Step 1: the photo stays on your phone</h2>
+<p>When you take or pick a photo, it is processed in your phone's memory. It is never uploaded, never stored in the cloud, and never reviewed by anyone. After analysis, the photo data is wiped from the working buffer. What syncs to your account is small data: the resulting scores, your plan, your progress, your streaks, your settings. The photo itself never leaves the device.</p>
+<p>This is a privacy design, not a privacy promise. There is no photo library on a server to leak, because the photo was never sent.</p>
+
+<h2>Step 2: photo quality is checked first</h2>
+<p>Before any trait is scored, the app checks whether the photo is good enough to be fair. It looks at brightness, sharpness, framing, and whether the face is reasonably centred and front-facing. A photo that is too dark, too blurry, or badly framed produces a low-confidence reading — and a low-confidence reading produces <strong>no score</strong>.</p>
+<p>That is a deliberate choice. A bad photo with a confident-looking number would be a lie: it would punish you for lighting, not for your skin or hair. The honest response is a retake prompt with specific guidance — more light, steadier hand, face centred — plus one free retake if the first scan was low-confidence. See our <a href="photo-tips-scan.html">scan photo guide</a> for the full setup.</p>
+
+<h2>Step 3: transparent rules measure photo signals</h2>
+<p>For photos that pass the quality check, the engine measures ratio-based photo signals — things like local variation, texture, edge sharpness, and colour consistency across regions of the frame — and applies fixed, explainable rules to produce trait scores. Every signal is a ratio (variation relative to the mean), not an absolute brightness value. That matters: it means the same photo, darkened, produces nearly the same scores. Absolute lightness is never a score input, so darker skin and darker photos are never scored lower for being darker.</p>
+<p>The engine does not detect identity, does not recognise who you are, and does not compare you to other people. There is no face database, no crowd ranking, no "people like you" model. There is just your photo, measured against fixed rules, on your device.</p>
+
+<h2>Step 4: bands, not numbers to obsess over</h2>
+<p>Results are shown as bands: <strong>Needs Work (below 50), Good (50–74), Great (75 and above)</strong>. Internally, scores are 0–100 for trend tracking, but the app does not present a precise-looking number as if it were a measurement of your worth. Bands are honest about the precision of the method: the difference between 62 and 64 is noise; the difference between Needs Work and Good is a real signal.</p>
+<p>Scores also stay in a narrow, non-shaming range. The method never produces extreme low scores designed to scare you into paying, and never produces extreme high scores designed to flatter you. Every trait result carries three things: <strong>Why</strong> (what the measurement saw), <strong>Action</strong> (what to do about it), and <strong>confidence</strong> (how much to trust this reading).</p>
+
+<h2>What AuraScan scores</h2>
+<ul>
+<li><strong>Skin:</strong> clarity and evenness signals from the skin region, framed as texture and consistency — not colour or lightness.</li>
+<li><strong>Hair:</strong> neatness and condition signals from the hair region.</li>
+<li><strong>Brows:</strong> tidiness and definition signals from the brow region.</li>
+<li><strong>Beard (opt-in only):</strong> scored only if you opt in. Skipped entirely otherwise.</li>
+<li><strong>Smile:</strong> a framing and expression proxy — capped, because a photo cannot measure how your smile feels in person.</li>
+<li><strong>Posture:</strong> a framing hint from head and shoulder positioning — guidance, not a medical assessment.</li>
+<li><strong>Photo quality:</strong> brightness, sharpness, and framing — because an unfair photo deserves a retake, not a score.</li>
+</ul>
+
+<h2>What AuraScan never scores</h2>
+<p>Attractiveness, bone structure, jaw shape, age, race, inferred gender, medical conditions, surgery need, comparison with others, and skin lightness. These are either unchangeable, unmeasurable by a photo honestly, or things no app should judge. If a trait cannot lead to a useful, safe action, it does not belong in a score.</p>
+
+<h2>The fairness gate</h2>
+<p>Every method has limits, and honest products state theirs. AuraScan includes a fairness gate: if a trait reading drops by more than 15 points in a way that suggests a measurement problem rather than a real change, that trait is <strong>skipped</strong>, not scored low, and the limitation is disclosed. A skipped trait is not a failure — it is the system refusing to guess.</p>
+<p>Two honest caveats. First, the regions are frame-geometry approximations — the engine does not run face detection, landmarks, or segmentation, and the Why strings say so. Second, no fairness claim is made before a 200-photo human review is completed. Until that review is done, the app does not claim to be "fairness-verified." The gate exists, the limits are disclosed, and the verification is still to come.</p>
+
+<h2>Why "rule-based, not AI" matters</h2>
+<p>Calling something "AI" implies a system that learned from data, generalises, and can be wrong in ways nobody can explain. AuraScan is the opposite: fixed rules, applied the same way every time, on your device, with results you can read and challenge. The same photo produces the same scores. The method can be described in a document. And when it is unsure, it says so.</p>
+<p>That transparency is the product. A glow-up app earns trust by showing its working — not by hiding behind a buzzword.</p>
+
+<div class="cta">
+<h2>Try your first AuraScan</h2>
+<p>Join Lookauramax and claim your one-time Join Reward: 1 AuraScan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser. No card needed.</p>
+<a class="btn" href="https://lookauramax.com/#pricing">See plans &amp; free trial →</a>
+</div>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<details open><summary>Is AuraScan AI?</summary><p>No. AuraScan is a rule-based estimate, not AI. It uses transparent heuristics from measured photo signals, and every result says so plainly.</p></details>
+<details><summary>What does AuraScan score?</summary><p>Only actionable traits: skin, hair, brows, opt-in beard, smile, posture, and photo quality. Results show bands — Needs Work, Good, Great — plus Why, Action, and confidence.</p></details>
+<details><summary>Does AuraScan upload my photo?</summary><p>No. The photo is analysed on your device and never uploaded or stored in the cloud. Only small data like scores and progress syncs.</p></details>
+<details><summary>Why did AuraScan give no score?</summary><p>Low confidence means no score. If the photo is too dark, blurry, or poorly framed, the honest answer is to retake it — not to invent a number.</p></details>
+</div>
+
+<p class="disclaimer"><strong>Disclaimer:</strong> AuraScan provides rule-based estimates, not medical advice, diagnosis, or a measurement of attractiveness. Results depend on photo quality and are a starting point for routines, not a clinical assessment.</p>
+
+<div class="related">
+<h3>Keep reading</h3>
+<a href="photo-tips-scan.html">→ How to Take a Good Scan Photo: Lighting, Angle, Framing</a>
+<a href="jawline-truth.html">→ The Truth About Jawline: Spot Reduction Is a Myth</a>
+<a href="what-is-lookauramax.html">→ What Is Lookauramax? The Private Glow-Up App Explained</a>
+</div>
+</main>
+<footer><div class="wrap"><p><a href="https://lookauramax.com/">Lookauramax</a> · <a href="https://lookauramax.com/blog/">Blog</a> · <a href="https://lookauramax.com/privacy">Privacy</a> · <a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></footer>
+</body>
+</html>
