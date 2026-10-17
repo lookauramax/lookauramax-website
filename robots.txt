@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lookauramax.com/sitemap.xml
