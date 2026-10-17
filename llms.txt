@@ -77,6 +77,20 @@
 - Cancel in 2 taps in Google Play. Deleting the app does not cancel a subscription.
 - Contact: support@lookauramax.com.
 
+## Free Tools (private — all math runs in the visitor's browser, no data sent anywhere)
+- [BMI Calculator](https://lookauramax.com/tools/bmi-calculator.html)
+- [Calorie Calculator (TDEE)](https://lookauramax.com/tools/calorie-calculator.html)
+- [Healthy Weight Range](https://lookauramax.com/tools/healthy-weight-range.html)
+- [Body Fat Calculator](https://lookauramax.com/tools/body-fat-calculator.html)
+- [Water Intake Calculator](https://lookauramax.com/tools/water-intake-calculator.html)
+- [Protein Calculator](https://lookauramax.com/tools/protein-calculator.html)
+- [Height & Weight Converter](https://lookauramax.com/tools/unit-converter.html)
+- [Skin Type Quiz](https://lookauramax.com/tools/skin-type-quiz.html)
+- [Routine Builder](https://lookauramax.com/tools/routine-builder.html)
+- [90-Day Glow-Up Planner](https://lookauramax.com/tools/90-day-planner.html)
+- [Hair Type Quiz](https://lookauramax.com/tools/hair-type-quiz.html)
+- [Habit Streak Tracker](https://lookauramax.com/tools/habit-streak-tracker.html)
+
 ## Optional
 
 - [Sitemap](https://lookauramax.com/sitemap.xml): Full sitemap.
