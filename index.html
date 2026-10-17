@@ -246,10 +246,10 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;color:var(--mut);fon
 <h2>One plan. Every feature.</h2>
 <p class="lede">Every paid plan includes the full app. No plan gates features by length. No ads. No weekly plan. No lifetime plan.</p>
 <div class="toggle" role="group" aria-label="Pricing region">
-<button id="btn-in" class="active" onclick="showRegion('in')">India (₹)</button>
-<button id="btn-us" onclick="showRegion('us')">United States ($)</button>
+<button id="btn-us" class="active" onclick="showRegion('us')">United States ($)</button>
+<button id="btn-in" onclick="showRegion('in')">India (₹)</button>
 </div>
-<div id="pricing-in">
+<div id="pricing-in" style="display:none">
 <div class="pricing">
 <div class="pcard"><span class="tag ghost">Flexible</span><div class="p-name">Monthly</div><div class="p-price">₹199</div><div class="p-per">₹199 / month · billed monthly</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Cancel in 2 taps</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
 <div class="pcard hero"><span class="tag">★ Best Value</span><div class="p-name">3-Month</div><div class="p-price">₹399 <small>total</small></div><div class="p-per">₹133 / month · Save 33%<br>Complete 1 transformation</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Lowest total cost for 1 transformation</li></ul><a class="btn btn-gold" href="#faq">Start free trial →</a></div>
@@ -257,7 +257,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;color:var(--mut);fon
 <div class="pcard"><span class="tag ghost">Best savings / month</span><div class="p-name">Yearly</div><div class="p-price">₹999 <small>total</small></div><div class="p-per">₹83.25 / month · Save 58%<br>Lowest per-month cost</div><ul><li>14-day free trial</li><li>Full app, all features</li><li>Best for a full year</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
 </div>
 </div>
-<div id="pricing-us" style="display:none">
+<div id="pricing-us">
 <div class="pricing">
 <div class="pcard"><span class="tag ghost">Flexible</span><div class="p-name">Monthly</div><div class="p-price">$9.99</div><div class="p-per">$9.99 / month · billed monthly</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Cancel in 2 taps</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
 <div class="pcard hero"><span class="tag">★ Best Value</span><div class="p-name">3-Month</div><div class="p-price">$19.99 <small>total</small></div><div class="p-per">$6.66 / month · Save 33%<br>Complete 1 transformation</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Lowest total cost for 1 transformation</li></ul><a class="btn btn-gold" href="#faq">Start free trial →</a></div>
@@ -265,7 +265,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;color:var(--mut);fon
 <div class="pcard"><span class="tag ghost">Best savings / month</span><div class="p-name">Yearly</div><div class="p-price">$49.99 <small>total</small></div><div class="p-per">$4.17 / month · Save 58%<br>Lowest per-month cost</div><ul><li>14-day free trial</li><li>Full app, all features</li><li>Best for a full year</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
 </div>
 </div>
-<p style="color:var(--mut);font-size:14.5px;margin-top:20px">Available worldwide on Google Play, with local pricing in 10 launch markets: India, the United States, the UK, Brazil, Indonesia, Philippines, Mexico, Nigeria, Pakistan, and Bangladesh. The exact price is always shown in Google Play before you pay.</p>
+<p style="color:var(--mut);font-size:14.5px;margin-top:20px">Prices shown in US dollars by default — switch to India (₹) for local pricing. Available worldwide on Google Play, with local pricing in 10 launch markets: India, the United States, the UK, Brazil, Indonesia, Philippines, Mexico, Nigeria, Pakistan, and Bangladesh. The exact price is always shown in Google Play before you pay.</p>
 <ul class="fine">
 <li><strong>3-Month is Best Value</strong> = lowest <em>total</em> cost to complete one 90-day transformation. <strong>Yearly is Best Savings Per Month</strong> = lowest per-month cost.</li>
 <li><strong>Free trial:</strong> you will not be charged during the trial. Google Play collects a payment method at trial start. A reminder arrives 2 days before the trial ends.</li>

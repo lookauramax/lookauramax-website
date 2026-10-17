@@ -65,8 +65,8 @@
 
 ## Facts
 
-- Pricing (India): Monthly ₹199, 3-Month ₹399, 6-Month ₹599, Yearly ₹999.
 - Pricing (US): Monthly $9.99, 3-Month $19.99, 6-Month $29.99, Yearly $49.99.
+- Pricing (India): Monthly ₹199, 3-Month ₹399, 6-Month ₹599, Yearly ₹999.
 - Trials: Monthly, 3-Month, 6-Month include a 7-day free trial; Yearly includes a 14-day free trial.
 - 3-Month is Best Value (lowest total cost to complete one 90-day transformation). Yearly is Best Savings Per Month (lowest per-month cost).
 - No Weekly plan. No Lifetime plan. No permanent free plan. No ads.
