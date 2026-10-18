@@ -78,7 +78,7 @@
     back.appendChild(backImg);
     coin.appendChild(front);
     coin.appendChild(back);
-  })();
+})();
 
   /* ---------- Scroll progress (scroll-owned motion) ----------
      The header itself is always visible now — no hide-on-scroll. */
@@ -204,4 +204,40 @@
       }, 450);
     });
   }
+
+  /* ---------- What section: interactive tabs ---------- */
+  var whatTabs = document.querySelectorAll('[data-what-tab]');
+  if (whatTabs.length) {
+    whatTabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        whatTabs.forEach(function (t) {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        document.querySelectorAll('[data-what-panel]').forEach(function (p) {
+          p.classList.remove('is-active');
+          p.hidden = true;
+        });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
+        var panel = document.querySelector('[data-what-panel="' + tab.getAttribute('data-what-tab') + '"]');
+        if (panel) {
+          panel.classList.add('is-active');
+          panel.hidden = false;
+        }
+      });
+    });
+  }
+
+  /* ---------- FAQ: single-open accordion (LooxUP-style interaction,
+     adapted: our <details> stay native + keyboard-accessible). ---------- */
+  var faqDetails = document.querySelectorAll('#faq details');
+  faqDetails.forEach(function (d) {
+    d.addEventListener('toggle', function () {
+      if (!d.open) return;
+      faqDetails.forEach(function (other) {
+        if (other !== d) other.open = false;
+      });
+    });
+  });
 })();
