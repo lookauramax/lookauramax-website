@@ -1,6 +1,6 @@
 # Lookauramax
 
-> Lookauramax is a glow-up app for Android. Its tagline is "Your glow-up, made real." It gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach powered by Aura Intelligence. AuraScan analyses your photo, measures your Aura Signals, and explains every score with Why and Action. Joining gives a one-time Join Reward (1 AuraScan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser — no card). Paid plans (Monthly, 3-Month, 6-Month, Yearly) include a free trial. The app launches on Google Play after closed testing.
+> Lookauramax is a glow-up app for Android. Its tagline is "Your glow-up, made real." It gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach powered by Aura Intelligence. AuraScan analyses your photo, measures your Aura Signals, and explains every score with Why and Action. Joining gives a one-time Join Reward (1 AuraScan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser — no card). Paid plans (Monthly, 3-Month, 6-Month, Yearly) include a free trial. The app launches on Google Play after closed testing.
 
 ## Why Lookauramax
 
