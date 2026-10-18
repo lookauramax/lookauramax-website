@@ -1,18 +1,21 @@
-/* Lookauramax mobile menu — vanilla JS, no libraries.
-   Toggle: button flips aria-expanded + panel .open + hidden.
+/* Lookauramax menu V3 — vanilla JS, no libraries.
+   The phone menu is a FULL-SCREEN overlay (#nav-overlay), not a
+   dropdown panel. Toggle: button flips aria-expanded + overlay
+   .open + hidden, and locks body scroll via <html>.nav-open.
    Close: link tap (navigation), Escape (focus returns to button),
-   or tap outside the panel. No focus trap (per spec); focus
-   returns sanely on Escape. Also swaps <html> no-js -> js so CSS
-   can show the panel as a plain stacked nav when JS is off. */
+   tap on the overlay backdrop itself, or resize to desktop width.
+   Also swaps <html> no-js -> js so CSS can show the overlay as a
+   plain stacked nav when JS is off. */
 (function () {
   'use strict';
   document.documentElement.classList.replace('no-js', 'js');
-  var btn = document.querySelector('.menu-btn');
-  var nav = document.getElementById('mobile-nav');
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('nav-overlay');
   if (!btn || !nav) return;
   function close(returnFocus) {
     nav.hidden = true;
     nav.classList.remove('open');
+    document.documentElement.classList.remove('nav-open');
     btn.setAttribute('aria-expanded', 'false');
     btn.setAttribute('aria-label', 'Open menu');
     if (returnFocus) btn.focus();
@@ -20,6 +23,7 @@
   function open() {
     nav.hidden = false;
     nav.classList.add('open');
+    document.documentElement.classList.add('nav-open');
     btn.setAttribute('aria-expanded', 'true');
     btn.setAttribute('aria-label', 'Close menu');
   }
@@ -28,11 +32,12 @@
   });
   nav.addEventListener('click', function (e) {
     if (e.target.closest('a')) close(false);
+    else if (e.target === nav) close(false);
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !nav.hidden) close(true);
   });
-  document.addEventListener('click', function (e) {
-    if (!nav.hidden && !nav.contains(e.target) && !btn.contains(e.target)) close(false);
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 900 && !nav.hidden) close(false);
   });
 })();

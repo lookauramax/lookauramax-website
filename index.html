@@ -26,277 +26,110 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Lookauramax","applicationCategory":"HealthApplication","operatingSystem":"Android","url":"https://www.lookauramax.com/","inLanguage":"en","description":"Glow-up app. AuraScan analysis, 90-day Aura Plan, daily Aura Routine, Aura Coach, powered by Aura Intelligence. No face ratings. No weekly billing.","offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":"9.99","highPrice":"49.99","offerCount":"4"},"author":{"@type":"Organization","name":"Lookauramax","url":"https://www.lookauramax.com/","email":"support@lookauramax.com"},"privacyPolicy":"https://www.lookauramax.com/privacy","logo":"https://www.lookauramax.com/logo.png"}
 </script>
 
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Lookauramax?","acceptedAnswer":{"@type":"Answer","text":"Lookauramax is a glow-up app for Android that gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach, powered by Aura Intelligence."}},{"@type":"Question","name":"Is Lookauramax free?","acceptedAnswer":{"@type":"Answer","text":"There is no permanent free plan. When you join, you get a one-time Join Reward: 1 AuraScan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser — no card needed. After that, you pick a paid plan and start a free trial."}},{"@type":"Question","name":"Does Lookauramax upload my photos?","acceptedAnswer":{"@type":"Answer","text":"No. Your photo is used only for your scan, never shared. Only small data — scores, plan, progress, streaks, settings — syncs to your account."}},{"@type":"Question","name":"Does Lookauramax use AI to rate my face?","acceptedAnswer":{"@type":"Answer","text":"No. AuraScan is an Aura Intelligence estimate, not AI. It scores only actionable traits and shows bands (Needs Work, Good, Great), not an attractiveness score."}},{"@type":"Question","name":"Can I cancel?","acceptedAnswer":{"@type":"Answer","text":"Yes. Cancel in 2 taps in Google Play before the trial ends and you pay nothing. If you cancel during a trial, Pro stays active until the trial ends. Deleting the app does not cancel — cancel in Google Play."}},{"@type":"Question","name":"Which plan is best value?","acceptedAnswer":{"@type":"Answer","text":"The 3-Month plan is Best Value — the lowest total cost to cover one full Aura Cycle: ₹399 in India / $19.99 in the US. The Yearly plan has the lowest cost per month."}},{"@type":"Question","name":"Who can use Lookauramax?","acceptedAnswer":{"@type":"Answer","text":"Ages 16 and over. Under 16 is blocked. Ages 16–17 need parental consent before a scan or paid access."}},{"@type":"Question","name":"When does the app launch?","acceptedAnswer":{"@type":"Answer","text":"The Lookauramax website is live now. The app launches on Google Play after closed testing is complete."}},{"@type":"Question","name":"Why is Lookauramax the best glow-up app?","acceptedAnswer":{"@type":"Answer","text":"We built it to be the best by being the most honest: scores only for traits you can improve, every score with Why + Action, honest pricing shown openly, no weekly billing trap, no face ratings ever, cancel in 2 taps — and our own cons published in our comparisons. We claim no ranking, award, or user count we cannot prove."}}]}</script>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--gold:#E19A2D;--gold-l:#FFD14E;--bg:#080706;--card:#131110;--line:rgba(255,255,255,.09);--txt:#F7F3EA;--mut:#B3ABA0;--mut2:#7E786E}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--txt);font-family:"Inter",system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-::selection{background:var(--gold);color:#000000}
-.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
-section{padding:88px 0}
-section+section{border-top:1px solid var(--line)}
-h1,h2,h3{font-family:"Space Grotesk",sans-serif;letter-spacing:-.02em}
-.serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400}
-.gold-text{background:linear-gradient(100deg,#FFF3C4,#FFD14E 40%,#E19A2D);-webkit-background-clip:text;background-clip:text;color:transparent}
-.kicker{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-l);font-weight:800;margin-bottom:16px}
-h2{font-size:clamp(30px,4vw,44px);line-height:1.12;font-weight:700}
-.lede{font-size:18px;color:var(--mut);max-width:640px;margin-top:14px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:700;font-size:15.5px;text-decoration:none;padding:15px 30px;transition:transform .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn-gold{background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#1A1204;box-shadow:0 12px 34px rgba(225,154,45,.30)}
-.btn-ghost{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.03);color:var(--txt)}
-/* header + footer design lives in /assets/base.css (single source of truth) */
-/* hero — split layout: headline + CTA left, transformation visual right (competitor pattern, our ethics) */
-.hero{padding:44px 0 60px;position:relative;overflow:hidden}
-.hero-wrap{max-width:1280px}
-.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:40px;align-items:center}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#FFD14E;border:1px solid rgba(255,209,78,.4);background:rgba(255,209,78,.08);padding:9px 16px;border-radius:999px;margin:0 0 24px}
-/* hero transformation visual — Day 0 → Day 90, realistic fictional man */
-.hero-visual{position:relative}
-.hero-transform{display:flex;align-items:flex-start;justify-content:center;gap:14px;margin:0 auto;max-width:640px;position:relative}
-.ht-face{flex:1 1 0;min-width:0;margin:0;text-align:center;position:relative}
-.ht-face img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center 30%;border-radius:18px;border:1px solid rgba(255,209,78,.35);display:block}
-.ht-after img{border:2px solid rgba(255,209,78,.65);box-shadow:0 0 54px rgba(255,190,60,.5)}
-.ht-face figcaption{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-top:10px;font-weight:700}
-.ht-after figcaption{color:#FFD14E}
-.ht-arrow{flex:0 0 auto;align-self:center;text-align:center;color:#FFD14E;font-size:30px;line-height:1}
-.ht-arrow small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#1A1204;font-weight:800;margin-top:8px;background:linear-gradient(135deg,#FFE9A3,#FFD14E 45%,#E19A2D);padding:6px 10px;border-radius:999px;box-shadow:0 6px 18px rgba(255,190,60,.35)}
-.hero-transform-note{font-size:12.5px;color:var(--mut2);margin:14px auto 0;max-width:520px;text-align:center}
-.hero-float{position:absolute;display:flex;align-items:center;gap:8px;background:rgba(18,16,12,.92);border:1px solid rgba(255,209,78,.45);border-radius:999px;padding:10px 16px;font-size:13.5px;font-weight:700;box-shadow:0 12px 32px rgba(0,0,0,.45);z-index:2}
-.hero-float b{color:#FFD14E}
-.hero-float-score{top:10px;right:10px}
-.hero-float-streak{position:static;width:max-content;margin:16px auto 0}
-.hero h1{font-size:clamp(52px,6.2vw,76px);line-height:1.02;font-weight:700;letter-spacing:-.03em}
-.hero-sub{font-size:clamp(17px,2vw,20px);color:var(--mut);max-width:560px;margin:20px 0 0}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.hero-note{margin-top:16px;font-size:13.5px;color:var(--mut2)}
-.hero-note b{color:var(--mut)}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:32px}.hero-visual{max-width:640px;margin:0 auto}.hero h1{font-size:clamp(44px,9vw,60px)}}
-/* 90-day journey visual — honest illustration, no fake photos */
-.journey{margin-top:56px;text-align:left;background:linear-gradient(160deg,rgba(255,209,78,.12),rgba(225,154,45,.04) 45%,rgba(255,255,255,.02));border:1px solid rgba(225,154,45,.32);border-radius:28px;padding:36px;position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45)}
-.journey:before{content:"";position:absolute;inset:0;background:radial-gradient(460px 240px at 85% 0%,rgba(255,209,78,.20),transparent 70%);pointer-events:none}
-.journey-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;position:relative}
-.journey-eyebrow{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-l);font-weight:800;margin-bottom:14px}
-.journey-title{font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-.02em}
-.journey-text{color:var(--mut);font-size:16px;margin-top:14px;max-width:520px}
-.journey-track{display:flex;margin-top:28px;position:relative}
-.journey-track:before{content:"";position:absolute;left:10px;right:10px;top:10px;height:2px;background:linear-gradient(90deg,rgba(255,209,78,.25),#E19A2D)}
-.jt-point{flex:1;position:relative;padding-top:28px}
-.jt-point:last-child{text-align:right}
-.jt-dot{position:absolute;top:3px;left:0;width:16px;height:16px;border-radius:50%;background:#0E0C0A;border:2px solid #FFD14E;box-shadow:0 0 12px rgba(255,209,78,.5)}
-.jt-point:last-child .jt-dot{left:auto;right:0}
-.jt-point b{display:block;font-size:13px;letter-spacing:.08em}
-.jt-point span{font-size:13px;color:var(--mut)}
-.journey-fine{margin-top:22px;font-size:12.5px;color:var(--mut2);max-width:520px}
-.journey-phone{position:relative}
-.jp-screen{background:linear-gradient(180deg,#1B1813,#0E0C0A);border:1px solid rgba(255,209,78,.35);border-radius:30px;padding:22px 20px 18px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
-.jp-app{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-l);font-weight:800;text-align:center}
-.jp-ring{position:relative;width:132px;height:132px;margin:16px auto 6px}
-.jp-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
-.jp-track{fill:none;stroke:rgba(255,255,255,.12);stroke-width:9}
-.jp-fill{fill:none;stroke:url(#jpGold);stroke-width:9;stroke-linecap:round;stroke-dasharray:326.7;stroke-dashoffset:71.9}
-.jp-score{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.jp-score b{font-family:"Space Grotesk",sans-serif;font-size:34px;line-height:1}
-.jp-score span{font-size:12px;color:var(--mut);margin-top:2px}
-.jp-traits{list-style:none;margin:14px 0 0}
-.jp-traits li{display:flex;justify-content:space-between;padding:9px 2px;border-top:1px solid rgba(255,255,255,.07);font-size:14px}
-.jp-traits li span{color:var(--mut)}.jp-traits li b{color:#FFD14E}
-.jp-streak{margin:14px 0 0;text-align:center;font-size:13px;font-weight:700;color:#FFD14E;background:rgba(255,209,78,.10);border:1px solid rgba(255,209,78,.30);border-radius:999px;padding:9px 12px}
-.jp-chip{position:absolute;left:-14px;top:36px;background:rgba(18,16,13,.92);border:1px solid rgba(255,209,78,.45);border-radius:999px;padding:9px 14px;font-size:12.5px;font-weight:700;box-shadow:0 10px 24px rgba(0,0,0,.45)}
-.jp-chip.two{left:auto;right:-12px;top:auto;bottom:44px}
-@media(max-width:900px){.journey-grid{grid-template-columns:1fr}.journey{padding:26px 20px}.jp-chip{left:8px}.jp-chip.two{right:8px}}
-.trust{display:grid;grid-template-columns:repeat(3,1fr);margin-top:44px;background:linear-gradient(180deg,rgba(255,209,78,.06),rgba(255,209,78,.02));border:1px solid rgba(255,209,78,.22);border-radius:20px;overflow:hidden}
-.trust div{text-align:center;padding:26px 16px}
-.trust div+div{border-left:1px solid rgba(255,255,255,.08)}
-.trust b{display:block;font-family:"Space Grotesk",sans-serif;font-size:36px;line-height:1.1;background:linear-gradient(180deg,#FFD14E,#E19A2D);-webkit-background-clip:text;background-clip:text;color:transparent}
-.trust span{display:block;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-top:8px}
-/* cards — 3 only, even */
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px}
-.card h3{font-size:19px;margin-bottom:8px}.card p{color:var(--mut);font-size:15px}
-.card .ic{font-size:26px;margin-bottom:14px}
-/* steps — 3 only */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
-.step{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px}
-.step .n{font-family:"Space Grotesk",sans-serif;font-size:13px;letter-spacing:.22em;color:var(--gold-l);font-weight:700}
-.step h3{font-size:19px;margin:14px 0 8px}.step p{color:var(--mut);font-size:15px}
-/* never list */
-.never{list-style:none;margin-top:28px;max-width:760px}
-.never li{padding:16px 0 16px 30px;position:relative;border-bottom:1px solid var(--line);font-size:16px}
-.never li:before{content:"✕";position:absolute;left:0;color:var(--gold-l);font-weight:800}
-.never li b{color:var(--txt)}
-/* pricing */
-.region-select{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:24px;color:var(--mut);font-size:14px;font-weight:700}
-.region-select select{appearance:none;-webkit-appearance:none;background:#141211 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23FFD14E' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 16px center;border:1px solid var(--line);border-radius:999px;color:var(--txt);padding:10px 38px 10px 20px;cursor:pointer;font-weight:700;font-size:14px;font-family:inherit}
-.region-select select:focus{outline:2px solid var(--gold);outline-offset:2px}
-.pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
-.pcard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 22px;display:flex;flex-direction:column}
-.pcard.hero{border:2px solid var(--gold);background:linear-gradient(180deg,#221703,#120E06)}
-.pcard .tag{display:inline-block;font-size:10.5px;letter-spacing:.14em;font-weight:800;padding:6px 11px;border-radius:999px;background:var(--gold);color:#000000;text-transform:uppercase;align-self:flex-start}
-.pcard .tag.ghost{background:transparent;border:1px solid rgba(255,255,255,.28);color:var(--txt)}
-.pcard .p-name{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:16px;margin-top:16px}
-.pcard .p-price{font-family:"Space Grotesk",sans-serif;font-size:40px;font-weight:700;letter-spacing:-.03em;margin:14px 0 4px}
-.pcard .p-price small{font-size:15px;color:var(--mut)}
-.pcard .p-per{color:var(--mut);font-size:13.5px;min-height:40px}
-.pcard ul{list-style:none;margin:18px 0 24px;flex:1}.pcard li{padding:8px 0 8px 22px;position:relative;color:var(--mut);font-size:14px;border-top:1px solid rgba(255,255,255,.06)}
-.pcard li:before{content:"✓";position:absolute;left:0;color:var(--gold-l)}
-.pcard .btn{width:100%;padding:12px;font-size:14.5px}
-.fine{color:var(--mut);font-size:13.5px;margin-top:20px}.fine li{margin:7px 0}
-/* faq — 6 only on page */
-details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 24px;margin:12px 0;max-width:820px}
-details[open]{border-color:rgba(225,154,45,.45)}
-summary{cursor:pointer;font-weight:700;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}summary::-webkit-details-marker{display:none}
-summary:after{content:"+";font-size:24px;color:var(--gold-l);flex-shrink:0}
-details[open] summary:after{content:"–"}
-details p{color:var(--mut);margin-top:10px;font-size:15px}
-/* cta */
-.cta{text-align:center;padding:88px 0}
-.cta h2{font-size:clamp(32px,4.6vw,52px)}
-.cta p{color:var(--mut);max-width:520px;margin:16px auto 28px}
-/* footer design lives in /assets/base.css (single source of truth) */
-@media(max-width:900px){.grid3,.steps{grid-template-columns:1fr 1fr}.pricing{grid-template-columns:1fr 1fr}.hlinks{display:none}}
-@media(max-width:560px){section{padding:64px 0}.grid3,.steps,.pricing{grid-template-columns:1fr}.hero{padding:32px 0 56px}.trust{grid-template-columns:1fr}.trust div+div{border-left:0;border-top:1px solid rgba(255,255,255,.08)}.journey-track{flex-wrap:wrap;row-gap:20px}.journey-track:before{display:none}.jt-point{flex:1 1 40%}.jt-point:last-child{text-align:left}.jt-point:last-child .jt-dot{left:0;right:auto}.hero-transform{gap:8px}.ht-arrow{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:2px;background:rgba(18,16,13,.72);border:1px solid rgba(255,209,78,.55);border-radius:999px;padding:8px 10px;box-shadow:0 10px 26px rgba(0,0,0,.5)}.ht-arrow small{margin-top:0;font-size:10px;padding:5px 8px}.ht-arrow{font-size:24px}.hero-float{font-size:12px;padding:8px 12px}}
-/* tasteful motion — subtle only */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
-/* trust badges */
-.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-.badges span{font-size:12px;font-weight:600;color:var(--mut);border:1px solid var(--line);background:rgba(255,255,255,.03);padding:7px 13px;border-radius:999px}
-/* interactive preview — one compact widget */
-.preview{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin-top:36px}
-.preview-chips{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0}
-.preview-chips button{border:1px solid var(--line);background:#181512;color:var(--txt);padding:9px 17px;border-radius:999px;cursor:pointer;font-weight:600;font-size:13.5px;transition:all .2s}
-.preview-chips button.active{background:var(--gold);color:#000000;border-color:var(--gold)}
-.preview-out{background:#0E0C0A;border:1px solid var(--line);border-radius:14px;padding:20px;min-height:110px}
-.preview-out p{color:var(--mut);font-size:15px}
-.preview-out .bar{height:9px;border-radius:999px;background:#26231F;overflow:hidden;margin:14px 0 6px}
-.preview-out .bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#FFD14E,#E19A2D);width:0;transition:width .8s ease}
-/* guides */
-.guide-list{list-style:none;margin-top:24px;max-width:760px}
-.guide-list li{border-bottom:1px solid var(--line)}
-.guide-list a{display:flex;justify-content:space-between;gap:16px;text-decoration:none;padding:16px 0;font-weight:600}
-.guide-list a:hover{color:var(--gold-l)}
-.guide-list small{color:var(--mut);font-weight:400}
-/* sticky conversion bar — appears after hero */
-.sticky-bar{position:fixed;left:50%;transform:translate(-50%,120%);bottom:16px;z-index:60;display:flex;align-items:center;gap:16px;background:rgba(18,16,13,.94);border:1px solid rgba(225,154,45,.45);backdrop-filter:blur(12px);border-radius:999px;padding:10px 10px 10px 20px;box-shadow:0 18px 50px rgba(0,0,0,.55);transition:transform .45s ease;max-width:calc(100% - 28px)}
-.sticky-bar.show{transform:translate(-50%,0)}
-.sticky-bar b{font-size:14px;white-space:nowrap}
-.sticky-bar .btn{padding:10px 20px;font-size:13.5px;white-space:nowrap}
-.sticky-bar .x{background:none;border:0;color:var(--mut);cursor:pointer;font-size:18px;padding:4px 8px;line-height:1}
-@media(max-width:560px){.sticky-bar b{display:none}}
-</style>
-<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
-<link rel="stylesheet" href="/assets/base.css?v=20261021">
-<link rel="stylesheet" href="/assets/motion.css">
-<script src="/assets/motion.js" defer></script>
-<script src="/assets/menu.js" defer></script>
-  <link rel="stylesheet" href="/assets/consent.css">
+
+
+<link rel="stylesheet" href="/assets/base.css?v=20261022">
+<link rel="stylesheet" href="/assets/motion.css?v=20261022">
+<script src="/assets/motion.js?v=20261022" defer></script>
+<script src="/assets/menu.js?v=20261022" defer></script>
+  <link rel="stylesheet" href="/assets/consent.css?v=20261022">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.lookauramax.com/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Lookauramax","slogan":"Your glow-up, made real.","logo":"https://www.lookauramax.com/logo.png","url":"https://www.lookauramax.com/","sameAs":["https://www.instagram.com/lookauramax","https://www.youtube.com/@lookauramax","https://www.tiktok.com/@lookauramax","https://www.facebook.com/lookauramax","https://www.threads.net/@lookauramax","https://x.com/Lookauramax","https://www.linkedin.com/company/lookauramax","https://www.pinterest.com/lookauramax/","https://www.reddit.com/user/lookauramax/"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Lookauramax","url":"https://www.lookauramax.com/","inLanguage":"en"}</script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
-<header><div class="head">
+<header class="masthead"><div class="masthead-inner">
 <a class="brand" href="/"><img src="/logo-small.png" alt="Lookauramax logo" width="64" height="64"><b>LOOK<em>AURA</em>MAX</b></a>
-<button class="menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
-<nav class="hlinks"><a href="/tools/">Tools</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a></nav>
-<a class="btn btn-gold" href="#pricing">Get the app →</a>
-</div><nav class="mobile-nav" id="mobile-nav" hidden><a href="/tools/">Tools</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a><div class="mnav-secondary"><a href="/about.html">About</a><a href="/glossary.html">Glossary</a><a href="/tools/">Aura Tools</a><a href="https://www.lookauramax.com/privacy">Privacy Policy</a><a href="https://www.lookauramax.com/terms">Terms</a><a href="https://www.lookauramax.com/refund">Refund Policy</a></div><a class="btn btn-gold" href="#pricing">Get the app →</a></nav></header>
+<nav class="toplinks" aria-label="Primary"><a href="/tools/">Tools</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a></nav>
+<a class="btn btn-gold masthead-cta" href="#pricing">Get the app →</a>
+<button class="nav-toggle" aria-expanded="false" aria-controls="nav-overlay" aria-label="Open menu"><span></span><span></span><span></span></button>
+</div>
+<div class="nav-overlay" id="nav-overlay" hidden>
+<nav class="nav-overlay-links" aria-label="Menu"><a href="/tools/"><span class="nav-num">01</span>Tools</a><a href="#how"><span class="nav-num">02</span>How it works</a><a href="#pricing"><span class="nav-num">03</span>Pricing</a><a href="#faq"><span class="nav-num">04</span>FAQ</a><a href="/blog/"><span class="nav-num">05</span>Blog</a></nav>
+<nav class="nav-overlay-sub" aria-label="More"><a href="/about.html">About</a><a href="/glossary.html">Glossary</a><a href="/tools/">Aura Tools</a><a href="https://www.lookauramax.com/privacy">Privacy Policy</a><a href="https://www.lookauramax.com/terms">Terms</a><a href="https://www.lookauramax.com/refund">Refund Policy</a></nav>
+<a class="btn btn-gold nav-overlay-cta" href="#pricing">Get the app →</a>
+</div></header>
 
 <main id="main">
-<section class="hero" style="border-top:0">
-<div class="wrap hero-wrap">
-<div class="hero-glow" aria-hidden="true"></div>
-<div class="dust" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-<div class="hero-grid">
-<div>
-<p class="hero-eyebrow">AuraScan · Aura Plan · Aura Routine</p>
+<section class="hero">
+<div class="wrap">
+<p class="hero-kicker">AuraScan · Aura Plan · Aura Routine</p>
 <h1>Your <span class="gold-text">glow‑up,</span><br><span class="serif">made real.</span></h1>
 <p class="hero-sub">One photo becomes your 90-day plan — clear, personal, and built to follow. We built Lookauramax to be the best glow-up app by being the most honest one: no face ratings. Clear scores with Why + Action.</p>
 <div class="hero-ctas"><a class="btn btn-gold" href="#pricing">See plans &amp; free trial →</a><a class="btn btn-ghost" href="#how">How it works</a></div>
 <div class="badges"><span>✓ Google Play Billing</span><span>✓ No ads</span><span>✓ Ages 16+</span><span>✓ Cancel in 2 taps</span></div>
 <p class="hero-note">Join → claim your <b>one-time Join Reward</b> → start a free trial. You will <b>not be charged</b> during the free trial.</p>
 </div>
-<div class="hero-visual">
-<div class="hero-transform" role="img" aria-label="Illustration: AI-generated image of a fictional man, Day 0 to Day 90.">
-<figure class="ht-face"><img src="/images/hero-day0.jpg" alt="Illustration — AI-generated image of a fictional man, Day 0 baseline" width="960" height="1280" fetchpriority="high"><figcaption>Day 0 · Baseline</figcaption></figure>
-<div class="ht-arrow" aria-hidden="true"><span>→</span><small>90 days</small></div>
-<figure class="ht-face ht-after"><img src="/images/hero-day90.jpg" alt="Illustration — AI-generated image of a fictional man, Day 90" width="960" height="1280" fetchpriority="high"><div class="hero-float hero-float-score" aria-hidden="true">Aura Score <b>78 · Great</b></div><figcaption>Day 90 · Aura</figcaption></figure>
-</div>
-<div class="hero-float hero-float-streak" aria-hidden="true"><b>24-day Aura Streak</b> · Routine done</div>
-<p class="hero-transform-note">Illustration — AI-generated image of a fictional person, Day 0 to Day 90. Not a real user or result.</p>
-</div>
-</div>
-<div class="trust">
+<figure class="hero-photo"><img src="/images/hero-day90.jpg" alt="Illustration — AI-generated image of a fictional man, Day 90" width="960" height="1280" fetchpriority="high"></figure>
+<div class="wrap">
+<div class="hero-ledger"><div><b>78 · Great</b><span>Aura Score</span></div><div><b>24-day Aura Streak</b><span>Routine done</span></div></div>
+<p class="hero-caption">Illustration — AI-generated image of a fictional person at Day 90. Not a real user or result.</p>
+<div class="proof">
 <div><b>1 photo</b><span>is all it takes</span></div>
 <div><b>90-day</b><span>plan cycles</span></div>
 <div><b>2 taps</b><span>to cancel, anytime</span></div>
 </div>
-<div class="journey">
+</div>
+</section>
+
+<section class="reveal">
+<div class="wrap">
 <div class="journey-grid">
 <div>
-<p class="journey-eyebrow">Your 90-day journey — illustrated</p>
+<p class="kicker">Your 90-day journey — illustrated</p>
 <h2 class="journey-title">Day 0 → Day 90.<br>One photo. One plan.<br>One routine.</h2>
 <p class="journey-text">AuraScan sets your precise starting point. Your Aura Plan turns it into daily steps. Aura Check-ins at Day 30, 60 and 90 show real, measured change — no filters, no fake photos, no overnight miracles.</p>
-<div class="journey-track">
-<div class="jt-point"><span class="jt-dot"></span><b>DAY 0</b><span>52 · Baseline</span></div>
-<div class="jt-point"><span class="jt-dot"></span><b>DAY 30</b><span>64</span></div>
-<div class="jt-point"><span class="jt-dot"></span><b>DAY 60</b><span>71</span></div>
-<div class="jt-point"><span class="jt-dot"></span><b>DAY 90</b><span>78</span></div>
+<div class="journey-timeline">
+<div class="jt-row"><div><b>DAY 0</b></div><span class="jt-score">52 · Baseline</span></div>
+<div class="jt-row"><div><b>DAY 30</b></div><span class="jt-score">64</span></div>
+<div class="jt-row"><div><b>DAY 60</b></div><span class="jt-score">71</span></div>
+<div class="jt-row"><div><b>DAY 90</b></div><span class="jt-score">78</span></div>
 </div>
 <p class="journey-fine">Illustration — a possible journey. Not a real user, not a promised result. Your scores reflect your starting point and your consistency.</p>
-<p class="journey-fine">Planning for January? See the <a href="/new-year-glow-up-2027/" style="color:var(--gold-l)">New Year Glow-Up 2027 hub</a> — one Aura Cycle, three habits, and a restart rule for missed days.</p>
+<p class="journey-fine">Planning for January? See the <a href="/new-year-glow-up-2027/">New Year Glow-Up 2027 hub</a> — one Aura Cycle, three habits, and a restart rule for missed days.</p>
 </div>
-<div class="journey-phone">
-<div class="jp-screen">
-<p class="jp-app">AuraScan · Illustration</p>
-<div class="jp-ring"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="jpGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD14E"/><stop offset="1" stop-color="#E19A2D"/></linearGradient></defs><circle class="jp-track" cx="60" cy="60" r="52"/><circle class="jp-fill" cx="60" cy="60" r="52"/></svg><div class="jp-score"><b>78</b><span>Great</span></div></div>
-<ul class="jp-traits"><li><span>Skin</span><b>Good</b></li><li><span>Hair</span><b>Great</b></li><li><span>Brows</span><b>Good</b></li><li><span>Smile</span><b>Great</b></li><li><span>Posture</span><b>Good</b></li></ul>
-<p class="jp-streak">24-day Aura Streak · Routine done</p>
-</div>
-<span class="jp-chip">✓ Routine done today</span>
-<span class="jp-chip two">Aura Score 78 · Great</span>
-</div>
+<div class="scorecard">
+<p class="scorecard-label">AuraScan · Illustration</p>
+<div class="score-big"><b>78</b><span>Great</span></div>
+<ul class="score-traits"><li><span>Skin</span><b>Good</b></li><li><span>Hair</span><b>Great</b></li><li><span>Brows</span><b>Good</b></li><li><span>Smile</span><b>Great</b></li><li><span>Posture</span><b>Good</b></li></ul>
+<p class="score-streak">24-day Aura Streak · Routine done</p>
 </div>
 </div>
 </div>
 </section>
 
-<div class="wrap">
 <section id="what" class="reveal">
 <div class="wrap">
 <p class="kicker">What it is</p>
 <h2>Three things. Done right.</h2>
-<div class="grid3">
-<div class="card"><div class="ic">◎</div><h3>AuraScan</h3><p>Analysis from one photo. Only traits you can actually improve — skin, hair, brows, smile, posture — shown as bands with Why, Action, and confidence.</p></div>
-<div class="card"><div class="ic">▦</div><h3>Aura Plan</h3><p>Your journey in Aura Cycles: 90, 180, 365 days, or ongoing. Day 0 / 30 / 60 / 90 Aura Check-ins show month-by-month change — no false promises, no overnight miracles.</p></div>
-<div class="card"><div class="ic">✓</div><h3>Aura Routine</h3><p>Small daily tasks for skin, hair, brows, smile, posture, and grooming. Plus an Aura Coach, powered by Aura Intelligence, a Preview of your potential, Style Lab, Library, and Progress tracking.</p></div>
+<div class="ledger">
+<div class="ledger-row"><span class="row-num">01</span><div><h3>AuraScan</h3><p>Analysis from one photo. Only traits you can actually improve — skin, hair, brows, smile, posture — shown as bands with Why, Action, and confidence.</p></div></div>
+<div class="ledger-row"><span class="row-num">02</span><div><h3>Aura Plan</h3><p>Your journey in Aura Cycles: 90, 180, 365 days, or ongoing. Day 0 / 30 / 60 / 90 Aura Check-ins show month-by-month change — no false promises, no overnight miracles.</p></div></div>
+<div class="ledger-row"><span class="row-num">03</span><div><h3>Aura Routine</h3><p>Small daily tasks for skin, hair, brows, smile, posture, and grooming. Plus an Aura Coach, powered by Aura Intelligence, a Preview of your potential, Style Lab, Library, and Progress tracking.</p></div></div>
 </div>
 <p style="color:var(--mut);margin-top:22px;font-size:15px">Core scan, plan, routine, and coach work <strong style="color:var(--txt)">offline</strong>. Internet is needed only for joining, sync, and billing.</p>
 </div>
 </section>
 
-
 <section class="reveal">
 <div class="wrap">
 <div class="preview">
 <p class="kicker">Try it — interactive</p>
-<h2 style="font-size:clamp(24px,3vw,34px)">Tap a trait. See what AuraScan actually measures.</h2>
+<h2>Tap a trait. See what AuraScan actually measures.</h2>
 <p style="color:var(--mut);margin-top:8px;font-size:15px">Illustration only — not your score. Real scores come from your own photo, with Why + Action + confidence.</p>
 <div class="preview-chips" id="preview-chips">
 <button class="active" data-focus="skin">Skin</button><button data-focus="hair">Hair</button><button data-focus="brows">Brows</button><button data-focus="smile">Smile</button><button data-focus="posture">Posture</button><button data-focus="photo">Photo quality</button>
 </div>
 <div class="preview-out">
-<h3 id="preview-title" style="font-family:'Space Grotesk',sans-serif;font-size:18px">Skin — clarity &amp; evenness</h3>
+<h3 id="preview-title">Skin — clarity &amp; evenness</h3>
 <p id="preview-text">Illustration: texture variation and evenness signals → a band (Needs Work / Good / Great) plus one concrete action, like a clear cleanser + moisturizer + SPF routine.</p>
 <div class="bar"><i id="preview-bar" style="width:68%"></i></div>
 <p style="font-size:13px;color:var(--mut2)">Band shown in the app — never a single “attractiveness” number.</p>
@@ -310,21 +143,18 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 <p class="kicker">Inside the app</p>
 <h2>See the app before you join.</h2>
 <p style="color:var(--mut);margin-top:8px;font-size:15px;max-width:640px">Three screens. No surprises — this is what you get on Day 0, Day 1, and Day 90.</p>
-<div class="grid3" style="margin-top:28px">
-<div>
+<div class="shots">
+<div class="shot-row">
 <figure class="app-shot"><img src="/images/app/scan.png" alt="App preview: AuraScan result screen with an Aura Score ring of 78, Great, and trait bands for skin, hair, smile, and posture." loading="lazy" decoding="async" width="780" height="1688"></figure>
-<h3 style="text-align:center;margin-top:16px">AuraScan</h3>
-<p style="text-align:center;color:var(--mut);font-size:14.5px">Your starting point, from one photo. Bands, never face ratings.</p>
+<div><h3>AuraScan</h3><p>Your starting point, from one photo. Bands, never face ratings.</p></div>
 </div>
-<div>
+<div class="shot-row">
 <figure class="app-shot"><img src="/images/app/routine.png" alt="App preview: Aura Routine screen with a daily checklist and a 24-day Aura Streak." loading="lazy" decoding="async" width="780" height="1688"></figure>
-<h3 style="text-align:center;margin-top:16px">Aura Routine</h3>
-<p style="text-align:center;color:var(--mut);font-size:14.5px">Small daily tasks. About 5 minutes. One reminder a day, max.</p>
+<div><h3>Aura Routine</h3><p>Small daily tasks. About 5 minutes. One reminder a day, max.</p></div>
 </div>
-<div>
+<div class="shot-row">
 <figure class="app-shot"><img src="/images/app/progress.png" alt="App preview: Aura Progress screen with an Aura Score bar chart from Day 0 to Day 90." loading="lazy" decoding="async" width="780" height="1688"></figure>
-<h3 style="text-align:center;margin-top:16px">Aura Progress</h3>
-<p style="text-align:center;color:var(--mut);font-size:14.5px">Real change, measured at Day 30, 60, and 90. No filters.</p>
+<div><h3>Aura Progress</h3><p>Real change, measured at Day 30, 60, and 90. No filters.</p></div>
 </div>
 </div>
 <p style="font-size:12.5px;color:var(--mut2);text-align:center;margin-top:22px">App preview — interface illustrations, not screenshots.</p>
@@ -336,9 +166,9 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 <p class="kicker">How it works</p>
 <h2>From one photo to a plan.</h2>
 <div class="steps">
-<div class="step"><div class="n">STEP 01</div><h3>Join</h3><p>Join with Google or email. Your progress stays tied to your account.</p></div>
-<div class="step"><div class="n">STEP 02</div><h3>Claim your reward</h3><p>One-time Join Reward: 1 AuraScan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser. No card.</p></div>
-<div class="step"><div class="n">STEP 03</div><h3>Follow your plan</h3><p>Daily routine, weekly rescans, 30-day Aura Check-ins. When ready, pick a plan and start a free trial.</p></div>
+<div class="step"><div class="n">STEP 01</div><div><h3>Join</h3><p>Join with Google or email. Your progress stays tied to your account.</p></div></div>
+<div class="step"><div class="n">STEP 02</div><div><h3>Claim your reward</h3><p>One-time Join Reward: 1 AuraScan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser. No card.</p></div></div>
+<div class="step"><div class="n">STEP 03</div><div><h3>Follow your plan</h3><p>Daily routine, weekly rescans, 30-day Aura Check-ins. When ready, pick a plan and start a free trial.</p></div></div>
 </div>
 </div>
 </section>
@@ -420,10 +250,10 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 </label>
 <div id="pricing-us">
 <div class="pricing">
-<div class="pcard hero"><span class="tag">★ Best Value</span><div class="p-name">3-Month</div><div class="p-price" data-price="quarterly">$19.99 <small>total</small></div><div class="p-per" data-per="quarterly">$6.66 / month · Save 33%<br>One full Aura Cycle</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Lowest total cost for one&nbsp;Aura&nbsp;Cycle</li></ul><a class="btn btn-gold" href="#faq">Start free trial →</a></div>
-<div class="pcard"><span class="tag ghost">Best savings / month</span><div class="p-name">Yearly</div><div class="p-price" data-price="yearly">$49.99 <small>total</small></div><div class="p-per" data-per="yearly">$4.17 / month · Save 58%<br>Lowest per-month cost</div><ul><li>14-day free trial</li><li>Full app, all features</li><li>Best for a full year</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
-<div class="pcard"><span class="tag ghost">2 Cycles</span><div class="p-name">6-Month</div><div class="p-price" data-price="halfyearly">$29.99 <small>total</small></div><div class="p-per" data-per="halfyearly">$5.00 / month · Save 49%<br>Two full Aura Cycles</div><ul><li>7-day free trial</li><li>Full app, all features</li><li data-save2x>Save 24% vs 2× 3-Month</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
-<div class="pcard"><span class="tag ghost">Flexible</span><div class="p-name">Monthly</div><div class="p-price" data-price="monthly">$9.99</div><div class="p-per" data-per="monthly">$9.99 / month · billed monthly</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Cancel in 2 taps</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
+<div class="pcard hero"><div><span class="tag">★ Best Value</span><div class="p-name">3-Month</div></div><div><div class="p-price" data-price="quarterly">$19.99 <small>total</small></div><div class="p-per" data-per="quarterly">$6.66 / month · Save 33%<br>One full Aura Cycle</div></div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Lowest total cost for one&nbsp;Aura&nbsp;Cycle</li></ul><a class="btn btn-gold" href="#faq">Start free trial →</a></div>
+<div class="pcard"><div><span class="tag ghost">Best savings / month</span><div class="p-name">Yearly</div></div><div><div class="p-price" data-price="yearly">$49.99 <small>total</small></div><div class="p-per" data-per="yearly">$4.17 / month · Save 58%<br>Lowest per-month cost</div></div><ul><li>14-day free trial</li><li>Full app, all features</li><li>Best for a full year</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
+<div class="pcard"><div><span class="tag ghost">2 Cycles</span><div class="p-name">6-Month</div></div><div><div class="p-price" data-price="halfyearly">$29.99 <small>total</small></div><div class="p-per" data-per="halfyearly">$5.00 / month · Save 49%<br>Two full Aura Cycles</div></div><ul><li>7-day free trial</li><li>Full app, all features</li><li data-save2x>Save 24% vs 2× 3-Month</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
+<div class="pcard"><div><span class="tag ghost">Flexible</span><div class="p-name">Monthly</div></div><div><div class="p-price" data-price="monthly">$9.99</div><div class="p-per" data-per="monthly">$9.99 / month · billed monthly</div></div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Cancel in 2 taps</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
 </div>
 </div>
 <p style="color:var(--mut);font-size:14.5px;margin-top:20px">Prices update automatically for your region — detected from your device timezone and language. Nothing is sent or stored; detection happens entirely in your browser. Pick a different market above if needed. Available worldwide on Google Play, with local pricing in 10 launch markets: India, the United States, the UK, Brazil, Indonesia, Philippines, Mexico, Nigeria, Pakistan, and Bangladesh. The exact price is always shown in Google Play before you pay.</p>
@@ -474,17 +304,18 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 <p style="color:var(--mut2);font-size:13.5px;margin-top:18px">Questions? Email <a href="mailto:support@lookauramax.com">support@lookauramax.com</a>. App launching on Google Play.</p>
 </div>
 </section>
-</div>
 </main>
-<footer><div class="wrap"><div class="foot">
-<div class="foot-brand"><img src="/logo-small.png" alt="Lookauramax founder logo" width="52" height="52"><div><p>LOOK<span>AURA</span>MAX</p><p>Your glow-up, made real.</p><p><a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></div>
-<nav class="foot-col" aria-label="Product"><h2>Product</h2><ul><li><a href="/tools/">Tools</a></li><li><a href="#how">How it works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
-<nav class="foot-col" aria-label="Resources"><h2>Resources</h2><ul><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Aura Tools</a></li><li><a href="/glossary.html">Glow-Up Glossary</a></li></ul></nav>
-<nav class="foot-col" aria-label="Legal"><h2>Legal</h2><ul><li><a href="https://www.lookauramax.com/privacy">Privacy Policy</a></li><li><a href="https://www.lookauramax.com/terms">Terms</a></li><li><a href="https://www.lookauramax.com/refund">Refund Policy</a></li></ul></nav>
+<footer class="colophon"><div class="wrap">
+<p class="colophon-wordmark" aria-hidden="true">LOOK<span>AURA</span>MAX</p>
+<div class="colophon-grid">
+<div class="colophon-brand"><img src="/logo-small.png" alt="Lookauramax founder logo" width="52" height="52"><p class="colophon-name">LOOK<span>AURA</span>MAX</p><p>Your glow-up, made real.</p><p><a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div>
+<nav class="colophon-col" aria-label="Product"><h2>Product</h2><ul><li><a href="/tools/">Tools</a></li><li><a href="#how">How it works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
+<nav class="colophon-col" aria-label="Resources"><h2>Resources</h2><ul><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Aura Tools</a></li><li><a href="/glossary.html">Glow-Up Glossary</a></li></ul></nav>
+<nav class="colophon-col" aria-label="Legal"><h2>Legal</h2><ul><li><a href="https://www.lookauramax.com/privacy">Privacy Policy</a></li><li><a href="https://www.lookauramax.com/terms">Terms</a></li><li><a href="https://www.lookauramax.com/refund">Refund Policy</a></li></ul></nav>
 </div>
-<p class="foot-note">Lookauramax is not a medical app. It does not diagnose, treat, or promise any physical outcome. Scores are Aura Intelligence estimates — clear, explainable checks, not medical advice.</p>
-<div class="social-row"><a href="https://www.instagram.com/lookauramax" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg></a><a href="https://www.youtube.com/@lookauramax" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@lookauramax" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="17" r="3.5"/><path d="M12 17V4"/><path d="M12 4c.5 3 2.5 4.5 6 5"/></svg></a><a href="https://www.facebook.com/lookauramax" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.3-1.3H17V2.5h-2.6A3.9 3.9 0 0 0 10.5 6.4v2.1H8V12h2.5v9.5H14V12h2.4l.4-3.5z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.threads.net/@lookauramax" target="_blank" rel="noopener" aria-label="Threads"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="M15.5 4.5v8"/></svg></a><a href="https://x.com/Lookauramax" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.2l7.3-8.3L2 2h6.5l4.4 5.9L18.9 2zm-1.1 18h1.7L7.6 3.9H5.7L17.8 20z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.linkedin.com/company/lookauramax" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.pinterest.com/lookauramax/" target="_blank" rel="noopener" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.08 2.45 7.58 5.96 9.12-.08-.78-.16-1.98.03-2.83.18-.78 1.16-4.95 1.16-4.95s-.3-.6-.3-1.48c0-1.38.8-2.42 1.8-2.42.85 0 1.26.64 1.26 1.4 0 .85-.54 2.13-.82 3.31-.23.98.49 1.78 1.46 1.78 1.75 0 3.1-1.85 3.1-4.51 0-2.36-1.7-4.01-4.12-4.01-2.8 0-4.45 2.1-4.45 4.28 0 .85.32 1.75.73 2.25.08.1.09.19.07.29l-.27 1.1c-.04.18-.14.22-.33.13-1.24-.58-2.01-2.38-2.01-3.83 0-3.12 2.27-5.99 6.54-5.99 3.43 0 6.1 2.44 6.1 5.71 0 3.42-2.16 6.17-5.15 6.17-1.01 0-1.95-.52-2.27-1.14l-.62 2.36c-.22.87-.83 1.96-1.24 2.62.93.29 1.92.44 2.95.44 5.52 0 10-4.48 10-10S17.52 2 12 2z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.reddit.com/user/lookauramax/" target="_blank" rel="noopener" aria-label="Reddit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.562-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.688-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z" fill="currentColor" stroke="none"/></svg></a></div>
-<div class="foot-bottom"><p>© 2026 Lookauramax. All rights reserved.</p><span data-cookie-settings-slot></span></div>
+<p class="colophon-note">Lookauramax is not a medical app. It does not diagnose, treat, or promise any physical outcome. Scores are Aura Intelligence estimates — clear, explainable checks, not medical advice.</p>
+<div class="colophon-social"><a href="https://www.instagram.com/lookauramax" target="_blank" rel="noopener" aria-label="Instagram">Instagram →</a><a href="https://www.youtube.com/@lookauramax" target="_blank" rel="noopener" aria-label="YouTube">YouTube →</a><a href="https://www.tiktok.com/@lookauramax" target="_blank" rel="noopener" aria-label="TikTok">TikTok →</a><a href="https://www.facebook.com/lookauramax" target="_blank" rel="noopener" aria-label="Facebook">Facebook →</a><a href="https://www.threads.net/@lookauramax" target="_blank" rel="noopener" aria-label="Threads">Threads →</a><a href="https://x.com/Lookauramax" target="_blank" rel="noopener" aria-label="X">X →</a><a href="https://www.linkedin.com/company/lookauramax" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn →</a><a href="https://www.pinterest.com/lookauramax/" target="_blank" rel="noopener" aria-label="Pinterest">Pinterest →</a><a href="https://www.reddit.com/user/lookauramax/" target="_blank" rel="noopener" aria-label="Reddit">Reddit →</a></div>
+<div class="colophon-bottom"><p>© 2026 Lookauramax. All rights reserved.</p><span data-cookie-settings-slot></span></div>
 </div></footer>
 
 <div class="sticky-bar" id="sticky-bar" role="complementary" aria-label="Quick action"><b>Start your glow-up — free trial</b><a class="btn btn-gold" href="#pricing">See plans →</a><button class="x" aria-label="Dismiss" onclick="document.getElementById('sticky-bar').remove()">×</button></div>
@@ -507,7 +338,7 @@ posture:{t:'Posture — framing hint',x:'Illustration: head-and-shoulder framing
 photo:{t:'Photo quality — fair reading',x:'Illustration: lighting, sharpness, and framing → a band plus one concrete action, like facing a window and holding the phone at eye level.',w:'80%'}};
 document.querySelectorAll('#preview-chips button').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('#preview-chips button').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');var d=previewData[btn.dataset.focus];document.getElementById('preview-title').textContent=d.t;document.getElementById('preview-text').textContent=d.x;var b2=document.getElementById('preview-bar');b2.style.width='0';setTimeout(function(){b2.style.width=d.w;},90);});});
 </script>
-  <script src="/assets/consent.js" defer></script>
-  <script src="/assets/pricing.js" defer></script>
+  <script src="/assets/consent.js?v=20261022" defer></script>
+  <script src="/assets/pricing.js?v=20261022" defer></script>
 </body>
 </html>
