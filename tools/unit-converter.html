@@ -8,28 +8,21 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <title>Free Height &amp; Weight Converter — cm, Feet, kg, lbs</title>
-<meta name="description" content="Free height and weight converter: convert cm to feet and inches, feet to cm, kg to lbs, and lbs to kg instantly. Two-way, no sign-up, nothing stored.">
-<link rel="canonical" href="https://lookauramax.com/tools/unit-converter.html">
+<meta name="description" content="Free height and weight converter: convert cm to feet and inches, feet to cm, kg to lbs, and lbs to kg. Two-way conversion with exact factors, no sign-up.">
+<link rel="canonical" href="https://www.lookauramax.com/tools/unit-converter.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Free Height &amp; Weight Converter — cm, Feet, kg, lbs">
-<meta property="og:description" content="Free height and weight converter: convert cm to feet and inches, feet to cm, kg to lbs, and lbs to kg instantly. Two-way, no sign-up, nothing stored.">
-<meta property="og:url" content="https://lookauramax.com/tools/unit-converter.html">
-<meta property="og:image" content="https://lookauramax.com/images/fitness.svg">
-<meta property="og:image:alt" content="Height and Weight Converter — Lookauramax free tool illustration">
+<meta property="og:description" content="Free height and weight converter: convert cm to feet and inches, feet to cm, kg to lbs, and lbs to kg. Two-way conversion with exact factors, no sign-up.">
+<meta property="og:url" content="https://www.lookauramax.com/tools/unit-converter.html">
+<meta property="og:image" content="https://www.lookauramax.com/images/tools/unit-converter.jpg">
+<meta property="og:image:alt" content="Illustration of a fictional man standing tall against a plain wall holding a tape measure">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Free Height &amp; Weight Converter — cm, Feet, kg, lbs">
-<meta name="twitter:description" content="Free height and weight converter: convert cm to feet and inches, feet to cm, kg to lbs, and lbs to kg instantly.">
-<meta name="twitter:image" content="https://lookauramax.com/images/fitness.svg">
-<meta name="twitter:image:alt" content="Height and Weight Converter — Lookauramax free tool illustration">
+<meta name="twitter:description" content="Free height and weight converter: convert cm to feet and inches, feet to cm, kg to lbs, and lbs to kg. Two-way conversion with exact factors, no sign-up.">
+<meta name="twitter:image" content="https://www.lookauramax.com/images/tools/unit-converter.jpg">
+<meta name="twitter:image:alt" content="Illustration of a fictional man standing tall against a plain wall holding a tape measure">
 <meta name="author" content="Lookauramax Team">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How do I convert cm to feet and inches?","acceptedAnswer":{"@type":"Answer","text":"Divide cm by 2.54 to get total inches, then divide by 12 for feet. The remainder is inches. For example, 175 cm is 68.9 inches, which is 5 feet 9 inches. This converter does it instantly."}},
-{"@type":"Question","name":"How do I convert kg to lbs?","acceptedAnswer":{"@type":"Answer","text":"Multiply kg by 2.20462 to get pounds. For example, 70 kg is about 154.3 lbs. To go back, divide lbs by 2.20462."}},
-{"@type":"Question","name":"Is this converter accurate?","acceptedAnswer":{"@type":"Answer","text":"Yes — it uses the exact definitions: 1 inch = 2.54 cm and 1 kg = 2.20462 lbs. Results are rounded for readability."}},
-{"@type":"Question","name":"Does this converter store my height or weight?","acceptedAnswer":{"@type":"Answer","text":"No. All conversion happens in your browser. Nothing is sent, stored, or tracked."}}
-]}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert cm to feet and inches?","acceptedAnswer":{"@type":"Answer","text":"Divide cm by 2.54 to get total inches, then divide by 12 for feet. The remainder is inches. For example, 175 cm is 68.9 inches, which is 5 feet 9 inches. This converter does it immediately."}},{"@type":"Question","name":"How do I convert kg to lbs?","acceptedAnswer":{"@type":"Answer","text":"Multiply kg by 2.20462 to get pounds. For example, 70 kg is about 154.3 lbs. To go back, divide lbs by 2.20462."}},{"@type":"Question","name":"Is this converter accurate?","acceptedAnswer":{"@type":"Answer","text":"Yes — it uses the exact definitions: 1 inch = 2.54 cm and 1 kg = 2.20462 lbs. Results are rounded for readability."}},{"@type":"Question","name":"Do I need to sign up to use this converter?","acceptedAnswer":{"@type":"Answer","text":"No. The tool works right here in your browser — no account, no name or email needed."}}]}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
@@ -67,7 +60,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 .tool input:focus,.tool select:focus{outline:2px solid #E19A2D;border-color:#E19A2D}
 .tool button{background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;border:0;border-radius:999px;padding:13px 26px;font-size:16px;cursor:pointer;margin-top:20px}
 .tool button:hover{filter:brightness(1.08)}
-.err{color:#FF9A8A;font-size:14px;margin-top:10px;min-height:20px}
+.err{color:#FF8A8A;font-size:14px;margin-top:10px;min-height:20px}
 .result{display:none;background:#1C1505;border:1px solid rgba(225,154,45,.5);border-radius:14px;padding:22px;margin-top:22px}
 .result .big{font-size:30px;font-weight:900;color:#FFD14E}
 .privacy-note{font-size:13px;color:#A9A29A;margin-top:14px}
@@ -75,44 +68,59 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 @media(max-width:600px){.row{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lookauramax.com/"}, {"@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://lookauramax.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Free Height & Weight Converter — cm, Feet, kg, lbs", "item": "https://lookauramax.com/tools/unit-converter.html"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lookauramax.com/"}, {"@type": "ListItem", "position": 2, "name": "Aura Tools", "item": "https://www.lookauramax.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Free Height & Weight Converter — cm, Feet, kg, lbs", "item": "https://www.lookauramax.com/tools/unit-converter.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "WebApplication", "name": "Free Height & Weight Converter — cm, Feet, kg, lbs", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": "https://lookauramax.com/tools/unit-converter.html"}
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Free Height & Weight Converter — cm, Feet, kg, lbs", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": "https://www.lookauramax.com/tools/unit-converter.html"}
 </script>
 <link rel="stylesheet" href="/assets/base.css">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
   <link rel="stylesheet" href="/assets/consent.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "HowTo", "name": "How to use the Height & Weight Converter", "step": [{"@type": "HowToStep", "text": "Type a height in either the cm or the feet and inches field."}, {"@type": "HowToStep", "text": "Read the converted height on the other side."}, {"@type": "HowToStep", "text": "Type a weight in either the kg or the lbs field."}, {"@type": "HowToStep", "text": "Read the converted weight on the other side."}]}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Lookauramax","logo":"https://www.lookauramax.com/logo.png","url":"https://www.lookauramax.com/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Lookauramax","url":"https://www.lookauramax.com/","inLanguage":"en"}</script>
 </head>
 <body>
 <header><div class="head">
 <a class="brand" href="/"><img src="/logo-small.png" alt="Lookauramax logo"><b>LOOK<em>AURA</em>MAX</b></a>
-<nav class="hlinks"><a href="/#what">What it is</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a></nav>
+<nav class="hlinks"><a href="/tools/">Tools</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a></nav>
 <a class="btn btn-gold" href="/#pricing">Get the app →</a>
 </div></header>
 <main id="main" class="wrap narrow">
-<p class="crumb"><a href="https://lookauramax.com/tools/">Free Tools</a> / Height &amp; Weight Converter</p>
+<p class="crumb"><a href="https://lookauramax.com/tools/">Aura Tools</a> / Height &amp; Weight Converter</p>
 <h1>Height &amp; Weight Converter</h1>
-<figure class="post-hero"><img src="/images/fitness.svg" alt="Height and Weight Converter — Lookauramax free tool illustration" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Lookauramax free tool — Height &amp; Weight Converter</figcaption></figure>
+<figure class="post-hero"><img src="/images/tools/unit-converter.jpg" alt="Illustration of a fictional man standing tall against a plain wall holding a tape measure" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Illustration — AI-generated image of a fictional person. Not a real user or result.</figcaption></figure>
 <p class="byline">By <a href="https://lookauramax.com/about.html">Lookauramax Team</a> · Published 17 Oct 2026 · Pure utility, no health claims.</p>
-<p class="lede">Convert height and weight instantly, both ways: centimetres ↔ feet and inches, kilograms ↔ pounds. Type in either side and the other updates. Everything runs in your browser. Nothing is sent anywhere, stored, or tracked.</p>
+<p class="lede">One inch is exactly 2.54 cm and one kilogram is exactly 2.20462 pounds. This converter applies those exact factors both ways, so typing on either side updates the other. Enter a value below to convert it.</p>
+<h2>What is the Height and Weight Converter?</h2>
+<p>The Height and Weight Converter is a free tool that converts height and weight between metric and imperial units. It uses exact conversion factors. It gives immediate results as you type. No sign-up is needed. It covers centimetres, feet, inches, kilograms, and pounds.</p>
+
+<h2>How to use this tool</h2>
+<ol>
+<li>Type a height in either the cm or the feet and inches field.</li>
+<li>Read the converted height on the other side.</li>
+<li>Type a weight in either the kg or the lbs field.</li>
+<li>Read the converted weight on the other side.</li>
+</ol>
 
 <div class="tool" aria-label="Height and weight converter">
 <h3 style="margin-top:0">Height</h3>
 <div class="row">
-<div><label for="cm">Centimetres (cm)</label><input id="cm" type="number" inputmode="decimal" min="50" max="300" step="0.1" placeholder="e.g. 175" oninput="fromCm()"></div>
+<div><label for="cm">Centimetres (cm)</label><input id="cm" type="number" inputmode="decimal" min="50" max="300" step="0.1" placeholder="175" oninput="fromCm()"></div>
 <div><label for="ft">Feet + inches</label><div class="row"><input id="ft" type="number" inputmode="numeric" min="1" max="9" step="1" placeholder="ft" oninput="fromFtIn()"><input id="inch" type="number" inputmode="decimal" min="0" max="11.99" step="0.1" placeholder="in" oninput="fromFtIn()"></div></div>
 </div>
 <p class="err" id="errH" role="alert"></p>
 <h3>Weight</h3>
 <div class="row">
-<div><label for="kg">Kilograms (kg)</label><input id="kg" type="number" inputmode="decimal" min="10" max="500" step="0.1" placeholder="e.g. 70" oninput="fromKg()"></div>
-<div><label for="lbs">Pounds (lbs)</label><input id="lbs" type="number" inputmode="decimal" min="22" max="1100" step="0.1" placeholder="e.g. 154.3" oninput="fromLbs()"></div>
+<div><label for="kg">Kilograms (kg)</label><input id="kg" type="number" inputmode="decimal" min="10" max="500" step="0.1" placeholder="70" oninput="fromKg()"></div>
+<div><label for="lbs">Pounds (lbs)</label><input id="lbs" type="number" inputmode="decimal" min="22" max="1100" step="0.1" placeholder="154.3" oninput="fromLbs()"></div>
 </div>
 <p class="err" id="errW" role="alert"></p>
 <div class="result" id="result" aria-live="polite"></div>
-<p class="privacy-note">🔒 This tool runs 100% in your browser. Your numbers are never sent, stored, or tracked.</p>
+<p class="privacy-note">No sign-up needed — the tool works right here in your browser.</p>
 </div>
 
 <h2>Quick reference</h2>
@@ -122,7 +130,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <li><strong>1 kg = 2.20462 lbs</strong></li>
 <li><strong>1 lb = 0.453592 kg</strong></li>
 </ul>
-<p>Example: 175 cm = 5 ft 9 in. 70 kg = 154.3 lbs. 6 ft 0 in = 182.9 cm.</p>
+<p>Illustration: 175 cm = 5 ft 9 in. 70 kg = 154.3 lbs. 6 ft 0 in = 182.9 cm.</p>
 
 <div class="cta">
 <h2>Your glow-up, made real</h2>
@@ -132,28 +140,30 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 
 <div class="faq">
 <h2>Frequently asked questions</h2>
-<details open><summary>How do I convert cm to feet and inches?</summary><p>Divide cm by 2.54 to get total inches, then divide by 12 for feet. The remainder is inches. For example, 175 cm is 68.9 inches, which is 5 feet 9 inches. This converter does it instantly.</p></details>
+<details open><summary>How do I convert cm to feet and inches?</summary><p>Divide cm by 2.54 to get total inches, then divide by 12 for feet. The remainder is inches. For example, 175 cm is 68.9 inches, which is 5 feet 9 inches. This converter does it immediately.</p></details>
 <details><summary>How do I convert kg to lbs?</summary><p>Multiply kg by 2.20462 to get pounds. For example, 70 kg is about 154.3 lbs. To go back, divide lbs by 2.20462.</p></details>
 <details><summary>Is this converter accurate?</summary><p>Yes — it uses the exact definitions: 1 inch = 2.54 cm and 1 kg = 2.20462 lbs. Results are rounded for readability.</p></details>
-<details><summary>Does this converter store my height or weight?</summary><p>No. All conversion happens in your browser. Nothing is sent, stored, or tracked.</p></details>
+<details><summary>Do I need to sign up to use this converter?</summary><p>No. The tool works right here in your browser — no account, no name or email needed.</p></details>
 </div>
 
 <p class="disclaimer"><strong>Note:</strong> This is a pure unit converter. It makes no health claims and gives no health advice.</p>
 
 <div class="related">
-<h3>Keep reading</h3>
-<a href="https://lookauramax.com/blog/height-truth.html">→ Height: The Honest Truth (What You Can and Cannot Change)</a>
-<a href="https://lookauramax.com/blog/look-taller-guide.html">→ How to Look Taller: Honest Style &amp; Posture Tips</a>
-<a href="https://lookauramax.com/blog/protein-guide.html">→ Protein Guide: How Much Do You Really Need?</a>
+<h3>Related tools</h3>
+<a href="https://lookauramax.com/tools/bmi-calculator.html">→ Free BMI Calculator</a>
+<a href="https://lookauramax.com/tools/healthy-weight-range.html">→ Healthy Weight Range Calculator</a>
+<a href="https://lookauramax.com/tools/calorie-calculator.html">→ Free Calorie Calculator (TDEE)</a>
+<a href="https://lookauramax.com/tools/protein-calculator.html">→ Daily Protein Calculator</a>
 </div>
 </main>
 <footer><div class="wrap"><div class="foot">
 <div class="foot-brand"><img src="/logo-small.png" alt="Lookauramax founder logo"><div><p>LOOK<span>AURA</span>MAX</p><p>Your glow-up, made real.</p><p><a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></div>
-<nav class="foot-col" aria-label="Product"><h4>Product</h4><ul><li><a href="/#what">What it is</a></li><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#faq">FAQ</a></li></ul></nav>
-<nav class="foot-col" aria-label="Resources"><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Free Tools</a></li><li><a href="/glossary.html">Glow-Up Glossary</a></li></ul></nav>
+<nav class="foot-col" aria-label="Product"><h4>Product</h4><ul><li><a href="/tools/">Tools</a></li><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#faq">FAQ</a></li></ul></nav>
+<nav class="foot-col" aria-label="Resources"><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Aura Tools</a></li><li><a href="/glossary.html">Glow-Up Glossary</a></li></ul></nav>
 <nav class="foot-col" aria-label="Legal"><h4>Legal</h4><ul><li><a href="https://lookauramax.com/privacy">Privacy Policy</a></li><li><a href="https://lookauramax.com/terms">Terms</a></li><li><a href="https://lookauramax.com/refund">Refund Policy</a></li></ul></nav>
 </div>
-<p class="foot-note">Lookauramax is not a medical app. It does not diagnose, treat, or promise any physical outcome. Scores are rule-based estimates, not AI, and not medical advice.</p>
+<p class="foot-note">Lookauramax is not a medical app. It does not diagnose, treat, or promise any physical outcome. Scores are Aura Intelligence estimates — clear, explainable checks, not medical advice.</p>
+<div class="social-row"><a href="https://www.instagram.com/lookauramax" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg></a><a href="https://www.youtube.com/@lookauramax" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@lookauramax" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="17" r="3.5"/><path d="M12 17V4"/><path d="M12 4c.5 3 2.5 4.5 6 5"/></svg></a><a href="https://www.facebook.com/lookauramax" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.3-1.3H17V2.5h-2.6A3.9 3.9 0 0 0 10.5 6.4v2.1H8V12h2.5v9.5H14V12h2.4l.4-3.5z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.threads.net/@lookauramax" target="_blank" rel="noopener" aria-label="Threads"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="M15.5 4.5v8"/></svg></a></div>
 <div class="foot-bottom"><p>© 2026 Lookauramax. All rights reserved.</p><span data-cookie-settings-slot></span></div>
 </div></footer>
 <script>

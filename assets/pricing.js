@@ -151,7 +151,7 @@
 
     setText('[data-per="monthly"]', fmt(m, m.monthly) + ' / month · billed monthly');
     setHtml('[data-per="quarterly"]',
-      fmt(m, m.q / 3) + ' / month · Save ' + qSave + '%<br>Complete 1 transformation');
+      fmt(m, m.q / 3) + ' / month · Save ' + qSave + '%<br>One full 90-day cycle');
     setHtml('[data-per="halfyearly"]',
       fmt(m, m.h / 6) + ' / month · Save ' + hSave + '%<br>Two full 90-day cycles');
     setHtml('[data-per="yearly"]',

@@ -95,7 +95,7 @@
       '<div class="lam-consent-actions">' +
         '<button type="button" class="lam-consent-accept">Accept analytics</button>' +
         '<button type="button" class="lam-consent-decline">Decline</button>' +
-        '<a class="lam-consent-policy" href="https://lookauramax.com/privacy">Privacy Policy</a>' +
+        '<a class="lam-consent-policy" href="https://www.lookauramax.com/privacy">Privacy Policy</a>' +
       '</div>';
     document.body.appendChild(banner);
     var acceptBtn = banner.querySelector('.lam-consent-accept');

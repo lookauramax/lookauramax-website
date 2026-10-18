@@ -8,28 +8,21 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <title>Free Daily Protein Calculator — How Much Do You Need?</title>
-<meta name="description" content="Free protein calculator: enter weight + activity level for an honest daily protein range in g/day, plus food examples. No sign-up, nothing stored.">
-<link rel="canonical" href="https://lookauramax.com/tools/protein-calculator.html">
+<meta name="description" content="Free protein calculator: enter your weight and activity level for an honest daily protein range in grams per day, plus everyday food ideas. No sign-up needed.">
+<link rel="canonical" href="https://www.lookauramax.com/tools/protein-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Free Daily Protein Calculator — How Much Protein Do You Need?">
-<meta property="og:description" content="Free daily protein calculator: enter your weight and activity level to get an honest protein range in grams per day, plus simple food examples. No sign-up, nothing stored.">
-<meta property="og:url" content="https://lookauramax.com/tools/protein-calculator.html">
-<meta property="og:image" content="https://lookauramax.com/images/nutrition.svg">
-<meta property="og:image:alt" content="Daily Protein Calculator — Lookauramax free tool illustration">
+<meta property="og:description" content="Free protein calculator: enter your weight and activity level for an honest daily protein range in grams per day, plus everyday food ideas. No sign-up needed.">
+<meta property="og:url" content="https://www.lookauramax.com/tools/protein-calculator.html">
+<meta property="og:image" content="https://www.lookauramax.com/images/tools/protein-calculator.jpg">
+<meta property="og:image:alt" content="Illustration of a fictional man preparing a high-protein lunch of eggs, beans and salad at a kitchen counter">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Free Daily Protein Calculator — How Much Protein Do You Need?">
-<meta name="twitter:description" content="Free daily protein calculator: enter your weight and activity level to get an honest protein range in grams per day, plus simple food examples.">
-<meta name="twitter:image" content="https://lookauramax.com/images/nutrition.svg">
-<meta name="twitter:image:alt" content="Daily Protein Calculator — Lookauramax free tool illustration">
+<meta name="twitter:description" content="Free protein calculator: enter your weight and activity level for an honest daily protein range in grams per day, plus everyday food ideas. No sign-up needed.">
+<meta name="twitter:image" content="https://www.lookauramax.com/images/tools/protein-calculator.jpg">
+<meta name="twitter:image:alt" content="Illustration of a fictional man preparing a high-protein lunch of eggs, beans and salad at a kitchen counter">
 <meta name="author" content="Lookauramax Team">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How much protein do I need per day?","acceptedAnswer":{"@type":"Answer","text":"It depends on your body weight and activity level. General guidance is roughly 0.8 g per kg of body weight for sedentary adults, rising to around 1.2–2.0 g per kg for active people and those doing strength training. This calculator gives you a range, not a single exact number."}},
-{"@type":"Question","name":"Is more protein always better?","acceptedAnswer":{"@type":"Answer","text":"No. Beyond your body's needs, extra protein does not build extra muscle — training, sleep, and overall diet matter more. Very high intakes can also be hard on digestion and are not suitable for everyone."}},
-{"@type":"Question","name":"Can I get enough protein without supplements?","acceptedAnswer":{"@type":"Answer","text":"Yes, for most people. Everyday foods — lentils, beans, eggs, dairy, chicken, fish, tofu, nuts — cover typical protein needs. Supplements are optional, not required."}},
-{"@type":"Question","name":"Who should not use this calculator's result as advice?","acceptedAnswer":{"@type":"Answer","text":"People with kidney conditions, pregnant or breastfeeding people, teenagers, and anyone with a medical condition or prescribed diet should follow their clinician's or dietitian's guidance instead of a general calculator."}}
-]}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much protein do I need per day?","acceptedAnswer":{"@type":"Answer","text":"It depends on your body weight and activity level. General guidance is roughly 0.8 g per kg of body weight for sedentary adults, rising to around 1.2–2.0 g per kg for active people and those doing strength training. This calculator gives you a range, not a single exact number."}},{"@type":"Question","name":"Is more protein always better?","acceptedAnswer":{"@type":"Answer","text":"No. Beyond your body's needs, extra protein does not build extra muscle — training, sleep, and overall diet matter more. Very high intakes can also be hard on digestion and are not suitable for everyone."}},{"@type":"Question","name":"Can I get enough protein without supplements?","acceptedAnswer":{"@type":"Answer","text":"Yes, for most people. Everyday foods — lentils, beans, eggs, dairy, chicken, fish, tofu, nuts — cover typical protein needs. Supplements are optional, not required."}},{"@type":"Question","name":"Who should not use this calculator's result as advice?","acceptedAnswer":{"@type":"Answer","text":"People with kidney conditions, pregnant or breastfeeding people, teenagers, and anyone with a medical condition or prescribed diet should follow their clinician's or dietitian's guidance instead of a general calculator."}}]}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
@@ -67,38 +60,53 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 .tool input:focus,.tool select:focus{outline:2px solid #E19A2D;border-color:#E19A2D}
 .tool button{background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;border:0;border-radius:999px;padding:13px 26px;font-size:16px;cursor:pointer;margin-top:20px}
 .tool button:hover{filter:brightness(1.08)}
-.err{color:#FF9A8A;font-size:14px;margin-top:10px;min-height:20px}
+.err{color:#FF8A8A;font-size:14px;margin-top:10px;min-height:20px}
 .result{display:none;background:#1C1505;border:1px solid rgba(225,154,45,.5);border-radius:14px;padding:22px;margin-top:22px}
 .result .big{font-size:30px;font-weight:900;color:#FFD14E}
 .privacy-note{font-size:13px;color:#A9A29A;margin-top:14px}
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lookauramax.com/"}, {"@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://lookauramax.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Free Daily Protein Calculator — How Much Do You Need?", "item": "https://lookauramax.com/tools/protein-calculator.html"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lookauramax.com/"}, {"@type": "ListItem", "position": 2, "name": "Aura Tools", "item": "https://www.lookauramax.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Free Daily Protein Calculator — How Much Do You Need?", "item": "https://www.lookauramax.com/tools/protein-calculator.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "WebApplication", "name": "Free Daily Protein Calculator — How Much Do You Need?", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": "https://lookauramax.com/tools/protein-calculator.html"}
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Free Daily Protein Calculator — How Much Do You Need?", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": "https://www.lookauramax.com/tools/protein-calculator.html"}
 </script>
 <link rel="stylesheet" href="/assets/base.css">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
   <link rel="stylesheet" href="/assets/consent.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "HowTo", "name": "How to use the Protein Calculator", "step": [{"@type": "HowToStep", "text": "Enter your weight."}, {"@type": "HowToStep", "text": "Choose your activity level."}, {"@type": "HowToStep", "text": "Select Calculate my protein range to see your range."}, {"@type": "HowToStep", "text": "Read your grams-per-day range and the food ideas beside it."}]}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Lookauramax","logo":"https://www.lookauramax.com/logo.png","url":"https://www.lookauramax.com/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Lookauramax","url":"https://www.lookauramax.com/","inLanguage":"en"}</script>
 </head>
 <body>
 <header><div class="head">
 <a class="brand" href="/"><img src="/logo-small.png" alt="Lookauramax logo"><b>LOOK<em>AURA</em>MAX</b></a>
-<nav class="hlinks"><a href="/#what">What it is</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a></nav>
+<nav class="hlinks"><a href="/tools/">Tools</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a></nav>
 <a class="btn btn-gold" href="/#pricing">Get the app →</a>
 </div></header>
 <main id="main" class="wrap narrow">
-<p class="crumb"><a href="https://lookauramax.com/tools/">Free Tools</a> / Daily Protein Calculator</p>
+<p class="crumb"><a href="https://lookauramax.com/tools/">Aura Tools</a> / Daily Protein Calculator</p>
 <h1>Daily Protein Calculator</h1>
-<figure class="post-hero"><img src="/images/nutrition.svg" alt="Daily Protein Calculator — Lookauramax free tool illustration" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Lookauramax free tool — Daily Protein Calculator</figcaption></figure>
+<figure class="post-hero"><img src="/images/tools/protein-calculator.jpg" alt="Illustration of a fictional man preparing a high-protein lunch of eggs, beans and salad at a kitchen counter" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Illustration — AI-generated image of a fictional person. Not a real user or result.</figcaption></figure>
 <p class="byline">By <a href="https://lookauramax.com/about.html">Lookauramax Team</a> · Published 17 Oct 2026 · General information, not medical advice.</p>
-<p class="lede">How much protein do you actually need? Enter your weight and activity level, and this free calculator gives you an honest range in grams per day — plus simple food examples. Everything runs in your browser. Nothing is sent anywhere, stored, or tracked.</p>
+<p class="lede">Most adults need roughly 0.8 grams of protein per kilogram of body weight per day, rising to around 1.2–2.0 grams for active people and those doing strength training. This calculator turns that guidance into a daily range for your weight and activity. Enter your details below to get your range.</p>
+<h2>What is the Protein Calculator?</h2>
+<p>The Protein Calculator is a free tool that estimates your daily protein needs. It uses your weight and activity level. It gives a range in grams with everyday food ideas. It is general information, not a prescription. Food first, supplements only if needed.</p>
+
+<h2>How to use this tool</h2>
+<ol>
+<li>Enter your weight.</li>
+<li>Choose your activity level.</li>
+<li>Select Calculate my protein range to see your range.</li>
+<li>Read your grams-per-day range and the food ideas beside it.</li>
+</ol>
 
 <div class="tool" role="form" aria-label="Daily protein calculator">
 <label for="weight">Your weight (kg)</label>
-<input id="weight" type="number" inputmode="decimal" min="20" max="300" step="0.1" placeholder="e.g. 70">
+<input id="weight" type="number" inputmode="decimal" min="20" max="300" step="0.1" placeholder="70">
 <label for="activity">Activity level</label>
 <select id="activity">
 <option value="sedentary">Sedentary — mostly sitting, little exercise</option>
@@ -108,14 +116,14 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <button type="button" onclick="calcProtein()">Calculate my protein range</button>
 <p class="err" id="err" role="alert"></p>
 <div class="result" id="result" aria-live="polite"></div>
-<p class="privacy-note">🔒 This tool runs 100% in your browser. Your weight is never sent, stored, or tracked.</p>
+<p class="privacy-note">No sign-up needed — the tool works right here in your browser.</p>
 </div>
 
 <h2>What the numbers mean</h2>
 <p>Protein needs scale with body weight and activity. General guidance used here: <strong>0.8 g/kg</strong> for sedentary adults, <strong>1.2–1.6 g/kg</strong> for active people, and <strong>1.6–2.0 g/kg</strong> for people focused on strength training. The calculator shows a range because no single number fits everyone — appetite, total calories, training, and health all shift it.</p>
 <p>Chasing extreme protein numbers is not the goal. Hitting a reasonable range from ordinary food, consistently, beats any perfect number you follow for three days and quit.</p>
 
-<h2>Simple food examples</h2>
+<h2>Clear food ideas</h2>
 <ul>
 <li><strong>Lentils / dal (1 cooked cup):</strong> ~18 g protein</li>
 <li><strong>Eggs (2 large):</strong> ~12 g protein</li>
@@ -143,19 +151,21 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <p class="disclaimer"><strong>Disclaimer:</strong> General nutrition information, not a personal diet prescription. People with kidney conditions or medical needs should follow clinician guidance. This tool does not diagnose, treat, or prescribe anything.</p>
 
 <div class="related">
-<h3>Keep reading</h3>
-<a href="https://lookauramax.com/blog/protein-guide.html">→ Protein Guide: How Much Do You Really Need?</a>
-<a href="https://lookauramax.com/blog/gain-weight-guide.html">→ How to Gain Weight the Healthy Way</a>
-<a href="https://lookauramax.com/blog/build-muscle-guide.html">→ How to Build Muscle: The Honest Beginner Guide</a>
+<h3>Related tools</h3>
+<a href="https://lookauramax.com/tools/calorie-calculator.html">→ Free Calorie Calculator (TDEE)</a>
+<a href="https://lookauramax.com/tools/water-intake-calculator.html">→ Daily Water Intake Calculator</a>
+<a href="https://lookauramax.com/tools/body-fat-calculator.html">→ Body Fat Percentage Calculator</a>
+<a href="https://lookauramax.com/tools/bmi-calculator.html">→ Free BMI Calculator</a>
 </div>
 </main>
 <footer><div class="wrap"><div class="foot">
 <div class="foot-brand"><img src="/logo-small.png" alt="Lookauramax founder logo"><div><p>LOOK<span>AURA</span>MAX</p><p>Your glow-up, made real.</p><p><a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></div>
-<nav class="foot-col" aria-label="Product"><h4>Product</h4><ul><li><a href="/#what">What it is</a></li><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#faq">FAQ</a></li></ul></nav>
-<nav class="foot-col" aria-label="Resources"><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Free Tools</a></li><li><a href="/glossary.html">Glow-Up Glossary</a></li></ul></nav>
+<nav class="foot-col" aria-label="Product"><h4>Product</h4><ul><li><a href="/tools/">Tools</a></li><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#faq">FAQ</a></li></ul></nav>
+<nav class="foot-col" aria-label="Resources"><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Aura Tools</a></li><li><a href="/glossary.html">Glow-Up Glossary</a></li></ul></nav>
 <nav class="foot-col" aria-label="Legal"><h4>Legal</h4><ul><li><a href="https://lookauramax.com/privacy">Privacy Policy</a></li><li><a href="https://lookauramax.com/terms">Terms</a></li><li><a href="https://lookauramax.com/refund">Refund Policy</a></li></ul></nav>
 </div>
-<p class="foot-note">Lookauramax is not a medical app. It does not diagnose, treat, or promise any physical outcome. Scores are rule-based estimates, not AI, and not medical advice.</p>
+<p class="foot-note">Lookauramax is not a medical app. It does not diagnose, treat, or promise any physical outcome. Scores are Aura Intelligence estimates — clear, explainable checks, not medical advice.</p>
+<div class="social-row"><a href="https://www.instagram.com/lookauramax" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg></a><a href="https://www.youtube.com/@lookauramax" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@lookauramax" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="17" r="3.5"/><path d="M12 17V4"/><path d="M12 4c.5 3 2.5 4.5 6 5"/></svg></a><a href="https://www.facebook.com/lookauramax" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.3-1.3H17V2.5h-2.6A3.9 3.9 0 0 0 10.5 6.4v2.1H8V12h2.5v9.5H14V12h2.4l.4-3.5z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.threads.net/@lookauramax" target="_blank" rel="noopener" aria-label="Threads"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="M15.5 4.5v8"/></svg></a></div>
 <div class="foot-bottom"><p>© 2026 Lookauramax. All rights reserved.</p><span data-cookie-settings-slot></span></div>
 </div></footer>
 <script>

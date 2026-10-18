@@ -8,28 +8,21 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <title>Build Your Routine — Free Morning &amp; Night Checklist</title>
-<meta name="description" content="Free routine builder: pick skin type, hair type, and goal for a simple morning + night checklist. General steps only, no products, nothing stored.">
-<link rel="canonical" href="https://lookauramax.com/tools/routine-builder.html">
+<meta name="description" content="Free routine builder: pick your skin type, hair type, and goal for a morning and night checklist with general steps. No products, no sign-up.">
+<link rel="canonical" href="https://www.lookauramax.com/tools/routine-builder.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Build Your Routine — Free Morning &amp; Night Checklist">
-<meta property="og:description" content="Free routine builder: pick your skin type, hair type, and goal, and get a simple morning and night checklist. General steps only, no products, nothing stored.">
-<meta property="og:url" content="https://lookauramax.com/tools/routine-builder.html">
-<meta property="og:image" content="https://lookauramax.com/images/routine.svg">
-<meta property="og:image:alt" content="Build Your Routine — Lookauramax free tool illustration">
+<meta property="og:description" content="Free routine builder: pick your skin type, hair type, and goal for a morning and night checklist with general steps. No products, no sign-up.">
+<meta property="og:url" content="https://www.lookauramax.com/tools/routine-builder.html">
+<meta property="og:image" content="https://www.lookauramax.com/images/tools/routine-builder.jpg">
+<meta property="og:image:alt" content="Illustration of a fictional man washing his face at a bathroom sink in the morning">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Build Your Routine — Free Morning &amp; Night Checklist">
-<meta name="twitter:description" content="Free routine builder: pick your skin type, hair type, and goal, and get a simple morning and night checklist.">
-<meta name="twitter:image" content="https://lookauramax.com/images/routine.svg">
-<meta name="twitter:image:alt" content="Build Your Routine — Lookauramax free tool illustration">
+<meta name="twitter:description" content="Free routine builder: pick your skin type, hair type, and goal for a morning and night checklist with general steps. No products, no sign-up.">
+<meta name="twitter:image" content="https://www.lookauramax.com/images/tools/routine-builder.jpg">
+<meta name="twitter:image:alt" content="Illustration of a fictional man washing his face at a bathroom sink in the morning">
 <meta name="author" content="Lookauramax Team">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How many steps should a daily routine have?","acceptedAnswer":{"@type":"Answer","text":"As few as you will actually do every day. A simple routine — cleanse, moisturise, sunscreen in the morning; cleanse, moisturise at night — beats a 10-step routine you quit in a week. Add steps only after the basics are a habit."}},
-{"@type":"Question","name":"Do I need different products for morning and night?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily different products, but different jobs: mornings are about protection (sunscreen), nights are about cleansing the day off and moisturising. This builder keeps the steps general — it never recommends specific products."}},
-{"@type":"Question","name":"How long before a routine shows results?","acceptedAnswer":{"@type":"Answer","text":"Skin and hair habits take weeks, not days. Give a simple routine at least 4–6 weeks of consistency before judging it. Switching products every few days makes it impossible to tell what helped."}},
-{"@type":"Question","name":"Does this builder store my answers?","acceptedAnswer":{"@type":"Answer","text":"No. Everything runs in your browser. Nothing is sent, stored, or tracked."}}
-]}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many steps should a daily routine have?","acceptedAnswer":{"@type":"Answer","text":"As few as you will actually do every day. A clear routine — cleanse, moisturise, sunscreen in the morning; cleanse, moisturise at night — beats a 10-step routine you quit in a week. Add steps only after the essentials are a habit."}},{"@type":"Question","name":"Do I need different products for morning and night?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily different products, but different jobs: mornings are about protection (sunscreen), nights are about cleansing the day off and moisturising. This builder keeps the steps general — it never recommends specific products."}},{"@type":"Question","name":"How long before a routine shows results?","acceptedAnswer":{"@type":"Answer","text":"Skin and hair habits take weeks, not days. Give a clear routine at least 4–6 weeks of consistency before judging it. Switching products every few days makes it impossible to tell what helped."}},{"@type":"Question","name":"Do I need to sign up to use the routine builder?","acceptedAnswer":{"@type":"Answer","text":"No. The tool works right here in your browser — no account, no name or email needed."}}]}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
@@ -67,7 +60,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 .tool input:focus,.tool select:focus{outline:2px solid #E19A2D;border-color:#E19A2D}
 .tool button{background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;border:0;border-radius:999px;padding:13px 26px;font-size:16px;cursor:pointer;margin-top:20px}
 .tool button:hover{filter:brightness(1.08)}
-.err{color:#FF9A8A;font-size:14px;margin-top:10px;min-height:20px}
+.err{color:#FF8A8A;font-size:14px;margin-top:10px;min-height:20px}
 .result{display:none;background:#1C1505;border:1px solid rgba(225,154,45,.5);border-radius:14px;padding:22px;margin-top:22px}
 .result .big{font-size:30px;font-weight:900;color:#FFD14E}
 .privacy-note{font-size:13px;color:#A9A29A;margin-top:14px}
@@ -76,28 +69,43 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 .checklist li::before{content:"☐";position:absolute;left:0;color:#FFD14E;font-size:18px}
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lookauramax.com/"}, {"@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://lookauramax.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Build Your Routine — Free Morning & Night Checklist", "item": "https://lookauramax.com/tools/routine-builder.html"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lookauramax.com/"}, {"@type": "ListItem", "position": 2, "name": "Aura Tools", "item": "https://www.lookauramax.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Build Your Routine — Free Morning & Night Checklist", "item": "https://www.lookauramax.com/tools/routine-builder.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "WebApplication", "name": "Build Your Routine — Free Morning & Night Checklist", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": "https://lookauramax.com/tools/routine-builder.html"}
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Build Your Routine — Free Morning & Night Checklist", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": "https://www.lookauramax.com/tools/routine-builder.html"}
 </script>
 <link rel="stylesheet" href="/assets/base.css">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
   <link rel="stylesheet" href="/assets/consent.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "HowTo", "name": "How to use the Routine Builder", "step": [{"@type": "HowToStep", "text": "Choose your skin type."}, {"@type": "HowToStep", "text": "Choose your hair type and your goal."}, {"@type": "HowToStep", "text": "Select Build my routine to see your checklist."}, {"@type": "HowToStep", "text": "Read your morning and night steps."}]}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Lookauramax","logo":"https://www.lookauramax.com/logo.png","url":"https://www.lookauramax.com/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Lookauramax","url":"https://www.lookauramax.com/","inLanguage":"en"}</script>
 </head>
 <body>
 <header><div class="head">
 <a class="brand" href="/"><img src="/logo-small.png" alt="Lookauramax logo"><b>LOOK<em>AURA</em>MAX</b></a>
-<nav class="hlinks"><a href="/#what">What it is</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a></nav>
+<nav class="hlinks"><a href="/tools/">Tools</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a></nav>
 <a class="btn btn-gold" href="/#pricing">Get the app →</a>
 </div></header>
 <main id="main" class="wrap narrow">
-<p class="crumb"><a href="https://lookauramax.com/tools/">Free Tools</a> / Routine Builder</p>
+<p class="crumb"><a href="https://lookauramax.com/tools/">Aura Tools</a> / Routine Builder</p>
 <h1>Build Your Routine</h1>
-<figure class="post-hero"><img src="/images/routine.svg" alt="Build Your Routine — Lookauramax free tool illustration" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Lookauramax free tool — Build Your Routine</figcaption></figure>
+<figure class="post-hero"><img src="/images/tools/routine-builder.jpg" alt="Illustration of a fictional man washing his face at a bathroom sink in the morning" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Illustration — AI-generated image of a fictional person. Not a real user or result.</figcaption></figure>
 <p class="byline">By <a href="https://lookauramax.com/about.html">Lookauramax Team</a> · Published 17 Oct 2026 · General information, not medical advice.</p>
-<p class="lede">Pick your skin type, hair type, and how complete you want your routine — and get a simple morning + night checklist with general steps only. No product recommendations, no 10-step nonsense. Everything runs in your browser. Nothing is sent anywhere, stored, or tracked.</p>
+<p class="lede">A routine you follow every day beats a long routine you abandon. Pick your skin type, hair type, and goal, and this builder gives you a morning and night checklist with general steps only — no product recommendations. Start below.</p>
+<h2>What is the Routine Builder?</h2>
+<p>The Routine Builder is a free tool that builds a morning and night checklist. It matches steps to your skin type, hair type, and goal. It gives general steps only, with no product recommendations. No sign-up is needed. Follow it daily, then adjust what is not working.</p>
+
+<h2>How to use this tool</h2>
+<ol>
+<li>Choose your skin type.</li>
+<li>Choose your hair type and your goal.</li>
+<li>Select Build my routine to see your checklist.</li>
+<li>Read your morning and night steps.</li>
+</ol>
 
 <div class="tool" aria-label="Routine builder">
 <label for="skin">Skin type</label>
@@ -120,17 +128,17 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 </select>
 <label for="goal">How complete?</label>
 <select id="goal">
-<option value="simple">Simple — the essentials only (best for beginners)</option>
+<option value="simple">Clear — the essentials only (best for beginners)</option>
 <option value="complete">Complete — a fuller routine</option>
 </select>
 <button type="button" onclick="buildRoutine()">Build my routine</button>
 <p class="err" id="err" role="alert"></p>
 <div class="result" id="result" aria-live="polite"></div>
-<p class="privacy-note">🔒 This tool runs 100% in your browser. Your choices are never sent, stored, or tracked.</p>
+<p class="privacy-note">No sign-up needed — the tool works right here in your browser.</p>
 </div>
 
 <h2>The rule behind every good routine</h2>
-<p>Consistency beats complexity. A 3-step routine you do every day outperforms a 10-step routine you abandon in a week. Start simple, make it a habit, and only add a step once the basics are automatic. Give any routine 4–6 weeks before judging it — skin and hair change slowly.</p>
+<p>Consistency beats complexity. A 3-step routine you do every day outperforms a 10-step routine you abandon in a week. Start clear, make it a habit, and only add a step once the essentials are automatic. Give any routine 4–6 weeks before judging it — skin and hair change slowly.</p>
 
 <div class="cta">
 <h2>Your glow-up, made real</h2>
@@ -140,28 +148,30 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 
 <div class="faq">
 <h2>Frequently asked questions</h2>
-<details open><summary>How many steps should a daily routine have?</summary><p>As few as you will actually do every day. A simple routine — cleanse, moisturise, sunscreen in the morning; cleanse, moisturise at night — beats a 10-step routine you quit in a week. Add steps only after the basics are a habit.</p></details>
+<details open><summary>How many steps should a daily routine have?</summary><p>As few as you will actually do every day. A clear routine — cleanse, moisturise, sunscreen in the morning; cleanse, moisturise at night — beats a 10-step routine you quit in a week. Add steps only after the essentials are a habit.</p></details>
 <details><summary>Do I need different products for morning and night?</summary><p>Not necessarily different products, but different jobs: mornings are about protection (sunscreen), nights are about cleansing the day off and moisturising. This builder keeps the steps general — it never recommends specific products.</p></details>
-<details><summary>How long before a routine shows results?</summary><p>Skin and hair habits take weeks, not days. Give a simple routine at least 4–6 weeks of consistency before judging it. Switching products every few days makes it impossible to tell what helped.</p></details>
-<details><summary>Does this builder store my answers?</summary><p>No. Everything runs in your browser. Nothing is sent, stored, or tracked.</p></details>
+<details><summary>How long before a routine shows results?</summary><p>Skin and hair habits take weeks, not days. Give a clear routine at least 4–6 weeks of consistency before judging it. Switching products every few days makes it impossible to tell what helped.</p></details>
+<details><summary>Do I need to sign up to use the routine builder?</summary><p>No. The tool works right here in your browser — no account, no name or email needed.</p></details>
 </div>
 
 <p class="disclaimer"><strong>Disclaimer:</strong> General information, not medical advice. No product recommendations. Skin conditions need a dermatologist.</p>
 
 <div class="related">
-<h3>Keep reading</h3>
-<a href="https://lookauramax.com/blog/skincare-routine-beginners.html">→ Skincare Routine for Beginners: The Simple Version</a>
-<a href="https://lookauramax.com/blog/aura-routine-daily.html">→ The Aura Routine: What a Good Daily Routine Looks Like</a>
-<a href="https://lookauramax.com/blog/hair-grooming-guide.html">→ Hair Grooming Guide: Cuts, Care, and Everyday Habits</a>
+<h3>Related tools</h3>
+<a href="https://lookauramax.com/tools/skin-type-quiz.html">→ Find Your Skin Type</a>
+<a href="https://lookauramax.com/tools/hair-type-quiz.html">→ Find Your Hair Type Quiz</a>
+<a href="https://lookauramax.com/tools/90-day-planner.html">→ Free 90-Day Glow-Up Planner</a>
+<a href="https://lookauramax.com/tools/habit-streak-tracker.html">→ Free Habit Streak Tracker</a>
 </div>
 </main>
 <footer><div class="wrap"><div class="foot">
 <div class="foot-brand"><img src="/logo-small.png" alt="Lookauramax founder logo"><div><p>LOOK<span>AURA</span>MAX</p><p>Your glow-up, made real.</p><p><a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></div>
-<nav class="foot-col" aria-label="Product"><h4>Product</h4><ul><li><a href="/#what">What it is</a></li><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#faq">FAQ</a></li></ul></nav>
-<nav class="foot-col" aria-label="Resources"><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Free Tools</a></li><li><a href="/glossary.html">Glow-Up Glossary</a></li></ul></nav>
+<nav class="foot-col" aria-label="Product"><h4>Product</h4><ul><li><a href="/tools/">Tools</a></li><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#faq">FAQ</a></li></ul></nav>
+<nav class="foot-col" aria-label="Resources"><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Aura Tools</a></li><li><a href="/glossary.html">Glow-Up Glossary</a></li></ul></nav>
 <nav class="foot-col" aria-label="Legal"><h4>Legal</h4><ul><li><a href="https://lookauramax.com/privacy">Privacy Policy</a></li><li><a href="https://lookauramax.com/terms">Terms</a></li><li><a href="https://lookauramax.com/refund">Refund Policy</a></li></ul></nav>
 </div>
-<p class="foot-note">Lookauramax is not a medical app. It does not diagnose, treat, or promise any physical outcome. Scores are rule-based estimates, not AI, and not medical advice.</p>
+<p class="foot-note">Lookauramax is not a medical app. It does not diagnose, treat, or promise any physical outcome. Scores are Aura Intelligence estimates — clear, explainable checks, not medical advice.</p>
+<div class="social-row"><a href="https://www.instagram.com/lookauramax" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg></a><a href="https://www.youtube.com/@lookauramax" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@lookauramax" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="17" r="3.5"/><path d="M12 17V4"/><path d="M12 4c.5 3 2.5 4.5 6 5"/></svg></a><a href="https://www.facebook.com/lookauramax" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.3-1.3H17V2.5h-2.6A3.9 3.9 0 0 0 10.5 6.4v2.1H8V12h2.5v9.5H14V12h2.4l.4-3.5z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.threads.net/@lookauramax" target="_blank" rel="noopener" aria-label="Threads"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="M15.5 4.5v8"/></svg></a></div>
 <div class="foot-bottom"><p>© 2026 Lookauramax. All rights reserved.</p><span data-cookie-settings-slot></span></div>
 </div></footer>
 <script>
@@ -191,7 +201,7 @@ function buildRoutine(){
     pm.push('Hair: brush gently / detangle before bed','Weekly (1–2×): gentle exfoliation — only if your skin tolerates it','Weekly (1×): deep-condition hair if dry or curly');
   }
   function list(a){ return '<ul class="checklist">'+a.map(function(i){return '<li>'+i+'</li>';}).join('')+'</ul>'; }
-  res.innerHTML='<p class="big">Your '+ (goal==='simple'?'Simple':'Complete') +' Routine</p><p>'+skinNote[skin]+'</p><p>'+hairNote[hair]+'</p><h3>Morning</h3>'+list(am)+'<h3>Night</h3>'+list(pm)+'<p><em>General steps only — no product recommendations. Give the routine 4–6 weeks of consistency before judging it.</em></p>';
+  res.innerHTML='<p class="big">Your '+ (goal==='simple'?'Clear':'Complete') +' Routine</p><p>'+skinNote[skin]+'</p><p>'+hairNote[hair]+'</p><h3>Morning</h3>'+list(am)+'<h3>Night</h3>'+list(pm)+'<p><em>General steps only — no product recommendations. Give the routine 4–6 weeks of consistency before judging it.</em></p>';
   res.style.display='block';
 }
 </script>

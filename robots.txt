@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://lookauramax.com/sitemap.xml
+Sitemap: https://www.lookauramax.com/sitemap.xml
 
 # AI search & answer-engine crawlers — explicitly allowed so Lookauramax
 # can be retrieved and cited by AI answers (Search / AI Overviews / ChatGPT /

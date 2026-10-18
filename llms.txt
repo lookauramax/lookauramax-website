@@ -1,101 +1,119 @@
 # Lookauramax
 
-> Lookauramax is a private, on-device glow-up app for Android. It gives you an on-device AuraScan, a 90-day Aura Plan, a daily Aura Routine, and a rule-based Aura Coach. Photos never leave your phone. Joining is required. There is no permanent free plan: joining gives a one-time Join Reward (1 AuraScan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser — no card). Paid plans (Monthly, 3-Month, 6-Month, Yearly) include a free trial. The app launches on Google Play after closed testing.
+> Lookauramax is a glow-up app for Android. Its tagline is "Your glow-up, made real." It gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach powered by Aura Intelligence. AuraScan analyses your photo, measures your Aura Signals, and explains every score with Why and Action. Joining gives a one-time Join Reward (1 AuraScan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser — no card). Paid plans (Monthly, 3-Month, 6-Month, Yearly) include a free trial. The app launches on Google Play after closed testing.
 
 ## Key pages
 
-- [Lookauramax — Build Your Aura, One Day at a Time](https://lookauramax.com/): Landing page. What Lookauramax is, how it works, pricing, FAQ.
-- [About Lookauramax](https://lookauramax.com/about.html): What Lookauramax is and is not, the privacy promise, and the honest standard.
-- [The Lookauramax Blog](https://lookauramax.com/blog/): 63 honest glow-up guides: looksmaxing, auramaxing, skincare, grooming, posture, sleep, style, six pack, jawline appearance, fat loss, weight loss, respectful dating advice, routines, comparisons, and a glow-up glossary.
-- [Privacy Policy](https://lookauramax.com/privacy): Privacy policy.
-- [Terms](https://lookauramax.com/terms): Terms of service.
-- [Refund Policy](https://lookauramax.com/refund): Refund policy.
-- [Glow-Up Glossary](https://lookauramax.com/glossary.html): 25 glow-up terms explained honestly, including mewing, spot reduction, BMI, TDEE.
-- [Free Tools](https://lookauramax.com/tools/): 12 free private tools — BMI, calorie, weight range, body fat, water, protein, converters, quizzes, planner, tracker.
-- [Lookauramax vs Umax](https://lookauramax.com/blog/lookauramax-vs-umax.html): Honest comparison.
-- [Lookauramax vs LooksMax AI](https://lookauramax.com/blog/lookauramax-vs-looksmax-ai.html): Honest comparison.
-- [Best Glow-Up Apps in 2026](https://lookauramax.com/blog/best-glow-up-apps.html): Honest comparison including our own cons.
+- [Lookauramax — Your Glow-Up, Made Real](https://www.lookauramax.com/): Landing page. What Lookauramax is, how it works, pricing, FAQ.
+- [About Lookauramax](https://www.lookauramax.com/about.html): What Lookauramax is and is not, the honest standard, pricing, and contact.
+- [The Lookauramax Blog](https://www.lookauramax.com/blog/): 66 honest glow-up guides: looksmaxing, auramaxing, skincare, grooming, posture, sleep, style, six pack, jawline appearance, fat loss, weight loss, respectful dating advice, routines, comparisons, and a glow-up glossary.
+- [New Year Glow-Up 2027](https://www.lookauramax.com/new-year-glow-up-2027/): A New Year glow-up plan for 2027 built on one Aura Cycle, with guides and tools.
+- [Privacy Policy](https://www.lookauramax.com/privacy): Privacy policy.
+- [Terms](https://www.lookauramax.com/terms): Terms of service.
+- [Refund Policy](https://www.lookauramax.com/refund): Refund policy.
+- [Glow-Up Glossary](https://www.lookauramax.com/glossary.html): 27 glow-up terms explained honestly, including mewing, spot reduction, BMI, TDEE, Winter Arc, and New Year glow-up.
+- [Aura Tools](https://www.lookauramax.com/tools/): 12 free Aura Tools — BMI, calorie, weight range, body fat, water, protein, converters, quizzes, planner, tracker.
+- [Lookauramax vs Umax](https://www.lookauramax.com/blog/lookauramax-vs-umax.html): Honest comparison.
+- [Lookauramax vs LooksMax AI](https://www.lookauramax.com/blog/lookauramax-vs-looksmax-ai.html): Honest comparison.
+- [Best Glow-Up Apps in 2026](https://www.lookauramax.com/blog/best-glow-up-apps.html): Honest comparison including our own cons.
 
 ## Blog
 
-- [What Is Looksmaxing? The Honest Guide](https://lookauramax.com/blog/looksmaxing-guide.html): What looksmaxing means, what works, what is myth.
-- [What Is Auramaxing? How to Build Your Aura](https://lookauramax.com/blog/auramaxing-guide.html): Auramaxing means building your aura with daily habits: grooming, posture, sleep, style, consistency.
-- [How to Look Good: 15 Honest, Practical Steps](https://lookauramax.com/blog/how-to-look-good.html): Practical grooming, posture, sleep, and style steps.
-- [How to Become Better: Looks, Habits, Confidence](https://lookauramax.com/blog/how-to-become-better.html): Self-improvement across looks, habits, and confidence.
-- [How to Get a Six Pack, Honestly](https://lookauramax.com/blog/six-pack-guide.html): Six-pack abs require low body fat plus training; no shortcuts, no spot reduction.
-- [How to Improve Your Jawline Appearance](https://lookauramax.com/blog/jawline-appearance-guide.html): Jawline appearance: overall body fat, beard/neckline grooming, posture, lighting and photo angle. Spot reduction is a myth.
-- [Fat Loss: The Honest Guide](https://lookauramax.com/blog/fat-loss-guide.html): Fat loss mechanics: calorie deficit, protein, lifting, steps, sleep. Not medical advice.
-- [Weight Loss That Actually Lasts](https://lookauramax.com/blog/weight-loss-guide.html): Sustainable weight-loss habits, plateaus, maintenance. Not medical advice.
-- [How to Get a Girlfriend: The Respectful, Honest Way](https://lookauramax.com/blog/how-to-get-girlfriend.html): Confidence, grooming, social skills, respect, consent, handling rejection with grace. No manipulation.
-- [Glow-Up Guide for Men](https://lookauramax.com/blog/glow-up-guide-men.html): Glow-up guide for men.
-- [Glow-Up Guide for Women](https://lookauramax.com/blog/glow-up-guide-women.html): Glow-up guide for women.
-- [Skincare for a Natural Glow](https://lookauramax.com/blog/skincare-glow-up.html): Simple skincare for a natural glow. No whitening or lightening claims.
-- [What Is Lookauramax?](https://lookauramax.com/blog/what-is-lookauramax.html): The private glow-up app, explained.
-- [The Honest 90-Day Glow-Up Guide](https://lookauramax.com/blog/glow-up-guide-90-days.html): What 90 days can and cannot do.
-- [A Simple Skincare Routine for Beginners](https://lookauramax.com/blog/skincare-routine-beginners.html): Cleanser, moisturiser, SPF.
-- [Hair + Grooming: The Fastest Honest Wins](https://lookauramax.com/blog/hair-grooming-guide.html): Highest-return grooming moves.
-- [Posture: The Most Underrated Glow-Up](https://lookauramax.com/blog/posture-guide.html): Posture guide.
-- [Sleep and Your Skin](https://lookauramax.com/blog/sleep-glow-up.html): What sleep does for your skin.
-- [The Truth About Jawline](https://lookauramax.com/blog/jawline-truth.html): Spot reduction is a myth.
-- [How AuraScan Works](https://lookauramax.com/blog/how-aurascan-works.html): Rule-based scores, not AI ratings.
-- [Lookauramax Pricing Explained](https://lookauramax.com/blog/lookauramax-pricing.html): Which plan is best value.
-- [How to Take a Good Scan Photo](https://lookauramax.com/blog/photo-tips-scan.html): Lighting, angle, framing.
-- [Style Basics](https://lookauramax.com/blog/style-guide-men-women.html): Fit beats brands.
-- [The Daily Aura Routine](https://lookauramax.com/blog/aura-routine-daily.html): Small steps, every day.
-
-- [How to Get Clear Skin: The Honest Guide](https://lookauramax.com/blog/clear-skin-guide.html): What actually clears skin: a simple routine, consistency, and knowing when to see a dermatologist.
-- [How to Get Rid of Pimples and Acne, Honestly](https://lookauramax.com/blog/acne-pimples-guide.html): What helps acne, what makes it worse, and when to get professional help.
-- [Dark Circles: What Actually Helps](https://lookauramax.com/blog/dark-circles-guide.html): Sleep, genetics, and honest fixes — what works, what doesn't, and no whitening claims.
-- [Oily Skin: A Simple Routine That Works](https://lookauramax.com/blog/oily-skin-guide.html): Gentle cleansing, light moisturiser, and SPF — without stripping your skin.
-- [Hair Fall: What Actually Helps (and What Doesn't)](https://lookauramax.com/blog/hair-fall-guide.html): Normal shedding vs real hair fall, what helps, and when to see a doctor.
-- [Hair Growth: The Honest Guide](https://lookauramax.com/blog/hair-growth-guide.html): Patience, scalp care, nutrition, and the myths that waste your money.
-- [Beard Growth: The Honest Guide](https://lookauramax.com/blog/beard-growth-guide.html): Genetics, patience, grooming, and what no oil or pill can do.
-- [Eyebrows: Shape, Groom, and Keep Them Natural](https://lookauramax.com/blog/eyebrow-guide.html): Clean up your natural shape — no over-plucking, no fake symmetry.
-- [How to Gain Weight, Healthily](https://lookauramax.com/blog/gain-weight-guide.html): Eat more, lift, sleep — a healthy way to gain weight without junk.
-- [How to Build Muscle: The Honest Beginner Guide](https://lookauramax.com/blog/build-muscle-guide.html): Progressive training, protein, rest, and realistic timelines.
-- [Home Workout: Get Fit Without a Gym](https://lookauramax.com/blog/home-workout-guide.html): A complete home routine with no equipment — strength, cardio, and consistency.
-- [Gym for Beginners: Your First 90 Days](https://lookauramax.com/blog/gym-beginners-guide.html): Machines, form, a simple plan, and gym confidence for the first 90 days.
-- [Protein: How Much You Actually Need](https://lookauramax.com/blog/protein-guide.html): How much protein you need, the best sources, and the myths to ignore.
-- [Height: The Honest Truth (and What You Can Control)](https://lookauramax.com/blog/height-truth.html): Growth plates close — no pill or exercise adds height. Posture, fit, and style can.
-- [How to Look Taller: Posture, Fit, and Style](https://lookauramax.com/blog/look-taller-guide.html): Posture, proportions, and fit — honest ways to look taller.
-- [How to Look Slimmer: Fit, Posture, and Photos](https://lookauramax.com/blog/look-slimmer-guide.html): Fit, posture, and angles that honestly slim your look — no crash diets.
-- [How to Be More Confident: The Honest Guide](https://lookauramax.com/blog/confidence-guide.html): Confidence is built from evidence: small wins, preparation, and self-respect.
-- [How to Talk to Girls: Respectful, Confident, Natural](https://lookauramax.com/blog/how-to-talk-to-girls.html): Respect, genuine interest, listening, and confidence — no tricks, no games.
-- [How to Talk to Boys: Confident, Natural, Respectful](https://lookauramax.com/blog/how-to-talk-to-boys.html): Be yourself, show interest, respect boundaries — no games, no pressure.
-- [How to Make Friends as a Teen / Young Adult](https://lookauramax.com/blog/how-to-make-friends.html): Show up, be consistent, be kind, and start small — friendships are built, not found.
-- [How to Be More Attractive (the Honest Way)](https://lookauramax.com/blog/how-to-be-attractive.html): Grooming, posture, health, kindness, and confidence — the real attractiveness formula.
-- [The Ultimate Glow-Up Checklist (90 Days)](https://lookauramax.com/blog/glow-up-checklist.html): The full 90-day checklist: skin, hair, fitness, posture, style, sleep, and habits.
-- [How to Smell Good All Day](https://lookauramax.com/blog/how-to-smell-good.html): Hygiene, fragrance, clothes, and breath — smell good without overdoing it.
-- [How to Look Good in Photos: Angles, Light, Pose](https://lookauramax.com/blog/look-good-in-photos.html): Light, angle, posture, and expression — look your best in every photo.
+- [What Is Lookauramax? Explained](https://www.lookauramax.com/blog/what-is-lookauramax.html): Lookauramax is a glow-up app for Android: AuraScan, 90-day plan, daily routine, Aura Intelligence coach. No face ratings, no weekly billing.
+- [The Honest 90-Day Glow-Up Guide (No Shortcuts)](https://www.lookauramax.com/blog/glow-up-guide-90-days.html): A realistic 90-day glow-up guide: skin, hair, posture, sleep, style, and how to measure progress fairly. No shortcuts, no promised outcomes.
+- [A Clear Skincare Routine for Beginners That Actually Works](https://www.lookauramax.com/blog/skincare-routine-beginners.html): A beginner skincare routine that works: cleanser, moisturiser, sunscreen. How to build it, what to avoid, and when to add actives slowly and safely.
+- [Hair + Grooming: The Fastest Honest Wins](https://www.lookauramax.com/blog/hair-grooming-guide.html): Haircut, brows, beard lines, nails, and small grooming habits — the fastest honest wins for looking sharper within a week, with no expensive products needed.
+- [Posture: The Most Underrated Glow-Up](https://www.lookauramax.com/blog/posture-guide.html): Posture changes photos, presence, and confidence. A clear daily routine to fix slouching: cues, stretches, desk setup, and what actually works.
+- [Sleep and Your Skin: What Actually Helps](https://www.lookauramax.com/blog/sleep-glow-up.html): How sleep affects skin, eyes, and energy — and a realistic wind-down routine: fixed wake time, dim lights, no doomscrolling, and 7–9 hours nightly.
+- [The Truth About Jawline: Spot Reduction Is a Myth](https://www.lookauramax.com/blog/jawline-truth.html): Can face exercises give you a jawline? No — spot reduction is a myth. What actually shapes jawline appearance: body fat, grooming, posture, lighting.
+- [How AuraScan Works: Aura Intelligence Scores, Explained](https://www.lookauramax.com/blog/how-aurascan-works.html): How AuraScan works: Aura Intelligence estimates from Aura Signals. Bands, confidence, fairness gate — and what it never scores or promises.
+- [Lookauramax Pricing Explained: Which Plan Is Best Value?](https://www.lookauramax.com/blog/lookauramax-pricing.html): Lookauramax pricing explained: Monthly, 3-Month, 6-Month, Yearly. Trials, Best Value vs Best Savings Per Month, and how to cancel in 2 taps.
+- [How to Take a Good Scan Photo: Lighting, Angle, Framing](https://www.lookauramax.com/blog/photo-tips-scan.html): Take a fair scan photo: window light, camera at eye level, neutral expression, plain background. Avoid the common mistakes that make scans unfair.
+- [Style Essentials: Look Sharper Without Spending Much](https://www.lookauramax.com/blog/style-guide-men-women.html): Style essentials for everyone: fit, colour, shoes, grooming, and a low-cost wardrobe that looks sharp. No brands, no big budget, no fashion degree needed.
+- [The Daily Aura Routine: Small Steps, Every Day](https://www.lookauramax.com/blog/aura-routine-daily.html): A realistic daily Aura Routine: morning, midday, evening tasks for skin, hair, posture, sleep, and style — plus how streaks and restarts work.
+- [What Is Looksmaxing? The Honest Guide](https://www.lookauramax.com/blog/looksmaxing-guide.html): Looksmaxing means improving appearance through grooming, habits and style — not surgery or ratings. This honest guide explains what helps and what is myth.
+- [What Is Auramaxing? How to Build Your Aura](https://www.lookauramax.com/blog/auramaxing-guide.html): Auramaxing means building your aura — presence, grooming, confidence and habits. Learn practical steps to build your aura honestly, without mystical claims.
+- [How to Look Good: 15 Honest, Practical Steps](https://www.lookauramax.com/blog/how-to-look-good.html): How to look good without filters, surgery or gimmicks: 15 honest steps for sleep, skincare, hair, brows, smile, posture, fit, photos and habits.
+- [How to Become Better: Looks, Habits, Confidence](https://www.lookauramax.com/blog/how-to-become-better.html): How to become better — honestly. Build looks, habits and confidence with small, repeatable steps: grooming, sleep, learning, kindness and consistency.
+- [How to Get a Six Pack, Honestly](https://www.lookauramax.com/blog/six-pack-guide.html): How to get a six pack honestly: body-fat reality, compound lifts, core training, protein, sleep and patience. No shortcuts, no drugs — a realistic plan.
+- [How to Improve Your Jawline Appearance](https://www.lookauramax.com/blog/jawline-appearance-guide.html): How to improve your jawline appearance honestly: overall fat loss, beard grooming, posture, and photo angle. Plus what does NOT work — mewing and face yoga.
+- [Fat Loss: The Honest Guide](https://www.lookauramax.com/blog/fat-loss-guide.html): Fat loss, honestly: calorie deficit, protein, strength training, steps, sleep and consistency. Why spot reduction fails and why extreme diets backfire.
+- [Weight Loss That Actually Lasts](https://www.lookauramax.com/blog/weight-loss-guide.html): Weight loss that actually lasts is built on habits, not willpower: routines, environment, tracking without obsession, plateaus, social eating, and maintenance.
+- [How to Get a Girlfriend: The Respectful, Honest Way](https://www.lookauramax.com/blog/how-to-get-girlfriend.html): How to get a girlfriend the honest way: no tricks, no games. Grooming, confidence, social skills, respect, asking someone out, and handling rejection well.
+- [Glow-Up Guide for Men](https://www.lookauramax.com/blog/glow-up-guide-men.html): A practical glow-up guide for men: skincare, hair, grooming, fitness, posture, style, and daily habits. Specific steps, no shaming, no shortcuts.
+- [Glow-Up Guide for Women](https://www.lookauramax.com/blog/glow-up-guide-women.html): A practical glow-up guide for women: skincare, hair, brows, style, posture, sleep, and habits. Specific steps, no shaming, no miracle promises.
+- [Skincare for a Natural Glow](https://www.lookauramax.com/blog/skincare-glow-up.html): How to get glowing skin honestly: a clear cleanser, moisturiser, and SPF routine, plus hydration, sleep, and consistency. No miracle claims, no quick fixes.
+- [How to Get Clear Skin: The Honest Guide](https://www.lookauramax.com/blog/clear-skin-guide.html): How to get clear skin without gimmicks: the clear routine, the habits that matter, what to avoid, and when to see a dermatologist for real help.
+- [How to Get Rid of Pimples and Acne, Honestly](https://www.lookauramax.com/blog/acne-pimples-guide.html): How to get rid of pimples and acne honestly: what causes breakouts, a routine that helps, what to avoid, and when a dermatologist is the fastest route.
+- [Dark Circles: What Actually Helps](https://www.lookauramax.com/blog/dark-circles-guide.html): Dark circles: what causes them, what actually helps — sleep, sun protection, gentle care — and which products and treatments are worth it or not.
+- [Oily Skin: A Clear Routine That Works](https://www.lookauramax.com/blog/oily-skin-guide.html): Oily skin routine that works: gentle cleansing, light moisturiser, sunscreen, and one active. What to avoid and why over-washing makes oil worse.
+- [Hair Fall: What Actually Helps (and What Doesn't)](https://www.lookauramax.com/blog/hair-fall-guide.html): Hair fall: how much shedding is normal, what actually helps — gentle care, nutrition, proven treatments — and which products are a waste of money.
+- [Hair Growth: The Honest Guide](https://www.lookauramax.com/blog/hair-growth-guide.html): Hair growth honestly: how fast hair grows, what helps — gentle care, nutrition, proven treatments — and the myths that waste your time and money.
+- [Beard Growth: The Honest Guide](https://www.lookauramax.com/blog/beard-growth-guide.html): Beard growth honestly: genetics decides density, but grooming, patience, and proven options help. What works, what doesn't, and when to see a doctor.
+- [Eyebrows: Shape, Groom, and Keep Them Natural](https://www.lookauramax.com/blog/eyebrow-guide.html): Eyebrow guide: how to shape and groom brows while keeping them natural — mapping, trimming, tweezing, what to avoid, and growing back over-plucked brows.
+- [How to Gain Weight, Healthily](https://www.lookauramax.com/blog/gain-weight-guide.html): How to gain weight healthily: eat in a steady calorie surplus, prioritise protein, train with weights, sleep well, and gain mostly muscle — not fat.
+- [How to Build Muscle: The Honest Beginner Guide](https://www.lookauramax.com/blog/build-muscle-guide.html): How to build muscle as a beginner: progressive overload, 2–4 strength sessions a week, enough protein, sleep, and patience. No steroids, no shortcuts.
+- [Home Workout: Get Fit Without a Gym](https://www.lookauramax.com/blog/home-workout-guide.html): Home workout guide: build strength, fitness and posture with no gym. Clear full-body sessions, progression rules, and a weekly plan that works.
+- [Gym for Beginners: Your First 90 Days](https://www.lookauramax.com/blog/gym-beginners-guide.html): Gym for beginners: what to do in your first 90 days — clear full-body sessions, form first, a weekly plan, and the mistakes to avoid. Start right.
+- [Protein: How Much You Actually Need](https://www.lookauramax.com/blog/protein-guide.html): How much protein do you actually need? Most people need 1.4–2.0 g per kg when training; sedentary adults need less. Food sources, vegetarian options, and myths.
+- [Height: The Honest Truth (and What You Can Control)](https://www.lookauramax.com/blog/height-truth.html): Height truth: adult height is set by genetics and growth plates. No pill or exercise grows adults taller. What you CAN control: posture, fit, style.
+- [How to Look Taller: Posture, Fit, and Style](https://www.lookauramax.com/blog/look-taller-guide.html): How to look taller without changing your height: stand tall, wear well-fitted monochrome outfits, keep clean lines, and use posture, fit, and photos honestly.
+- [How to Look Slimmer: Fit, Posture, and Photos](https://www.lookauramax.com/blog/look-slimmer-guide.html): How to look slimmer honestly: well-fitted clothes, good posture, monochrome lines, photo angles — plus real fat-loss habits that change your body.
+- [How to Be More Confident: The Honest Guide](https://www.lookauramax.com/blog/confidence-guide.html): How to be more confident, honestly — no fake tricks. Practical confidence tips: small wins, body language, self-talk, and social practice that build confidence.
+- [How to Talk to Girls: Respectful, Confident, Natural](https://www.lookauramax.com/blog/how-to-talk-to-girls.html): How to talk to girls, the respectful way: no tricks, no pickup lines. Start conversations naturally, listen with genuine interest, and respect boundaries.
+- [How to Talk to Boys: Confident, Natural, Respectful](https://www.lookauramax.com/blog/how-to-talk-to-boys.html): How to talk to boys, the respectful way: no games, no tricks. Start conversations naturally, listen with genuine interest, and respect boundaries.
+- [How to Make Friends as a Teen / Young Adult](https://www.lookauramax.com/blog/how-to-make-friends.html): How to make friends as a teen or young adult: honest steps. Where to meet people, how to start conversations, follow up, and build lasting friendships.
+- [How to Be More Attractive (the Honest Way)](https://www.lookauramax.com/blog/how-to-be-attractive.html): How to be attractive the honest way: grooming, posture, health, style, kindness and confidence. No tricks, no scores — Habits that help.
+- [The Ultimate Glow-Up Checklist (90 Days)](https://www.lookauramax.com/blog/glow-up-checklist.html): A 90-day glow-up checklist: skin, hair, grooming, posture, sleep, style, fitness and social habits — a realistic week-by-week plan, no miracle claims.
+- [How to Smell Good All Day](https://www.lookauramax.com/blog/how-to-smell-good.html): How to smell good all day: shower habits, deodorant, fragrance essentials, fresh clothes and fresh breath. Clear, honest advice for real everyday life.
+- [How to Look Good in Photos: Angles, Light, Pose](https://www.lookauramax.com/blog/look-good-in-photos.html): How to look good in photos: natural light, flattering angles, framing, posture and relaxed expressions. Pose and be photogenic without filters.
+- [The Morning Routine That Actually Improves Your Day](https://www.lookauramax.com/blog/morning-routine-guide.html): A morning routine that works in real life: light, water, skincare, movement, and one focused hour — no 5 a.m. punishment and no 20-step list required.
+- [The Night Routine That Improves Sleep and Skin](https://www.lookauramax.com/blog/night-routine-guide.html): A night routine that actually works: wind down, cleanse, moisturise, and sleep on time — the evening habits that improve sleep, skin, and mornings.
+- [How to Wash Your Face the Right Way (Honestly)](https://www.lookauramax.com/blog/face-wash-guide.html): How to wash your face properly: lukewarm water, gentle cleanser, 60 seconds, pat dry — plus the common mistakes that irritate skin and cause breakouts.
+- [Sunscreen: The Honest Guide to Daily Sun Protection](https://www.lookauramax.com/blog/sunscreen-guide.html): Sunscreen is the highest-value skincare habit: how to pick SPF 30+, how much to use, when to reapply, and the myths that keep people unprotected.
+- [How to Get the Right Haircut: The Honest Guide](https://www.lookauramax.com/blog/haircut-guide.html): How to get the right haircut: know your hair type, bring reference photos, talk to your barber clearly, and keep it maintained — no jargon, no regret cuts.
+- [Nail Grooming: The Small Detail People Notice](https://www.lookauramax.com/blog/nails-grooming-guide.html): Nail grooming is a small detail people notice fast: trim, file, clean, and moisturise in five minutes a week — plus the habits that damage nails.
+- [Dating Profile Photos: The Honest Guide](https://www.lookauramax.com/blog/dating-profile-photos-guide.html): Dating profile photos that are honest and attractive: good light, real smiles, full photos, no heavy filters. Tips for photos that look like you.
+- [First Impressions: The Honest Guide](https://www.lookauramax.com/blog/first-impression-guide.html): First impressions form in seconds — but they are not fixed. Learn how appearance, body language, and listening shape them, honestly, without tricks.
+- [Teeth Care: The Honest Daily Guide](https://www.lookauramax.com/blog/teeth-care-guide.html): Teeth care, honestly: brush twice, clean between teeth, mind sugar and acid, and see a dentist regularly. No miracle shortcuts — habits that protect your smile.
+- [Body Language: The Honest Guide](https://www.lookauramax.com/blog/body-language-guide.html): Body language, honestly: posture, eye contact, gestures, and listening — how you actually come across, and how to improve it without manipulation or tricks.
+- [Wardrobe Essentials: The Honest Guide](https://www.lookauramax.com/blog/wardrobe-essentials-guide.html): Wardrobe essentials, honestly: fit first, a few versatile pieces, and good grooming beat a closet full of trends. Build a wardrobe that fits your life.
+- [Skincare Ingredients: The Honest Guide](https://www.lookauramax.com/blog/skincare-ingredients-guide.html): Skincare ingredients, honestly: what glycerin, ceramides, niacinamide, acids, and retinoids actually do — and how to build a routine without wasting money.
+- [Lookauramax vs Umax: An Honest Comparison (2026)](https://www.lookauramax.com/blog/lookauramax-vs-umax.html): Lookauramax vs Umax compared honestly: pricing, scoring, privacy, free access and cancel terms. Facts as of Oct 2026 — check Google Play for details.
+- [Lookauramax vs LooksMax AI: An Honest Comparison (2026)](https://www.lookauramax.com/blog/lookauramax-vs-looksmax-ai.html): Lookauramax vs LooksMax AI compared honestly: pricing, scoring, privacy, trials and cancel terms. Facts as of Oct 2026 — check Google Play for details.
+- [Best Glow-Up Apps in 2026: An Honest Comparison](https://www.lookauramax.com/blog/best-glow-up-apps.html): Best glow-up apps in 2026 compared honestly: Lookauramax, Umax, LooksMax AI, free face-score sites. Pros and cons of each — including our own honest cons.
+- [New Year Glow-Up 2027: A 90-Day Plan That Actually Works](https://www.lookauramax.com/blog/new-year-glow-up-2027.html): A 90-day New Year glow-up plan for 2027: what to do in weeks 1–12, how to track progress fairly, and what to do when you miss a day. Honest, step by step.
+- [New Year Makeover Checklist 2027](https://www.lookauramax.com/blog/new-year-makeover-checklist-2027.html): A New Year makeover checklist for 2027: grooming, skin, hair, posture, style, sleep, and photos — week by week, with nothing extreme and nothing promised.
+- [New Year Resolutions That Stick: The Glow-Up Edition](https://www.lookauramax.com/blog/new-year-resolutions-that-stick.html): New Year resolutions that stick use one habit, one trigger, and one tracker. Here is the design, the week-2 dip, and how to restart without guilt.
 
 ## Facts
 
 - Pricing (US): Monthly $9.99, 3-Month $19.99, 6-Month $29.99, Yearly $49.99.
 - Pricing (India): Monthly ₹199, 3-Month ₹399, 6-Month ₹599, Yearly ₹999.
 - Trials: Monthly, 3-Month, 6-Month include a 7-day free trial; Yearly includes a 14-day free trial.
-- 3-Month is Best Value (lowest total cost to complete one 90-day transformation). Yearly is Best Savings Per Month (lowest per-month cost).
+- 3-Month is Best Value (lowest total cost to cover one full 90-day cycle). Yearly is Best Savings Per Month (lowest per-month cost).
 - No Weekly plan. No Lifetime plan. No permanent free plan. No ads.
-- AuraScan is a rule-based estimate, not AI. It scores only actionable traits (skin, hair, brows, opt-in beard, smile, posture, photo quality) as bands: Needs Work, Good, Great.
+- AuraScan is an Aura Intelligence estimate, not AI. It scores only actionable traits (skin, hair, brows, opt-in beard, smile, posture, photo quality) as bands: Needs Work, Good, Great.
 - Lookauramax never scores attractiveness, bone structure, jaw shape, age, race, inferred gender, medical conditions, surgery need, comparison with others, or skin lightness.
 - Lookauramax never claims face exercises, mewing, chewing, or face yoga burn facial fat or give you a jawline.
 - Ages 16+. Under 16 blocked. Ages 16–17 need parental consent before a scan or paid access.
 - Cancel in 2 taps in Google Play. Deleting the app does not cancel a subscription.
 - Contact: support@lookauramax.com.
 
-## Free Tools (private — all math runs in the visitor's browser, no data sent anywhere)
-- [BMI Calculator](https://lookauramax.com/tools/bmi-calculator.html)
-- [Calorie Calculator (TDEE)](https://lookauramax.com/tools/calorie-calculator.html)
-- [Healthy Weight Range](https://lookauramax.com/tools/healthy-weight-range.html)
-- [Body Fat Calculator](https://lookauramax.com/tools/body-fat-calculator.html)
-- [Water Intake Calculator](https://lookauramax.com/tools/water-intake-calculator.html)
-- [Protein Calculator](https://lookauramax.com/tools/protein-calculator.html)
-- [Height & Weight Converter](https://lookauramax.com/tools/unit-converter.html)
-- [Skin Type Quiz](https://lookauramax.com/tools/skin-type-quiz.html)
-- [Routine Builder](https://lookauramax.com/tools/routine-builder.html)
-- [90-Day Glow-Up Planner](https://lookauramax.com/tools/90-day-planner.html)
-- [Hair Type Quiz](https://lookauramax.com/tools/hair-type-quiz.html)
-- [Habit Streak Tracker](https://lookauramax.com/tools/habit-streak-tracker.html)
+## Free Tools
+- [BMI Calculator](https://www.lookauramax.com/tools/bmi-calculator.html): Free BMI calculator: enter height and weight to get your BMI and category, with WHO bands explained. No sign-up needed. General information, not medical advice.
+- [Healthy Weight Range Calculator](https://www.lookauramax.com/tools/healthy-weight-range.html): Find the healthy weight range for your height from the WHO BMI band (18.5–24.9). Shown as a range, never one ideal number. Free, no sign-up, not medical advice.
+- [Body Fat Percentage Calculator](https://www.lookauramax.com/tools/body-fat-calculator.html): Estimate body fat percentage with the US Navy tape-measure method. Free, no sign-up. A rough estimate for tracking trends — not a medical measurement.
+- [Height & Weight Converter](https://www.lookauramax.com/tools/unit-converter.html): Free height and weight converter: convert cm to feet and inches, feet to cm, kg to lbs, and lbs to kg. Two-way conversion with exact factors, no sign-up.
+- [Free Calorie Calculator (TDEE)](https://www.lookauramax.com/tools/calorie-calculator.html): Free calorie calculator: estimate daily calorie needs (TDEE) from age, height, weight and activity. Estimates only, not medical advice.
+- [Daily Protein Calculator](https://www.lookauramax.com/tools/protein-calculator.html): Free protein calculator: enter your weight and activity level for an honest daily protein range in grams per day, plus everyday food ideas. No sign-up needed.
+- [Daily Water Intake Calculator](https://www.lookauramax.com/tools/water-intake-calculator.html): How much water should you drink a day? Get a general daily water guide from your weight and activity. Free, no sign-up. Not a prescription.
+- [Build Your Routine](https://www.lookauramax.com/tools/routine-builder.html): Free routine builder: pick your skin type, hair type, and goal for a morning and night checklist with general steps. No products, no sign-up.
+- [Free 90-Day Glow-Up Planner](https://www.lookauramax.com/tools/90-day-planner.html): Free 90-day glow-up planner — pick a start date, get Day 30, 60 and 90 milestones and a weekly checklist for one Aura Cycle. No sign-up.
+- [Free Habit Streak Tracker](https://www.lookauramax.com/tools/habit-streak-tracker.html): Track up to 5 daily habits free: tap to check off each day and watch your Aura Streak grow. No account needed. A checklist tool, not medical advice.
+- [Find Your Skin Type](https://www.lookauramax.com/tools/skin-type-quiz.html): Free skin type quiz: answer 6 questions on how your skin feels and get your likely type plus a care checklist. No sign-up. General information, not a diagnosis.
+- [Find Your Hair Type Quiz](https://www.lookauramax.com/tools/hair-type-quiz.html): Free hair type quiz — answer 6 questions and get your hair type plus a general care checklist. No sign-up. General information, not a diagnosis.
 
 ## Optional
 
-- [Sitemap](https://lookauramax.com/sitemap.xml): Full sitemap.
+- [Sitemap](https://www.lookauramax.com/sitemap.xml): Full sitemap.

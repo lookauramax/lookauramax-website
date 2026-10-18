@@ -8,28 +8,21 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <title>Free Habit Streak Tracker: Build Daily Habits</title>
-<meta name="description" content="Track up to 5 daily habits free: tap to check off each day and watch your streaks grow. Your data stays in this browser only — no account, no sync.">
-<link rel="canonical" href="https://lookauramax.com/tools/habit-streak-tracker.html">
+<meta name="description" content="Track up to 5 daily habits free: tap to check off each day and watch your Aura Streak grow. No account needed. A checklist tool, not medical advice.">
+<link rel="canonical" href="https://www.lookauramax.com/tools/habit-streak-tracker.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Free Habit Streak Tracker: Build Daily Habits">
-<meta property="og:description" content="Track up to 5 daily habits free: tap to check off each day and watch your streaks grow. Your data stays in this browser only — no account, no sync.">
-<meta property="og:url" content="https://lookauramax.com/tools/habit-streak-tracker.html">
-<meta property="og:image" content="https://lookauramax.com/images/routine.svg">
-<meta property="og:image:alt" content="Free Habit Streak Tracker — Lookauramax tool illustration">
+<meta property="og:description" content="Track up to 5 daily habits free: tap to check off each day and watch your Aura Streak grow. No account needed. A checklist tool, not medical advice.">
+<meta property="og:url" content="https://www.lookauramax.com/tools/habit-streak-tracker.html">
+<meta property="og:image" content="https://www.lookauramax.com/images/tools/habit-streak-tracker.jpg">
+<meta property="og:image:alt" content="Illustration of a fictional man marking a wall calendar with a pencil in a bright home office">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Free Habit Streak Tracker: Build Daily Habits">
-<meta name="twitter:description" content="Track up to 5 daily habits free: tap to check off each day and watch your streaks grow. Your data stays in this browser only — no account, no sync.">
-<meta name="twitter:image" content="https://lookauramax.com/images/routine.svg">
-<meta name="twitter:image:alt" content="Free Habit Streak Tracker — Lookauramax tool illustration">
+<meta name="twitter:description" content="Track up to 5 daily habits free: tap to check off each day and watch your Aura Streak grow. No account needed. A checklist tool, not medical advice.">
+<meta name="twitter:image" content="https://www.lookauramax.com/images/tools/habit-streak-tracker.jpg">
+<meta name="twitter:image:alt" content="Illustration of a fictional man marking a wall calendar with a pencil in a bright home office">
 <meta name="author" content="Lookauramax Team">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Where is my habit data stored?","acceptedAnswer":{"@type":"Answer","text":"Only in this browser, using localStorage on your own device. Nothing is sent to any server, no account is created, and no one else can see your habits. Use the Clear all data button to delete everything at any time."}},
-{"@type":"Question","name":"How is a streak counted?","acceptedAnswer":{"@type":"Answer","text":"A streak is the number of consecutive days up to today on which you checked off the habit. If you miss a day, the streak resets to zero — that is normal, and the goal is to start a new streak the next day."}},
-{"@type":"Question","name":"What happens if I clear my browser data?","acceptedAnswer":{"@type":"Answer","text":"Your habits and check-ins are deleted, because they live only in this browser. The tracker has no backup and no sync, by design — your data never leaves your device."}},
-{"@type":"Question","name":"How many habits can I track?","acceptedAnswer":{"@type":"Answer","text":"Up to 5 habits. Fewer, well-chosen habits work better than a long list — start with one or two you can actually do every day, then add more once they feel easy."}}
-]}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need an account for the habit tracker?","acceptedAnswer":{"@type":"Answer","text":"No. Add habits and check them off with no account. Your habits are saved in this browser, so they are still here when you return on the same device and browser. Clearing your browser data removes them. Use the Clear all data button to delete everything at any time."}},{"@type":"Question","name":"How is an Aura Streak counted?","acceptedAnswer":{"@type":"Answer","text":"An Aura Streak is the number of consecutive days up to today on which you checked off the habit. If you miss a day, the Aura Streak resets to zero — that is normal, and the goal is to start a new Aura Streak the next day."}},{"@type":"Question","name":"What happens if I clear my browser data?","acceptedAnswer":{"@type":"Answer","text":"Your habits and check-ins are removed, because the tracker keeps them in this browser with no backup. Add your habits again to start fresh."}},{"@type":"Question","name":"How many habits can I track?","acceptedAnswer":{"@type":"Answer","text":"Up to 5 habits. Fewer, well-chosen habits work better than a long list — start with one or two you can actually do every day, then add more once they feel easy."}}]}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
@@ -68,9 +61,9 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 .tool button:hover{filter:brightness(1.08)}
 button.ghost{background:none;border:1px solid rgba(255,255,255,.3);color:#D9D2C4;border-radius:999px;padding:9px 16px;cursor:pointer;font-size:14px}
 button.ghost:hover{border-color:#FFD14E;color:#FFD14E}
-button.danger{background:none;border:1px solid rgba(255,120,120,.5);color:#FF9A9A;border-radius:999px;padding:9px 16px;cursor:pointer;font-size:14px}
-button.danger:hover{border-color:#FF9A9A}
-.error{color:#FF9A9A;font-weight:700;margin-top:10px}
+button.danger{background:none;border:1px solid rgba(255,138,138,.5);color:#FF8A8A;border-radius:999px;padding:9px 16px;cursor:pointer;font-size:14px}
+button.danger:hover{border-color:#FF8A8A}
+.error{color:#FF8A8A;font-weight:700;margin-top:10px}
 .habit{border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 18px;margin:14px 0;background:#050505}
 .habit-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap}
 .habit-top strong{font-size:18px}
@@ -83,36 +76,51 @@ button.danger:hover{border-color:#FF9A9A}
 .note{color:#A9A29A;font-size:14px}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Free Habit Streak Tracker: Build Daily Habits","description":"Track up to 5 daily habits free: tap to check off each day and watch your streaks grow. Your data stays in this browser only — no account, no sync, delete anytime.","image":"https://lookauramax.com/images/routine.svg","author":{"@type":"Organization","name":"Lookauramax","url":"https://lookauramax.com/"},"publisher":{"@type":"Organization","name":"Lookauramax","url":"https://lookauramax.com/","logo":{"@type":"ImageObject","url":"https://lookauramax.com/logo.png"}},"mainEntityOfPage":"https://lookauramax.com/tools/habit-streak-tracker.html","datePublished":"2026-10-17","dateModified":"2026-10-17","inLanguage":"en"}
+{"@context":"https://schema.org","@type":"Article","headline":"Free Habit Streak Tracker: Build Daily Habits","description":"Track up to 5 daily habits free: tap to check off each day and watch your Aura Streak grow. No account needed. A checklist tool, not medical advice.","image":"https://www.lookauramax.com/images/routine.svg","author":{"@type":"Organization","name":"Lookauramax","url":"https://www.lookauramax.com/"},"publisher":{"@type":"Organization","name":"Lookauramax","url":"https://www.lookauramax.com/","logo":{"@type":"ImageObject","url":"https://www.lookauramax.com/logo.png"}},"mainEntityOfPage":"https://www.lookauramax.com/tools/habit-streak-tracker.html","datePublished":"2026-10-17","dateModified":"2026-10-17","inLanguage":"en"}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lookauramax.com/"}, {"@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://lookauramax.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Free Habit Streak Tracker: Build Daily Habits", "item": "https://lookauramax.com/tools/habit-streak-tracker.html"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lookauramax.com/"}, {"@type": "ListItem", "position": 2, "name": "Aura Tools", "item": "https://www.lookauramax.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Free Habit Streak Tracker: Build Daily Habits", "item": "https://www.lookauramax.com/tools/habit-streak-tracker.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "WebApplication", "name": "Free Habit Streak Tracker: Build Daily Habits", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": "https://lookauramax.com/tools/habit-streak-tracker.html"}
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Free Habit Streak Tracker: Build Daily Habits", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": "https://www.lookauramax.com/tools/habit-streak-tracker.html"}
 </script>
 <link rel="stylesheet" href="/assets/base.css">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
   <link rel="stylesheet" href="/assets/consent.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "HowTo", "name": "How to use the Habit Streak Tracker", "step": [{"@type": "HowToStep", "text": "Type a habit name and select Add habit."}, {"@type": "HowToStep", "text": "Select Mark done today for a habit you finished."}, {"@type": "HowToStep", "text": "Return each day to check off the habit again."}, {"@type": "HowToStep", "text": "Watch your Aura Streak grow with each consecutive day."}]}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Lookauramax","logo":"https://www.lookauramax.com/logo.png","url":"https://www.lookauramax.com/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Lookauramax","url":"https://www.lookauramax.com/","inLanguage":"en"}</script>
 </head>
 <body>
 <header><div class="head">
 <a class="brand" href="/"><img src="/logo-small.png" alt="Lookauramax logo"><b>LOOK<em>AURA</em>MAX</b></a>
-<nav class="hlinks"><a href="/#what">What it is</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a></nav>
+<nav class="hlinks"><a href="/tools/">Tools</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a></nav>
 <a class="btn btn-gold" href="/#pricing">Get the app →</a>
 </div></header>
 <main id="main" class="wrap narrow">
 <p class="crumb"><a href="https://lookauramax.com/tools/">Tools</a> / Habit Streak Tracker</p>
 <h1>Free Habit Streak Tracker</h1>
-<figure class="post-hero"><img src="/images/routine.svg" alt="Free Habit Streak Tracker — Lookauramax tool illustration" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Lookauramax tool — Free Habit Streak Tracker</figcaption></figure>
+<figure class="post-hero"><img src="/images/tools/habit-streak-tracker.jpg" alt="Illustration of a fictional man marking a wall calendar with a pencil in a bright home office" width="1200" height="630" loading="lazy" decoding="async"><figcaption>Illustration — AI-generated image of a fictional person. Not a real user or result.</figcaption></figure>
 <p class="byline">By <a href="https://lookauramax.com/about.html">Lookauramax Team</a> · Published 17 Oct 2026 · General information, not medical advice.</p>
-<p class="lede">Small habits, repeated daily, are the whole secret of a glow-up. Add up to 5 habits, tap to check each one off, and watch your streaks grow — with zero accounts, zero tracking, and zero data leaving this browser.</p>
+<p class="lede">An Aura Streak is the number of consecutive days you checked off a habit. Add up to 5 habits, tap to check each one off, and watch your Aura Streak grow. No account is needed. Start below.</p>
+<h2>What is the Habit Streak Tracker?</h2>
+<p>The Habit Streak Tracker is a free tool that tracks up to five daily habits. Each completed day adds to your Aura Streak. Missed days are normal. The tracker restarts the next day without guilt. One missed day is a pause, not a failure.</p>
+
+<h2>How to use this tool</h2>
+<ol>
+<li>Type a habit name and select Add habit.</li>
+<li>Select Mark done today for a habit you finished.</li>
+<li>Return each day to check off the habit again.</li>
+<li>Watch your Aura Streak grow with each consecutive day.</li>
+</ol>
 
 <div class="tool">
-<p class="privacy-note"><strong>Your data stays in this browser.</strong> Habits and check-ins are saved only on this device (browser localStorage). Nothing is sent to any server, no account is created, and no one else can see them. <button type="button" class="danger" onclick="clearAll()">Clear all data</button></p>
+<p class="privacy-note">No sign-up needed — the tool works right here in your browser.</p>
 <div class="addrow">
-<input type="text" id="habitName" maxlength="60" placeholder="e.g. Wash face, 10-minute walk, Read 10 pages" aria-label="New habit name">
+<input type="text" id="habitName" maxlength="60" placeholder="Wash face, 10-minute walk, Read 10 pages" aria-label="New habit name">
 <button type="button" onclick="addHabit()">Add habit</button>
 </div>
 <p class="error" id="habitError" role="alert"></p>
@@ -120,40 +128,42 @@ button.danger:hover{border-color:#FF9A9A}
 <p class="note" id="habitHint"></p>
 </div>
 
-<h2>How to make streaks actually work</h2>
-<p>Pick habits so small you cannot fail them. "Ten-minute walk" beats "one hour at the gym." "Wash face" beats "full 8-step routine." A streak works because it makes skipping visible — one missed day costs you the number you were proud of. But a broken streak is not a failure: the goal is to start a new one the next day, not to punish yourself for the miss.</p>
+<h2>How to make Aura Streaks actually work</h2>
+<p>Pick habits so small you cannot fail them. "Ten-minute walk" beats "one hour at the gym." "Wash face" beats "full 8-step routine." An Aura Streak works because it makes skipping visible — one missed day costs you the number you were proud of. But a broken streak is not a failure: the goal is to start a new one the next day, not to punish yourself for the miss.</p>
 <p>Keep the list short. Five habits is the maximum here for a reason — most people who try to track ten habits quit all of them by week two. One or two habits done every day for a month will change more than ten habits done for three days.</p>
 
 <div class="cta">
 <h2>Want habits with a plan behind them?</h2>
-<p>Lookauramax gives you a daily Aura Routine, streaks, and reminders inside the app — plus an AuraScan to start from. Join and claim your one-time Join Reward — 1 scan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser. No card needed.</p>
+<p>Lookauramax gives you a daily Aura Routine, Aura Streaks, and reminders inside the app — plus an AuraScan to start from. Join and claim your one-time Join Reward — 1 scan, 1 retake if confidence is low, a 3-day routine, and a Preview teaser. No card needed.</p>
 <a class="btn" href="https://lookauramax.com/#pricing">See plans &amp; free trial →</a>
 </div>
 
 <div class="faq">
 <h2>Frequently asked questions</h2>
-<details open><summary>Where is my habit data stored?</summary><p>Only in this browser, using localStorage on your own device. Nothing is sent to any server, no account is created, and no one else can see your habits. Use the Clear all data button to delete everything at any time.</p></details>
-<details><summary>How is a streak counted?</summary><p>A streak is the number of consecutive days up to today on which you checked off the habit. If you miss a day, the streak resets to zero — that is normal, and the goal is to start a new streak the next day.</p></details>
-<details><summary>What happens if I clear my browser data?</summary><p>Your habits and check-ins are deleted, because they live only in this browser. The tracker has no backup and no sync, by design — your data never leaves your device.</p></details>
+<details><summary>Do I need an account for the habit tracker?</summary><p>No. Add habits and check them off with no account. Your habits are saved in this browser, so they are still here when you return on the same device and browser. Clearing your browser data removes them. Use the Clear all data button to delete everything at any time.</p></details>
+<details><summary>How is an Aura Streak counted?</summary><p>An Aura Streak is the number of consecutive days up to today on which you checked off the habit. If you miss a day, the Aura Streak resets to zero — that is normal, and the goal is to start a new Aura Streak the next day.</p></details>
+<details><summary>What happens if I clear my browser data?</summary><p>Your habits and check-ins are removed, because the tracker keeps them in this browser with no backup. Add your habits again to start fresh.</p></details>
 <details><summary>How many habits can I track?</summary><p>Up to 5 habits. Fewer, well-chosen habits work better than a long list — start with one or two you can actually do every day, then add more once they feel easy.</p></details>
 </div>
 
-<p class="disclaimer"><strong>Disclaimer:</strong> This tool is a simple habit checklist with general information only. It does not diagnose, treat, or promise any physical or social outcome. For health concerns, speak to a qualified professional.</p>
+<p class="disclaimer"><strong>Disclaimer:</strong> This tool is a clear habit checklist with general information only. It does not diagnose, treat, or promise any physical or social outcome. For health concerns, speak to a qualified professional.</p>
 
 <div class="related">
-<h3>Keep reading</h3>
-<a href="https://lookauramax.com/blog/aura-routine-daily.html">→ Aura Routine: What a Good Daily Routine Actually Looks Like</a>
-<a href="https://lookauramax.com/blog/how-to-become-better.html">→ How to Become Better: Small Habits, Real Change</a>
-<a href="https://lookauramax.com/blog/glow-up-guide-90-days.html">→ The Honest 90-Day Glow-Up Guide (No Shortcuts)</a>
+<h3>Related tools</h3>
+<a href="https://lookauramax.com/tools/90-day-planner.html">→ Free 90-Day Glow-Up Planner</a>
+<a href="https://lookauramax.com/tools/routine-builder.html">→ Build Your Routine</a>
+<a href="https://lookauramax.com/tools/water-intake-calculator.html">→ Daily Water Intake Calculator</a>
+<a href="https://lookauramax.com/tools/calorie-calculator.html">→ Free Calorie Calculator (TDEE)</a>
 </div>
 </main>
 <footer><div class="wrap"><div class="foot">
 <div class="foot-brand"><img src="/logo-small.png" alt="Lookauramax founder logo"><div><p>LOOK<span>AURA</span>MAX</p><p>Your glow-up, made real.</p><p><a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></div>
-<nav class="foot-col" aria-label="Product"><h4>Product</h4><ul><li><a href="/#what">What it is</a></li><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#faq">FAQ</a></li></ul></nav>
-<nav class="foot-col" aria-label="Resources"><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Free Tools</a></li><li><a href="/glossary.html">Glow-Up Glossary</a></li></ul></nav>
+<nav class="foot-col" aria-label="Product"><h4>Product</h4><ul><li><a href="/tools/">Tools</a></li><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#faq">FAQ</a></li></ul></nav>
+<nav class="foot-col" aria-label="Resources"><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Aura Tools</a></li><li><a href="/glossary.html">Glow-Up Glossary</a></li></ul></nav>
 <nav class="foot-col" aria-label="Legal"><h4>Legal</h4><ul><li><a href="https://lookauramax.com/privacy">Privacy Policy</a></li><li><a href="https://lookauramax.com/terms">Terms</a></li><li><a href="https://lookauramax.com/refund">Refund Policy</a></li></ul></nav>
 </div>
-<p class="foot-note">Lookauramax is not a medical app. It does not diagnose, treat, or promise any physical outcome. Scores are rule-based estimates, not AI, and not medical advice.</p>
+<p class="foot-note">Lookauramax is not a medical app. It does not diagnose, treat, or promise any physical outcome. Scores are Aura Intelligence estimates — clear, explainable checks, not medical advice.</p>
+<div class="social-row"><a href="https://www.instagram.com/lookauramax" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg></a><a href="https://www.youtube.com/@lookauramax" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@lookauramax" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="17" r="3.5"/><path d="M12 17V4"/><path d="M12 4c.5 3 2.5 4.5 6 5"/></svg></a><a href="https://www.facebook.com/lookauramax" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.3-1.3H17V2.5h-2.6A3.9 3.9 0 0 0 10.5 6.4v2.1H8V12h2.5v9.5H14V12h2.4l.4-3.5z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.threads.net/@lookauramax" target="_blank" rel="noopener" aria-label="Threads"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="M15.5 4.5v8"/></svg></a></div>
 <div class="foot-bottom"><p>© 2026 Lookauramax. All rights reserved.</p><span data-cookie-settings-slot></span></div>
 </div></footer>
 <script>
