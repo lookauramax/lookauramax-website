@@ -174,7 +174,9 @@ footer:not(:has(.foot)) .lam-cookie-settings{color:#FFD14E}
 /* --- ONE details/FAQ system: every FAQ on every page looks identical ---
    (was: index had the good card style, 78 pages had a weaker one) --- */
 details{background:#131110;border:1px solid rgba(255,255,255,.09);border-radius:16px;
-  padding:20px 24px;margin:12px 0}
+  padding:20px 24px;margin:12px 0;max-width:860px}
+details[open]{border-color:rgba(255,209,78,.45)}
+details summary:hover{color:#FFD14E}
 details summary{cursor:pointer;font-weight:700;font-size:16.5px;list-style:none;
   display:flex;justify-content:space-between;align-items:center;gap:16px}
 details summary::-webkit-details-marker{display:none}
