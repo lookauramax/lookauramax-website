@@ -75,7 +75,7 @@ h2{font-size:clamp(30px,4vw,44px);line-height:1.12;font-weight:700}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#FFD14E;border:1px solid rgba(255,209,78,.4);background:rgba(255,209,78,.08);padding:9px 16px;border-radius:999px;margin:0 0 24px}
 /* hero transformation visual — Day 0 → Day 90, realistic fictional man */
 .hero-visual{position:relative}
-.hero-transform{display:flex;align-items:center;justify-content:center;gap:20px;margin:0 auto;max-width:560px}
+.hero-transform{display:flex;align-items:center;justify-content:center;gap:20px;margin:0 auto;max-width:560px;position:relative}
 .ht-face{margin:0;text-align:center}
 .ht-face img{width:215px;height:238px;object-fit:cover;object-position:center 30%;border-radius:18px;border:1px solid rgba(255,209,78,.35);display:block}
 .ht-after img{box-shadow:0 0 44px rgba(255,190,60,.45)}
@@ -86,8 +86,8 @@ h2{font-size:clamp(30px,4vw,44px);line-height:1.12;font-weight:700}
 .hero-transform-note{font-size:12.5px;color:var(--mut2);margin:14px auto 0;max-width:520px;text-align:center}
 .hero-float{position:absolute;display:flex;align-items:center;gap:8px;background:rgba(18,16,12,.92);border:1px solid rgba(255,209,78,.45);border-radius:999px;padding:10px 16px;font-size:13.5px;font-weight:700;box-shadow:0 12px 32px rgba(0,0,0,.45);z-index:2}
 .hero-float b{color:#FFD14E}
-.hero-float-score{top:16px;right:4px}
-.hero-float-streak{bottom:52px;left:-6px}
+.hero-float-score{top:12px;right:8px}
+.hero-float-streak{bottom:12px;left:8px}
 .hero h1{font-size:clamp(52px,6.2vw,84px);line-height:1.02;font-weight:700;letter-spacing:-.03em}
 .hero-sub{font-size:clamp(17px,2vw,20px);color:var(--mut);max-width:560px;margin:24px 0 0}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
@@ -177,7 +177,7 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 .cta p{color:var(--mut);max-width:520px;margin:16px auto 28px}
 /* footer design lives in /assets/base.css (single source of truth) */
 @media(max-width:900px){.grid3,.steps{grid-template-columns:1fr 1fr}.pricing{grid-template-columns:1fr 1fr}.hlinks{display:none}}
-@media(max-width:560px){section{padding:64px 0}.grid3,.steps,.pricing{grid-template-columns:1fr}.hero{padding:56px 0}.trust{grid-template-columns:1fr}.trust div+div{border-left:0;border-top:1px solid rgba(255,255,255,.08)}.hero-transform{gap:12px}.ht-face img{width:138px;height:152px}.ht-arrow{font-size:24px}.hero-float{font-size:12px;padding:8px 12px}.hero-float-streak{left:0}}
+@media(max-width:560px){section{padding:64px 0}.grid3,.steps,.pricing{grid-template-columns:1fr}.hero{padding:56px 0}.trust{grid-template-columns:1fr}.trust div+div{border-left:0;border-top:1px solid rgba(255,255,255,.08)}.hero-transform{gap:12px}.ht-face img{width:138px;height:152px}.ht-arrow{font-size:24px}.hero-float{font-size:12px;padding:8px 12px}}
 /* tasteful motion — subtle only */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
@@ -240,10 +240,10 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 <figure class="ht-face ht-before"><img src="/images/hero-day0.jpg" alt="" width="960" height="1280" fetchpriority="high"><figcaption>Day 0 · Baseline</figcaption></figure>
 <div class="ht-arrow" aria-hidden="true"><span>→</span><small>90 days</small></div>
 <figure class="ht-face ht-after"><img src="/images/hero-day90.jpg" alt="" width="960" height="1280" fetchpriority="high"><figcaption>Day 90 · Aura</figcaption></figure>
-</div>
-<p class="hero-transform-note">Illustration — AI-generated image of a fictional person, Day 0 to Day 90. Not a real user or result.</p>
 <div class="hero-float hero-float-score" aria-hidden="true">Aura Score <b>78 · Great</b></div>
 <div class="hero-float hero-float-streak" aria-hidden="true">🔥 <b>24-day streak</b> · Routine done</div>
+</div>
+<p class="hero-transform-note">Illustration — AI-generated image of a fictional person, Day 0 to Day 90. Not a real user or result.</p>
 </div>
 </div>
 <div class="trust">
