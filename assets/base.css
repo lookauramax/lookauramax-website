@@ -156,23 +156,27 @@ body .post-hero figcaption{text-align:center}
   transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .js-motion [data-stagger].is-revealed{opacity:1;transform:none}
 
-/* ---------- Branded load intro (homepage only, CSS-only, <800ms,
+/* ---------- Branded load intro (homepage only, CSS-only, ~1.1s,
    pointer-events:none throughout, ends visibility:hidden; if CSS or
    JS fails the page is simply visible with no intro) ---------- */
 .intro{position:fixed;inset:0;z-index:200;background:#000;display:flex;
-  align-items:center;justify-content:center;flex-direction:column;gap:14px;
-  pointer-events:none;animation:introHide .4s var(--ease) .55s forwards}
-.intro-mark{width:64px;height:64px;border-radius:50%;position:relative;
-  background:conic-gradient(from 210deg,#FFF3C4,#FFD14E 30%,#E19A2D 60%,#976729 85%,#FFF3C4);
-  animation:introMark .55s var(--ease) both;
-  box-shadow:0 0 44px rgba(255,190,60,.45),inset 0 1px 0 rgba(255,255,255,.6)}
-.intro-mark:after{content:"";position:absolute;inset:3px;border-radius:50%;background:#000}
-.intro-mark span{position:absolute;inset:0;z-index:1;display:flex;align-items:center;
-  justify-content:center;font-family:"Space Grotesk",sans-serif;font-weight:700;
-  font-size:17px;letter-spacing:.14em;color:#FFD14E}
+  align-items:center;justify-content:center;flex-direction:column;gap:16px;
+  pointer-events:none;animation:introHide .35s var(--ease) .8s forwards}
+/* Coin flip: the real circular logo spins once like a coin —
+   front face → edge → back face → front. Both faces carry the
+   logo, so it never shows mirrored. */
+.intro-mark{width:78px;height:78px;position:relative;transform-style:preserve-3d;
+  animation:introCoin .8s var(--ease) both}
+.intro-face{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:#000;
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border:2px solid rgba(255,209,78,.85);
+  box-shadow:0 0 34px rgba(255,190,60,.4),inset 0 1px 0 rgba(255,255,255,.5)}
+.intro-face img{width:100%;height:100%;object-fit:cover;display:block}
+.intro-face.back{transform:rotateY(180deg)}
 .intro-word{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.32em;
-  font-size:13px;color:#F5F0E6;animation:introMark .55s var(--ease) .08s both}
+  font-size:13px;color:#F5F0E6;animation:introMark .5s var(--ease) .15s both}
 @keyframes introMark{from{opacity:0;transform:scale(.88) translateY(6px)}to{opacity:1;transform:none}}
+@keyframes introCoin{from{transform:perspective(700px) rotateY(0)}to{transform:perspective(700px) rotateY(360deg)}}
 @keyframes introHide{to{opacity:0;visibility:hidden}}
 
 /* ---------- Kinetic hero headline: word-by-word rise + shine sweep.
