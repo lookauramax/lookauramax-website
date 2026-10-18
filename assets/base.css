@@ -189,6 +189,10 @@ details p{margin-top:12px;color:#B3ABA0}
 
 /* --- ONE width system: every page shares it (was random 760/780/820/980/1060/1120) --- */
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px;display:block}
+/* Footer column is always the 1120 shell, even on pages whose inline
+   <style> redefines .wrap narrower AFTER base.css loads (legal pages):
+   footer .wrap (0,1,1) beats a bare .wrap (0,1,0) override. */
+footer .wrap{max-width:1120px}
 section.faq-narrow{max-width:860px}
 .wrap.narrow{max-width:860px}
 
