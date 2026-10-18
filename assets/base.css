@@ -1130,6 +1130,40 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
 .hp-streak{margin:14px 0 0;text-align:center;font-size:13px;font-weight:700;color:#FFD14E;background:rgba(255,209,78,.10);border:1px solid rgba(255,209,78,.30);border-radius:999px;padding:9px 12px}
 .hp-chip{position:static;display:block;width:max-content;margin:0 auto 14px;background:rgba(18,16,13,.92);border:1px solid rgba(255,209,78,.45);border-radius:999px;padding:9px 14px;font-size:12.5px;font-weight:700;box-shadow:0 10px 24px rgba(0,0,0,.45)}
 .hp-chip.two{margin:14px auto 0}
+/* --- Hero stage (v5): the phone gets a stage, not a void.
+   LooxUP-inspired devices, adapted honestly + kept centered:
+   (a) a localized gold glow + floor shadow behind the phone, so it sits
+   EMBEDDED in light, not pasted on black; (b) two frosted-glass journey
+   chips flanking the phone — Day 0 / Day 90 JOURNEY markers, never face
+   scores; (c) the Aura ring draws itself once on load. No split layout,
+   no serif, no lavender, no face-rating chips — our system, our honesty. --- */
+.hero-stage{position:relative;z-index:1;max-width:880px;margin:24px auto 0;padding:0 24px}
+.hero-stage::before{content:"";position:absolute;left:50%;top:46%;width:min(720px,92%);aspect-ratio:1;
+  transform:translate(-50%,-50%);pointer-events:none;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,209,78,.22),rgba(255,209,78,.08) 42%,rgba(255,209,78,0) 70%)}
+.hero-stage::after{content:"";position:absolute;left:50%;bottom:-6px;width:min(420px,72%);height:26px;
+  transform:translateX(-50%);pointer-events:none;border-radius:50%;
+  background:radial-gradient(ellipse,rgba(0,0,0,.75),rgba(0,0,0,0) 70%);filter:blur(6px)}
+.hero-stage .hero-phone{margin:0 auto}
+.hp-screen{box-shadow:0 40px 90px rgba(0,0,0,.7),0 0 90px rgba(255,190,60,.22),inset 0 1px 0 rgba(255,255,255,.12),inset 0 0 0 1px rgba(255,209,78,.12)}
+.hp-fill{animation:hpDraw 1.5s cubic-bezier(.6,.05,.2,1) .25s both}
+@keyframes hpDraw{from{stroke-dashoffset:326.7}to{stroke-dashoffset:71.9}}
+.hero-glass{position:absolute;z-index:2;width:210px;padding:14px 16px;border-radius:16px;
+  background:rgba(255,255,255,.06);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,209,78,.35);
+  box-shadow:0 18px 40px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.1);
+  animation:glassFloat 7s ease-in-out infinite}
+.hero-glass b{display:block;font-family:"Space Grotesk",sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;color:#FFD14E;margin-bottom:4px}
+.hero-glass span{display:block;font-size:13px;line-height:1.5;color:#EDE6D6}
+.hero-glass.day0{left:24px;top:15%;opacity:.92}
+.hero-glass.day90{right:24px;top:54%;animation-delay:1.4s;
+  background:rgba(255,209,78,.10);border-color:rgba(255,209,78,.55);
+  box-shadow:0 18px 40px rgba(0,0,0,.45),0 0 34px rgba(255,190,60,.18),inset 0 1px 0 rgba(255,255,255,.12)}
+@keyframes glassFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@media(max-width:1080px){.hero-glass{width:180px}}
+@media(max-width:860px){.hero-glass{display:none}.hero-stage{padding:0}}
+@media(prefers-reduced-motion:reduce){.hero-glass,.hp-fill{animation:none!important}}
 /* --- Journey section: scrubber back home, centered, full width for it. --- */
 .journey-layout{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
 
