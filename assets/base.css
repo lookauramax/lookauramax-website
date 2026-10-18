@@ -451,12 +451,12 @@ footer{border-top:1px solid var(--line);padding:64px 0 32px;color:#B9B2A4;
 .js-parallax .hero-photo img{top:-6%;bottom:auto;height:112%}
 .hero-photo:after{content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,rgba(0,0,0,.12),transparent 30%,transparent 62%,rgba(0,0,0,.55))}
-.aura-ring{position:absolute;width:78%;aspect-ratio:1;right:-14%;top:6%;z-index:0;
+.aura-ring{position:absolute;width:118%;aspect-ratio:1;left:50%;margin-left:-59%;top:-2%;z-index:0;
   border-radius:50%;pointer-events:none;
-  border:1px solid rgba(255,209,78,.35);
-  box-shadow:0 0 0 1px rgba(255,209,78,.08),0 0 80px rgba(255,190,60,.22),inset 0 0 60px rgba(255,190,60,.12);
+  border:1.5px solid rgba(255,209,78,.5);
+  box-shadow:0 0 0 1px rgba(255,209,78,.12),0 0 90px rgba(255,190,60,.3),inset 0 0 60px rgba(255,190,60,.15);
   animation:auraBreathe 6s ease-in-out infinite}
-.aura-ring.two{width:56%;right:-8%;top:16%;animation-delay:1.2s;opacity:.6}
+.aura-ring.two{width:96%;margin-left:-48%;top:2%;animation-delay:1.2s;opacity:.65}
 @keyframes auraBreathe{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.05);opacity:1}}
 .hero-chip{position:absolute;z-index:2;display:flex;align-items:center;gap:8px;
   background:rgba(8,7,6,.9);border:1px solid rgba(255,209,78,.5);border-radius:10px;
@@ -601,6 +601,15 @@ footer{border-top:1px solid var(--line);padding:64px 0 32px;color:#B9B2A4;
 .app-shot img{width:100%;height:auto;border-radius:36px;border:1px solid rgba(255,209,78,.3);
   box-shadow:0 20px 50px rgba(0,0,0,.5);display:block;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
 .app-shot img:hover{transform:translateY(-6px);box-shadow:0 28px 60px rgba(0,0,0,.6),0 0 44px rgba(255,190,60,.18)}
+/* --- What it is: photographic portrait replaces the app screenshot.
+   Founder: app screenshot not needed — use something attractive. The
+   Day 90 portrait (bright, confident) carries the section; one glass chip
+   ("One photo · Seven signals") + honest illustration caption. --- */
+.what-photo{margin:0;position:relative}
+.what-photo img{width:100%;height:auto;display:block;border-radius:24px;border:1px solid rgba(255,209,78,.4);
+  box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 60px rgba(255,190,60,.12);aspect-ratio:3/4;object-fit:cover;object-position:center 20%}
+.what-photo figcaption{color:#8A8272;font-size:12.5px;margin-top:8px}
+.hero-glass.what-chip{left:16px;top:auto;right:auto;bottom:44px;width:auto;max-width:calc(100% - 32px)}
 
 /* --- How it works: photo + steps. --- */
 .how-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start;margin-top:36px}
@@ -1113,7 +1122,7 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
 /* --- Hero phone: the product is the hero visual. One centered phone
    showing the AuraScan result (ring + trait bands + streak) — no
    split-face, no fake transformation. Gentle float, alive not frantic. --- */
-.hero-phone{position:relative;z-index:1;max-width:min(380px,88vw);margin:40px auto 0;animation:heroFloat 6s ease-in-out infinite}
+.hero-phone{position:relative;z-index:1;max-width:min(440px,88vw);margin:40px auto 0;animation:heroFloat 6s ease-in-out infinite}
 @keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .hp-screen{position:relative;background:linear-gradient(180deg,#1B1813,#0E0C0A);border:1px solid rgba(255,209,78,.5);border-radius:36px;padding:26px 24px 22px;box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 70px rgba(255,190,60,.16),inset 0 1px 0 rgba(255,255,255,.08)}
 .hp-app{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-l);font-weight:800;text-align:center}
@@ -1137,18 +1146,18 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
    chips flanking the phone — Day 0 / Day 90 JOURNEY markers, never face
    scores; (c) the Aura ring draws itself once on load. No split layout,
    no serif, no lavender, no face-rating chips — our system, our honesty. --- */
-.hero-stage{position:relative;z-index:1;max-width:880px;margin:24px auto 0;padding:0 24px}
-.hero-stage::before{content:"";position:absolute;left:50%;top:46%;width:min(720px,92%);aspect-ratio:1;
+.hero-stage{position:relative;z-index:1;max-width:780px;margin:24px auto 0;padding:0 24px}
+.hero-stage::before{content:"";position:absolute;left:50%;top:46%;width:min(780px,96%);aspect-ratio:1;
   transform:translate(-50%,-50%);pointer-events:none;border-radius:50%;
-  background:radial-gradient(circle,rgba(255,209,78,.22),rgba(255,209,78,.08) 42%,rgba(255,209,78,0) 70%)}
-.hero-stage::after{content:"";position:absolute;left:50%;bottom:-6px;width:min(420px,72%);height:26px;
+  background:radial-gradient(circle,rgba(255,209,78,.34),rgba(255,209,78,.13) 45%,rgba(255,209,78,0) 72%)}
+.hero-stage::after{content:"";position:absolute;left:50%;bottom:-6px;width:min(500px,82%);height:32px;
   transform:translateX(-50%);pointer-events:none;border-radius:50%;
-  background:radial-gradient(ellipse,rgba(0,0,0,.75),rgba(0,0,0,0) 70%);filter:blur(6px)}
+  background:radial-gradient(ellipse,rgba(0,0,0,.88),rgba(0,0,0,0) 70%);filter:blur(6px)}
 .hero-stage .hero-phone{margin:0 auto}
 .hp-screen{box-shadow:0 40px 90px rgba(0,0,0,.7),0 0 90px rgba(255,190,60,.22),inset 0 1px 0 rgba(255,255,255,.12),inset 0 0 0 1px rgba(255,209,78,.12)}
 .hp-fill{animation:hpDraw 1.5s cubic-bezier(.6,.05,.2,1) .25s both}
 @keyframes hpDraw{from{stroke-dashoffset:326.7}to{stroke-dashoffset:71.9}}
-.hero-glass{position:absolute;z-index:2;width:210px;padding:14px 16px;border-radius:16px;
+.hero-glass{position:absolute;z-index:2;width:220px;padding:15px 17px;border-radius:16px;
   background:rgba(255,255,255,.06);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
   border:1px solid rgba(255,209,78,.35);
   box-shadow:0 18px 40px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.1);
@@ -1156,13 +1165,14 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
 .hero-glass b{display:block;font-family:"Space Grotesk",sans-serif;font-size:12px;font-weight:700;
   letter-spacing:.22em;text-transform:uppercase;color:#FFD14E;margin-bottom:4px}
 .hero-glass span{display:block;font-size:13px;line-height:1.5;color:#EDE6D6}
-.hero-glass.day0{left:24px;top:15%;opacity:.92}
-.hero-glass.day90{right:24px;top:54%;animation-delay:1.4s;
+.hero-glass.day0{left:0;top:12%;opacity:.95}
+.hero-glass.day90{right:0;top:50%;animation-delay:1.4s;
   background:rgba(255,209,78,.10);border-color:rgba(255,209,78,.55);
   box-shadow:0 18px 40px rgba(0,0,0,.45),0 0 34px rgba(255,190,60,.18),inset 0 1px 0 rgba(255,255,255,.12)}
 @keyframes glassFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @media(max-width:1080px){.hero-glass{width:180px}}
 @media(max-width:860px){.hero-glass{display:none}.hero-stage{padding:0}}
+@media(min-width:1400px){.hero-stage{max-width:900px}.hero-phone{max-width:min(480px,88vw)}.hero-glass{width:240px}}
 @media(prefers-reduced-motion:reduce){.hero-glass,.hp-fill{animation:none!important}}
 /* --- Journey section: scrubber back home, centered, full width for it. --- */
 .journey-layout{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
