@@ -185,7 +185,7 @@ details summary::after{content:"";flex-shrink:0;width:10px;height:10px;
   transform:rotate(45deg) translateY(-2px);transition:transform .2s ease}
 details[open ] summary::after{transform:rotate(-135deg) translateY(-2px)}
 details p{margin-top:12px;color:#B3ABA0}
-@media(max-width:560px){details{padding:16px 18px}details summary{font-size:15.5px}}
+@media(max-width:560px){details{padding:16px 18px}details summary{font-size:15.5px}.social-row{gap:12px}}
 
 /* --- ONE width system: every page shares it (was random 760/780/820/980/1060/1120) --- */
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px;display:block}
@@ -208,7 +208,7 @@ details p{margin-top:12px;color:#B3ABA0}
 @media(max-width:560px){.duo-visual{gap:12px}}
 
 /* --- Footer social row: gold platform icons, same on every page --- */
-.social-row{display:flex;gap:16px;align-items:center;margin:2px 0 22px}
+.social-row{display:flex;gap:16px;align-items:center;margin:2px 0 22px;flex-wrap:wrap}
 .social-row a{color:#FFD14E;display:inline-flex;line-height:0}
 .social-row a:hover{color:#FFE9A3}
 .social-row svg{width:22px;height:22px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
