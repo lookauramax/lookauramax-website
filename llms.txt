@@ -126,6 +126,8 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 - [Find Your Skin Type](https://www.lookauramax.com/tools/skin-type-quiz): Free skin type quiz: answer 6 questions on how your skin feels and get your likely type plus a care checklist. No sign-up. General information, not a diagnosis.
 - [Find Your Hair Type Quiz](https://www.lookauramax.com/tools/hair-type-quiz): Free hair type quiz — answer 6 questions and get your hair type plus a general care checklist. No sign-up. General information, not a diagnosis.
 
+- [Compare Lookauramax vs Umax vs LooksMax AI](https://www.lookauramax.com/compare): Honest side-by-side comparison — face ratings, weekly billing, photos, cancel, pricing. Verified claims only, with sources and our own cons.
+
 ## Optional
 
 - [Sitemap](https://www.lookauramax.com/sitemap.xml): Full sitemap.

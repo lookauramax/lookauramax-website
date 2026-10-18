@@ -1109,3 +1109,54 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
 /* --- Journey section: scrubber moved to the hero, so the phone
    visual stands alone, centered. --- */
 .journey-layout{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
+
+/* --- Hero phone: the product is the hero visual. One centered phone
+   showing the AuraScan result (ring + trait bands + streak) — no
+   split-face, no fake transformation. Gentle float, alive not frantic. --- */
+.hero-phone{position:relative;z-index:1;max-width:min(380px,88vw);margin:40px auto 0;animation:heroFloat 6s ease-in-out infinite}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hp-screen{position:relative;background:linear-gradient(180deg,#1B1813,#0E0C0A);border:1px solid rgba(255,209,78,.5);border-radius:36px;padding:26px 24px 22px;box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 70px rgba(255,190,60,.16),inset 0 1px 0 rgba(255,255,255,.08)}
+.hp-app{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-l);font-weight:800;text-align:center}
+.hp-ring{position:relative;width:150px;height:150px;margin:18px auto 8px}
+.hp-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.hp-track{fill:none;stroke:rgba(255,255,255,.12);stroke-width:9}
+.hp-fill{fill:none;stroke:url(#hpGold);stroke-width:9;stroke-linecap:round;stroke-dasharray:326.7;stroke-dashoffset:71.9}
+.hp-score{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.hp-score b{font-family:"Space Grotesk",sans-serif;font-size:38px;line-height:1;font-variant-numeric:tabular-nums}
+.hp-score span{font-size:12px;color:var(--mut);margin-top:2px}
+.hp-traits{list-style:none;margin:14px 0 0}
+.hp-traits li{display:flex;justify-content:space-between;padding:9px 2px;border-top:1px solid var(--line-soft);font-size:14px}
+.hp-traits li span{color:var(--mut)}.hp-traits li b{color:#FFD14E}
+.hp-streak{margin:14px 0 0;text-align:center;font-size:13px;font-weight:700;color:#FFD14E;background:rgba(255,209,78,.10);border:1px solid rgba(255,209,78,.30);border-radius:999px;padding:9px 12px}
+.hp-chip{position:static;display:block;width:max-content;margin:0 auto 14px;background:rgba(18,16,13,.92);border:1px solid rgba(255,209,78,.45);border-radius:999px;padding:9px 14px;font-size:12.5px;font-weight:700;box-shadow:0 10px 24px rgba(0,0,0,.45)}
+.hp-chip.two{margin:14px auto 0}
+/* --- Journey section: scrubber back home, centered, full width for it. --- */
+.journey-layout{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
+
+/* --- Pain: "Sound familiar?" — four honest cards, numbered with the
+   gold aura-ring motif. Empathetic, never shaming. --- */
+.pain{padding:72px 0 8px}
+.pain .shell{text-align:center}
+.pain h2{font-size:clamp(30px,4vw,44px);margin:0 0 12px}
+.pain-sub{color:var(--mut);font-size:17px;max-width:640px;margin:0 auto 36px;line-height:1.6}
+.pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:980px;margin:0 auto;text-align:left}
+.pain-card{position:relative;background:linear-gradient(180deg,#171410,#0E0C0A);border:1px solid var(--line-soft);border-radius:var(--r-lg);padding:26px 24px;box-shadow:0 16px 36px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.05)}
+.pain-card h3{font-size:19px;margin:14px 0 8px}
+.pain-card p{color:var(--mut);font-size:15px;line-height:1.65;margin:0}
+.pain-card .pain-answer{margin-top:14px;color:#F5F0E6}
+.pain-card .pain-answer b{color:#FFD14E}
+/* --- Signals: seven Aura Signals as protocol-style cards. --- */
+.signals{padding:72px 0 8px}
+.signals .shell{text-align:center}
+.signals h2{font-size:clamp(30px,4vw,44px);margin:0 0 12px}
+.signals-sub{color:var(--mut);font-size:17px;max-width:680px;margin:0 auto 36px;line-height:1.6}
+.signals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:980px;margin:0 auto;text-align:left}
+.signal-card{position:relative;background:linear-gradient(180deg,#171410,#0E0C0A);border:1px solid var(--line-soft);border-radius:var(--r-lg);padding:26px 24px;box-shadow:0 16px 36px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.05)}
+.signal-card:last-child{grid-column:2}
+.signal-card h3{font-size:19px;margin:14px 0 8px}
+.signal-card p{color:var(--mut);font-size:15px;line-height:1.65;margin:0 0 6px}
+.signal-card p b{color:#F5F0E6}
+/* Gold aura-ring number badge — the signature motif for both sections. */
+.ring-num{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,209,78,.6);box-shadow:0 0 22px rgba(255,190,60,.28),inset 0 0 12px rgba(255,190,60,.12);color:#FFD14E;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:15px}
+@media(max-width:900px){.signals-grid{grid-template-columns:1fr 1fr}.signal-card:last-child{grid-column:1/-1;max-width:480px;margin:0 auto}}
+@media(max-width:480px){.pain-grid,.signals-grid{grid-template-columns:1fr}.signal-card:last-child{grid-column:auto;max-width:none}}
