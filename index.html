@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -195,9 +195,10 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 @media(max-width:560px){.sticky-bar b{display:none}}
 </style>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
-<link rel="stylesheet" href="/assets/base.css?v=20261020">
+<link rel="stylesheet" href="/assets/base.css?v=20261021">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
+<script src="/assets/menu.js" defer></script>
   <link rel="stylesheet" href="/assets/consent.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.lookauramax.com/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Lookauramax","slogan":"Your glow-up, made real.","logo":"https://www.lookauramax.com/logo.png","url":"https://www.lookauramax.com/","sameAs":["https://www.instagram.com/lookauramax","https://www.youtube.com/@lookauramax","https://www.tiktok.com/@lookauramax","https://www.facebook.com/lookauramax","https://www.threads.net/@lookauramax","https://x.com/Lookauramax","https://www.linkedin.com/company/lookauramax","https://www.pinterest.com/lookauramax/","https://www.reddit.com/user/lookauramax/"]}</script>
@@ -206,9 +207,10 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 <body>
 <header><div class="head">
 <a class="brand" href="/"><img src="/logo-small.png" alt="Lookauramax logo" width="64" height="64"><b>LOOK<em>AURA</em>MAX</b></a>
+<button class="menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
 <nav class="hlinks"><a href="/tools/">Tools</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a></nav>
 <a class="btn btn-gold" href="#pricing">Get the app →</a>
-</div></header>
+</div><nav class="mobile-nav" id="mobile-nav" hidden><a href="/tools/">Tools</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a><div class="mnav-secondary"><a href="/about.html">About</a><a href="/glossary.html">Glossary</a><a href="/tools/">Aura Tools</a><a href="https://www.lookauramax.com/privacy">Privacy Policy</a><a href="https://www.lookauramax.com/terms">Terms</a><a href="https://www.lookauramax.com/refund">Refund Policy</a></div><a class="btn btn-gold" href="#pricing">Get the app →</a></nav></header>
 
 <main id="main">
 <section class="hero" style="border-top:0">
@@ -217,7 +219,7 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 <div class="dust" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 <div class="hero-grid">
 <div>
-<p class="hero-eyebrow">✦ AuraScan · Aura Plan · Aura Routine</p>
+<p class="hero-eyebrow">AuraScan · Aura Plan · Aura Routine</p>
 <h1>Your <span class="gold-text">glow‑up,</span><br><span class="serif">made real.</span></h1>
 <p class="hero-sub">One photo becomes your 90-day plan — clear, personal, and built to follow. We built Lookauramax to be the best glow-up app by being the most honest one: no face ratings. Clear scores with Why + Action.</p>
 <div class="hero-ctas"><a class="btn btn-gold" href="#pricing">See plans &amp; free trial →</a><a class="btn btn-ghost" href="#how">How it works</a></div>
@@ -230,7 +232,7 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 <div class="ht-arrow" aria-hidden="true"><span>→</span><small>90 days</small></div>
 <figure class="ht-face ht-after"><img src="/images/hero-day90.jpg" alt="Illustration — AI-generated image of a fictional man, Day 90" width="960" height="1280" fetchpriority="high"><div class="hero-float hero-float-score" aria-hidden="true">Aura Score <b>78 · Great</b></div><figcaption>Day 90 · Aura</figcaption></figure>
 </div>
-<div class="hero-float hero-float-streak" aria-hidden="true">🔥 <b>24-day Aura Streak</b> · Routine done</div>
+<div class="hero-float hero-float-streak" aria-hidden="true"><b>24-day Aura Streak</b> · Routine done</div>
 <p class="hero-transform-note">Illustration — AI-generated image of a fictional person, Day 0 to Day 90. Not a real user or result.</p>
 </div>
 </div>
@@ -259,7 +261,7 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 <p class="jp-app">AuraScan · Illustration</p>
 <div class="jp-ring"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="jpGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD14E"/><stop offset="1" stop-color="#E19A2D"/></linearGradient></defs><circle class="jp-track" cx="60" cy="60" r="52"/><circle class="jp-fill" cx="60" cy="60" r="52"/></svg><div class="jp-score"><b>78</b><span>Great</span></div></div>
 <ul class="jp-traits"><li><span>Skin</span><b>Good</b></li><li><span>Hair</span><b>Great</b></li><li><span>Brows</span><b>Good</b></li><li><span>Smile</span><b>Great</b></li><li><span>Posture</span><b>Good</b></li></ul>
-<p class="jp-streak">🔥 24-day Aura Streak · Routine done</p>
+<p class="jp-streak">24-day Aura Streak · Routine done</p>
 </div>
 <span class="jp-chip">✓ Routine done today</span>
 <span class="jp-chip two">Aura Score 78 · Great</span>
@@ -348,9 +350,9 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 <p class="lede">Tap a part of the day to see what the routine actually asks of you. Nothing extreme — a routine built to follow, every day.</p>
 <div class="tabs" data-tabs>
 <div class="tab-btns" role="tablist" aria-label="Part of the day">
-<button class="tab-btn active" role="tab" aria-selected="true" data-tab-target="morning">☀️ Morning</button>
-<button class="tab-btn" role="tab" aria-selected="false" data-tab-target="midday">🌤️ Midday</button>
-<button class="tab-btn" role="tab" aria-selected="false" data-tab-target="evening">🌙 Evening</button>
+<button class="tab-btn active" role="tab" aria-selected="true" data-tab-target="morning">Morning</button>
+<button class="tab-btn" role="tab" aria-selected="false" data-tab-target="midday">Midday</button>
+<button class="tab-btn" role="tab" aria-selected="false" data-tab-target="evening">Evening</button>
 </div>
 <div class="tab-panel active" data-tab-panel="morning" role="tabpanel"><ul><li>Gentle face wash</li><li>Moisturiser + SPF</li><li>2-minute posture reset — chin tuck + shoulder roll</li><li>A glass of water</li></ul><p class="tab-note">About 5 minutes. Sets up your skin, posture, and focus for the day.</p></div>
 <div class="tab-panel" data-tab-panel="midday" role="tabpanel"><ul><li>Water + a 5-minute walk</li><li>Posture check at your desk</li><li>One grooming touch-up — hair or brows — if needed</li><li>Step outside for daylight</li></ul><p class="tab-note">About 5 minutes. Breaks up the day without breaking your flow.</p></div>

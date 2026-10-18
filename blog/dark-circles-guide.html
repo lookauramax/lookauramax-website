@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,9 +62,10 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/base.css?v=20261020">
+<link rel="stylesheet" href="/assets/base.css?v=20261021">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
+<script src="/assets/menu.js" defer></script>
   <link rel="stylesheet" href="/assets/consent.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Lookauramax","logo":"https://www.lookauramax.com/logo.png","url":"https://www.lookauramax.com/"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Lookauramax","url":"https://www.lookauramax.com/","inLanguage":"en"}</script>
@@ -72,9 +73,10 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <body>
 <header><div class="head">
 <a class="brand" href="/"><img src="/logo-small.png" alt="Lookauramax logo" width="64" height="64"><b>LOOK<em>AURA</em>MAX</b></a>
+<button class="menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
 <nav class="hlinks"><a href="/tools/">Tools</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a></nav>
 <a class="btn btn-gold" href="/#pricing">Get the app →</a>
-</div></header>
+</div><nav class="mobile-nav" id="mobile-nav" hidden><a href="/tools/">Tools</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a><div class="mnav-secondary"><a href="/about.html">About</a><a href="/glossary.html">Glossary</a><a href="/tools/">Aura Tools</a><a href="https://www.lookauramax.com/privacy">Privacy Policy</a><a href="https://www.lookauramax.com/terms">Terms</a><a href="https://www.lookauramax.com/refund">Refund Policy</a></div><a class="btn btn-gold" href="/#pricing">Get the app →</a></nav></header>
 <main id="main" class="wrap narrow">
 <p class="crumb"><a href="https://www.lookauramax.com/blog/">Blog</a> / Dark Circles</p>
 <h1>Dark Circles: What Actually Helps</h1>

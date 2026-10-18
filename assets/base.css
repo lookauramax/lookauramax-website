@@ -1,8 +1,36 @@
-/* Lookauramax shared base — consistency + robustness.
-   Visual-only normalization. Never changes copy, pricing, links, or colors.
-   Loaded after each page's inline <style>, so it only fills gaps. */
+/* =================================================================
+   LOOKAURAMAX DESIGN SYSTEM V2 — mobile-first, premium.
+   Presentation only: no copy, pricing, links, SEO, or legal changes.
+   Loaded after each page's inline <style>, so equal-specificity
+   rules here win. motion.css loads after this file and owns MOTION
+   only (transitions/animations) — it must not redefine visuals.
+   -----------------------------------------------------------------
+   What V2 changes vs V1 (why):
+   - Header: working hamburger + full mobile nav (V1 hid .hlinks on
+     phones with no replacement — nav simply disappeared).
+   - Gold as ACCENT (solid #FFD14E, hairlines, small highlights),
+     never as gradient floods (V1 gradient buttons/cards/bands
+     are the #1 "cheap AI template" tell).
+   - No decorative glyph-emoji as design (V1 ◎▦✓ icon blocks,
+     floating gold dust, shimmer sweeps, h2 underline grows).
+   - Real depth: solid cards + soft layered shadows, not 1px borders.
+   - Type: Inter everywhere (blog was system-ui), Space Grotesk
+     display with tight tracking, Instrument Serif kept ONLY for
+     the hero's second line (the editorial moment).
+   - Rhythm: consistent section spacing, no dead gaps, no cramped
+     stacks; 3-column trust strip stays 3 columns on phones.
+   ================================================================= */
 
-/* --- Robustness: no horizontal overflow, no clipped media --- */
+/* ---------- Tokens ---------- */
+:root{
+  --bg:#0A0908; --bg2:#121110; --card:#141210;
+  --line:rgba(255,255,255,.08);
+  --gold:#FFD14E; --gold-deep:#E19A2D; --gold-ink:#1A1204;
+  --txt:#F7F3EA; --mut:#C6BFB2; --mut2:#8F897C;
+  --radius:20px; --radius-sm:14px;
+}
+
+/* ---------- Robustness: no horizontal overflow, no clipped media ---------- */
 html,body{overflow-x:clip}
 img,svg,video,canvas,iframe{max-width:100%;height:auto}
 table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
@@ -10,126 +38,125 @@ pre,code{overflow-wrap:break-word;white-space:pre-wrap}
 p,li,h1,h2,h3,h4,td,th{overflow-wrap:break-word}
 a{overflow-wrap:break-word}
 
-/* --- Buttons: one layout language (colors stay per-page) --- */
-.btn,.calcbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  border-radius:999px;font-weight:800;text-decoration:none;cursor:pointer;
-  padding:13px 26px;line-height:1.25;transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
-.btn-gold{background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#1A1204;box-shadow:0 12px 34px rgba(225,154,45,.30)}
-.btn-ghost{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.03);color:#FFFDF6}
-.btn:not(.btn-ghost):not(.btn-gold){
-  background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100}
-button{font:inherit}
+/* ---------- Typography ---------- */
+body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1{font-size:clamp(34px,5vw,52px);line-height:1.08;letter-spacing:-.025em}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.15;letter-spacing:-.02em}
+h3{font-size:19px;line-height:1.3}
+::selection{background:#FFD14E;color:#1A1204}
+a{color:inherit}
 input,select,textarea{font:inherit;max-width:100%}
 input,select,textarea,.tool input,.tool select{min-height:44px}
-
-/* --- Tap targets: 44px minimum (excludes the tiny dismiss ×) --- */
-button:not(.sticky-bar .x),[role="button"],summary{min-height:44px}
+button{font:inherit}
+button:not(.sticky-bar .x):not(.menu-btn),[role="button"],summary{min-height:44px}
 summary{display:flex;align-items:center}
 
-/* --- Shared containers breathe the same on small screens --- */
-@media(max-width:768px){
-  .wrap,.head{padding-left:16px;padding-right:16px}
-  table{font-size:14px}
-}
+/* ---------- Layout ---------- */
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px;display:block}
+.wrap.narrow{max-width:860px}
+footer .wrap{max-width:1120px}
+section{padding:80px 0}
+section+section{border-top:1px solid rgba(255,255,255,.06)}
+section.faq-narrow{max-width:860px}
+@media(max-width:560px){section{padding:64px 0}}
 
-/* --- Premium cards (shared): blog hub, landing featured cards, tool cards.
-   Visual-only. Component styles are scoped under .card so other
-   elements (e.g. pricing .tag inside .pcard) are untouched. --- */
-.card{position:relative;background:linear-gradient(180deg,#171512,#0D0C0A);
-  border:1px solid rgba(225,154,45,.25);border-radius:18px;
-  box-shadow:0 8px 24px rgba(0,0,0,.35);overflow:hidden;
-  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-.card:hover{transform:translateY(-3px);border-color:rgba(255,209,78,.55);
-  box-shadow:0 16px 32px rgba(0,0,0,.45)}
-.card.featured{border-color:rgba(255,209,78,.65);
-  box-shadow:0 12px 32px rgba(0,0,0,.45),0 0 0 1px rgba(255,209,78,.25)}
-.card .ribbon{position:absolute;top:14px;left:14px;z-index:2;
-  background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);
-  color:#171100;font-size:11px;font-weight:800;letter-spacing:.12em;
-  text-transform:uppercase;padding:6px 12px;border-radius:999px;
-  box-shadow:0 4px 12px rgba(0,0,0,.4)}
-.card-thumb{margin:0;aspect-ratio:16/9;overflow:hidden;background:#121110}
-.card-thumb img{width:100%;height:100%;object-fit:cover;display:block;
-  transition:transform .35s ease}
-.card:hover .card-thumb img{transform:scale(1.03)}
-.card-body{padding:20px 22px 22px}
-.card .tag{display:inline-block;background:rgba(225,154,45,.14);
-  border:1px solid rgba(225,154,45,.35);color:#FFD14E;font-size:11px;
-  letter-spacing:.14em;font-weight:800;text-transform:uppercase;
-  padding:5px 10px;border-radius:999px;margin:0 0 12px}
-.card h2{font-size:22px;line-height:1.25;margin:0 0 8px}
-.card h2 a{color:#FFFDF6;text-decoration:none}
-.card h2 a:hover{color:#FFD14E}
-.card-desc{color:#CFC7B8;font-size:15px;margin:0 0 14px}
-.card .read{margin:0}
-.card .read a{color:#FFD14E;font-weight:800;text-decoration:none}
-.card .read a:hover{text-decoration:underline}
-@media (prefers-reduced-motion: reduce){
-  .card,.card:hover,.card-thumb img,.card:hover .card-thumb img{
-    transform:none;transition:none}
-}
-
-
-/* ================================================================
-   PREMIUM HEADER + FOOTER SYSTEM (single source of truth, site-wide).
-   Loaded after each page's inline <style>, so these rules win on
-   equal specificity. Every page uses the same .head/.hlinks/.foot
-   header + footer. The old simple-header/footer patterns below are
-   inert fallbacks (no page uses them anymore).
-   ================================================================ */
-
-/* --- Header: capsule nav, bigger, premium (index + 404) --- */
-header{position:sticky;top:0;z-index:50;background:rgba(8,7,6,.84);
+/* =================================================================
+   HEADER V2 — one row on every viewport. Phones: logo + wordmark +
+   hamburger; the CTA and full nav live in the dropdown panel.
+   Desktop: capsule nav + CTA button, hamburger hidden.
+   ================================================================= */
+header{position:sticky;top:0;z-index:50;background:rgba(10,9,8,.88);
   backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(225,154,45,.28)}
-.head{display:flex;align-items:center;justify-content:space-between;gap:22px;
-  max-width:1120px;margin:0 auto;padding:22px 24px;flex-wrap:nowrap;
-  font-family:"Inter",system-ui,sans-serif;line-height:1.7}
-.brand{display:flex;align-items:center;gap:13px;text-decoration:none;flex-shrink:0;color:#F7F3EA}
-.brand img{width:64px;height:64px;border-radius:50%;object-fit:cover;
-  border:2px solid rgba(255,209,78,.7);box-shadow:0 0 24px rgba(255,190,60,.30);flex-shrink:0}
-.brand b{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.12em;font-size:24px;white-space:nowrap}
-.brand b em,.brand span em{font-style:normal;color:#E19A2D}
-.hlinks{display:flex;align-items:center;gap:6px;padding:6px;
-  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:999px}
-.hlinks a{text-decoration:none;color:#B9B2A4;font-size:16px;font-weight:600;
-  padding:13px 22px;border-radius:999px;transition:background .2s ease,color .2s ease;white-space:nowrap}
-.hlinks a:hover{color:#FFFFFF;background:rgba(255,255,255,.09)}
-.hlinks a:active{background:rgba(255,209,78,.18);color:#FFD14E}
-.head .btn{padding:16px 30px;font-size:16px;white-space:nowrap;flex-shrink:0;font-weight:800;margin:0}
+  border-bottom:1px solid rgba(255,255,255,.08)}
+/* Menu open: header must sit ABOVE the consent banner (z-9999) so the
+   dropdown panel is fully reachable on first visit. Closed: back to 50. */
+header:has(.mobile-nav.open){z-index:10000}
+.head{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  max-width:1120px;margin:0 auto;padding:14px 24px;flex-wrap:nowrap;
+  font-family:"Inter",system-ui,sans-serif;line-height:1.5}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0;color:#F7F3EA}
+.brand img{width:48px;height:48px;border-radius:50%;object-fit:cover;
+  border:1.5px solid rgba(255,209,78,.6);box-shadow:0 0 16px rgba(255,190,60,.22);flex-shrink:0}
+.brand b{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.1em;font-size:21px;white-space:nowrap}
+.brand b em,.brand span em,.brand b span{font-style:normal;color:#E19A2D}
+.hlinks{display:flex;align-items:center;gap:2px;padding:4px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:999px}
+.hlinks a{text-decoration:none;color:#B9B2A4;font-size:14.5px;font-weight:600;
+  padding:9px 16px;border-radius:999px;transition:background .2s ease,color .2s ease;white-space:nowrap}
+.hlinks a:hover{color:#FFFFFF;background:rgba(255,255,255,.08)}
+.hlinks a:active{background:rgba(255,209,78,.16);color:#FFD14E}
+.head .btn{padding:11px 20px;font-size:14px;white-space:nowrap;flex-shrink:0;font-weight:800;margin:0}
 
-/* --- Simple headers: blog / tools / legal / about / glossary (81 pages) --- */
-header:not(:has(.head)):not(:has(.head-brand)){position:sticky;top:0;z-index:50;
-  background:rgba(8,7,6,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(225,154,45,.22)}
-header:not(:has(.head)):not(:has(.head-brand)) .wrap{display:flex;align-items:center;
-  justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
-header:not(:has(.head)):not(:has(.head-brand)) .wrap a:first-child{
-  font-family:"Space Grotesk",sans-serif;font-weight:800;letter-spacing:.14em;
-  font-size:19px;text-decoration:none;color:#FFFDF6;white-space:nowrap}
-header:not(:has(.head)):not(:has(.head-brand)) .wrap a:first-child span{color:#E19A2D}
-header:not(:has(.head)):not(:has(.head-brand)) .wrap a:last-child{
-  font-size:13.5px;font-weight:700;padding:9px 18px;border:1px solid rgba(255,255,255,.18);
-  border-radius:999px;text-decoration:none;background:rgba(255,255,255,.04);color:#CFC7B8;white-space:nowrap}
+/* --- Hamburger button: 44px target, 3 lines -> X when open --- */
+.menu-btn{display:none;width:44px;height:44px;flex:0 0 auto;flex-direction:column;
+  align-items:center;justify-content:center;gap:6px;background:transparent;
+  border:1px solid rgba(255,255,255,.16);border-radius:12px;cursor:pointer;padding:0}
+.menu-btn span{display:block;width:20px;height:2px;border-radius:2px;background:#F7F3EA;
+  transition:transform .25s ease,opacity .25s ease}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
 
-/* --- Footer: professional aligned grid (index + 404) --- */
-footer{border-top:1px solid rgba(225,154,45,.28);padding:52px 0 34px;
+/* --- Mobile nav panel: dropdown pinned under the sticky header --- */
+.mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;z-index:49;
+  background:#0D0C0A;border-bottom:1px solid rgba(255,255,255,.1);
+  box-shadow:0 24px 48px rgba(0,0,0,.55);padding:8px 16px 20px;
+  max-height:calc(100dvh - 64px);overflow-y:auto}
+.mobile-nav.open{display:block}
+.mobile-nav a{display:flex;align-items:center;min-height:52px;padding:10px 4px;
+  font-size:17px;font-weight:600;color:#F7F3EA;text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.06)}
+.mobile-nav a:active{color:#FFD14E}
+.mobile-nav .mnav-secondary{margin-top:12px;padding-top:4px}
+.mobile-nav .mnav-secondary a{min-height:44px;font-size:15px;font-weight:500;
+  color:#B9B2A4;border-bottom:0}
+.mobile-nav a.btn{display:inline-flex;min-height:52px;width:100%;margin-top:16px;
+  border-bottom:0;background:#FFD14E;color:#1A1204;
+  box-shadow:0 8px 24px rgba(255,209,78,.22)}
+.mobile-nav a.btn:active{color:#1A1204}
+
+/* --- No-JS fallback: panel always visible on phones, button hidden --- */
+.no-js .mobile-nav{display:block;position:static;max-height:none;box-shadow:none}
+.no-js .menu-btn{display:none}
+
+@media(max-width:900px){
+  .head{padding:12px 16px}
+  .hlinks{display:none}
+  .head .btn{display:none}
+  .menu-btn{display:inline-flex}
+  .foot{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:560px){
+  .head{padding:10px 16px;flex-wrap:nowrap}
+  .brand img{width:40px;height:40px}
+  .brand b{font-size:18px;letter-spacing:.09em}
+  .foot{grid-template-columns:1fr;gap:28px}
+  footer{padding:40px 0 26px}
+}
+@media(min-width:901px){
+  .menu-btn,.mobile-nav{display:none!important}
+}
+
+/* =================================================================
+   FOOTER V2 — editorial labels, 44px circular social buttons.
+   ================================================================= */
+footer{border-top:1px solid rgba(255,255,255,.08);padding:48px 0 28px;
   color:#B9B2A4;font-size:14px;background:#0A0908}
-.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;align-items:start}
+.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px;align-items:start}
 .foot-brand{display:flex;align-items:flex-start;gap:13px}
 .foot-brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;
-  border:2px solid rgba(255,209,78,.65);box-shadow:0 0 20px rgba(255,190,60,.25)}
+  border:1.5px solid rgba(255,209,78,.6);box-shadow:0 0 16px rgba(255,190,60,.22)}
 .foot-brand p:first-child{font-weight:800;letter-spacing:.18em;color:#FFFDF6;
   font-family:"Space Grotesk",sans-serif;font-size:16px;margin:0}
 .foot-brand p:first-child span{color:#E19A2D}
 .foot-brand p:last-child{margin:6px 0 0;color:#B9B2A4;font-size:14px}
 .foot-brand a{color:#FFD14E;text-decoration:none}
 .foot-brand a:hover{text-decoration:underline}
-.foot-col h2{margin:0 0 16px;font-family:"Space Grotesk",sans-serif;font-size:13px;
-  font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#FFFDF6}
+.foot-col h2{margin:0 0 14px;font-family:"Space Grotesk",sans-serif;font-size:12px;
+  font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#8F897C}
 .foot-col ul{list-style:none;margin:0;padding:0}
-.foot-col li{margin:0 0 11px}
-.foot-col a{text-decoration:none;color:#B9B2A4;font-size:14.5px}
+.foot-col li{margin:0 0 10px}
+.foot-col a{text-decoration:none;color:#C6BFB2;font-size:14.5px}
 .foot-col a:hover{color:#FFD14E}
 .foot-note{margin:36px 0 0;font-size:13.5px;line-height:1.6;color:#8F897C;max-width:820px}
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;
@@ -138,87 +165,306 @@ footer{border-top:1px solid rgba(225,154,45,.28);padding:52px 0 34px;
 .foot-bottom p{margin:0}
 .foot-bottom .lam-cookie-settings{color:#FFD14E}
 
-/* --- Simple footers: blog / tools / legal / about / glossary (82 pages) --- */
-footer:not(:has(.foot)){border-top:1px solid rgba(225,154,45,.22);padding:34px 0 38px;text-align:center}
-footer:not(:has(.foot)) .wrap p{margin:0 auto;max-width:760px;line-height:1.7}
-footer:not(:has(.foot)) .wrap a{color:#CFC7B8;text-decoration:none}
-footer:not(:has(.foot)) .wrap a:hover{color:#FFD14E}
-footer:not(:has(.foot)) .lam-cookie-settings{color:#FFD14E}
+/* --- Social row: 44px circular buttons --- */
+.social-row{display:flex;gap:10px;align-items:center;margin:2px 0 22px;flex-wrap:wrap}
+.social-row a{color:#FFD14E;display:inline-flex;align-items:center;justify-content:center;
+  width:44px;height:44px;border:1px solid rgba(255,255,255,.14);border-radius:50%;line-height:0}
+.social-row a:hover{color:#FFE9A3;border-color:rgba(255,209,78,.6);background:rgba(255,209,78,.06)}
+.social-row svg{width:20px;height:20px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
-/* --- Header/footer responsive --- */
-@media(max-width:900px){
-  .hlinks{display:none}
-  .foot{grid-template-columns:1fr 1fr;gap:32px}
+/* =================================================================
+   BUTTONS — solid gold primary (no gradient flood), ghost secondary.
+   ================================================================= */
+.btn,.calcbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border-radius:999px;font-weight:800;text-decoration:none;cursor:pointer;
+  padding:14px 28px;line-height:1.25;border:1px solid transparent;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+.btn-gold,.btn:not(.btn-ghost):not(.btn-gold){background:#FFD14E;color:#1A1204;
+  box-shadow:0 8px 24px rgba(255,209,78,.22)}
+.btn-gold:hover,.btn:not(.btn-ghost):not(.btn-gold):hover{background:#FFE27A;
+  transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,209,78,.30)}
+.btn-ghost{border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.03);color:#FFFDF6}
+.btn-ghost:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.06)}
+.calcbtn{background:#FFD14E;color:#1A1204;box-shadow:0 8px 24px rgba(255,209,78,.22);border:none}
+.calcbtn:hover{background:#FFE27A;transform:translateY(-2px)}
+.filter-btn{background:#14120F;border:1px solid rgba(255,255,255,.14);color:#EDE6D6;
+  border-radius:999px;padding:9px 16px;font-size:14px;font-weight:700;cursor:pointer;
+  transition:border-color .2s ease,color .2s ease,background .2s ease}
+.filter-btn:hover{border-color:rgba(255,209,78,.6);color:#FFD14E}
+.filter-btn.active{background:#FFD14E;color:#1A1204;border-color:transparent}
+
+/* =================================================================
+   CARDS — solid surfaces, real depth. One system for feature cards,
+   hub cards, steps, and tool cards.
+   ================================================================= */
+.card{position:relative;background:#141210;
+  border:1px solid rgba(255,255,255,.08);border-radius:20px;
+  box-shadow:0 16px 36px rgba(0,0,0,.35);overflow:hidden;
+  transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
+.card:hover{border-color:rgba(255,209,78,.4);box-shadow:0 20px 44px rgba(0,0,0,.45)}
+.card.featured{border-color:rgba(255,209,78,.55)}
+.card .ribbon{position:absolute;top:14px;left:14px;z-index:2;
+  background:#FFD14E;color:#1A1204;font-size:11px;font-weight:800;letter-spacing:.12em;
+  text-transform:uppercase;padding:6px 12px;border-radius:999px;
+  box-shadow:0 4px 12px rgba(0,0,0,.4)}
+.card-thumb{margin:0;aspect-ratio:16/9;overflow:hidden;background:#121110}
+.card-thumb img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .35s ease}
+.card-body{padding:20px 22px 22px}
+.card .tag{display:inline-block;background:rgba(255,209,78,.12);
+  border:1px solid rgba(255,209,78,.3);color:#FFD14E;font-size:11px;
+  letter-spacing:.14em;font-weight:800;text-transform:uppercase;
+  padding:5px 10px;border-radius:999px;margin:0 0 12px}
+.card h2{font-size:21px;line-height:1.3;margin:0 0 8px}
+.card h2 a{color:#FFFDF6;text-decoration:none}
+.card h2 a:hover{color:#FFD14E}
+.card-desc{color:#C6BFB2;font-size:15px;margin:0 0 14px}
+.card .read{margin:0}
+.card .read a{color:#FFD14E;font-weight:800;text-decoration:none}
+.card .read a:hover{text-decoration:underline}
+.card .ic{display:none} /* glyph icons are not the design */
+@media(hover:hover){
+  .card:hover{transform:translateY(-3px)}
+  .card:hover .card-thumb img{transform:scale(1.03)}
 }
+@media (prefers-reduced-motion: reduce){
+  .card,.card:hover,.card-thumb img,.card:hover .card-thumb img{transform:none;transition:none}
+}
+
+/* --- Steps (homepage "How it works") --- */
+.step{background:#141210;border:1px solid rgba(255,255,255,.08);border-radius:20px;
+  padding:28px;box-shadow:0 16px 36px rgba(0,0,0,.35);
+  transition:border-color .25s ease,box-shadow .25s ease}
+.step:hover{border-color:rgba(255,209,78,.4)}
+.step .n{font-family:"Space Grotesk",sans-serif;font-size:12px;letter-spacing:.22em;color:#FFD14E;font-weight:800}
+.step h3{font-size:19px;margin:14px 0 8px}
+.step p{color:#C6BFB2;font-size:15px}
+
+/* =================================================================
+   HERO (homepage) — label eyebrow, solid-gold accent word, clean
+   badge row, compact 3-column trust strip, unclipped float chips.
+   ================================================================= */
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;
+  font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:#FFD14E;
+  border:0;background:none;padding:0;margin:0 0 20px}
+.hero-eyebrow::before{content:"";width:26px;height:2px;background:#E19A2D;border-radius:2px;flex-shrink:0}
+.hero h1{font-size:clamp(44px,11.5vw,72px);line-height:1.04;letter-spacing:-.03em}
+.gold-text{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#FFD14E}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400}
+.hero-sub{font-size:17px;color:#C6BFB2;max-width:560px;margin:20px 0 0;line-height:1.65}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-ctas .btn{padding:15px 28px;font-size:16px;min-height:52px}
+.hero-note{margin-top:18px;font-size:13.5px;color:#8F897C;line-height:1.6}
+.hero-note b{color:#C6BFB2}
+.badges{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:22px}
+.badges span{font-size:13px;font-weight:600;color:#C6BFB2;border:0;background:none;padding:0;border-radius:0}
+.hero-float{background:rgba(14,12,10,.94);border:1px solid rgba(255,209,78,.4);
+  border-radius:999px;padding:9px 14px;font-size:12.5px;font-weight:700;
+  box-shadow:0 12px 32px rgba(0,0,0,.45);z-index:2}
+.hero-float b{color:#FFD14E}
+.hero-float-score{top:10px;right:10px;max-width:calc(100% - 20px)}
+.hero-float-streak{position:static;width:max-content;margin:14px auto 0}
+/* Floating gold dust + cursor glow are clutter — off. */
+.dust,.hero-glow{display:none!important}
 @media(max-width:560px){
-  .head{padding:14px 16px;gap:12px}
-  .brand img{width:46px;height:46px}
-  .brand b{font-size:18px;letter-spacing:.10em}
-  .head .btn{padding:13px 22px;font-size:15px}
-  .foot{grid-template-columns:1fr;gap:28px}
-  footer{padding:40px 0 28px}
-  header:not(:has(.head)):not(:has(.head-brand)) .wrap{padding-top:13px;padding-bottom:13px}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas .btn{width:100%}
+  .hero-eyebrow{font-size:10.5px;letter-spacing:.2em} /* one line at 390px */
 }
-/* 404 header uses <span> inside <b> for the gold word (index uses <em>) */
-.brand b span{color:#E19A2D}
-@media(max-width:560px){.head{flex-wrap:wrap}}
 
-/* --- ONE details/FAQ system: every FAQ on every page looks identical ---
-   (was: index had the good card style, 78 pages had a weaker one) --- */
-details{background:#131110;border:1px solid rgba(255,255,255,.09);border-radius:16px;
-  padding:20px 24px;margin:12px auto;max-width:860px}
-details[open]{border-color:rgba(255,209,78,.45)}
-details summary:hover{color:#FFD14E}
-details summary{cursor:pointer;font-weight:700;font-size:16.5px;list-style:none;
-  display:flex;justify-content:space-between;align-items:center;gap:16px}
-details summary::-webkit-details-marker{display:none}
-details summary::after{content:"";flex-shrink:0;width:10px;height:10px;
-  border-right:2px solid #FFD14E;border-bottom:2px solid #FFD14E;
-  transform:rotate(45deg) translateY(-2px);transition:transform .2s ease}
-details[open ] summary::after{transform:rotate(-135deg) translateY(-2px)}
-details p{margin-top:12px;color:#B3ABA0}
-@media(max-width:560px){details{padding:16px 18px}details summary{font-size:15.5px}.social-row{gap:12px}}
+/* --- Trust strip: compact, 3 columns even on phones --- */
+.trust{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px;
+  background:#121110;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden}
+.trust div{text-align:center;padding:22px 10px}
+.trust div+div{border-left:1px solid rgba(255,255,255,.07)}
+.trust b{display:block;font-size:30px;line-height:1.1;color:#FFD14E;
+  background:none;-webkit-text-fill-color:#FFD14E;letter-spacing:-.02em}
+.trust span{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8F897C;margin-top:6px}
+@media(max-width:560px){
+  .trust{grid-template-columns:repeat(3,1fr)}
+  .trust div{padding:18px 6px}
+  .trust b{font-size:23px}
+  .trust span{font-size:9.5px;letter-spacing:.08em}
+}
 
-/* --- ONE width system: every page shares it (was random 760/780/820/980/1060/1120) --- */
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px;display:block}
-/* Footer column is always the 1120 shell, even on pages whose inline
-   <style> redefines .wrap narrower AFTER base.css loads (legal pages):
-   footer .wrap (0,1,1) beats a bare .wrap (0,1,0) override. */
-footer .wrap{max-width:1120px}
-section.faq-narrow{max-width:860px}
-.wrap.narrow{max-width:860px}
+/* --- Journey panel: solid card, no gold flood; phone chips off on phones --- */
+.journey{margin-top:48px;background:#141210;border:1px solid rgba(255,255,255,.09);
+  border-radius:24px;padding:32px;box-shadow:0 24px 56px rgba(0,0,0,.4)}
+.journey:before{display:none}
+.journey-track:before{background:linear-gradient(90deg,rgba(255,209,78,.3),#E19A2D)}
+.jp-screen{background:#0E0C0A;border:1px solid rgba(255,209,78,.3);border-radius:30px}
+.jp-streak{background:rgba(255,209,78,.08);border:1px solid rgba(255,209,78,.25)}
+@media(max-width:560px){.jp-chip{display:none}.journey{padding:24px 18px}}
 
-/* --- App preview images: rendered phone screens (interface illustrations, not screenshots) --- */
+/* --- App preview images --- */
 .app-shot{margin:0 auto;max-width:300px}
-.app-shot img{width:100%;height:auto;border-radius:36px;border:1px solid rgba(255,209,78,.35);
-  box-shadow:0 20px 50px rgba(0,0,0,.5);display:block;transition:transform .25s ease}
-.app-shot img:hover{transform:translateY(-4px)}
+.app-shot img{width:100%;height:auto;border-radius:36px;border:1px solid rgba(255,209,78,.3);
+  box-shadow:0 20px 50px rgba(0,0,0,.5);display:block}
 @media(max-width:560px){.app-shot{max-width:260px}}
 
 /* --- Duo visual: Day 0 / Day 90 pair for article pages --- */
 .duo-visual{display:flex;gap:20px;justify-content:center;margin:28px auto 6px;max-width:640px}
 .duo-visual figure{margin:0;text-align:center;flex:1}
-.duo-visual img{width:100%;aspect-ratio:3/3.6;object-fit:cover;object-position:center 30%;border-radius:18px;border:1px solid rgba(255,209,78,.35);display:block}
+.duo-visual img{width:100%;aspect-ratio:3/3.6;object-fit:cover;object-position:center 30%;border-radius:18px;border:1px solid rgba(255,209,78,.3);display:block}
 .duo-visual figcaption{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#B9B2A4;margin-top:10px;font-weight:700}
 .duo-visual .after figcaption{color:#FFD14E}
 .duo-note{font-size:12.5px;color:#8F897C;text-align:center;margin:10px auto 0;max-width:560px}
 @media(max-width:560px){.duo-visual{gap:12px}}
 
-/* --- Footer social row: gold platform icons, same on every page --- */
-.social-row{display:flex;gap:16px;align-items:center;margin:2px 0 22px;flex-wrap:wrap}
-.social-row a{color:#FFD14E;display:inline-flex;line-height:0}
-.social-row a:hover{color:#FFE9A3}
-.social-row svg{width:22px;height:22px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+/* =================================================================
+   PRICING — solid hero card (no gradient flood), solid tags.
+   Values, order, and pricing.js behavior untouched.
+   ================================================================= */
+.pcard{background:#141210;border:1px solid rgba(255,255,255,.09);border-radius:20px;
+  padding:26px 22px;display:flex;flex-direction:column;box-shadow:0 16px 36px rgba(0,0,0,.3)}
+.pcard.hero{background:#1B1610;border:2px solid #E19A2D;box-shadow:0 20px 48px rgba(0,0,0,.5)}
+.pcard .tag{display:inline-block;font-size:10.5px;letter-spacing:.14em;font-weight:800;
+  padding:6px 11px;border-radius:999px;background:#FFD14E;color:#1A1204;
+  text-transform:uppercase;align-self:flex-start}
+.pcard .tag.ghost{background:transparent;border:1px solid rgba(255,255,255,.28);color:#F7F3EA}
+.pcard .p-name{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:16px;margin-top:16px}
+.pcard .p-price{font-family:"Space Grotesk",sans-serif;font-size:40px;font-weight:700;letter-spacing:-.03em;margin:14px 0 4px;color:#FFFDF6}
+.pcard .p-price small{font-size:15px;color:#C6BFB2}
+.pcard .p-per{color:#C6BFB2;font-size:13.5px;min-height:40px}
+.pcard ul{list-style:none;margin:18px 0 24px;flex:1}
+.pcard li{padding:8px 0 8px 22px;position:relative;color:#C6BFB2;font-size:14px;border-top:1px solid rgba(255,255,255,.06)}
+.pcard li:before{content:"✓";position:absolute;left:0;color:#FFD14E}
+.pcard .btn{width:100%;padding:12px;font-size:14.5px}
+.region-select{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:24px;color:#C6BFB2;font-size:14px;font-weight:700}
+.region-select select{appearance:none;-webkit-appearance:none;
+  background:#141211 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23FFD14E' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 16px center;
+  border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#F7F3EA;
+  padding:10px 38px 10px 20px;cursor:pointer;font-weight:700;font-size:14px;font-family:inherit}
 
-/* --- Why Lookauramax close (guides/tools) + homepage comparison strip --- */
-.why-close{margin:32px 0;padding:24px 26px;border:1px solid rgba(225,154,45,.35);border-radius:16px;background:linear-gradient(180deg,#1C1505,#121210)}
+/* =================================================================
+   FAQ / <details> — one system everywhere, chevron marker.
+   ================================================================= */
+details{background:#141210;border:1px solid rgba(255,255,255,.08);border-radius:14px;
+  padding:18px 20px;margin:12px auto;max-width:860px}
+details[open]{border-color:rgba(255,209,78,.4)}
+details summary{cursor:pointer;font-weight:700;font-size:16px;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:16px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"";flex-shrink:0;width:9px;height:9px;
+  border-right:2px solid #FFD14E;border-bottom:2px solid #FFD14E;
+  transform:rotate(45deg);transition:transform .2s ease}
+details[open] summary::after{transform:rotate(225deg)}
+details summary:hover{color:#FFD14E}
+details p{margin-top:12px;color:#C6BFB2;font-size:15px}
+.faq details{background:#141210;border:1px solid rgba(255,255,255,.08);border-radius:14px;
+  padding:18px 20px;margin:10px 0}
+.faq summary{font-weight:700}
+.faq p{margin-top:10px}
+@media(max-width:560px){details{padding:16px 18px}details summary{font-size:15.5px}}
+
+/* =================================================================
+   INTERACTIVE WIDGETS — segmented controls (iOS pattern), solid bars.
+   ================================================================= */
+.preview{background:#141210;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:28px;margin-top:36px}
+.preview-chips{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0;padding:4px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;width:max-content;max-width:100%}
+.preview-chips button{border:0;background:transparent;color:#F7F3EA;padding:10px 18px;
+  border-radius:999px;cursor:pointer;font-weight:700;font-size:14px;transition:background .2s ease,color .2s ease}
+.preview-chips button.active{background:#FFD14E;color:#1A1204}
+.preview-out{background:#0E0C0A;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:20px;min-height:110px}
+.preview-out p{color:#C6BFB2;font-size:15px}
+.preview-out .bar{height:9px;border-radius:999px;background:#26231F;overflow:hidden;margin:14px 0 6px}
+.preview-out .bar i{display:block;height:100%;border-radius:999px;background:#FFD14E;width:0;transition:width .8s ease}
+.tabs{margin-top:26px}
+.tab-btns{display:flex;gap:6px;flex-wrap:wrap;padding:4px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;width:max-content;max-width:100%}
+.tab-btn{padding:11px 20px;border-radius:999px;border:0;background:transparent;
+  color:#F7F3EA;font-weight:700;font-size:14.5px;cursor:pointer;
+  transition:background .2s ease,color .2s ease,border-color .2s ease}
+.tab-btn:hover{color:#FFD14E}
+.tab-btn.active{background:#FFD14E;color:#1A1204}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.tab-panel ul{list-style:none;margin:20px 0 0;max-width:640px}
+.tab-panel li{padding:13px 0 13px 30px;position:relative;border-bottom:1px solid rgba(255,255,255,.07);font-size:16px}
+.tab-panel li:before{content:"✓";position:absolute;left:0;color:#FFD14E;font-weight:800}
+.tab-note{color:#B9B2A4;font-size:14px;margin-top:14px}
+
+/* --- Never list (homepage promise) --- */
+.never{list-style:none;margin-top:28px;max-width:760px}
+.never li{padding:16px 0 16px 30px;position:relative;border-bottom:1px solid rgba(255,255,255,.07);font-size:16px}
+.never li:before{content:"✕";position:absolute;left:0;color:#FFD14E;font-weight:800}
+.never li b{color:#F7F3EA}
+
+/* --- Guide list (homepage Learn) --- */
+.guide-list{list-style:none;margin-top:24px;max-width:760px}
+.guide-list li{border-bottom:1px solid rgba(255,255,255,.07)}
+.guide-list a{display:flex;justify-content:space-between;gap:16px;text-decoration:none;padding:16px 0;font-weight:600}
+.guide-list a:hover{color:#FFD14E}
+.guide-list small{color:#8F897C;font-weight:400}
+
+/* =================================================================
+   BLOG / ARTICLE pages — Inter body, refined boxes, honest captions.
+   ================================================================= */
+.post-hero{margin:22px 0 6px}
+.post-hero img{width:100%;height:auto;border-radius:18px;border:1px solid rgba(255,255,255,.1);display:block}
+.post-hero figcaption{color:#8A8272;font-size:12.5px;margin-top:8px}
+.byline{color:#8A8272;font-size:13px;margin:10px 0 20px}
+.crumb{font-size:13px;color:#A9A29A;margin:28px 0 8px}
+.crumb a{color:#A9A29A;text-decoration:none}
+.lede{font-size:19px;color:#C6BFB2}
+div.cta{background:#171410;border:1px solid rgba(255,209,78,.35);border-radius:18px;padding:26px;margin:32px 0}
+div.cta h2{margin-top:0}
+.disclaimer{border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 20px;
+  color:#A9A29A;font-size:14px;margin:28px 0;background:#121110}
+.related{margin:28px 0}
+.related a{display:block;margin:6px 0;color:#FFD14E}
+.grid{display:grid;grid-template-columns:1fr;gap:22px;margin:28px 0 60px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+
+/* =================================================================
+   TOOLS — constrained card, solid inputs, solid result bar.
+   ================================================================= */
+.tool{background:#141210;border:1px solid rgba(255,255,255,.09);border-radius:20px;
+  padding:28px;margin:28px 0;box-shadow:0 16px 36px rgba(0,0,0,.3)}
+.tool label{display:block;font-weight:700;margin:16px 0 6px}
+.tool label:first-of-type{margin-top:0}
+.tool input,.tool select{width:100%;background:#0D0C0A;color:#F7F3EA;
+  border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:13px 14px;font-size:16px}
+.tool input:focus,.tool select:focus{outline:2px solid #E19A2D;border-color:#E19A2D}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.row{grid-template-columns:1fr}.tool{padding:22px 18px}}
+.result{background:#171410;border:1px solid rgba(255,209,78,.35);border-radius:14px;padding:22px;margin-top:22px}
+.result .bignum{font-size:44px;font-weight:800;color:#FFD14E;line-height:1.1}
+.result .cat{font-size:20px;font-weight:800;margin:6px 0}
+.error{color:#FF8A8A;font-weight:700;margin-top:14px}
+.privacy{font-size:13px;color:#A9A29A;margin-top:16px}
+.bar{height:10px;background:#26231F;border-radius:999px;margin:14px 0;overflow:hidden}
+.bar i{display:block;height:100%;background:#FFD14E;border-radius:999px}
+
+/* =================================================================
+   COMPARISON + WHY-CLOSE — solid boxes, readable table.
+   ================================================================= */
+.why-close{margin:32px 0;padding:24px 26px;border:1px solid rgba(255,209,78,.35);border-radius:18px;background:#171410}
 .why-close h2{margin-top:0}
 .why-close ul{margin:12px 0 0;padding-left:20px}
 .why-close li{margin:8px 0}
 @media(max-width:560px){.why-close{padding:20px}}
-.why-strip{margin-top:28px;overflow-x:auto;border:1px solid rgba(225,154,45,.25);border-radius:16px}
+.why-strip{margin-top:28px;overflow-x:auto;border:1px solid rgba(255,255,255,.09);border-radius:16px}
 .why-strip table{display:table;width:100%;border-collapse:collapse;font-size:14.5px;min-width:760px}
-.why-strip th,.why-strip td{text-align:left;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.08);vertical-align:top}
-.why-strip thead th{background:#171512;color:#FFD14E;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.why-strip th,.why-strip td{text-align:left;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.07);vertical-align:top}
+.why-strip thead th{background:#171512;color:#FFD14E;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
 .why-strip tbody tr:last-child td{border-bottom:0}
 .why-strip-note{font-size:13.5px;margin-top:14px}
+
+/* =================================================================
+   STICKY BAR — kept (founder-approved), solid bg, hairline border.
+   ================================================================= */
+.sticky-bar{position:fixed;left:50%;transform:translate(-50%,120%);bottom:16px;z-index:60;
+  display:flex;align-items:center;gap:14px;background:rgba(16,14,11,.95);
+  border:1px solid rgba(255,209,78,.4);backdrop-filter:blur(12px);
+  border-radius:999px;padding:10px 10px 10px 20px;box-shadow:0 18px 50px rgba(0,0,0,.55);
+  transition:transform .45s ease;max-width:calc(100% - 28px)}
+.sticky-bar.show{transform:translate(-50%,0)}
+.sticky-bar b{font-size:14px;white-space:nowrap}
+.sticky-bar .btn{padding:10px 20px;font-size:13.5px;white-space:nowrap}
+.sticky-bar .x{background:none;border:0;color:#8F897C;cursor:pointer;font-size:18px;padding:4px 8px;line-height:1}
+@media(max-width:560px){.sticky-bar b{display:none}.sticky-bar{padding:8px 8px 8px 16px}}
