@@ -83,7 +83,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(8,7,6,.84);
   backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(225,154,45,.28)}
 .head{display:flex;align-items:center;justify-content:space-between;gap:22px;
-  max-width:1120px;margin:0 auto;padding:22px 24px;flex-wrap:nowrap}
+  max-width:1120px;margin:0 auto;padding:22px 24px;flex-wrap:nowrap;
+  font-family:"Inter",system-ui,sans-serif;line-height:1.7}
 .brand{display:flex;align-items:center;gap:13px;text-decoration:none;flex-shrink:0;color:#F7F3EA}
 .brand img{width:64px;height:64px;border-radius:50%;object-fit:cover;
   border:2px solid rgba(255,209,78,.7);box-shadow:0 0 24px rgba(255,190,60,.30);flex-shrink:0}
@@ -95,7 +96,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(8,7,6,.84);
   padding:13px 22px;border-radius:999px;transition:background .2s ease,color .2s ease;white-space:nowrap}
 .hlinks a:hover{color:#FFFFFF;background:rgba(255,255,255,.09)}
 .hlinks a:active{background:rgba(255,209,78,.18);color:#FFD14E}
-.head .btn{padding:16px 30px;font-size:16px;white-space:nowrap;flex-shrink:0}
+.head .btn{padding:16px 30px;font-size:16px;white-space:nowrap;flex-shrink:0;font-weight:800;margin:0}
 
 /* --- Simple headers: blog / tools / legal / about / glossary (81 pages) --- */
 header:not(:has(.head)):not(:has(.head-brand)){position:sticky;top:0;z-index:50;
