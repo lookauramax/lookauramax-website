@@ -83,7 +83,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(8,7,6,.84);
   backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(225,154,45,.28)}
 .head{display:flex;align-items:center;justify-content:space-between;gap:22px;
-  max-width:1120px;margin:0 auto;padding:22px 30px;flex-wrap:nowrap}
+  max-width:1120px;margin:0 auto;padding:22px 24px;flex-wrap:nowrap}
 .brand{display:flex;align-items:center;gap:13px;text-decoration:none;flex-shrink:0}
 .brand img{width:64px;height:64px;border-radius:50%;object-fit:cover;
   border:2px solid rgba(255,209,78,.7);box-shadow:0 0 24px rgba(255,190,60,.30);flex-shrink:0}
@@ -159,7 +159,7 @@ footer:not(:has(.foot)) .lam-cookie-settings{color:#FFD14E}
   .foot{grid-template-columns:1fr 1fr;gap:32px}
 }
 @media(max-width:560px){
-  .head{padding:14px 18px;gap:12px}
+  .head{padding:14px 16px;gap:12px}
   .brand img{width:46px;height:46px}
   .brand b{font-size:18px;letter-spacing:.10em}
   .head .btn{padding:13px 22px;font-size:15px}
@@ -171,33 +171,30 @@ footer:not(:has(.foot)) .lam-cookie-settings{color:#FFD14E}
 .brand b span{color:#E19A2D}
 @media(max-width:560px){.head{flex-wrap:wrap}}
 
+/* --- ONE details/FAQ system: every FAQ on every page looks identical ---
+   (was: index had the good card style, 78 pages had a weaker one) --- */
+details{background:#131110;border:1px solid rgba(255,255,255,.09);border-radius:16px;
+  padding:20px 24px;margin:12px 0}
+details summary{cursor:pointer;font-weight:700;font-size:16.5px;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:16px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"";flex-shrink:0;width:10px;height:10px;
+  border-right:2px solid #FFD14E;border-bottom:2px solid #FFD14E;
+  transform:rotate(45deg) translateY(-2px);transition:transform .2s ease}
+details[open ] summary::after{transform:rotate(-135deg) translateY(-2px)}
+details p{margin-top:12px;color:#B3ABA0}
+@media(max-width:560px){details{padding:16px 18px}details summary{font-size:15.5px}}
+
 /* --- ONE width system: every page shares it (was random 760/780/820/980/1060/1120) --- */
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px;display:block}
 .wrap.narrow{max-width:860px}
 
-/* --- Shared app-interface mockups: pure CSS, honest "app preview" illustrations --- */
-.app-phone{background:linear-gradient(180deg,#1B1813,#0E0C0A);border:1px solid rgba(255,209,78,.35);
-  border-radius:30px;padding:22px 20px 18px;box-shadow:0 20px 50px rgba(0,0,0,.5);max-width:320px;margin:0 auto}
-.app-phone-head{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#FFD14E;font-weight:800;text-align:center}
-.app-phone-sub{font-size:13px;color:#B9B2A4;text-align:center;margin:8px 0 0}
-.app-phone-ring{position:relative;width:132px;height:132px;margin:16px auto 6px}
-.app-phone-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
-.app-phone-ring .ring-track{fill:none;stroke:rgba(255,255,255,.12);stroke-width:9}
-.app-phone-ring .ring-fill{fill:none;stroke:url(#apGold);stroke-width:9;stroke-linecap:round;stroke-dasharray:326.7;stroke-dashoffset:71.9}
-.app-phone-score{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.app-phone-score b{font-family:"Space Grotesk",sans-serif;font-size:34px;line-height:1}
-.app-phone-score span{font-size:12px;color:#B9B2A4;margin-top:2px}
-.app-phone-rows{list-style:none;margin:14px 0 0;padding:0}
-.app-phone-rows li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 2px;border-top:1px solid rgba(255,255,255,.07);font-size:14px}
-.app-phone-rows li b{color:#FFD14E;flex-shrink:0}
-.app-phone-rows li .done{color:#FFD14E;font-weight:800}
-.app-phone-pill{margin:16px 0 0;text-align:center;font-size:13px;font-weight:700;color:#FFD14E;
-  background:rgba(255,209,78,.10);border:1px solid rgba(255,209,78,.30);border-radius:999px;padding:9px 12px}
-.app-phone-bars{display:flex;align-items:flex-end;gap:14px;height:132px;margin:18px 6px 0}
-.app-bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px;height:100%}
-.app-bar i{display:block;width:100%;border-radius:8px 8px 0 0;background:linear-gradient(180deg,#FFD14E,#976729)}
-.app-bar b{font-size:14px}
-.app-bar span{font-size:11px;letter-spacing:.08em;color:#B9B2A4}
+/* --- App preview images: rendered phone screens (interface illustrations, not screenshots) --- */
+.app-shot{margin:0 auto;max-width:300px}
+.app-shot img{width:100%;height:auto;border-radius:36px;border:1px solid rgba(255,209,78,.35);
+  box-shadow:0 20px 50px rgba(0,0,0,.5);display:block;transition:transform .25s ease}
+.app-shot img:hover{transform:translateY(-4px)}
+@media(max-width:560px){.app-shot{max-width:260px}}
 
 /* --- Duo visual: Day 0 / Day 90 pair for article pages --- */
 .duo-visual{display:flex;gap:20px;justify-content:center;margin:28px auto 6px;max-width:640px}
