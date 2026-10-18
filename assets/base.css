@@ -453,19 +453,21 @@ footer{border-top:1px solid var(--line);padding:64px 0 32px;color:#B9B2A4;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 14px 30px rgba(225,154,45,.18)}
 .badge-tile svg{width:22px;height:22px;flex-shrink:0;color:#FFD14E;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .badge-tile span{font-size:13px;font-weight:700;line-height:1.35;color:#F5F0E6}
-/* Photo card: centered portrait, same 3:4 aspect as the image, so
-   the FULL face shows with zero crop (a full-width strip sliced
-   the face to a thin band). Aura ring + chips sit on the card. */
-.hero-photo{position:relative;z-index:1;overflow:hidden;max-width:520px;margin:36px auto 0;
-  aspect-ratio:3/4;border-radius:24px;border:1px solid rgba(255,209,78,.35);
-  box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 60px rgba(255,190,60,.12)}
+/* Hero background photo: full-bleed, low opacity, behind all hero
+   content. NEW image (hero-bg.jpg — same model, new pose/scene),
+   never a repeat of the journey/scrubber photos. The dark overlay
+   keeps the headline, CTAs and phone fully readable. */
+.hero-photo{position:absolute;inset:0;z-index:0;overflow:hidden;margin:0;border:0;border-radius:0;box-shadow:none}
 .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  object-position:center 25%;will-change:transform}
+  /* 75% horizontal: the man stands on the right third, so the crop
+     keeps his face in frame on narrow phones instead of showing
+     only the empty dark left side. */
+  object-position:75% center;opacity:.22;will-change:transform}
 /* Parallax headroom: the photo is 112% tall so a ±24px scroll
    translate never exposes an edge. */
 .js-parallax .hero-photo img{top:-6%;bottom:auto;height:112%}
 .hero-photo:after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(180deg,rgba(0,0,0,.12),transparent 30%,transparent 62%,rgba(0,0,0,.55))}
+  background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.25) 40%,rgba(0,0,0,.85))}
 /* (Hero halo rings removed in the hero redesign: the phone sits clean
    on black — no absolute decorative rings to misalign across widths.) */
 .hero-chip{position:absolute;z-index:2;display:flex;align-items:center;gap:8px;
@@ -982,7 +984,6 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
 @media(max-width:1024px){
   .hero-copy{padding:64px 28px 40px}
   .hero-eyebrow{font-size:10.5px;letter-spacing:.2em}
-  .hero-photo{min-height:380px}
   .hero-badges{padding:0 28px 56px}
   .hero h1{font-size:clamp(44px,6vw,60px)}
   .badge-tiles{grid-template-columns:1fr 1fr}
@@ -1050,7 +1051,7 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
      live in the journey phone mockup). */
   .hero-photo{position:absolute;inset:0;min-height:0;z-index:0;max-width:none;aspect-ratio:auto;
     margin:0;border-radius:0;border:0;box-shadow:none}
-  .hero-photo:after{background:linear-gradient(180deg,rgba(0,0,0,.68),rgba(0,0,0,.48) 42%,rgba(0,0,0,.84))}
+  .hero-photo:after{background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.25) 42%,rgba(0,0,0,.70))}
   .hero-chip{display:none}
   .hero-copy{position:relative;z-index:1}
   /* Soft dark halo directly behind the phone hero copy: the text
@@ -1154,7 +1155,6 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
 /* ---------- Wide desktop: 1440px+ ---------- */
 @media(min-width:1440px){
   .hero-copy{padding-top:104px;padding-bottom:56px}
-  .hero-photo{min-height:520px}
 }
 
 /* =================================================================
