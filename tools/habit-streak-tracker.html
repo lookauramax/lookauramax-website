@@ -94,9 +94,9 @@ button.danger:hover{border-color:#FF9A9A}
 <link rel="stylesheet" href="/assets/base.css">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
+  <link rel="stylesheet" href="/assets/consent.css">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
 <header><div class="wrap"><a href="https://lookauramax.com/">LOOK<span>AURA</span>MAX</a> · <a href="https://lookauramax.com/tools/" style="letter-spacing:0;font-weight:700;color:#A9A29A">Tools</a></div></header>
 <main id="main" class="wrap">
 <p class="crumb"><a href="https://lookauramax.com/tools/">Tools</a> / Habit Streak Tracker</p>
@@ -202,5 +202,6 @@ function clearAll(){
 document.getElementById("habitName").addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();addHabit();}});
 render();
 </script>
+  <script src="/assets/consent.js" defer></script>
 </body>
 </html>

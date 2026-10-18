@@ -17,15 +17,51 @@
     el.classList.add('lm-reveal');
     fresh.push(el);
   });
+  /* Stagger: cards in a grid rise one after another, then hover stays instant. */
+  fresh.forEach(function (el) {
+    var p = el.parentElement;
+    if (p && (p.classList.contains('grid3') || p.classList.contains('steps') || p.classList.contains('pricing'))) {
+      var n = parseInt(p.dataset.lmCount || '0', 10);
+      el.style.transitionDelay = (n % 3 * 90) + 'ms';
+      p.dataset.lmCount = String(n + 1);
+    }
+  });
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('lm-visible'); io.unobserve(e.target); }
+        if (e.isIntersecting) { e.target.classList.add('lm-visible'); e.target.style.transitionDelay = '0ms'; io.unobserve(e.target); }
       });
     }, { threshold: 0.1 });
     fresh.forEach(function (el) { io.observe(el); });
   } else {
-    fresh.forEach(function (el) { el.classList.add('lm-visible'); });
+    fresh.forEach(function (el) { el.classList.add('lm-visible'); el.style.transitionDelay = '0ms'; });
+  }
+
+  /* --- Generic tabs: [data-tabs] > [data-tab-target] buttons + [data-tab-panel] panels --- */
+  document.querySelectorAll('[data-tabs]').forEach(function (tabs) {
+    var btns = tabs.querySelectorAll('[data-tab-target]');
+    var panels = tabs.querySelectorAll('[data-tab-panel]');
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab-target');
+        btns.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+        panels.forEach(function (p) { p.classList.remove('active'); });
+        btn.classList.add('active'); btn.setAttribute('aria-selected', 'true');
+        var panel = tabs.querySelector('[data-tab-panel="' + target + '"]');
+        if (panel) panel.classList.add('active');
+      });
+    });
+  });
+
+  /* --- Hero cursor glow (desktop pointers only; static otherwise) --- */
+  var hero = document.querySelector('.hero');
+  var glow = document.querySelector('.hero-glow');
+  if (hero && glow && window.matchMedia('(pointer: fine)').matches) {
+    hero.addEventListener('mousemove', function (e) {
+      var r = hero.getBoundingClientRect();
+      glow.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+      glow.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+    });
   }
 
   /* --- Gentle count-up for tool result numbers --- */

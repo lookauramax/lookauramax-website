@@ -1,0 +1,105 @@
+/* Lookauramax — cookie consent banner. Self-contained (no dependency on
+ * base.css variables). Brand-matched: logo golds on charcoal/black.
+ * Accessible: high contrast, visible keyboard focus, no motion. */
+
+.lam-consent-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  background: #121212;
+  color: #ffffff;
+  border: 1px solid rgba(225, 154, 45, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.lam-consent-banner p { margin: 0; }
+
+.lam-consent-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffd14e;
+}
+
+.lam-consent-text { margin-top: 8px !important; color: #e8e8e8; }
+
+.lam-consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.lam-consent-accept,
+.lam-consent-decline {
+  appearance: none;
+  border-radius: 999px;
+  padding: 11px 20px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+/* Accept: gold. Decline: equal size and prominence, outlined — no dark pattern. */
+.lam-consent-accept {
+  background: #e19a2d;
+  color: #000000;
+  border: 2px solid #e19a2d;
+}
+
+.lam-consent-decline {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.lam-consent-policy {
+  color: #ffd14e;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.lam-consent-accept:hover { background: #ffd14e; border-color: #ffd14e; }
+.lam-consent-decline:hover { background: rgba(255, 255, 255, 0.12); }
+
+.lam-consent-accept:focus-visible,
+.lam-consent-decline:focus-visible,
+.lam-consent-policy:focus-visible,
+.lam-cookie-settings:focus-visible {
+  outline: 3px solid #ffd14e;
+  outline-offset: 2px;
+}
+
+.lam-cookie-settings {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 520px) {
+  .lam-consent-banner { left: 8px; right: 8px; bottom: 8px; padding: 16px; }
+  .lam-consent-actions { flex-direction: column; align-items: stretch; }
+  .lam-consent-accept, .lam-consent-decline { width: 100%; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lam-consent-banner { transition: none; }
+}

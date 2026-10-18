@@ -66,3 +66,104 @@ summary{display:flex;align-items:center}
   .card,.card:hover,.card-thumb img,.card:hover .card-thumb img{
     transform:none;transition:none}
 }
+
+
+/* ================================================================
+   PREMIUM HEADER + FOOTER SYSTEM (single source of truth, site-wide).
+   Loaded after each page's inline <style>, so these rules win on
+   equal specificity. Landing (index) + 404 use .head/.hlinks/.foot;
+   blog/tools/legal pages use the simple header/footer patterns.
+   ================================================================ */
+
+/* --- Header: capsule nav, bigger, premium (index + 404) --- */
+header{position:sticky;top:0;z-index:50;background:rgba(8,7,6,.84);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(225,154,45,.28)}
+.head{display:flex;align-items:center;justify-content:space-between;gap:22px;
+  max-width:1120px;margin:0 auto;padding:18px 28px;flex-wrap:nowrap}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none;flex-shrink:0}
+.brand img{width:56px;height:56px;border-radius:50%;object-fit:cover;
+  border:2px solid rgba(255,209,78,.7);box-shadow:0 0 24px rgba(255,190,60,.30);flex-shrink:0}
+.brand b{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.12em;font-size:22px;white-space:nowrap}
+.brand b em,.brand span em{font-style:normal;color:#E19A2D}
+.hlinks{display:flex;align-items:center;gap:6px;padding:6px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:999px}
+.hlinks a{text-decoration:none;color:#B9B2A4;font-size:15px;font-weight:600;
+  padding:11px 19px;border-radius:999px;transition:background .2s ease,color .2s ease;white-space:nowrap}
+.hlinks a:hover{color:#fff;background:rgba(255,255,255,.09)}
+.hlinks a:active{background:rgba(255,209,78,.18);color:#FFD14E}
+.head .btn{padding:14px 26px;font-size:15px;white-space:nowrap;flex-shrink:0}
+
+/* --- Simple headers: blog / tools / legal / about / glossary (81 pages) --- */
+header:not(:has(.head)):not(:has(.head-brand)){position:sticky;top:0;z-index:50;
+  background:rgba(8,7,6,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(225,154,45,.22)}
+header:not(:has(.head)):not(:has(.head-brand)) .wrap{display:flex;align-items:center;
+  justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
+header:not(:has(.head)):not(:has(.head-brand)) .wrap a:first-child{
+  font-family:"Space Grotesk",sans-serif;font-weight:800;letter-spacing:.14em;
+  font-size:19px;text-decoration:none;color:#FFFDF6;white-space:nowrap}
+header:not(:has(.head)):not(:has(.head-brand)) .wrap a:first-child span{color:#E19A2D}
+header:not(:has(.head)):not(:has(.head-brand)) .wrap a:last-child{
+  font-size:13.5px;font-weight:700;padding:9px 18px;border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;text-decoration:none;background:rgba(255,255,255,.04);color:#CFC7B8;white-space:nowrap}
+
+/* --- Blog hub header --- */
+header .head-brand{display:flex;align-items:center;gap:12px;padding-top:16px;padding-bottom:16px}
+header .head-brand .brand img{width:44px;height:44px}
+header .head-brand .brand span{font-family:"Space Grotesk",sans-serif;font-weight:800;
+  letter-spacing:.14em;font-size:19px}
+header .head-brand .blog-label{font-size:13.5px;font-weight:700;padding:9px 18px;
+  border:1px solid rgba(255,255,255,.18);border-radius:999px;text-decoration:none;
+  background:rgba(255,255,255,.04);color:#CFC7B8}
+
+/* --- Footer: professional aligned grid (index + 404) --- */
+footer{border-top:1px solid rgba(225,154,45,.28);padding:52px 0 34px;
+  color:#B9B2A4;font-size:14px;background:#0A0908}
+.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;align-items:start}
+.foot-brand{display:flex;align-items:flex-start;gap:13px}
+.foot-brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;
+  border:2px solid rgba(255,209,78,.65);box-shadow:0 0 20px rgba(255,190,60,.25)}
+.foot-brand p:first-child{font-weight:800;letter-spacing:.18em;color:#FFFDF6;
+  font-family:"Space Grotesk",sans-serif;font-size:16px;margin:0}
+.foot-brand p:first-child span{color:#E19A2D}
+.foot-brand p:last-child{margin:6px 0 0;color:#B9B2A4;font-size:14px}
+.foot-brand a{color:#FFD14E;text-decoration:none}
+.foot-brand a:hover{text-decoration:underline}
+.foot-col h4{margin:0 0 16px;font-family:"Space Grotesk",sans-serif;font-size:13px;
+  font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#FFFDF6}
+.foot-col ul{list-style:none;margin:0;padding:0}
+.foot-col li{margin:0 0 11px}
+.foot-col a{text-decoration:none;color:#B9B2A4;font-size:14.5px}
+.foot-col a:hover{color:#FFD14E}
+.foot-note{margin:36px 0 0;font-size:13.5px;line-height:1.6;color:#8F897C;max-width:820px}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;
+  flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.08);margin-top:26px;padding-top:24px;
+  font-size:13.5px;color:#8F897C}
+.foot-bottom p{margin:0}
+.foot-bottom .lam-cookie-settings{color:#FFD14E}
+
+/* --- Simple footers: blog / tools / legal / about / glossary (82 pages) --- */
+footer:not(:has(.foot)){border-top:1px solid rgba(225,154,45,.22);padding:34px 0 38px;text-align:center}
+footer:not(:has(.foot)) .wrap p{margin:0 auto;max-width:760px;line-height:1.7}
+footer:not(:has(.foot)) .wrap a{color:#CFC7B8;text-decoration:none}
+footer:not(:has(.foot)) .wrap a:hover{color:#FFD14E}
+footer:not(:has(.foot)) .lam-cookie-settings{color:#FFD14E}
+
+/* --- Header/footer responsive --- */
+@media(max-width:900px){
+  .hlinks{display:none}
+  .foot{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:560px){
+  .head{padding:14px 18px;gap:12px}
+  .brand img{width:46px;height:46px}
+  .brand b{font-size:18px;letter-spacing:.10em}
+  .head .btn{padding:12px 20px;font-size:14px}
+  .foot{grid-template-columns:1fr;gap:28px}
+  footer{padding:40px 0 28px}
+  header:not(:has(.head)):not(:has(.head-brand)) .wrap{padding-top:13px;padding-bottom:13px}
+}
+/* 404 header uses <span> inside <b> for the gold word (index uses <em>) */
+.brand b span{color:#E19A2D}
+@media(max-width:560px){.head{flex-wrap:wrap}}
