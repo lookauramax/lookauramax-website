@@ -15,7 +15,7 @@
  *    footer, or the "Change cookie choice" button on the Privacy page.
  *
  * SETUP (founder): create a Google Analytics 4 property, copy its Measurement
- * ID (looks like G-XXXXXXXXXX), and replace GA_MEASUREMENT_ID below with it.
+ * ID (looks like G-DNHD5B3MWR), and replace GA_MEASUREMENT_ID below with it.
  * Until the real ID is pasted in, "Accept" stores the choice but loads
  * nothing — the site works exactly as before.
  */
@@ -23,7 +23,7 @@
   'use strict';
 
   /* TODO (founder): paste your real GA4 Measurement ID here, e.g. 'G-ABC1234567'. */
-  var GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+  var GA_MEASUREMENT_ID = 'G-DNHD5B3MWR';
   var STORAGE_KEY = 'lookauramax_cookie_consent';
   var GA_CONFIGURED = /^G-[A-Z0-9]{6,}$/.test(GA_MEASUREMENT_ID);
 
