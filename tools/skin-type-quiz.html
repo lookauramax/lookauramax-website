@@ -27,7 +27,7 @@
 {"@type":"Question","name":"What are the main skin types?","acceptedAnswer":{"@type":"Answer","text":"The common categories are dry, oily, combination, and sensitive-leaning. Combination means oily in some zones (often the T-zone) and normal or dry elsewhere. Sensitive-leaning skin reacts easily to products, weather, or friction."}},
 {"@type":"Question","name":"Can my skin type change over time?","acceptedAnswer":{"@type":"Answer","text":"Yes. Age, seasons, hormones, climate, products, and health can all shift how your skin behaves. Re-checking every few months is normal — a quiz result is a snapshot, not a permanent label."}},
 {"@type":"Question","name":"Is this quiz a diagnosis?","acceptedAnswer":{"@type":"Answer","text":"No. This quiz gives general information based on how you describe your skin. It does not diagnose acne, eczema, rosacea, or any skin condition. Persistent or painful skin problems need a dermatologist."}},
-{"@type":"Question","name":"What should I do after learning my skin type?","acceptedAnswer":{"@type":"Answer","text":"Start with the basics for your type: gentle cleansing, moisturiser suited to how your skin feels, and daily sunscreen. Introduce one new product at a time and stop anything that stings, burns, or causes a rash."}}
+{"@type":"Question","name":"What should I do after learning my skin type?","acceptedAnswer":{"@type":"Answer","text":"Start with the basics for your type: gentle cleansing, moisturizer suited to how your skin feels, and daily sunscreen. Introduce one new product at a time and stop anything that stings, burns, or causes a rash."}}
 ]}
 </script>
 <style>
@@ -119,7 +119,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <label><input type="radio" name="q5" value="oily"> Shiny, especially on the forehead and nose</label>
 <label><input type="radio" name="q5" value="combo"> Shiny T-zone, matte cheeks</label>
 <label><input type="radio" name="q5" value="sensitive"> Redness or blotchiness is the first thing I notice</label></div>
-<div class="q"><p>6. How does moisturiser usually feel on your skin?</p>
+<div class="q"><p>6. How does moisturizer usually feel on your skin?</p>
 <label><input type="radio" name="q6" value="dry"> Absorbed quickly — skin still feels dry</label>
 <label><input type="radio" name="q6" value="oily"> Heavy or greasy — I often skip it</label>
 <label><input type="radio" name="q6" value="combo"> Fine on cheeks, too heavy on the T-zone</label>
@@ -131,7 +131,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 </div>
 
 <h2>What to do with your result</h2>
-<p>Your skin type is a starting point, not a verdict. The basics are the same for everyone: gentle cleansing, a moisturiser that suits how your skin feels, and daily sunscreen. The differences are in texture and strength — dry skin usually wants richer creams, oily skin usually wants lighter gels, and sensitive-leaning skin wants fewer products and a patch test first.</p>
+<p>Your skin type is a starting point, not a verdict. The basics are the same for everyone: gentle cleansing, a moisturizer that suits how your skin feels, and daily sunscreen. The differences are in texture and strength — dry skin usually wants richer creams, oily skin usually wants lighter gels, and sensitive-leaning skin wants fewer products and a patch test first.</p>
 <p>Introduce one new product at a time, and stop anything that stings, burns, or causes a rash. Skin also changes with seasons, climate, age, and health — re-check every few months instead of treating one result as permanent.</p>
 
 <div class="cta">
@@ -145,7 +145,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <details open><summary>What are the main skin types?</summary><p>The common categories are dry, oily, combination, and sensitive-leaning. Combination means oily in some zones (often the T-zone) and normal or dry elsewhere. Sensitive-leaning skin reacts easily to products, weather, or friction.</p></details>
 <details><summary>Can my skin type change over time?</summary><p>Yes. Age, seasons, hormones, climate, products, and health can all shift how your skin behaves. Re-checking every few months is normal — a quiz result is a snapshot, not a permanent label.</p></details>
 <details><summary>Is this quiz a diagnosis?</summary><p>No. This quiz gives general information based on how you describe your skin. It does not diagnose acne, eczema, rosacea, or any skin condition. Persistent or painful skin problems need a dermatologist.</p></details>
-<details><summary>What should I do after learning my skin type?</summary><p>Start with the basics for your type: gentle cleansing, moisturiser suited to how your skin feels, and daily sunscreen. Introduce one new product at a time and stop anything that stings, burns, or causes a rash.</p></details>
+<details><summary>What should I do after learning my skin type?</summary><p>Start with the basics for your type: gentle cleansing, moisturizer suited to how your skin feels, and daily sunscreen. Introduce one new product at a time and stop anything that stings, burns, or causes a rash.</p></details>
 </div>
 
 <p class="disclaimer"><strong>Disclaimer:</strong> General information, not a diagnosis. Skin conditions need a dermatologist. This quiz never prescribes treatments for acne, eczema, rosacea, or any other condition.</p>
@@ -171,9 +171,9 @@ function quizSkin(){
   var order=['dry','oily','combo','sensitive'], best=order[0];
   order.forEach(function(k){ if(scores[k]>scores[best]) best=k; });
   var data={
-    dry:{t:'Dry skin',d:'Your answers point to dry skin — it tends to feel tight, look dull, and absorb moisturiser quickly. Focus on gentle cleansing, richer moisturisers, lukewarm (not hot) water, and daily sunscreen. Avoid over-washing and harsh scrubs, which strip the little oil dry skin has.',c:['Gentle, fragrance-free cleanser','Richer cream moisturiser, morning and night','Daily sunscreen','Lukewarm water, not hot','Pat dry — do not rub']},
-    oily:{t:'Oily skin',d:'Your answers point to oily skin — shine and visible pores, especially on the forehead and nose. Focus on gentle cleansing, lightweight gel moisturisers, and daily sunscreen. Do not skip moisturiser entirely: over-drying can make skin produce more oil.',c:['Gentle cleanser, morning and night','Lightweight gel moisturiser','Daily sunscreen (gel or matte formulas)','Blotting paper for midday shine','Avoid harsh scrubs and over-washing']},
-    combo:{t:'Combination skin',d:'Your answers point to combination skin — oily in the T-zone (forehead, nose, chin) and normal or dry elsewhere. You may need different care in different zones: lighter products on the T-zone, richer ones on dry cheeks.',c:['Gentle cleanser','Light moisturiser on the T-zone, richer on dry areas','Daily sunscreen','One new product at a time','Adjust with the seasons']},
+    dry:{t:'Dry skin',d:'Your answers point to dry skin — it tends to feel tight, look dull, and absorb moisturizer quickly. Focus on gentle cleansing, richer moisturizers, lukewarm (not hot) water, and daily sunscreen. Avoid over-washing and harsh scrubs, which strip the little oil dry skin has.',c:['Gentle, fragrance-free cleanser','Richer cream moisturizer, morning and night','Daily sunscreen','Lukewarm water, not hot','Pat dry — do not rub']},
+    oily:{t:'Oily skin',d:'Your answers point to oily skin — shine and visible pores, especially on the forehead and nose. Focus on gentle cleansing, lightweight gel moisturizers, and daily sunscreen. Do not skip moisturizer entirely: over-drying can make skin produce more oil.',c:['Gentle cleanser, morning and night','Lightweight gel moisturizer','Daily sunscreen (gel or matte formulas)','Blotting paper for midday shine','Avoid harsh scrubs and over-washing']},
+    combo:{t:'Combination skin',d:'Your answers point to combination skin — oily in the T-zone (forehead, nose, chin) and normal or dry elsewhere. You may need different care in different zones: lighter products on the T-zone, richer ones on dry cheeks.',c:['Gentle cleanser','Light moisturizer on the T-zone, richer on dry areas','Daily sunscreen','One new product at a time','Adjust with the seasons']},
     sensitive:{t:'Sensitive-leaning skin',d:'Your answers point to sensitive-leaning skin — it reacts easily to products, weather, or friction. Keep the routine minimal: few products, fragrance-free, patch-test anything new on a small area first. If reactions are frequent or severe, see a dermatologist.',c:['Minimal routine — few products','Fragrance-free, gentle formulas','Patch-test new products first','Daily sunscreen for sensitive skin','Stop anything that stings or burns']}
   };
   var x=data[best];
