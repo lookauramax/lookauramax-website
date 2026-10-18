@@ -26,7 +26,6 @@ body{background:#050505;color:#F7F3EA;font-family:system-ui,-apple-system,"Segoe
 a{color:#FFD14E}
 .wrap{max-width:980px;margin:0 auto;padding:0 24px}
 header{border-bottom:1px solid rgba(225,154,45,.35);padding:14px 0}
-.head-brand{display:flex;align-items:center;gap:10px}
 .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
 .brand-mark{width:34px;height:34px;border-radius:50%;object-fit:cover;display:block}
 header a{color:#F7F3EA;text-decoration:none;font-weight:900;letter-spacing:.18em}
@@ -53,7 +52,11 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
   <link rel="stylesheet" href="/assets/consent.css">
 </head>
 <body>
-<header><div class="wrap head-brand"><a class="brand" href="https://lookauramax.com/"><img src="/logo-small.png" alt="Lookauramax logo" class="brand-mark" width="34" height="34"><span>LOOK<span>AURA</span>MAX</span></a> · <a href="https://lookauramax.com/blog/" class="blog-label">Blog</a></div></header>
+<header><div class="head">
+<a class="brand" href="/"><img src="/logo-small.png" alt="Lookauramax logo"><b>LOOK<em>AURA</em>MAX</b></a>
+<nav class="hlinks"><a href="/#what">What it is</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a></nav>
+<a class="btn btn-gold" href="/#pricing">Get the app →</a>
+</div></header>
 <main id="main" class="wrap">
 <h1>The Lookauramax <span>Blog</span></h1>
 <p class="lede">Honest glow-up guides: skincare, grooming, posture, sleep, style, looksmaxing, fat loss, weight loss, and how Lookauramax works. No shortcuts, no fake promises, no shame. Every post is practical advice you can actually follow.</p>
@@ -134,7 +137,15 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <article class="card" data-tag="comparisons"><figure class="card-thumb"><img src="/images/blog/best-glow-up-apps.jpg" alt="Illustration: AI-generated image of a fictional man in his mid-20s with fair skin and light brown hair sitting on a couch holding a smartphone with a blank dark screen." loading="lazy" decoding="async" width="1200" height="630"></figure><div class="card-body"><p class="tag">Comparison</p><h2><a href="best-glow-up-apps.html">Best Glow-Up Apps in 2026: An Honest Comparison</a></h2><p class="card-desc">The best glow-up apps compared honestly — including our own real cons.</p><p class="read"><a href="best-glow-up-apps.html">Read guide &rarr;</a></p></div></article>
 </div>
 </main>
-<footer><div class="wrap"><p><a href="https://lookauramax.com/">Lookauramax</a> · <a href="https://lookauramax.com/privacy">Privacy</a> · <a href="https://lookauramax.com/terms">Terms</a> · <a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p><p style="margin-top:8px">Blog content is general information, not medical advice.</p></div></footer>
+<footer><div class="wrap"><div class="foot">
+<div class="foot-brand"><img src="/logo-small.png" alt="Lookauramax founder logo"><div><p>LOOK<span>AURA</span>MAX</p><p>Your glow-up, made real.</p><p><a href="mailto:support@lookauramax.com">support@lookauramax.com</a></p></div></div>
+<nav class="foot-col" aria-label="Product"><h4>Product</h4><ul><li><a href="/#what">What it is</a></li><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#faq">FAQ</a></li></ul></nav>
+<nav class="foot-col" aria-label="Resources"><h4>Resources</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Free Tools</a></li><li><a href="/glossary.html">Glow-Up Glossary</a></li></ul></nav>
+<nav class="foot-col" aria-label="Legal"><h4>Legal</h4><ul><li><a href="https://lookauramax.com/privacy">Privacy Policy</a></li><li><a href="https://lookauramax.com/terms">Terms</a></li><li><a href="https://lookauramax.com/refund">Refund Policy</a></li></ul></nav>
+</div>
+<p class="foot-note">Lookauramax is not a medical app. It does not diagnose, treat, or promise any physical outcome. Scores are rule-based estimates, not AI, and not medical advice.</p>
+<div class="foot-bottom"><p>© 2026 Lookauramax. All rights reserved.</p><span data-cookie-settings-slot></span></div>
+</div></footer>
 <script>
 (function(){var btns=document.querySelectorAll('.filter-btn');var cards=document.querySelectorAll('.grid .card');var status=document.querySelector('.filter-status');if(!btns.length)return;function apply(f){var n=0;cards.forEach(function(c){var show=f==='all'||c.dataset.tag.split(' ').indexOf(f)>-1;c.classList.toggle('is-hidden',!show);if(show)n++;});status.textContent='Showing '+n+' guide'+(n===1?'':'s');btns.forEach(function(b){var on=b.dataset.filter===f;b.classList.toggle('active',on);b.setAttribute('aria-pressed',on?'true':'false');});}btns.forEach(function(b){b.addEventListener('click',function(){apply(b.dataset.filter);});});})();
 </script>

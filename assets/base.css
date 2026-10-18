@@ -14,6 +14,8 @@ a{overflow-wrap:break-word}
 .btn,.calcbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
   border-radius:999px;font-weight:800;text-decoration:none;cursor:pointer;
   padding:13px 26px;line-height:1.25;transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+.btn-gold{background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#1A1204;box-shadow:0 12px 34px rgba(225,154,45,.30)}
+.btn-ghost{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.03);color:#FFFDF6}
 .btn:not(.btn-ghost):not(.btn-gold){
   background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100}
 button{font:inherit}
@@ -71,8 +73,9 @@ summary{display:flex;align-items:center}
 /* ================================================================
    PREMIUM HEADER + FOOTER SYSTEM (single source of truth, site-wide).
    Loaded after each page's inline <style>, so these rules win on
-   equal specificity. Landing (index) + 404 use .head/.hlinks/.foot;
-   blog/tools/legal pages use the simple header/footer patterns.
+   equal specificity. Every page uses the same .head/.hlinks/.foot
+   header + footer. The old simple-header/footer patterns below are
+   inert fallbacks (no page uses them anymore).
    ================================================================ */
 
 /* --- Header: capsule nav, bigger, premium (index + 404) --- */
