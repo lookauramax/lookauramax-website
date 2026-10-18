@@ -43,5 +43,6 @@
       "destination": "/parent-consent.html",
       "source": "/parent-consent"
     }
-  ]
+  ],
+  "cleanUrls": true
 }

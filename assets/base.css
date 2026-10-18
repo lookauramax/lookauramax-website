@@ -240,26 +240,43 @@ body .post-hero figcaption{text-align:center}
    HEADER — BIG, with PRESENCE. The header is the brand's first
    impression: taller bar, larger logo mark, larger wordmark, on
    every width (phone too, proportionally). Never a thin strip.
-   Sticky, smart (hides on scroll-down, shows on scroll-up),
-   blur + hairline. Desktop: plain text links with a gold
-   underline that DRAWS itself (scaleX) on hover and on the
-   scroll-spy active link. Phones: logo + hamburger; full nav
-   lives in the overlay.
+   Always-visible sticky CAPSULE: floating pill, gold hairline,
+   blur + shadow. Never hides on scroll.
    ================================================================= */
-header{position:sticky;top:0;z-index:50;background:rgba(5,4,3,.88);
+header{position:sticky;top:12px;z-index:50;max-width:1140px;margin:12px auto 0;
+  border-radius:999px;border:1px solid rgba(255,209,78,.4);
+  background:rgba(8,7,6,.88);
   backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--line);
-  transition:transform .4s var(--ease)}
-header.is-hidden{transform:translateY(-100%)}
+  box-shadow:0 18px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.06)}
 header.nav-open{z-index:10002}
+html{scroll-padding-top:128px}
 .masthead{display:flex;align-items:center;justify-content:space-between;gap:16px;
   max-width:1120px;margin:0 auto;padding:22px 24px;flex-wrap:nowrap;
   font-family:"Inter",system-ui,sans-serif;line-height:1.5}
 .brand{display:flex;align-items:center;gap:13px;text-decoration:none;flex-shrink:0;color:#F7F3EA}
 .brand img{width:64px;height:64px;border-radius:50%;object-fit:cover;
   border:1.5px solid rgba(255,209,78,.6);box-shadow:0 0 22px rgba(255,190,60,.3);flex-shrink:0}
+/* Header logo coin flip: JS wraps the logo in .brand-coin with a
+   cloned back face (same logo both sides, never mirrored). The
+   coin flips once every 6s, then rests — alive, not frantic.
+   No JS / reduced-motion = plain static logo. */
+.brand-coin{position:relative;display:block;width:64px;height:64px;flex-shrink:0;
+  transform-style:preserve-3d;animation:headerCoin 6s ease-in-out infinite}
+.coin-face{position:absolute;inset:0;border-radius:50%;overflow:hidden;
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border:1.5px solid rgba(255,209,78,.6);box-shadow:0 0 22px rgba(255,190,60,.3)}
+.coin-face img{width:100%!important;height:100%!important;object-fit:cover;display:block;border:0!important;box-shadow:none!important}
+.coin-face.back{transform:rotateY(180deg)}
+@keyframes headerCoin{0%{transform:perspective(600px) rotateY(0)}
+  12%{transform:perspective(600px) rotateY(360deg)}
+  100%{transform:perspective(600px) rotateY(360deg)}}
+@media(prefers-reduced-motion:reduce){.brand-coin{animation:none}}
 .brand b{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.08em;font-size:26px;white-space:nowrap}
 .brand b em,.brand span em,.brand b span{font-style:normal;color:#E19A2D}
+/* Header tagline under the wordmark — same line as the footer tagline,
+   small caps gold so the capsule stays compact (text stack < logo). */
+.brand-text{display:flex;flex-direction:column;line-height:1.05;gap:4px}
+.brand-tag{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#FFD14E;font-weight:700;white-space:nowrap}
 .hlinks{display:flex;align-items:center;gap:30px}
 .hlinks a{position:relative;text-decoration:none;color:#C9C2B2;font-size:15.5px;font-weight:600;
   padding:9px 0;white-space:nowrap;transition:color .25s var(--ease)}
@@ -344,7 +361,10 @@ footer{border-top:1px solid var(--line);padding:64px 0 32px;color:#B9B2A4;
   border:1.5px solid rgba(255,209,78,.6);box-shadow:0 0 22px rgba(255,190,60,.28)}
 .foot-wordmark{font-family:"Space Grotesk",sans-serif;font-weight:700;
   font-size:clamp(34px,8vw,64px);line-height:1;letter-spacing:-.02em;margin:0;
-  background:var(--gold-metal);-webkit-background-clip:text;background-clip:text;color:transparent}
+  color:#F7F3EA}
+/* Footer wordmark colours match the header exactly:
+   LOOK + MAX in cream white, AURA in gold #E19A2D. */
+.foot-wordmark em{font-style:normal;color:#E19A2D}
 .foot-tag{margin:6px 0 0;color:#C9C2B2;font-size:15px}
 .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;align-items:start;margin-top:36px}
 .foot-brand p{margin:0}
@@ -418,11 +438,14 @@ footer{border-top:1px solid var(--line);padding:64px 0 32px;color:#B9B2A4;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 14px 30px rgba(225,154,45,.18)}
 .badge-tile svg{width:22px;height:22px;flex-shrink:0;color:#FFD14E;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .badge-tile span{font-size:13px;font-weight:700;line-height:1.35;color:#F5F0E6}
-/* Photo band: full-width, photography dominates, seam fades into
-   black at the bottom, aura ring breathes behind it. */
-.hero-photo{position:relative;z-index:1;overflow:hidden;min-height:460px}
+/* Photo card: centered portrait, same 3:4 aspect as the image, so
+   the FULL face shows with zero crop (a full-width strip sliced
+   the face to a thin band). Aura ring + chips sit on the card. */
+.hero-photo{position:relative;z-index:1;overflow:hidden;max-width:520px;margin:36px auto 0;
+  aspect-ratio:3/4;border-radius:24px;border:1px solid rgba(255,209,78,.35);
+  box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 60px rgba(255,190,60,.12)}
 .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  object-position:center 28%;will-change:transform}
+  object-position:center 25%;will-change:transform}
 /* Parallax headroom: the photo is 112% tall so a ±24px scroll
    translate never exposes an edge. */
 .js-parallax .hero-photo img{top:-6%;bottom:auto;height:112%}
@@ -506,7 +529,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 32px;color:#B9B2A4;
    Native range input = keyboard + touch accessible. Dragging is
    direct manipulation (no transition); release near a snap point
    (0 / 50 / 100) glides there with a satisfying snap. --- */
-.scrubber{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;
+.scrubber{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;
   border:1px solid rgba(255,209,78,.4);background:#0A0908;
   box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 0 1px rgba(255,209,78,.08),0 0 60px rgba(255,190,60,.12);
   touch-action:pan-y}
@@ -680,7 +703,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 32px;color:#B9B2A4;
 .price-row li:before{content:"";position:absolute;left:0;top:15px;width:16px;height:16px;border-radius:50%;
   background:rgba(255,209,78,.12);border:1px solid rgba(255,209,78,.5)}
 .price-row li:after{content:"✓";position:absolute;left:4px;top:12px;font-size:11px;color:#FFD14E;font-weight:800}
-.price-row .btn{width:100%;padding:13px;font-size:14.5px}
+.price-row .btn{width:100%;padding:13px;font-size:14.5px;box-sizing:border-box}
 .fine{color:var(--mut);font-size:13.5px;margin-top:20px}
 .fine li{margin:7px 0}
 
@@ -721,10 +744,11 @@ details[open] p{animation:faqIn .35s var(--ease)}
 #faq{counter-reset:faq}
 
 /* --- CTA: photo-backed band (hero-day90, already cached from the hero). --- */
-.cta-band{position:relative;overflow:hidden;text-align:center;padding:88px 24px;
-  background-image:url("/images/hero-day90.jpg");background-size:cover;background-position:center 28%}
-.cta-band:before{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.78),rgba(0,0,0,.62) 55%,rgba(0,0,0,.82))}
+.cta-band{position:relative;overflow:hidden;text-align:center;padding:88px 24px;background:#000}
+.cta-photo{width:min(420px,82vw);aspect-ratio:3/4;margin:0 auto 30px;border-radius:24px;overflow:hidden;
+  border:1px solid rgba(255,209,78,.4);
+  box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 60px rgba(255,190,60,.14)}
+.cta-photo img{width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block}
 .cta-band .shell{position:relative;z-index:1}
 .cta-band h2{font-size:clamp(32px,4.6vw,52px)}
 .cta-band p{color:var(--mut);max-width:520px;margin:16px auto 28px}
@@ -903,7 +927,7 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
   .cards{grid-template-columns:repeat(2,1fr)}
   .trend-grid{grid-template-columns:repeat(2,1fr)}
   .grid{grid-template-columns:repeat(2,1fr)}
-  .scrubber{aspect-ratio:16/10}
+  .scrubber{aspect-ratio:4/5}
 }
 
 /* Header CTA hides at <=900px: at tablet widths the nav + CTA
@@ -917,9 +941,12 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
 @media(max-width:480px){
   section{padding:72px 0}
   .shell{padding:0 20px}
+  header{margin:10px 12px 0;top:10px}
   .masthead{padding:16px 16px}
   .brand img{width:52px;height:52px}
+  .brand-coin{width:52px;height:52px}
   .brand b{font-size:22px;letter-spacing:.08em}
+  .brand-tag{font-size:9px;letter-spacing:.2em}
   .hlinks,.masthead .btn{display:none}
   .menu-btn{display:inline-flex}
   .foot{grid-template-columns:1fr;gap:28px}
@@ -944,7 +971,8 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
      the hero viewport on every phone height. Copy sits over it
      with a dark gradient for readability; chips hide (they also
      live in the journey phone mockup). */
-  .hero-photo{position:absolute;inset:0;min-height:0;z-index:0}
+  .hero-photo{position:absolute;inset:0;min-height:0;z-index:0;max-width:none;aspect-ratio:auto;
+    margin:0;border-radius:0;border:0;box-shadow:none}
   .hero-photo:after{background:linear-gradient(180deg,rgba(0,0,0,.68),rgba(0,0,0,.48) 42%,rgba(0,0,0,.84))}
   .hero-chip{display:none}
   .hero-copy{position:relative;z-index:1}
@@ -1012,8 +1040,11 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
 /* ---------- Small phones: 320–360px ---------- */
 @media(max-width:360px){
   .masthead{padding:14px 12px;gap:10px}
+  header{margin:8px 10px 0;top:8px}
   .brand img{width:44px;height:44px}
+  .brand-coin{width:44px;height:44px}
   .brand b{font-size:18px;letter-spacing:.06em}
+  .brand-tag{font-size:8.5px;letter-spacing:.18em}
   .hero h1{font-size:38px}
   .hero-copy{padding:32px 16px 24px}
   .hero-eyebrow{font-size:9.5px;letter-spacing:.12em}
@@ -1064,3 +1095,17 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
    ACCESSIBILITY — visible keyboard focus everywhere.
    ================================================================= */
 :focus-visible{outline:2px solid #FFD14E;outline-offset:2px}
+
+/* --- Blog index grid: TWO cards side by side on tablet/desktop.
+   base.css loads after the blog page's inline <style>, so this rule
+   (not the inline one) decides the layout. Previously the base
+   .grid rule (1 column) won, showing one post per row. --- */
+@media(min-width:768px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+/* --- Hero scrubber: the interactive Day 0 → Day 90 comparison is now
+   the hero visual (replacing the static photo card). Same centered
+   slot, same 520px width, draggable on touch + mouse + keyboard. --- */
+.hero-scrubber{position:relative;z-index:1;max-width:520px;margin:36px auto 0}
+/* --- Journey section: scrubber moved to the hero, so the phone
+   visual stands alone, centered. --- */
+.journey-layout{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}

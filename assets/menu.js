@@ -1,8 +1,8 @@
 /* Lookauramax V4 shared JS — vanilla, no libraries.
-   Owns: overlay menu, smart header (hide on scroll-down / show on
-   scroll-up), gold scroll-progress line, scroll-spy active nav,
-   scroll reveals + stagger, honest-number counters, the Aura Score
-   ring fill, and the pricing region-switch transition.
+   Owns: overlay menu, always-visible sticky capsule header, gold
+   scroll-progress line, header logo coin flip, scroll-spy active
+   nav, scroll reveals + stagger, honest-number counters, the Aura
+   Score ring fill, and the pricing region-switch transition.
    Progressive enhancement everywhere: if JS fails, or
    IntersectionObserver is missing, or the user prefers reduced
    motion, the page stays fully visible with FINAL values shown.
@@ -36,7 +36,7 @@
     btn.setAttribute('aria-expanded', 'true');
     btn.setAttribute('aria-label', 'Close menu');
     document.documentElement.classList.add('nav-open');
-    if (header) { header.classList.remove('is-hidden'); header.classList.add('nav-open'); }
+    if (header) { header.classList.add('nav-open'); }
   }
   if (btn && nav) {
     nav.inert = true;
@@ -55,17 +55,38 @@
     });
   }
 
-  /* ---------- Smart header + scroll progress (scroll-owned motion) ---------- */
+  /* ---------- Header logo coin flip ---------- */
+  /* Wraps the header logo in a two-face coin (front = the real
+     logo, back = a clone of it, so it never shows mirrored) and
+     lets the CSS flip it once every 6s. No JS / reduced-motion =
+     the plain static logo stays. */
+  (function () {
+    if (reduce) return;
+    var logo = document.querySelector('.brand img');
+    if (!logo || logo.closest('.brand-coin')) return;
+    var coin = document.createElement('span');
+    coin.className = 'brand-coin';
+    var front = document.createElement('span');
+    front.className = 'coin-face front';
+    var back = document.createElement('span');
+    back.className = 'coin-face back';
+    var backImg = logo.cloneNode(false);
+    backImg.setAttribute('aria-hidden', 'true');
+    backImg.setAttribute('alt', '');
+    logo.parentNode.insertBefore(coin, logo);
+    front.appendChild(logo);
+    back.appendChild(backImg);
+    coin.appendChild(front);
+    coin.appendChild(back);
+  })();
+
+  /* ---------- Scroll progress (scroll-owned motion) ----------
+     The header itself is always visible now — no hide-on-scroll. */
   var progress = document.getElementById('scroll-progress');
   var lastY = window.scrollY;
   var ticking = false;
   function onScroll() {
     var y = window.scrollY;
-    var menuOpen = !!(nav && nav.classList.contains('open'));
-    if (header && !menuOpen) {
-      if (y > 160 && y > lastY + 4) header.classList.add('is-hidden');
-      else if (y < lastY - 4 || y <= 160) header.classList.remove('is-hidden');
-    }
     if (progress && !reduce) {
       var max = document.documentElement.scrollHeight - window.innerHeight;
       var p = max > 0 ? Math.min(1, Math.max(0, y / max)) : 0;
