@@ -55,7 +55,7 @@ h2{font-size:clamp(30px,4vw,44px);line-height:1.12;font-weight:700}
 .btn-ghost{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.03);color:var(--txt)}
 /* header + footer design lives in /assets/base.css (single source of truth) */
 /* hero — split layout: headline + CTA left, transformation visual right (competitor pattern, our ethics) */
-.hero{padding:88px 0 72px;position:relative;overflow:hidden}
+.hero{padding:44px 0 72px;position:relative;overflow:hidden}
 .hero-wrap{max-width:1280px}
 .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#FFD14E;border:1px solid rgba(255,209,78,.4);background:rgba(255,209,78,.08);padding:9px 16px;border-radius:999px;margin:0 0 24px}
@@ -163,7 +163,7 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 .cta p{color:var(--mut);max-width:520px;margin:16px auto 28px}
 /* footer design lives in /assets/base.css (single source of truth) */
 @media(max-width:900px){.grid3,.steps{grid-template-columns:1fr 1fr}.pricing{grid-template-columns:1fr 1fr}.hlinks{display:none}}
-@media(max-width:560px){section{padding:64px 0}.grid3,.steps,.pricing{grid-template-columns:1fr}.hero{padding:56px 0}.trust{grid-template-columns:1fr}.trust div+div{border-left:0;border-top:1px solid rgba(255,255,255,.08)}.journey-track{flex-wrap:wrap;row-gap:20px}.journey-track:before{display:none}.jt-point{flex:1 1 40%}.jt-point:last-child{text-align:left}.jt-point:last-child .jt-dot{left:0;right:auto}.hero-transform{gap:12px}.ht-face img{width:min(138px,36vw)}.ht-arrow{font-size:24px}.hero-float{font-size:12px;padding:8px 12px}}
+@media(max-width:560px){section{padding:64px 0}.grid3,.steps,.pricing{grid-template-columns:1fr}.hero{padding:32px 0 56px}.trust{grid-template-columns:1fr}.trust div+div{border-left:0;border-top:1px solid rgba(255,255,255,.08)}.journey-track{flex-wrap:wrap;row-gap:20px}.journey-track:before{display:none}.jt-point{flex:1 1 40%}.jt-point:last-child{text-align:left}.jt-point:last-child .jt-dot{left:0;right:auto}.hero-transform{gap:12px}.ht-face img{width:min(138px,36vw)}.ht-arrow{font-size:24px}.hero-float{font-size:12px;padding:8px 12px}}
 /* tasteful motion — subtle only */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
@@ -408,7 +408,7 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 <p style="margin-top:20px"><a href="/blog/" style="color:var(--gold-l);font-weight:700">Read all 66 guides →</a></p>
 </section>
 
-<section id="faq" class="reveal">
+<section id="faq" class="reveal wrap faq-narrow">
 <p class="kicker">FAQ</p>
 <h2>Questions, answered.</h2>
 <div style="margin-top:26px">
