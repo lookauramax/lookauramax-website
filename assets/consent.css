@@ -1,7 +1,6 @@
 /* Lookauramax — cookie consent banner. Self-contained (no dependency on
- * base.css variables). V3: paper card, ink text, rectangular buttons.
- * Accessible: high contrast, visible keyboard focus, no motion.
- * Behavior is owned by consent.js — this file is presentation only. */
+ * base.css variables). Brand-matched: logo golds on charcoal/black.
+ * Accessible: high contrast, visible keyboard focus, no motion. */
 
 .lam-consent-banner {
   position: fixed;
@@ -12,11 +11,11 @@
   max-width: 560px;
   margin: 0 auto;
   padding: 18px 20px;
-  background: #F5F1E8;
-  color: #17140F;
-  border: 1.5px solid #17140F;
-  border-radius: 12px;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+  background: #121212;
+  color: #FFFFFF;
+  border: 1px solid rgba(225, 154, 45, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.5;
@@ -28,10 +27,10 @@
 .lam-consent-title {
   font-size: 16px;
   font-weight: 700;
-  color: #976729;
+  color: #FFD14E;
 }
 
-.lam-consent-text { margin-top: 8px !important; color: #4A443B; }
+.lam-consent-text { margin-top: 8px !important; color: #E8E8E8; }
 
 .lam-consent-actions {
   display: flex;
@@ -44,7 +43,7 @@
 .lam-consent-accept,
 .lam-consent-decline {
   appearance: none;
-  border-radius: 8px;
+  border-radius: 999px;
   padding: 11px 20px;
   font: inherit;
   font-size: 15px;
@@ -62,24 +61,24 @@
 
 .lam-consent-decline {
   background: transparent;
-  color: #17140F;
-  border: 2px solid #17140F;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
 }
 
 .lam-consent-policy {
-  color: #976729;
+  color: #FFD14E;
   text-decoration: underline;
   font-size: 14px;
 }
 
-.lam-consent-accept:hover { background: #F0A93A; border-color: #F0A93A; }
-.lam-consent-decline:hover { background: rgba(23, 20, 15, 0.06); }
+.lam-consent-accept:hover { background: #FFD14E; border-color: #FFD14E; }
+.lam-consent-decline:hover { background: rgba(255, 255, 255, 0.12); }
 
 .lam-consent-accept:focus-visible,
 .lam-consent-decline:focus-visible,
 .lam-consent-policy:focus-visible,
 .lam-cookie-settings:focus-visible {
-  outline: 3px solid #E19A2D;
+  outline: 3px solid #FFD14E;
   outline-offset: 2px;
 }
 
