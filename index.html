@@ -34,7 +34,7 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Lookauramax?","acceptedAnswer":{"@type":"Answer","text":"Lookauramax is a glow-up app for Android that gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach, powered by Aura Intelligence."}},{"@type":"Question","name":"Is Lookauramax free?","acceptedAnswer":{"@type":"Answer","text":"There is no permanent free plan. When you join, you get a one-time Join Reward: 1 AuraScan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser — no card needed. After that, you pick a paid plan and start a free trial."}},{"@type":"Question","name":"Does Lookauramax upload my photos?","acceptedAnswer":{"@type":"Answer","text":"No. Your photo is used only for your scan, never shared. Only small data — scores, plan, progress, streaks, settings — syncs to your account."}},{"@type":"Question","name":"Does Lookauramax use AI to rate my face?","acceptedAnswer":{"@type":"Answer","text":"No. AuraScan is an Aura Intelligence estimate, not AI. It scores only actionable traits and shows bands (Needs Work, Good, Great), not an attractiveness score."}},{"@type":"Question","name":"Can I cancel?","acceptedAnswer":{"@type":"Answer","text":"Yes. Cancel in 2 taps in Google Play before the trial ends and you pay nothing. If you cancel during a trial, Pro stays active until the trial ends. Deleting the app does not cancel — cancel in Google Play."}},{"@type":"Question","name":"Which plan is best value?","acceptedAnswer":{"@type":"Answer","text":"The 3-Month plan is Best Value — the lowest total cost to cover one full Aura Cycle: ₹399 in India / $19.99 in the US. The Yearly plan has the lowest cost per month."}},{"@type":"Question","name":"Who can use Lookauramax?","acceptedAnswer":{"@type":"Answer","text":"Ages 16 and over. Under 16 is blocked. Ages 16–17 need parental consent before a scan or paid access."}},{"@type":"Question","name":"When does the app launch?","acceptedAnswer":{"@type":"Answer","text":"The Lookauramax website is live now. The app launches on Google Play after closed testing is complete."}},{"@type":"Question","name":"Why is Lookauramax the best glow-up app?","acceptedAnswer":{"@type":"Answer","text":"We built it to be the best by being the most honest: scores only for traits you can improve, every score with Why + Action, honest pricing shown openly, no weekly billing trap, no face ratings ever, cancel in 2 taps — and our own cons published in our comparisons. We claim no ranking, award, or user count we cannot prove."}}]}</script>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
-<link rel="stylesheet" href="/assets/base.css?v=20261103">
+<link rel="stylesheet" href="/assets/base.css?v=20261104">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/menu.js?v=20261102" defer></script>
@@ -68,7 +68,7 @@
 <div class="hero-aurora" aria-hidden="true"><div class="aurora-blob one"></div><div class="aurora-blob two"></div></div>
 <div class="hero-copy">
 <p class="hero-eyebrow">AuraScan · Aura Plan · Aura Routine</p>
-<h1><span class="k-word"><span class="k-inner">Know</span></span> <span class="k-word"><span class="k-inner">where</span></span> <span class="k-word"><span class="k-inner">you</span></span> <span class="k-word"><span class="k-inner">stand.</span></span><br><span class="k-word"><span class="k-inner gold-text k-shine">Grow from there.<i class="shine" aria-hidden="true"></i></span></span></h1>
+<h1><span class="k-word"><span class="k-inner">Know</span></span> <span class="k-word"><span class="k-inner">where</span></span> <span class="k-word"><span class="k-inner">you</span></span> <span class="k-word"><span class="k-inner">stand.</span></span> <span class="k-word"><span class="k-inner gold-text k-shine">Grow from there.<i class="shine" aria-hidden="true"></i></span></span></h1>
 <p class="hero-sub">One photo. Seven signals. A 90-day plan built around you — clear scores, honest actions, progress you can see.</p>
 <div class="hero-ctas"><a class="btn btn-gold" id="hero-cta" href="#pricing">See plans &amp; free trial <span class="btn-arrow" aria-hidden="true">→</span></a><a class="btn btn-ghost" href="#how">How it works</a></div>
 <p class="hero-note">Join → claim your <b>one-time Join Reward</b> → start a free trial. You will <b>not be charged</b> during the free trial.</p>
@@ -128,9 +128,9 @@
 <p class="journey-text">AuraScan sets your precise starting point. Your Aura Plan turns it into daily steps. Aura Check-ins at Day 30, 60 and 90 show real, measured change — no filters, no fake photos, no overnight miracles.</p>
 <div class="journey-track">
 <div class="jt-point"><span class="jt-dot"></span><b>DAY 0</b><span>52 · Baseline</span></div>
-<div class="jt-point"><span class="jt-dot"></span><b>DAY 30</b><span>64</span></div>
-<div class="jt-point"><span class="jt-dot"></span><b>DAY 60</b><span>71</span></div>
-<div class="jt-point"><span class="jt-dot"></span><b>DAY 90</b><span>78</span></div>
+<div class="jt-point"><span class="jt-dot"></span><b>DAY 30</b><span>64 · Check-in</span></div>
+<div class="jt-point"><span class="jt-dot"></span><b>DAY 60</b><span>71 · Check-in</span></div>
+<div class="jt-point"><span class="jt-dot"></span><b>DAY 90</b><span>78 · Check-in</span></div>
 </div>
 <div class="journey-layout">
 <div>
@@ -354,7 +354,12 @@
 
 <section class="cta-band reveal">
 <div class="shell">
-<div class="cta-photo"><img src="/images/hero-day90.jpg" alt="Illustration — AI-generated image of a fictional man" width="960" height="1280" loading="lazy"></div>
+<div class="cta-journey" id="cta-journey">
+<div class="cta-ring"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="ctaGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD14E"/><stop offset=".55" stop-color="#E19A2D"/><stop offset="1" stop-color="#976729"/></linearGradient></defs><circle class="cta-ring-track" cx="60" cy="60" r="52"/><circle class="cta-ring-fill" id="cta-ring-fill" cx="60" cy="60" r="52"/></svg><div class="cta-ring-score"><b id="cta-score">52</b><span id="cta-day">Day 0</span></div></div>
+<input type="range" id="cta-range" min="0" max="90" value="0" step="1" aria-label="Drag to preview Day 0 to Day 90">
+<div class="cta-range-labels"><span>Day 0</span><span>Day 90</span></div>
+<p class="cta-journey-note">Illustrative example — drag to preview a possible journey. Your real scores come from your AuraScan.</p>
+</div>
 <h2>Your first Aura Cycle<br>starts with <span class="gold-text">one photo.</span></h2>
 <p>Join, claim your one-time Join Reward, and see your honest starting point in under a minute.</p>
 <a class="btn btn-gold" href="#pricing">See plans &amp; free trial →</a>
@@ -383,10 +388,11 @@
 var sb=document.getElementById('sticky-bar');
 var footerInView=false;
 var pricingInView=false;
-function updateSticky(){if(!sb||!sb.isConnected)return;sb.classList.toggle('show',window.scrollY>650&&!document.getElementById('lam-consent-banner')&&!footerInView&&!pricingInView&&!document.documentElement.classList.contains('nav-open'));}
+var ctaInView=false;
+function updateSticky(){if(!sb||!sb.isConnected)return;sb.classList.toggle('show',window.scrollY>650&&!document.getElementById('lam-consent-banner')&&!footerInView&&!pricingInView&&!ctaInView&&!document.documentElement.classList.contains('nav-open'));}
 window.addEventListener('scroll',updateSticky,{passive:true});
 new MutationObserver(updateSticky).observe(document.body,{childList:true});
-if('IntersectionObserver' in window){new IntersectionObserver(function(es){footerInView=es[0].isIntersecting;updateSticky();},{threshold:0.05}).observe(document.querySelector('footer'));new IntersectionObserver(function(es){pricingInView=es[0].isIntersecting;updateSticky();},{threshold:0.05}).observe(document.getElementById('pricing'));}
+if('IntersectionObserver' in window){new IntersectionObserver(function(es){footerInView=es[0].isIntersecting;updateSticky();},{threshold:0.05}).observe(document.querySelector('footer'));new IntersectionObserver(function(es){pricingInView=es[0].isIntersecting;updateSticky();},{threshold:0.05}).observe(document.getElementById('pricing'));new IntersectionObserver(function(es){ctaInView=es[0].isIntersecting;updateSticky();},{threshold:0.05}).observe(document.querySelector('.cta-band'));}
 
 // interactive preview
 var previewData={
@@ -415,6 +421,29 @@ if(scrub){
     if(snap!==null&&snap!==v){scrub.classList.add('is-snapping');sRange.value=snap;sApply(snap);setTimeout(function(){scrub.classList.remove('is-snapping');},320);}
   });
   sApply(50);
+}
+
+// final CTA: interactive journey preview. Drag Day 0 -> Day 90;
+// score interpolates between the illustrative milestones
+// (52 / 64 / 71 / 78). Illustrative only — never a promise.
+var ctaRange=document.getElementById('cta-range');
+if(ctaRange){
+  var ctaScore=document.getElementById('cta-score');
+  var ctaDay=document.getElementById('cta-day');
+  var ctaFill=document.getElementById('cta-ring-fill');
+  var ctaMiles=[[0,52],[30,64],[60,71],[90,78]];
+  ctaRange.addEventListener('input',function(){
+    var d=parseInt(ctaRange.value,10);
+    var s=52;
+    for(var i=0;i<ctaMiles.length-1;i++){
+      var a=ctaMiles[i],b=ctaMiles[i+1];
+      if(d>=a[0]&&d<=b[0]){s=Math.round(a[1]+(b[1]-a[1])*(d-a[0])/(b[0]-a[0]));break;}
+    }
+    if(d===90)s=78;
+    ctaScore.textContent=s;
+    ctaDay.textContent='Day '+d;
+    ctaFill.style.strokeDashoffset=(326.7*(1-s/100)).toFixed(1);
+  });
 }
 
 // hero parallax (scroll-owned, transform only, ±24px) + magnetic CTA
