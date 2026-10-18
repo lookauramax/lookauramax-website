@@ -170,3 +170,40 @@ footer:not(:has(.foot)) .lam-cookie-settings{color:#FFD14E}
 /* 404 header uses <span> inside <b> for the gold word (index uses <em>) */
 .brand b span{color:#E19A2D}
 @media(max-width:560px){.head{flex-wrap:wrap}}
+
+/* --- ONE width system: every page shares it (was random 760/780/820/980/1060/1120) --- */
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px;display:block}
+.wrap.narrow{max-width:860px}
+
+/* --- Shared app-interface mockups: pure CSS, honest "app preview" illustrations --- */
+.app-phone{background:linear-gradient(180deg,#1B1813,#0E0C0A);border:1px solid rgba(255,209,78,.35);
+  border-radius:30px;padding:22px 20px 18px;box-shadow:0 20px 50px rgba(0,0,0,.5);max-width:320px;margin:0 auto}
+.app-phone-head{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#FFD14E;font-weight:800;text-align:center}
+.app-phone-sub{font-size:13px;color:#B9B2A4;text-align:center;margin:8px 0 0}
+.app-phone-ring{position:relative;width:132px;height:132px;margin:16px auto 6px}
+.app-phone-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.app-phone-ring .ring-track{fill:none;stroke:rgba(255,255,255,.12);stroke-width:9}
+.app-phone-ring .ring-fill{fill:none;stroke:url(#apGold);stroke-width:9;stroke-linecap:round;stroke-dasharray:326.7;stroke-dashoffset:71.9}
+.app-phone-score{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.app-phone-score b{font-family:"Space Grotesk",sans-serif;font-size:34px;line-height:1}
+.app-phone-score span{font-size:12px;color:#B9B2A4;margin-top:2px}
+.app-phone-rows{list-style:none;margin:14px 0 0;padding:0}
+.app-phone-rows li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 2px;border-top:1px solid rgba(255,255,255,.07);font-size:14px}
+.app-phone-rows li b{color:#FFD14E;flex-shrink:0}
+.app-phone-rows li .done{color:#FFD14E;font-weight:800}
+.app-phone-pill{margin:16px 0 0;text-align:center;font-size:13px;font-weight:700;color:#FFD14E;
+  background:rgba(255,209,78,.10);border:1px solid rgba(255,209,78,.30);border-radius:999px;padding:9px 12px}
+.app-phone-bars{display:flex;align-items:flex-end;gap:14px;height:132px;margin:18px 6px 0}
+.app-bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px;height:100%}
+.app-bar i{display:block;width:100%;border-radius:8px 8px 0 0;background:linear-gradient(180deg,#FFD14E,#976729)}
+.app-bar b{font-size:14px}
+.app-bar span{font-size:11px;letter-spacing:.08em;color:#B9B2A4}
+
+/* --- Duo visual: Day 0 / Day 90 pair for article pages --- */
+.duo-visual{display:flex;gap:20px;justify-content:center;margin:28px auto 6px;max-width:640px}
+.duo-visual figure{margin:0;text-align:center;flex:1}
+.duo-visual img{width:100%;aspect-ratio:3/3.6;object-fit:cover;object-position:center 30%;border-radius:18px;border:1px solid rgba(255,209,78,.35);display:block}
+.duo-visual figcaption{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#B9B2A4;margin-top:10px;font-weight:700}
+.duo-visual .after figcaption{color:#FFD14E}
+.duo-note{font-size:12.5px;color:#8F897C;text-align:center;margin:10px auto 0;max-width:560px}
+@media(max-width:560px){.duo-visual{gap:12px}}
