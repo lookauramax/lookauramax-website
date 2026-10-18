@@ -127,9 +127,9 @@ h2{font-size:clamp(30px,4vw,44px);line-height:1.12;font-weight:700}
 .never li:before{content:"✕";position:absolute;left:0;color:var(--gold-l);font-weight:800}
 .never li b{color:var(--txt)}
 /* pricing */
-.toggle{display:inline-flex;background:#141211;border:1px solid var(--line);border-radius:999px;padding:5px;gap:5px;margin-top:24px}
-.toggle button{border:0;background:transparent;color:var(--mut);padding:9px 20px;border-radius:999px;cursor:pointer;font-weight:700;font-size:14px}
-.toggle button.active{background:var(--gold);color:#000}
+.region-select{display:inline-flex;align-items:center;gap:10px;margin-top:24px;color:var(--mut);font-size:14px;font-weight:700}
+.region-select select{appearance:none;-webkit-appearance:none;background:#141211 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23FFD14E' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 16px center;border:1px solid var(--line);border-radius:999px;color:var(--txt);padding:10px 38px 10px 20px;cursor:pointer;font-weight:700;font-size:14px;font-family:inherit}
+.region-select select:focus{outline:2px solid var(--gold);outline-offset:2px}
 .pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
 .pcard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 22px;display:flex;flex-direction:column}
 .pcard.hero{border:2px solid var(--gold);background:linear-gradient(180deg,#221703,#120E06)}
@@ -318,27 +318,29 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 <p class="kicker">Pricing</p>
 <h2>One plan. Every feature.</h2>
 <p class="lede">Every paid plan includes the full app. No plan gates features by length. No ads. No weekly plan. No lifetime plan.</p>
-<div class="toggle" role="group" aria-label="Pricing region">
-<button id="btn-us" class="active" onclick="showRegion('us')">United States ($)</button>
-<button id="btn-in" onclick="showRegion('in')">India (₹)</button>
-</div>
-<div id="pricing-in" style="display:none">
-<div class="pricing">
-<div class="pcard"><span class="tag ghost">Flexible</span><div class="p-name">Monthly</div><div class="p-price">₹199</div><div class="p-per">₹199 / month · billed monthly</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Cancel in 2 taps</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
-<div class="pcard hero"><span class="tag">★ Best Value</span><div class="p-name">3-Month</div><div class="p-price">₹399 <small>total</small></div><div class="p-per">₹133 / month · Save 33%<br>Complete 1 transformation</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Lowest total cost for 1 transformation</li></ul><a class="btn btn-gold" href="#faq">Start free trial →</a></div>
-<div class="pcard"><span class="tag ghost">2 Transformations</span><div class="p-name">6-Month</div><div class="p-price">₹599 <small>total</small></div><div class="p-per">₹99.83 / month · Save 49%<br>Two full 90-day cycles</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Save 24% vs 2× 3-Month</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
-<div class="pcard"><span class="tag ghost">Best savings / month</span><div class="p-name">Yearly</div><div class="p-price">₹999 <small>total</small></div><div class="p-per">₹83.25 / month · Save 58%<br>Lowest per-month cost</div><ul><li>14-day free trial</li><li>Full app, all features</li><li>Best for a full year</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
-</div>
-</div>
+<label class="region-select" for="pricing-region">Show prices for:
+<select id="pricing-region" aria-label="Choose your market for pricing">
+<option value="US">United States ($)</option>
+<option value="IN">India (₹)</option>
+<option value="GB">United Kingdom (£)</option>
+<option value="BR">Brazil (R$)</option>
+<option value="ID">Indonesia (Rp)</option>
+<option value="PH">Philippines (₱)</option>
+<option value="MX">Mexico (Mex$)</option>
+<option value="NG">Nigeria (₦)</option>
+<option value="PK">Pakistan (Rs)</option>
+<option value="BD">Bangladesh (৳)</option>
+</select>
+</label>
 <div id="pricing-us">
 <div class="pricing">
-<div class="pcard"><span class="tag ghost">Flexible</span><div class="p-name">Monthly</div><div class="p-price">$9.99</div><div class="p-per">$9.99 / month · billed monthly</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Cancel in 2 taps</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
-<div class="pcard hero"><span class="tag">★ Best Value</span><div class="p-name">3-Month</div><div class="p-price">$19.99 <small>total</small></div><div class="p-per">$6.66 / month · Save 33%<br>Complete 1 transformation</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Lowest total cost for 1 transformation</li></ul><a class="btn btn-gold" href="#faq">Start free trial →</a></div>
-<div class="pcard"><span class="tag ghost">2 Transformations</span><div class="p-name">6-Month</div><div class="p-price">$29.99 <small>total</small></div><div class="p-per">$5.00 / month · Save 49%<br>Two full 90-day cycles</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Save 24% vs 2× 3-Month</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
-<div class="pcard"><span class="tag ghost">Best savings / month</span><div class="p-name">Yearly</div><div class="p-price">$49.99 <small>total</small></div><div class="p-per">$4.17 / month · Save 58%<br>Lowest per-month cost</div><ul><li>14-day free trial</li><li>Full app, all features</li><li>Best for a full year</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
+<div class="pcard"><span class="tag ghost">Flexible</span><div class="p-name">Monthly</div><div class="p-price" data-price="monthly">$9.99</div><div class="p-per" data-per="monthly">$9.99 / month · billed monthly</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Cancel in 2 taps</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
+<div class="pcard hero"><span class="tag">★ Best Value</span><div class="p-name">3-Month</div><div class="p-price" data-price="quarterly">$19.99 <small>total</small></div><div class="p-per" data-per="quarterly">$6.66 / month · Save 33%<br>Complete 1 transformation</div><ul><li>7-day free trial</li><li>Full app, all features</li><li>Lowest total cost for 1 transformation</li></ul><a class="btn btn-gold" href="#faq">Start free trial →</a></div>
+<div class="pcard"><span class="tag ghost">2 Transformations</span><div class="p-name">6-Month</div><div class="p-price" data-price="halfyearly">$29.99 <small>total</small></div><div class="p-per" data-per="halfyearly">$5.00 / month · Save 49%<br>Two full 90-day cycles</div><ul><li>7-day free trial</li><li>Full app, all features</li><li data-save2x>Save 24% vs 2× 3-Month</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
+<div class="pcard"><span class="tag ghost">Best savings / month</span><div class="p-name">Yearly</div><div class="p-price" data-price="yearly">$49.99 <small>total</small></div><div class="p-per" data-per="yearly">$4.17 / month · Save 58%<br>Lowest per-month cost</div><ul><li>14-day free trial</li><li>Full app, all features</li><li>Best for a full year</li></ul><a class="btn btn-ghost" href="#faq">Start free trial</a></div>
 </div>
 </div>
-<p style="color:var(--mut);font-size:14.5px;margin-top:20px">Prices shown in US dollars by default — switch to India (₹) for local pricing. Available worldwide on Google Play, with local pricing in 10 launch markets: India, the United States, the UK, Brazil, Indonesia, Philippines, Mexico, Nigeria, Pakistan, and Bangladesh. The exact price is always shown in Google Play before you pay.</p>
+<p style="color:var(--mut);font-size:14.5px;margin-top:20px">Prices update automatically for your region — detected from your device timezone and language. Nothing is sent or stored; detection happens entirely in your browser. Pick a different market above if needed. Available worldwide on Google Play, with local pricing in 10 launch markets: India, the United States, the UK, Brazil, Indonesia, Philippines, Mexico, Nigeria, Pakistan, and Bangladesh. The exact price is always shown in Google Play before you pay.</p>
 <ul class="fine">
 <li><strong>3-Month is Best Value</strong> = lowest <em>total</em> cost to complete one 90-day transformation. <strong>Yearly is Best Savings Per Month</strong> = lowest per-month cost.</li>
 <li><strong>Free trial:</strong> you will not be charged during the trial. Google Play collects a payment method at trial start. A reminder arrives 2 days before the trial ends.</li>
@@ -394,7 +396,6 @@ details p{color:var(--mut);margin-top:10px;font-size:15px}
 
 <div class="sticky-bar" id="sticky-bar" role="complementary" aria-label="Quick action"><b>Start your glow-up — free trial</b><a class="btn btn-gold" href="#pricing">See plans →</a><button class="x" aria-label="Dismiss" onclick="document.getElementById('sticky-bar').remove()">×</button></div>
 <script>
-function showRegion(r){document.getElementById('pricing-in').style.display=r==='in'?'block':'none';document.getElementById('pricing-us').style.display=r==='us'?'block':'none';document.getElementById('btn-in').className=r==='in'?'active':'';document.getElementById('btn-us').className=r==='us'?'active':'';}
 // subtle scroll reveal
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
@@ -412,5 +413,6 @@ photo:{t:'Photo quality — fair reading',x:'Example: lighting, sharpness, and f
 document.querySelectorAll('#demo-chips button').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('#demo-chips button').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');var d=demoData[btn.dataset.focus];document.getElementById('demo-title').textContent=d.t;document.getElementById('demo-text').textContent=d.x;var b2=document.getElementById('demo-bar');b2.style.width='0';setTimeout(function(){b2.style.width=d.w;},90);});});
 </script>
   <script src="/assets/consent.js" defer></script>
+  <script src="/assets/pricing.js" defer></script>
 </body>
 </html>
