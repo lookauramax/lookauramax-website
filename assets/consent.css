@@ -12,7 +12,7 @@
   margin: 0 auto;
   padding: 18px 20px;
   background: #121212;
-  color: #ffffff;
+  color: #FFFFFF;
   border: 1px solid rgba(225, 154, 45, 0.55);
   border-radius: 16px;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
@@ -27,10 +27,10 @@
 .lam-consent-title {
   font-size: 16px;
   font-weight: 700;
-  color: #ffd14e;
+  color: #FFD14E;
 }
 
-.lam-consent-text { margin-top: 8px !important; color: #e8e8e8; }
+.lam-consent-text { margin-top: 8px !important; color: #E8E8E8; }
 
 .lam-consent-actions {
   display: flex;
@@ -54,31 +54,31 @@
 
 /* Accept: gold. Decline: equal size and prominence, outlined — no dark pattern. */
 .lam-consent-accept {
-  background: #e19a2d;
+  background: #E19A2D;
   color: #000000;
-  border: 2px solid #e19a2d;
+  border: 2px solid #E19A2D;
 }
 
 .lam-consent-decline {
   background: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
 }
 
 .lam-consent-policy {
-  color: #ffd14e;
+  color: #FFD14E;
   text-decoration: underline;
   font-size: 14px;
 }
 
-.lam-consent-accept:hover { background: #ffd14e; border-color: #ffd14e; }
+.lam-consent-accept:hover { background: #FFD14E; border-color: #FFD14E; }
 .lam-consent-decline:hover { background: rgba(255, 255, 255, 0.12); }
 
 .lam-consent-accept:focus-visible,
 .lam-consent-decline:focus-visible,
 .lam-consent-policy:focus-visible,
 .lam-cookie-settings:focus-visible {
-  outline: 3px solid #ffd14e;
+  outline: 3px solid #FFD14E;
   outline-offset: 2px;
 }
 

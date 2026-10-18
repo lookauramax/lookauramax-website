@@ -23,7 +23,7 @@ input,select,textarea{font:inherit;max-width:100%}
 input,select,textarea,.tool input,.tool select{min-height:44px}
 
 /* --- Tap targets: 44px minimum (excludes the tiny dismiss ×) --- */
-button:not(.sticky-bar .x),[role="button"],summary,.toggle button,.demo-chips button{min-height:44px}
+button:not(.sticky-bar .x),[role="button"],summary{min-height:44px}
 summary{display:flex;align-items:center}
 
 /* --- Shared containers breathe the same on small screens --- */
@@ -111,15 +111,6 @@ header:not(:has(.head)):not(:has(.head-brand)) .wrap a:last-child{
   font-size:13.5px;font-weight:700;padding:9px 18px;border:1px solid rgba(255,255,255,.18);
   border-radius:999px;text-decoration:none;background:rgba(255,255,255,.04);color:#CFC7B8;white-space:nowrap}
 
-/* --- Blog hub header --- */
-header .head-brand{display:flex;align-items:center;gap:12px;padding-top:16px;padding-bottom:16px}
-header .head-brand .brand img{width:44px;height:44px}
-header .head-brand .brand span{font-family:"Space Grotesk",sans-serif;font-weight:800;
-  letter-spacing:.14em;font-size:19px}
-header .head-brand .blog-label{font-size:13.5px;font-weight:700;padding:9px 18px;
-  border:1px solid rgba(255,255,255,.18);border-radius:999px;text-decoration:none;
-  background:rgba(255,255,255,.04);color:#CFC7B8}
-
 /* --- Footer: professional aligned grid (index + 404) --- */
 footer{border-top:1px solid rgba(225,154,45,.28);padding:52px 0 34px;
   color:#B9B2A4;font-size:14px;background:#0A0908}
@@ -133,7 +124,7 @@ footer{border-top:1px solid rgba(225,154,45,.28);padding:52px 0 34px;
 .foot-brand p:last-child{margin:6px 0 0;color:#B9B2A4;font-size:14px}
 .foot-brand a{color:#FFD14E;text-decoration:none}
 .foot-brand a:hover{text-decoration:underline}
-.foot-col h4{margin:0 0 16px;font-family:"Space Grotesk",sans-serif;font-size:13px;
+.foot-col h2{margin:0 0 16px;font-family:"Space Grotesk",sans-serif;font-size:13px;
   font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#FFFDF6}
 .foot-col ul{list-style:none;margin:0;padding:0}
 .foot-col li{margin:0 0 11px}
@@ -217,3 +208,16 @@ section.faq-narrow{max-width:860px}
 .social-row a{color:#FFD14E;display:inline-flex;line-height:0}
 .social-row a:hover{color:#FFE9A3}
 .social-row svg{width:22px;height:22px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* --- Why Lookauramax close (guides/tools) + homepage comparison strip --- */
+.why-close{margin:32px 0;padding:24px 26px;border:1px solid rgba(225,154,45,.35);border-radius:16px;background:linear-gradient(180deg,#1C1505,#121210)}
+.why-close h2{margin-top:0}
+.why-close ul{margin:12px 0 0;padding-left:20px}
+.why-close li{margin:8px 0}
+@media(max-width:560px){.why-close{padding:20px}}
+.why-strip{margin-top:28px;overflow-x:auto;border:1px solid rgba(225,154,45,.25);border-radius:16px}
+.why-strip table{display:table;width:100%;border-collapse:collapse;font-size:14.5px;min-width:760px}
+.why-strip th,.why-strip td{text-align:left;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.08);vertical-align:top}
+.why-strip thead th{background:#171512;color:#FFD14E;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.why-strip tbody tr:last-child td{border-bottom:0}
+.why-strip-note{font-size:13.5px;margin-top:14px}
