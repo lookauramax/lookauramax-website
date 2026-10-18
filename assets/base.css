@@ -98,7 +98,7 @@ h1,h2,h3{font-family:"Space Grotesk",sans-serif}
 ::selection{background:#FFD14E;color:#1A1204}
 a{color:inherit}
 input,select,textarea{font:inherit;max-width:100%}
-input,select,textarea,.tool input,.tool select{min-height:44px}
+input:not([type=radio]):not([type=checkbox]),select,textarea,.tool input:not([type=radio]):not([type=checkbox]),.tool select{min-height:44px}
 button{font:inherit}
 button:not(.sticky-bar .x):not(.menu-btn),[role="button"],summary{min-height:44px}
 summary{display:flex;align-items:center}
@@ -858,7 +858,7 @@ div.cta h2{margin-top:0}
   box-shadow:0 16px 36px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.05)}
 .tool label{display:block;font-weight:700;margin:16px 0 6px}
 .tool label:first-of-type{margin-top:0}
-.tool input,.tool select{width:100%;background:#0A0908;color:#F7F3EA;
+.tool input:not([type=radio]):not([type=checkbox]),.tool select{width:100%;background:#0A0908;color:#F7F3EA;
   border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:13px 14px;font-size:16px;
   transition:border-color .25s var(--ease),box-shadow .25s var(--ease)}
 .tool input:focus,.tool select:focus{outline:2px solid #E19A2D;border-color:#E19A2D;

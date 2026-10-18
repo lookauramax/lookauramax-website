@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#000000">
-<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.ico?v=20261029" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <title>Find Your Hair Type Quiz: Free, Honest Result</title>
@@ -56,8 +56,17 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 .tool{background:#121214;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:26px;margin:24px 0}
 .q{margin:20px 0}
 .q strong{display:block;margin-bottom:8px}
-.q label{display:block;font-weight:400;margin:5px 0;cursor:pointer}
-.q input{margin-right:8px}
+.tool .q label{display:flex;align-items:center;gap:12px;background:#050505;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:13px 16px;margin:8px 0;cursor:pointer;color:#D9D2C4;font-weight:500;transition:border-color .18s ease,background .18s ease,box-shadow .18s ease}
+.tool .q label:hover{border-color:rgba(255,209,78,.65);background:#0E0C09}
+.tool .q label:has(input:checked){border-color:#FFD14E;background:rgba(255,209,78,.08);box-shadow:0 0 0 1px rgba(255,209,78,.35),0 8px 24px rgba(0,0,0,.35);color:#F7F3EA}
+.tool .q label:focus-within{border-color:#FFD14E;box-shadow:0 0 0 2px rgba(255,209,78,.4)}
+.tool .q input{width:20px;height:20px;min-height:0;margin:0;flex:0 0 auto;accent-color:#E19A2D;cursor:pointer}
+.quiz-progress{height:6px;background:rgba(255,255,255,.1);border-radius:999px;overflow:hidden;margin:4px 0 6px}
+.quiz-progress-fill{height:100%;width:0;background:linear-gradient(90deg,#FFD14E,#E19A2D);border-radius:999px;transition:width .3s ease}
+.quiz-progress-label{font-size:13px;color:#A9A29A;margin:0 0 4px}
+@keyframes quizResultIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.result.show{animation:quizResultIn .35s ease}
+@media(prefers-reduced-motion:reduce){.tool .q label,.quiz-progress-fill{transition:none}.result.show{animation:none}}
 .tool button{background:linear-gradient(135deg,#FFE9A3,#FFD14E 30%,#E19A2D 68%,#B97F1F);color:#171100;font-weight:800;padding:12px 22px;border:0;border-radius:999px;cursor:pointer;margin-top:16px;font-size:16px}
 .tool button:hover{filter:brightness(1.08)}
 .error{color:#FF8A8A;font-weight:700;margin-top:10px}
@@ -77,7 +86,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/base.css?v=20261028">
+<link rel="stylesheet" href="/assets/base.css?v=20261029">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/menu.js" defer></script>
@@ -124,6 +133,8 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 </ol>
 
 <div class="tool" id="quiz">
+<div class="quiz-progress" aria-hidden="true"><div class="quiz-progress-fill" id="quiz-progress-fill"></div></div>
+<p class="quiz-progress-label" id="quiz-progress-label">0 of 6 answered</p>
 <div class="q"><strong>1. Air-dry your hair with no products. What shape does it take?</strong>
 <label><input type="radio" name="q1" value="straight"> Falls straight, no bend or wave</label>
 <label><input type="radio" name="q1" value="wavy"> A loose S-shaped wave</label>
@@ -230,11 +241,20 @@ function showResult(){
   var best="straight",bestScore=-1;
   ["straight","wavy","curly","coily"].forEach(function(k){if(scores[k]>bestScore){bestScore=scores[k];best=k;}});
   var r=RESULTS[best];
-  var html="<div class='result'><h3>Your hair type: "+r.title+"</h3><p>"+r.desc+"</p><h3>General care checklist</h3><ul>";
+  var html="<div class='result show'><h3>Your hair type: "+r.title+"</h3><p>"+r.desc+"</p><h3>General care checklist</h3><ul>";
   r.care.forEach(function(c){html+="<li>"+c+"</li>";});
   html+="</ul><p class='note'>General information, not a diagnosis. Hair sits on a spectrum — if you feel between two types, follow the care advice that matches how your hair actually behaves day to day.</p></div>";
   out.innerHTML=html;
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){out.scrollIntoView({behavior:'smooth',block:'nearest'});}
 }
+/* Quiz progress: fills as questions are answered — the quiz feels live. */
+(function(){
+  var tool=document.getElementById('quiz');
+  var fill=document.getElementById('quiz-progress-fill'), label=document.getElementById('quiz-progress-label');
+  if(!tool||!fill||!label) return;
+  function upd(){var n=0;for(var i=1;i<=6;i++){if(document.querySelector("input[name='q"+i+"']:checked"))n++;}fill.style.width=(n/6*100)+'%';label.textContent=n+' of 6 answered';}
+  tool.addEventListener('change',upd); upd();
+})();
 </script>
   <script src="/assets/consent.js" defer></script>
 </body>
