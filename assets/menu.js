@@ -1,38 +1,186 @@
-/* Lookauramax mobile menu — vanilla JS, no libraries.
-   Toggle: button flips aria-expanded + panel .open + hidden.
-   Close: link tap (navigation), Escape (focus returns to button),
-   or tap outside the panel. No focus trap (per spec); focus
-   returns sanely on Escape. Also swaps <html> no-js -> js so CSS
-   can show the panel as a plain stacked nav when JS is off. */
+/* Lookauramax V4 shared JS — vanilla, no libraries.
+   Owns: overlay menu, smart header (hide on scroll-down / show on
+   scroll-up), gold scroll-progress line, scroll-spy active nav,
+   scroll reveals + stagger, honest-number counters, the Aura Score
+   ring fill, and the pricing region-switch transition.
+   Progressive enhancement everywhere: if JS fails, or
+   IntersectionObserver is missing, or the user prefers reduced
+   motion, the page stays fully visible with FINAL values shown.
+   pricing.js / consent.js / motion.js are untouched. */
 (function () {
   'use strict';
   document.documentElement.classList.replace('no-js', 'js');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO = 'IntersectionObserver' in window;
+
+  /* ---------- Overlay menu ---------- */
   var btn = document.querySelector('.menu-btn');
-  var nav = document.getElementById('mobile-nav');
-  if (!btn || !nav) return;
-  function close(returnFocus) {
-    nav.hidden = true;
+  var nav = document.getElementById('nav-overlay');
+  var header = document.querySelector('header');
+  function closeMenu(returnFocus) {
+    if (!nav || !btn) return;
     nav.classList.remove('open');
+    nav.setAttribute('aria-hidden', 'true');
+    nav.inert = true;
     btn.setAttribute('aria-expanded', 'false');
     btn.setAttribute('aria-label', 'Open menu');
+    document.documentElement.classList.remove('nav-open');
+    if (header) header.classList.remove('nav-open');
     if (returnFocus) btn.focus();
   }
-  function open() {
-    nav.hidden = false;
+  function openMenu() {
+    if (!nav || !btn) return;
     nav.classList.add('open');
+    nav.removeAttribute('aria-hidden');
+    nav.inert = false;
     btn.setAttribute('aria-expanded', 'true');
     btn.setAttribute('aria-label', 'Close menu');
+    document.documentElement.classList.add('nav-open');
+    if (header) { header.classList.remove('is-hidden'); header.classList.add('nav-open'); }
   }
-  btn.addEventListener('click', function () {
-    if (nav.hidden) open(); else close(false);
-  });
-  nav.addEventListener('click', function (e) {
-    if (e.target.closest('a')) close(false);
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !nav.hidden) close(true);
-  });
-  document.addEventListener('click', function (e) {
-    if (!nav.hidden && !nav.contains(e.target) && !btn.contains(e.target)) close(false);
-  });
+  if (btn && nav) {
+    nav.inert = true;
+    nav.setAttribute('aria-hidden', 'true');
+    btn.addEventListener('click', function () {
+      if (nav.classList.contains('open')) closeMenu(false); else openMenu();
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest('a') || e.target.closest('[data-nav-close]')) closeMenu(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) closeMenu(true);
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 901 && nav.classList.contains('open')) closeMenu(false);
+    });
+  }
+
+  /* ---------- Smart header + scroll progress (scroll-owned motion) ---------- */
+  var progress = document.getElementById('scroll-progress');
+  var lastY = window.scrollY;
+  var ticking = false;
+  function onScroll() {
+    var y = window.scrollY;
+    var menuOpen = !!(nav && nav.classList.contains('open'));
+    if (header && !menuOpen) {
+      if (y > 160 && y > lastY + 4) header.classList.add('is-hidden');
+      else if (y < lastY - 4 || y <= 160) header.classList.remove('is-hidden');
+    }
+    if (progress && !reduce) {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? Math.min(1, Math.max(0, y / max)) : 0;
+      progress.style.transform = 'scaleX(' + p.toFixed(3) + ')';
+    }
+    lastY = y;
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
+  onScroll();
+
+  /* ---------- Scroll-spy: gold underline draws under the active nav link ---------- */
+  if (hasIO && header) {
+    var spyMap = {};
+    header.querySelectorAll('.hlinks a[href^="#"]').forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) spyMap[id] = a;
+    });
+    var spyIds = Object.keys(spyMap);
+    if (spyIds.length) {
+      var spyIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          spyIds.forEach(function (id) { spyMap[id].removeAttribute('aria-current'); });
+          var link = spyMap[e.target.id];
+          if (link) link.setAttribute('aria-current', 'true');
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+      spyIds.forEach(function (id) {
+        var sec = document.getElementById(id);
+        if (sec) spyIO.observe(sec);
+      });
+    }
+  }
+
+  /* ---------- Scroll reveals + stagger (final states live in HTML/CSS;
+     JS only animates INTO them) ---------- */
+  if (!reduce && hasIO) {
+    document.documentElement.classList.add('js-motion');
+    var revealIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-revealed');
+        var kids = e.target.querySelectorAll('[data-stagger]');
+        kids.forEach(function (k, i) {
+          k.style.transitionDelay = (i * 70) + 'ms';
+          k.classList.add('is-revealed');
+        });
+        revealIO.unobserve(e.target);
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { revealIO.observe(el); });
+  }
+
+  /* ---------- Honest-number counters (real values only: 90, 7, 78) ---------- */
+  function runCounter(el) {
+    var end = parseInt(el.getAttribute('data-count'), 10);
+    if (isNaN(end)) return;
+    if (reduce) return; /* final value already in the HTML */
+    var suffix = el.getAttribute('data-suffix') || '';
+    var dur = 1000;
+    var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var t = Math.min(1, (ts - start) / dur);
+      var eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = String(Math.round(end * eased)) + suffix;
+      if (t < 1) window.requestAnimationFrame(step);
+      else el.textContent = String(end) + suffix;
+    }
+    window.requestAnimationFrame(step);
+  }
+  var counters = document.querySelectorAll('[data-count]');
+  if (counters.length && hasIO && !reduce) {
+    var countIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        runCounter(e.target);
+        countIO.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(function (el) { countIO.observe(el); });
+  }
+
+  /* ---------- Aura Score ring: fills on scroll into view ---------- */
+  var journey = document.querySelector('.journey');
+  var ringFill = document.querySelector('.jp-fill');
+  if (journey && ringFill && hasIO && !reduce) {
+    /* Start empty (CSS keeps the full ring as the no-JS / reduced-motion
+       fallback). On scroll into view, transition cleanly to full. */
+    ringFill.style.strokeDashoffset = '326.7';
+    var ringIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        ringFill.style.strokeDashoffset = '71.9';
+        ringIO.unobserve(e.target);
+      });
+    }, { threshold: 0.3 });
+    ringIO.observe(journey);
+  }
+
+  /* ---------- Pricing region switch: sliding indicator + price swap ---------- */
+  var region = document.getElementById('pricing-region');
+  if (region) {
+    region.addEventListener('change', function () {
+      var wrap = region.closest('.region-select');
+      var prices = document.getElementById('pricing-us');
+      if (wrap) wrap.classList.add('is-switching');
+      if (prices) prices.classList.add('is-switching');
+      window.setTimeout(function () {
+        if (wrap) wrap.classList.remove('is-switching');
+        if (prices) prices.classList.remove('is-switching');
+      }, 450);
+    });
+  }
 })();

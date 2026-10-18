@@ -43,7 +43,7 @@
 .lam-consent-accept,
 .lam-consent-decline {
   appearance: none;
-  border-radius: 999px;
+  border-radius: 12px;
   padding: 11px 20px;
   font: inherit;
   font-size: 15px;
@@ -52,17 +52,21 @@
   min-height: 44px;
 }
 
-/* Accept: gold. Decline: equal size and prominence, outlined — no dark pattern. */
+/* Accept: metallic gold (gradient + inset highlight + glow) — never a
+   flat orange slab. Decline: equal size and prominence, outlined —
+   no dark pattern. */
 .lam-consent-accept {
-  background: #E19A2D;
-  color: #000000;
-  border: 2px solid #E19A2D;
+  background: linear-gradient(180deg, #FFE9A3 0%, #FFD14E 30%, #E19A2D 70%, #B07E1F 100%);
+  color: #1A1204;
+  border: 1px solid rgba(255, 209, 78, 0.65);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 0 rgba(0, 0, 0, 0.28),
+    0 8px 22px rgba(225, 154, 45, 0.35);
 }
 
 .lam-consent-decline {
   background: transparent;
   color: #FFFFFF;
-  border: 2px solid #FFFFFF;
+  border: 1px solid rgba(255, 209, 78, 0.55);
 }
 
 .lam-consent-policy {
@@ -71,8 +75,8 @@
   font-size: 14px;
 }
 
-.lam-consent-accept:hover { background: #FFD14E; border-color: #FFD14E; }
-.lam-consent-decline:hover { background: rgba(255, 255, 255, 0.12); }
+.lam-consent-accept:hover { filter: brightness(1.06); border-color: #FFD14E; }
+.lam-consent-decline:hover { background: rgba(225, 154, 45, 0.10); border-color: rgba(255, 209, 78, 0.8); }
 
 .lam-consent-accept:focus-visible,
 .lam-consent-decline:focus-visible,
