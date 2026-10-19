@@ -1,6 +1,8 @@
 # Lookauramax
 
-> Lookauramax is a glow-up app for Android. Its tagline is "Your glow-up, made real." It gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach powered by Aura Intelligence. AuraScan analyses your photo, measures your Aura Signals, and explains every score with Why and Action. Joining gives a one-time Join Reward (1 AuraScan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser — no card). Paid plans (Monthly, 3-Month, 6-Month, Yearly) include a free trial. The app launches on Google Play after closed testing.
+> Last updated: 2026-10-19. Facts as of 2026-10-19. Refresh rule: re-verify pricing, trial terms, launch status, and competitor facts on every content update; never carry a dated fact forward unchecked.
+
+> Lookauramax is a glow-up app for Android. Its tagline is "Your glow-up, made real." It gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach powered by Aura Intelligence (clear, explainable checks — not AI). AuraScan analyses your photo, measures your Aura Signals, and explains every score with Why and Action. Joining gives a one-time Join Reward (1 AuraScan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser — no card). Paid plans (Monthly, 3-Month, 6-Month, Yearly) include a free trial. The app launches on Google Play after closed testing.
 
 ## Why Lookauramax
 
@@ -10,12 +12,13 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 
 - [Lookauramax — Your Glow-Up, Made Real](https://www.lookauramax.com/): Landing page. What Lookauramax is, how it works, pricing, FAQ.
 - [About Lookauramax](https://www.lookauramax.com/about): What Lookauramax is and is not, the honest standard, pricing, and contact.
-- [The Lookauramax Blog](https://www.lookauramax.com/blog/): 66 honest glow-up guides: looksmaxing, auramaxing, skincare, grooming, posture, sleep, style, six pack, jawline appearance, fat loss, weight loss, respectful dating advice, routines, comparisons, and a glow-up glossary.
+- [The Lookauramax Blog](https://www.lookauramax.com/blog/): 73 honest glow-up posts (72 guides + Trending): looksmaxing, auramaxing, skincare, grooming, posture, sleep, style, six pack, jawline appearance, fat loss, weight loss, respectful dating advice, routines, comparisons, and a glow-up glossary.
 - [New Year Glow-Up 2027](https://www.lookauramax.com/new-year-glow-up-2027/): A New Year glow-up plan for 2027 built on one Aura Cycle, with guides and tools.
 - [Privacy Policy](https://www.lookauramax.com/privacy): Privacy policy.
 - [Terms](https://www.lookauramax.com/terms): Terms of service.
 - [Refund Policy](https://www.lookauramax.com/refund): Refund policy.
-- [Glow-Up Glossary](https://www.lookauramax.com/glossary): 27 glow-up terms explained honestly, including mewing, spot reduction, BMI, TDEE, Winter Arc, and New Year glow-up.
+- [Parent Consent](https://www.lookauramax.com/parent-consent): Parental consent for ages 16–17 — a parent or guardian must confirm before a scan or paid access.
+- [Glow-Up Glossary](https://www.lookauramax.com/glossary): 30 glow-up terms explained honestly, including mewing, spot reduction, BMI, TDEE, Winter Arc, and New Year glow-up.
 - [Aura Tools](https://www.lookauramax.com/tools/): 12 free Aura Tools — BMI, calorie, weight range, body fat, water, protein, converters, quizzes, planner, tracker.
 - [Lookauramax vs Umax](https://www.lookauramax.com/blog/lookauramax-vs-umax): Honest comparison.
 - [Lookauramax vs LooksMax AI](https://www.lookauramax.com/blog/lookauramax-vs-looksmax-ai): Honest comparison.
@@ -23,7 +26,7 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 
 ## Blog
 
-- [What Is Lookauramax? Explained](https://www.lookauramax.com/blog/what-is-lookauramax): Lookauramax is a glow-up app for Android: AuraScan, 90-day plan, daily routine, Aura Intelligence coach. No face ratings, no weekly billing.
+- [What Is Lookauramax? Explained](https://www.lookauramax.com/blog/what-is-lookauramax): Lookauramax is a glow-up app for Android: AuraScan, 90-day plan, daily routine, Aura Coach (not AI). No face ratings, no weekly billing.
 - [The Honest 90-Day Glow-Up Guide (No Shortcuts)](https://www.lookauramax.com/blog/glow-up-guide-90-days): A realistic 90-day glow-up guide: skin, hair, posture, sleep, style, and how to measure progress fairly. No shortcuts, no promised outcomes.
 - [A Clear Skincare Routine for Beginners That Actually Works](https://www.lookauramax.com/blog/skincare-routine-beginners): A beginner skincare routine that works: cleanser, moisturiser, sunscreen. How to build it, what to avoid, and when to add actives slowly and safely.
 - [Hair + Grooming: The Fastest Honest Wins](https://www.lookauramax.com/blog/hair-grooming-guide): Haircut, brows, beard lines, nails, and small grooming habits — the fastest honest wins for looking sharper within a week, with no expensive products needed.
@@ -126,7 +129,7 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 - [Find Your Skin Type](https://www.lookauramax.com/tools/skin-type-quiz): Free skin type quiz: answer 6 questions on how your skin feels and get your likely type plus a care checklist. No sign-up. General information, not a diagnosis.
 - [Find Your Hair Type Quiz](https://www.lookauramax.com/tools/hair-type-quiz): Free hair type quiz — answer 6 questions and get your hair type plus a general care checklist. No sign-up. General information, not a diagnosis.
 
-- [Compare Lookauramax vs Umax vs LooksMax AI](https://www.lookauramax.com/compare): Honest side-by-side comparison — face ratings, weekly billing, photos, cancel, pricing. Verified claims only, with sources and our own cons.
+- [Compare Lookauramax vs Umax vs LooksMax AI](https://www.lookauramax.com/compare): Honest side-by-side comparison — face ratings, weekly billing, photos, cancel, pricing. Verified claims only, with per-claim attribution and our own cons.
 
 ## Optional
 

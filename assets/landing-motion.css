@@ -1,0 +1,119 @@
+/* landing-motion.css — homepage-only motion for the 12 logic-driven improvements.
+   Loads after base.css + motion.css. Content is visible by default; JS only
+   adds animation states, so a JS failure never hides content. All motion
+   dies under prefers-reduced-motion (JS early-returns there too). Colours:
+   black + charcoal + gold only. No orange, no cream, no light surfaces. */
+
+/* ---------- #1 Hero reveal: tighten the pre-existing word rise to 450ms,
+   hero only. Legal pages (privacy/refund/terms) also use .k-word and keep
+   the base 900ms timing. The 5th word had no stagger delay; give it one. */
+.hero .k-inner{animation-duration:.45s}
+.hero .k-word:nth-of-type(5) .k-inner{animation-delay:.56s}
+
+/* ---------- #2 Word rotator (under the hero) ---------- */
+.hero-rotator{margin:18px auto 0;text-align:center;font-size:16px;color:var(--mut)}
+.rotator-word{display:inline-block;color:var(--gold-l);font-weight:700;transition:opacity .3s ease,transform .3s ease}
+.rotator-word.is-out{opacity:0;transform:translateY(6px)}
+
+/* ---------- #4 Value shuffle (one pass, then settles) ---------- */
+.value-shuffle{margin:26px auto 0;text-align:center;font-size:15.5px;color:var(--txt)}
+.value-shuffle-word{display:inline-block;font-weight:600;transition:opacity .35s ease,transform .35s ease}
+.value-shuffle-word.is-out{opacity:0;transform:translateY(4px)}
+
+/* ---------- #5 Honest count-up stats ---------- */
+.stats-strip{padding:48px 0 8px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:960px;margin:0 auto;text-align:center}
+.stat{background:linear-gradient(180deg,#171410,#0E0C0A);border:1px solid var(--line-soft);border-radius:var(--r-lg);padding:24px 12px}
+.stat-num{display:block;font-family:"Space Grotesk",sans-serif;font-size:40px;line-height:1;color:var(--gold-l)}
+.stat span{display:block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-top:8px}
+@media(max-width:720px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- #6 Bento grid (8 real features) ---------- */
+.bento-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.bento-tile{background:linear-gradient(180deg,#171410,#0E0C0A);border:1px solid var(--line-soft);border-radius:var(--r-lg);padding:24px}
+.bento-tile:hover{border-color:rgba(255,209,78,.5)}
+.bento-wide{grid-column:span 2}
+.bento-num{display:block;font-family:"Space Grotesk",sans-serif;font-size:12px;letter-spacing:.22em;color:#FFD14E;font-weight:800}
+.bento-tile h3{font-size:18px;margin:12px 0 8px}
+.bento-tile p{color:var(--mut);font-size:14.5px;margin:0}
+.bento-anim .bento-tile{opacity:0;transform:translateY(14px) scale(.98);transition:opacity .5s ease,transform .5s ease}
+.bento-anim.in-view .bento-tile{opacity:1;transform:none}
+.bento-anim .bento-tile:nth-child(1){transition-delay:0ms}
+.bento-anim .bento-tile:nth-child(2){transition-delay:70ms}
+.bento-anim .bento-tile:nth-child(3){transition-delay:140ms}
+.bento-anim .bento-tile:nth-child(4){transition-delay:210ms}
+.bento-anim .bento-tile:nth-child(5){transition-delay:280ms}
+.bento-anim .bento-tile:nth-child(6){transition-delay:350ms}
+.bento-anim .bento-tile:nth-child(7){transition-delay:420ms}
+.bento-anim .bento-tile:nth-child(8){transition-delay:490ms}
+@media(max-width:900px){.bento-grid{grid-template-columns:repeat(2,1fr)}.bento-wide{grid-column:span 2}}
+@media(max-width:560px){.bento-grid{grid-template-columns:1fr}.bento-wide{grid-column:span 1}}
+
+/* ---------- #7 Cursor tour hint (JS-created, visual only) ---------- */
+.lam-cursor{position:fixed;z-index:120;width:26px;height:26px;pointer-events:none;opacity:0;transition:left .7s cubic-bezier(.22,1,.36,1),top .7s cubic-bezier(.22,1,.36,1),opacity .3s ease;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
+.lam-cursor.is-shown{opacity:1}
+.lam-cursor svg{width:100%;height:100%;display:block}
+.lam-ripple{position:fixed;z-index:119;width:36px;height:36px;border:2px solid var(--gold-l);border-radius:50%;pointer-events:none;opacity:.9;transform:translate(-50%,-50%) scale(.4);transition:transform .4s ease,opacity .4s ease}
+.lam-ripple.is-out{transform:translate(-50%,-50%) scale(1.4);opacity:0}
+
+/* ---------- #8 Process draw (gold line through the How steps) ---------- */
+#how .steps{position:relative}
+.how-line{position:absolute;left:14px;top:28px;width:2px;height:calc(100% - 56px);overflow:visible;pointer-events:none}
+.how-line line{stroke:#E19A2D;stroke-width:2;stroke-linecap:round;stroke-dasharray:100;transition:stroke-dashoffset .9s var(--ease-out)}
+.how-line.is-hidden line{stroke-dashoffset:100}
+
+/* ---------- #9 Before/after slider (Guesswork vs Measured, text only) ---------- */
+.ba-wrap{position:relative;max-width:860px;margin:28px auto 0;border:1px solid var(--line-soft);border-radius:var(--r-lg);overflow:hidden;min-height:340px;background:#0E0C0A}
+.ba-panel{position:absolute;inset:0;padding:28px;z-index:1}
+.ba-guess{background:linear-gradient(180deg,#141110,#0E0C0A)}
+.ba-measured{background:linear-gradient(180deg,#1A1408,#12100A);clip-path:inset(0 0 0 50%)}
+.ba-tag{display:inline-block;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--gold-l)}
+.ba-panel h3{font-size:21px;margin:12px 0 8px}
+.ba-panel ul{list-style:none;margin:14px 0 0;padding:0}
+.ba-panel li{position:relative;padding:6px 0 6px 22px;color:var(--mut);font-size:15px}
+.ba-panel li::before{content:"";position:absolute;left:0;top:15px;width:10px;height:2px;background:var(--mut2)}
+.ba-measured li::before{background:var(--gold-l)}
+.ba-measured li{color:var(--txt)}
+#ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:3;margin:0}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--gold-metal);transform:translateX(-50%);pointer-events:none;z-index:2}
+.ba-handle::after{content:"";position:absolute;top:50%;left:50%;width:34px;height:34px;border:2px solid var(--gold-l);border-radius:50%;background:#0E0C0A;transform:translate(-50%,-50%)}
+#ba-range:focus-visible + .ba-handle{outline:2px solid var(--gold-l);outline-offset:2px}
+.ba-note{text-align:center;color:var(--mut);font-size:14px;margin:16px auto 0;max-width:640px}
+@media(max-width:560px){.ba-wrap{min-height:460px}.ba-panel{padding:22px 18px}}
+
+/* ---------- #3 Milestone pings (true site facts, stack in once) ---------- */
+.milestone-pings{display:flex;flex-direction:column;gap:10px;align-items:center;margin:0 auto 26px;max-width:640px}
+.ping{display:flex;align-items:center;gap:10px;background:#0E0C0A;border:1px solid var(--line-soft);border-radius:999px;padding:10px 18px;font-size:14.5px;font-weight:600}
+.ping-dot{width:8px;height:8px;border-radius:50%;background:var(--gold-metal);flex:none}
+.pings-anim .ping{opacity:0;transform:translateY(10px);transition:opacity .45s ease,transform .45s ease}
+.pings-anim.in-view .ping{opacity:1;transform:none}
+.pings-anim .ping:nth-child(1){transition-delay:0ms}
+.pings-anim .ping:nth-child(2){transition-delay:180ms}
+.pings-anim .ping:nth-child(3){transition-delay:360ms}
+.pings-anim .ping:nth-child(4){transition-delay:540ms}
+
+/* ---------- #11 Us vs them ---------- */
+.us-note{text-align:center;color:var(--mut);font-size:15px;margin:8px auto 0;max-width:640px}
+.us-table-wrap{max-width:820px;margin:28px auto 0;overflow-x:auto}
+.us-table{width:100%;border-collapse:collapse;text-align:left}
+.us-table th,.us-table td{padding:14px 16px;border-bottom:1px solid var(--line-soft);font-size:15px}
+.us-table thead th{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-l)}
+.us-table tbody th{font-weight:600}
+.us-table td{text-align:center}
+.us-table .us-yes{color:var(--gold-l);font-weight:700}
+.us-foot{text-align:center;color:var(--mut);font-size:13.5px;margin:14px auto 0;max-width:640px}
+@media(max-width:560px){.us-table th,.us-table td{padding:10px 8px;font-size:13.5px}}
+
+/* ---------- #10 Price roll (odometer) ---------- */
+.od-col{display:inline-block;overflow:hidden;height:1em;line-height:1;vertical-align:text-bottom}
+.od-strip{display:flex;flex-direction:column;transition:transform .5s cubic-bezier(.22,1,.36,1);will-change:transform}
+.od-strip span{display:block;height:1em;line-height:1}
+.od-static{display:inline-block}
+
+/* ---------- Reduced motion: all new motion off, content visible ---------- */
+@media (prefers-reduced-motion:reduce){
+  .hero .k-inner,.rotator-word,.value-shuffle-word,.bento-tile,.ping,.how-line line,.od-strip{animation:none!important;transition:none!important}
+  .bento-anim .bento-tile,.pings-anim .ping{opacity:1!important;transform:none!important}
+  .how-line.is-hidden line{stroke-dashoffset:0!important}
+  .lam-cursor,.lam-ripple{display:none!important}
+}

@@ -137,31 +137,54 @@
     if (el) el.innerHTML = html;
   }
 
-  function render(code) {
+  /* Price roll (#10): on a user-initiated region change ONLY, route the
+   * price/per figures through the odometer hook (landing-motion.js), which
+   * animates the digits and then restores the exact HTML below. Initial
+   * render never rolls; renewal lines never roll. If the hook is absent
+   * (other pages, JS failure), behaviour is exactly the old setText/setHtml. */
+  function setPrice(sel, html, roll) {
+    var el = document.querySelector(sel);
+    if (!el) return;
+    if (roll && window.__lamPriceRoll) { window.__lamPriceRoll(el, html); return; }
+    el.innerHTML = html;
+  }
+  function setPriceText(sel, text, roll) {
+    var el = document.querySelector(sel);
+    if (!el) return;
+    if (roll && window.__lamPriceRoll) { window.__lamPriceRoll(el, text); return; }
+    el.textContent = text;
+  }
+
+  function render(code, opts) {
+    var roll = !!(opts && opts.roll);
     var m = MARKETS[code] || MARKETS.US;
     var qSave = savePct(3, m.monthly, m.q);
     var hSave = savePct(6, m.monthly, m.h);
     var ySave = savePct(12, m.monthly, m.y);
     var save2x = Math.floor((2 * m.q - m.h) / (2 * m.q) * 100);
 
-    setText('[data-price="monthly"]', fmt(m, m.monthly));
-    setHtml('[data-price="quarterly"]', fmt(m, m.q) + ' <small>total</small>');
-    setHtml('[data-price="halfyearly"]', fmt(m, m.h) + ' <small>total</small>');
-    setHtml('[data-price="yearly"]', fmt(m, m.y) + ' <small>total</small>');
+    setPriceText('[data-price="monthly"]', fmt(m, m.monthly), roll);
+    setPrice('[data-price="quarterly"]', fmt(m, m.q) + ' <small>total</small>', roll);
+    setPrice('[data-price="halfyearly"]', fmt(m, m.h) + ' <small>total</small>', roll);
+    setPrice('[data-price="yearly"]', fmt(m, m.y) + ' <small>total</small>', roll);
 
-    setText('[data-per="monthly"]', fmt(m, m.monthly) + ' / month · billed monthly');
-    setHtml('[data-per="quarterly"]',
-      fmt(m, m.q / 3) + ' / month · Save ' + qSave + '%<br>One full 90-day cycle');
-    setHtml('[data-per="halfyearly"]',
-      fmt(m, m.h / 6) + ' / month · Save ' + hSave + '%<br>Two full 90-day cycles');
-    setHtml('[data-per="yearly"]',
-      fmt(m, m.y / 12) + ' / month · Save ' + ySave + '%<br>Lowest per-month cost');
+    setPriceText('[data-per="monthly"]', fmt(m, m.monthly) + ' / month · billed monthly', roll);
+    setPrice('[data-per="quarterly"]',
+      fmt(m, m.q / 3) + ' / month · Save ' + qSave + '%<br>One full 90-day cycle', roll);
+    setPrice('[data-per="halfyearly"]',
+      fmt(m, m.h / 6) + ' / month · Save ' + hSave + '%<br>Two full 90-day cycles', roll);
+    setPrice('[data-per="yearly"]',
+      fmt(m, m.y / 12) + ' / month · Save ' + ySave + '%<br>Lowest per-month cost', roll);
     setText('[data-save2x]', 'Save ' + save2x + '% vs 2× 3-Month');
+    setText('[data-renew="monthly"]', 'then ' + fmt(m, m.monthly) + ' every month unless you cancel');
+    setText('[data-renew="quarterly"]', 'then ' + fmt(m, m.q) + ' every 3 months unless you cancel');
+    setText('[data-renew="halfyearly"]', 'then ' + fmt(m, m.h) + ' every 6 months unless you cancel');
+    setText('[data-renew="yearly"]', 'then ' + fmt(m, m.y) + ' every year unless you cancel');
   }
 
   var select = document.getElementById('pricing-region');
   if (!select) return;
   select.value = detectMarket();
   render(select.value);
-  select.addEventListener('change', function () { render(select.value); });
+  select.addEventListener('change', function () { render(select.value, { roll: true }); });
 })();
