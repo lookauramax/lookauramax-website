@@ -468,6 +468,21 @@ footer{border-top:1px solid var(--line);padding:64px 0 32px;color:#B9B2A4;
 .js-parallax .hero-photo img{top:-6%;bottom:auto;height:112%}
 .hero-photo:after{content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.25) 40%,rgba(0,0,0,.85))}
+/* --- Hero background on phones: composed band, never a sliced face. ---
+   A 2.33:1 image stretched over a ~1200px-tall phone hero shows only
+   a ~14%-wide vertical slice, which cuts through the man's face no
+   matter the object-position. So on phones the photo becomes a
+   fixed-height top band: the full face stays composed in frame (72%
+   horizontal centres the face core), the gradient fades to solid
+   black at the band edge, and the rest of the hero is clean black.
+   The parallax 112% headroom is neutralised inside the band so no
+   edge can ever show. */
+@media (max-width:640px){
+  .hero-photo{height:560px;bottom:auto}
+  .hero-photo img{height:100%;object-position:72% center}
+  .js-parallax .hero-photo img{top:0;height:100%}
+  .hero-photo:after{background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.25) 35%,rgba(0,0,0,.85) 75%,#000 100%)}
+}
 /* (Hero halo rings removed in the hero redesign: the phone sits clean
    on black — no absolute decorative rings to misalign across widths.) */
 .hero-chip{position:absolute;z-index:2;display:flex;align-items:center;gap:8px;
