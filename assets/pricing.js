@@ -112,13 +112,13 @@
   }
 
   /* Whole amounts show no decimals (₹199, Mex$99); fractional amounts
-   * show 2 decimals ($5.00, ₹99.83); zero-decimal markets round whole. */
-  function fmt(m, value) {
+   * show 2 decimals ($4.99, ₹99.83); zero-decimal markets round whole. */
+  function fmt(m, value, floorIt) {
     if (m.decimals === 0) return m.symbol + groupThousands(Math.round(value));
     /* Exact whole amounts show no decimals (₹199, ₹133); anything that
      * merely ROUNDS to whole still shows 2 decimals ($5.00, not $5). */
     if (Number.isInteger(value)) return m.symbol + groupThousands(value);
-    var rounded = Math.round(value * 100) / 100;
+    var rounded = (floorIt ? Math.floor(value * 100 + 1e-9) : Math.round(value * 100)) / 100;
     var parts = rounded.toFixed(2).split('.');
     return m.symbol + groupThousands(parts[0]) + '.' + parts[1];
   }
@@ -170,11 +170,11 @@
 
     setPriceText('[data-per="monthly"]', fmt(m, m.monthly) + ' / month · billed monthly', roll);
     setPrice('[data-per="quarterly"]',
-      fmt(m, m.q / 3) + ' / month · Save ' + qSave + '%<br>One full 90-day cycle', roll);
+      fmt(m, m.q / 3, true) + ' / month · Save ' + qSave + '%<br>One full 90-day cycle', roll);
     setPrice('[data-per="halfyearly"]',
-      fmt(m, m.h / 6) + ' / month · Save ' + hSave + '%<br>Two full 90-day cycles', roll);
+      fmt(m, m.h / 6, true) + ' / month · Save ' + hSave + '%<br>Two full 90-day cycles', roll);
     setPrice('[data-per="yearly"]',
-      fmt(m, m.y / 12) + ' / month · Save ' + ySave + '%<br>Lowest per-month cost', roll);
+      fmt(m, m.y / 12, true) + ' / month · Save ' + ySave + '%<br>Lowest per-month cost', roll);
     setText('[data-save2x]', 'Save ' + save2x + '% vs 2× 3-Month');
     setText('[data-renew="monthly"]', 'then ' + fmt(m, m.monthly) + ' every month unless you cancel');
     setText('[data-renew="quarterly"]', 'then ' + fmt(m, m.q) + ' every 3 months unless you cancel');
