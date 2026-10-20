@@ -78,7 +78,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/base.css?v=20261105">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
@@ -175,7 +175,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 
 <div class="cta">
 <h2>Turn one number into a daily plan</h2>
-<p>Join Lookauramax for your one-time Join Reward: 1 AuraScan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser — no card.</p>
+<p>Join the launch list and get one email on launch day. Your honest starting point is one AuraScan away.</p>
 <a class="btn" href="https://www.lookauramax.com/#pricing">See plans →</a>
 </div>
 
@@ -190,6 +190,22 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <li><strong>No fake promises</strong> — 90-day Aura Cycles, no guaranteed transformations, and our own cons published in the <a href="/blog/best-glow-up-apps">comparisons</a>.</li>
 </ul>
 </aside>
+
+<div class="methodology">
+<h2>How this tool works</h2>
+<p>This calculator works out your Body Mass Index (BMI): your weight in kilograms divided by your height in metres squared (kg/m²). It then reads the result against the standard World Health Organization bands.</p>
+<h3>Rules and assumptions</h3>
+<ul>
+<li>Underweight: below 18.5</li>
+<li>Healthy range: 18.5–24.9</li>
+<li>Overweight: 25–29.9</li>
+<li>Obese: 30 and above</li>
+<li>Inputs are validated: height 100–250 cm, weight 25–400 kg.</li>
+</ul>
+<h3>Limitations</h3>
+<p>BMI is a population screening measure, not a measurement of body composition. A muscular build reads high, and BMI says nothing about where fat is carried or about fitness. Treat the band as a starting point for a conversation, not a verdict — and speak to a qualified professional for medical questions.</p>
+<p class="method-next"><strong>Next step:</strong> For the weight range behind the healthy band, open the <a href="/tools/healthy-weight-range">Healthy Weight Range</a>. Background reading: <a href="https://www.lookauramax.com/blog/fat-loss-guide">Fat Loss: The Honest Guide</a>, <a href="https://www.lookauramax.com/blog/gain-weight-guide">How to Gain Weight, Healthily</a>.</p>
+</div>
 
 <div class="faq">
 <h2>Frequently asked questions</h2>
@@ -265,6 +281,7 @@ function calcBMI(){
   document.getElementById('result').classList.add('show');
 }
 </script>
-  <script src="/assets/consent.js" defer></script>
+  <script src="/assets/ga-events.js" defer></script>
+<script src="/assets/consent.js" defer></script>
 </body>
 </html>

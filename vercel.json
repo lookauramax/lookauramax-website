@@ -44,5 +44,12 @@
       "source": "/parent-consent"
     }
   ],
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/blog/glow-up-guide-women",
+      "destination": "/blog/glow-up-guide-for-men",
+      "permanent": true
+    }
+  ]
 }

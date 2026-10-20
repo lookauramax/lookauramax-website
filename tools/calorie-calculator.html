@@ -75,7 +75,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/base.css?v=20261105">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
@@ -166,7 +166,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 
 <div class="cta">
 <h2>Turn calories into a daily plan</h2>
-<p>Join Lookauramax for your one-time Join Reward: 1 AuraScan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser — no card.</p>
+<p>Join the launch list and get one email on launch day. Your honest starting point is one AuraScan away.</p>
 <a class="btn" href="https://www.lookauramax.com/#pricing">See plans →</a>
 </div>
 
@@ -181,6 +181,19 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <li><strong>No fake promises</strong> — 90-day Aura Cycles, no guaranteed transformations, and our own cons published in the <a href="/blog/best-glow-up-apps">comparisons</a>.</li>
 </ul>
 </aside>
+
+<div class="methodology">
+<h2>How this tool works</h2>
+<p>This calculator estimates your daily calorie needs (TDEE) using the Mifflin-St Jeor equation — 10 × weight(kg) + 6.25 × height(cm) − 5 × age, plus 5 for men or −161 for women — multiplied by an activity factor for your day. It then shows a suggested range: maintenance, a moderate deficit for fat loss, or a small surplus for gaining.</p>
+<h3>Rules and assumptions</h3>
+<ul>
+<li>Activity multipliers run from sedentary (×1.2) to very active (×1.9); pick the level that matches your typical week, not your best day.</li>
+<li>The suggested fat-loss range sits around 500 kcal below maintenance; the gaining range around 300 kcal above.</li>
+</ul>
+<h3>Limitations</h3>
+<p>Every equation is an estimate — real expenditure varies by roughly 10–15% between individuals. Use the number as a starting point, track your weight trend for two to three weeks, and adjust. This tool is not medical or dietetic advice.</p>
+<p class="method-next"><strong>Next step:</strong> Set your protein target next with the <a href="/tools/protein-calculator">Daily Protein Calculator</a>. Background reading: <a href="https://www.lookauramax.com/blog/fat-loss-guide">Fat Loss: The Honest Guide</a>, <a href="https://www.lookauramax.com/blog/build-muscle-guide">How to Build Muscle: The Honest Beginner Guide</a>.</p>
+</div>
 
 <div class="faq">
 <h2>Frequently asked questions</h2>
@@ -242,6 +255,7 @@ function calcTDEE(){
   document.getElementById('result').classList.add('show');
 }
 </script>
-  <script src="/assets/consent.js" defer></script>
+  <script src="/assets/ga-events.js" defer></script>
+<script src="/assets/consent.js" defer></script>
 </body>
 </html>

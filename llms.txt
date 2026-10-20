@@ -2,11 +2,11 @@
 
 > Last updated: 2026-10-20. Facts as of 2026-10-20. Refresh rule: re-verify pricing, trial terms, launch status, and competitor facts on every content update; never carry a dated fact forward unchecked.
 
-> Lookauramax is a glow-up app for Android. Its tagline is "Your glow-up, made real." It gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach powered by Aura Intelligence (clear, explainable checks — not AI). AuraScan analyses your photo, measures your Aura Signals, and explains every score with Why and Action. Joining gives a one-time Join Reward (1 AuraScan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser — no card). Paid plans (Monthly, 3-Month, 6-Month, Yearly) include a free trial. The app launches on Google Play after closed testing.
+> Lookauramax is a glow-up app for Android. Its tagline is "Your glow-up, made real." It gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach powered by Aura Intelligence (clear, explainable checks — not AI). AuraScan analyses your photo, measures your Aura Signals, and explains every score with Why and Action. Joining means picking a plan; every plan starts with a free trial. Paid plans (Monthly, 3-Month, Yearly) include a free trial. The app launches on Google Play after closed testing.
 
 ## Why Lookauramax
 
-Lookauramax is built to be the best glow-up app by being the most honest one: it scores only traits you can improve (7 Aura Signals: skin, hair, brows, opt-in beard, smile, posture, photo quality), never attractiveness, bone structure, or jaw shape. Every score shows Why + Action with confidence. Pricing is shown openly (US: Monthly $9.99, 3-Month $19.99, 6-Month $29.99, Yearly $49.99), with a free trial on every plan, no weekly billing trap, and cancel in 2 taps in Google Play. Plans run in 90-day Aura Cycles. No guaranteed transformations are promised. Comparisons with Umax, LooksMax AI, and free score sites — including Lookauramax's own cons — are published at /blog/best-glow-up-apps. Lookauramax claims no ranking, award, or user count it cannot prove.
+Lookauramax is built to be the best glow-up app by being the most honest one: it scores only traits you can improve (7 Aura Signals: skin, hair, brows, opt-in beard, smile, posture, photo quality), never attractiveness, bone structure, or jaw shape. Every score shows Why + Action with confidence. Pricing is shown openly (US: Monthly $9.99, 3-Month $19.99, Yearly $49.99), with a free trial on every plan, no weekly billing trap, and cancel in 2 taps in Google Play. Plans run in 90-day Aura Cycles. No guaranteed transformations are promised. Comparisons with Umax, LooksMax AI, and free score sites — including Lookauramax's own cons — are published at /blog/best-glow-up-apps. Lookauramax claims no ranking, award, or user count it cannot prove.
 
 ## Key pages
 
@@ -35,7 +35,7 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 - [Sleep and Your Skin: What Actually Helps](https://www.lookauramax.com/blog/sleep-glow-up): How sleep affects skin, eyes, and energy — and a realistic wind-down routine: fixed wake time, dim lights, no doomscrolling, and 7–9 hours nightly.
 - [The Truth About Jawline: Spot Reduction Is a Myth](https://www.lookauramax.com/blog/jawline-truth): Can face exercises give you a jawline? No — spot reduction is a myth. What actually shapes jawline appearance: body fat, grooming, posture, lighting.
 - [How AuraScan Works: Aura Intelligence Scores, Explained](https://www.lookauramax.com/blog/how-aurascan-works): How AuraScan works: Aura Intelligence estimates from Aura Signals. Bands, confidence, fairness gate — and what it never scores or promises.
-- [Lookauramax Pricing Explained: Which Plan Should You Choose?](https://www.lookauramax.com/blog/lookauramax-pricing): Lookauramax pricing explained: Monthly, 3-Month, 6-Month, Yearly. Trials, Recommended vs Best Savings Per Month, and how to cancel in 2 taps.
+- [Lookauramax Pricing Explained: Which Plan Should You Choose?](https://www.lookauramax.com/blog/lookauramax-pricing): Lookauramax pricing explained: Monthly, 3-Month, Yearly. Trials, Recommended vs Best Savings Per Month, and how to cancel in 2 taps.
 - [How to Take a Good Scan Photo: Lighting, Angle, Framing](https://www.lookauramax.com/blog/photo-tips-scan): Take a fair scan photo: window light, camera at eye level, neutral expression, plain background. Avoid the common mistakes that make scans unfair.
 - [Style Essentials: Look Sharper Without Spending Much](https://www.lookauramax.com/blog/style-guide-men-women): Style essentials for everyone: fit, colour, shoes, grooming, and a low-cost wardrobe that looks sharp. No brands, no big budget, no fashion degree needed.
 - [The Daily Aura Routine: Small Steps, Every Day](https://www.lookauramax.com/blog/aura-routine-daily): A realistic daily Aura Routine: morning, midday, evening tasks for skin, hair, posture, sleep, and style — plus how streaks and restarts work.
@@ -49,7 +49,7 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 - [Weight Loss That Actually Lasts](https://www.lookauramax.com/blog/weight-loss-guide): Weight loss that actually lasts is built on habits, not willpower: routines, environment, tracking without obsession, plateaus, social eating, and maintenance.
 - [How to Get a Girlfriend: The Respectful, Honest Way](https://www.lookauramax.com/blog/how-to-get-girlfriend): How to get a girlfriend the honest way: no tricks, no games. Grooming, confidence, social skills, respect, asking someone out, and handling rejection well.
 - [Glow-Up Guide for Men](https://www.lookauramax.com/blog/glow-up-guide-men): A practical glow-up guide for men: skincare, hair, grooming, fitness, posture, style, and daily habits. Specific steps, no shaming, no shortcuts.
-- [Glow-Up Guide for Women](https://www.lookauramax.com/blog/glow-up-guide-women): A practical glow-up guide for women: skincare, hair, brows, style, posture, sleep, and habits. Specific steps, no shaming, no miracle promises.
+- [Glow-Up Guide for Women](https://www.lookauramax.com/blog/glow-up-guide-for-men): A practical glow-up guide for women: skincare, hair, brows, style, posture, sleep, and habits. Specific steps, no shaming, no miracle promises.
 - [Skincare for a Natural Glow](https://www.lookauramax.com/blog/skincare-glow-up): How to get glowing skin honestly: a clear cleanser, moisturiser, and SPF routine, plus hydration, sleep, and consistency. No miracle claims, no quick fixes.
 - [How to Get Clear Skin: The Honest Guide](https://www.lookauramax.com/blog/clear-skin-guide): How to get clear skin without gimmicks: the clear routine, the habits that matter, what to avoid, and when to see a dermatologist for real help.
 - [How to Get Rid of Pimples and Acne, Honestly](https://www.lookauramax.com/blog/acne-pimples-guide): How to get rid of pimples and acne honestly: what causes breakouts, a routine that helps, what to avoid, and when a dermatologist is the fastest route.
@@ -101,18 +101,28 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 - [Rice Water for Hair: Benefits and How to Use It](https://www.lookauramax.com/blog/rice-water-hair-guide): Rice water for hair: the traditional rinse with inositol, amino acids, and B vitamins. How to make it, how to use it, and the truth about growth vs retention.
 - [Vitamin C Serum: How to Use It for Brighter Skin](https://www.lookauramax.com/blog/vitamin-c-serum-guide): Vitamin C serum brightens dull skin and defends against environmental damage. How to use it: morning, after cleansing, before moisturiser and sunscreen.
 - [Trending Glow-Up Topics Right Now](https://www.lookauramax.com/blog/trending-now): Trending glow-up topics: Korean skincare, glass skin, double cleansing, snail mucin, rice water, vitamin C — plus the seasonal moments coming next.
+- [No Nut November: The Honest Guide, Myths vs Facts](https://www.lookauramax.com/blog/no-nut-november-guide): No Nut November explained honestly: what the challenge is, what studies actually found, the myths to ignore, and how to turn the month into habits that last.
+- [Movember Guide: Grow a Moustache That Looks Sharp](https://www.lookauramax.com/blog/movember-guide): Movember 2026 explained: the official rules, a week-by-week growing guide, how to style a moustache that suits your face, and the men's health cause behind it.
+- [Winter Skincare for Men: The Dry-Skin Survival Guide](https://www.lookauramax.com/blog/winter-skincare-men): Winter skincare for men: why cold air and indoor heating dry your skin out, the routine changes that fix it, and the habits that keep skin calm until spring.
+- [Wedding Season Glow-Up: A Groom and Guest Timeline](https://www.lookauramax.com/blog/wedding-season-glow-up): Wedding season prep for grooms and guests: a 12-week to day-of timeline for skin, hair, beard, teeth, and nails, so you look sharp in every photo.
+- [Party Season Grooming Checklist for Men That Works](https://www.lookauramax.com/blog/party-season-grooming-checklist): A party season grooming checklist for men: skin recovery between events, haircut timing, beard and nail details, fragrance, and looking fresh in every photo.
+- [Why to Start Your Glow-Up in December, Not January](https://www.lookauramax.com/blog/start-glow-up-december): Starting your glow-up in December beats the January rush: build the base routine at low pressure now, so the new year starts on rails instead of from zero.
+- [Glow-Up Resolutions for 2027 That Actually Stick](https://www.lookauramax.com/blog/new-year-resolutions-2027): Most resolutions die by February. These 2027 glow-up resolutions are built differently: small daily actions, a 90-day cycle, and a restart rule for missed days.
+- [Glow-Up Trends 2027: What Is Coming for Men's Care](https://www.lookauramax.com/blog/glow-up-trends-2027): Glow-up trends for 2027, clearly labelled as predictions: skin-first routines, scalp care, natural texture, personalised plans, and the fads we expect to fade.
+- [Dry January: What a Month Off Alcohol Does to Skin](https://www.lookauramax.com/blog/dry-january-skin): Dry January and your skin: what University of Sussex research found, why alcohol dulls and puffs your face, and what one month off can honestly change.
+- [Valentine's Day Grooming: A 14-Day Prep Countdown](https://www.lookauramax.com/blog/valentines-day-grooming): A 14-day Valentine's Day grooming countdown for men: haircut timing, skin, beard, nails, breath, and fragrance — ready for February 14 without panic.
 
 ## Facts
 
-- Pricing (US): Monthly $9.99, 3-Month $19.99, 6-Month $29.99, Yearly $49.99.
-- Pricing (India): Monthly ₹199, 3-Month ₹399, 6-Month ₹599, Yearly ₹999.
-- Trials: Monthly, 3-Month, 6-Month include a 7-day free trial; Yearly includes a 14-day free trial.
+- Pricing (US): Monthly $9.99, 3-Month $19.99, Yearly $49.99.
+- Pricing (India): Monthly ₹199, 3-Month ₹399, Yearly ₹999.
+- Trials: Monthly and 3-Month include a 7-day free trial; Yearly includes a 14-day free trial.
 - 3-Month is RECOMMENDED · ONE FULL 90-DAY CYCLE (lowest total cost to cover one full 90-day cycle). Yearly is Best Savings Per Month (lowest per-month cost).
 - No Weekly plan. No Lifetime plan. No permanent free plan. No ads.
-- AuraScan is an Aura Intelligence estimate, not AI. It scores only actionable traits (skin, hair, brows, opt-in beard, smile, posture, photo quality) as bands: Needs Work, Good, Great.
+- AuraScan is an Aura Intelligence estimate, not AI. It scores only actionable traits (skin, hair, brows, opt-in beard, smile, posture, photo quality) as bands: Focus first, Good, Strong.
 - Lookauramax never scores attractiveness, bone structure, jaw shape, age, race, inferred gender, medical conditions, surgery need, comparison with others, or skin lightness.
 - Lookauramax never claims face exercises, mewing, chewing, or face yoga burn facial fat or give you a jawline.
-- Ages 16+. Under 16 blocked. Ages 16–17 need parental consent before a scan or paid access.
+- Ages 18+. Under 16 blocked. Ages 16–17 need parental consent before a scan or paid access.
 - Cancel in 2 taps in Google Play. Deleting the app does not cancel a subscription.
 - Contact: support@lookauramax.com.
 
@@ -135,3 +145,14 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 ## Optional
 
 - [Sitemap](https://www.lookauramax.com/sitemap.xml): Full sitemap.
+
+
+## Topic hubs
+- Skincare: https://www.lookauramax.com/hubs/skincare
+- Hair & Grooming: https://www.lookauramax.com/hubs/grooming
+- Style: https://www.lookauramax.com/hubs/style
+- Fitness & Wellness: https://www.lookauramax.com/hubs/fitness-wellness
+- Confidence: https://www.lookauramax.com/hubs/confidence
+- The Glow-Up: https://www.lookauramax.com/hubs/glow-up
+- Limitations (what Lookauramax can and cannot do): https://www.lookauramax.com/limitations
+- Changelog: https://www.lookauramax.com/changelog

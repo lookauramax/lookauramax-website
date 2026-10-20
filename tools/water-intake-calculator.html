@@ -73,7 +73,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/base.css?v=20261105">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
@@ -156,7 +156,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 
 <div class="cta">
 <h2>Turn hydration into a daily habit</h2>
-<p>Join Lookauramax for your one-time Join Reward: 1 AuraScan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser — no card.</p>
+<p>Join the launch list and get one email on launch day. Your honest starting point is one AuraScan away.</p>
 <a class="btn" href="https://www.lookauramax.com/#pricing">See plans →</a>
 </div>
 
@@ -171,6 +171,19 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <li><strong>No fake promises</strong> — 90-day Aura Cycles, no guaranteed transformations, and our own cons published in the <a href="/blog/best-glow-up-apps">comparisons</a>.</li>
 </ul>
 </aside>
+
+<div class="methodology">
+<h2>How this tool works</h2>
+<p>This calculator estimates a daily water target from your body weight — 30–35 ml per kilogram — with an addition for training days, and shows the result in litres, millilitres, and cups (1 cup = 240 ml).</p>
+<h3>Rules and assumptions</h3>
+<ul>
+<li>Base range: 30–35 ml per kg of body weight.</li>
+<li>Training adds extra fluid for what you sweat out; hot climates add more.</li>
+</ul>
+<h3>Limitations</h3>
+<p>Needs vary with climate, altitude, diet, and health. Thirst is a real signal — the target is a planning aid, not a quota to force. If a medical condition limits your fluid intake, your clinician's guidance replaces this estimate.</p>
+<p class="method-next"><strong>Next step:</strong> Water is one half of recovery; the other half is sleep — see the <a href="/tools/routine-builder">Routine Builder</a> for the evening side. Background reading: <a href="https://www.lookauramax.com/blog/sleep-glow-up">Sleep and Your Skin: What Actually Helps</a>, <a href="https://www.lookauramax.com/blog/skincare-glow-up">Skincare for a Natural Glow</a>.</p>
+</div>
 
 <div class="faq">
 <h2>Frequently asked questions</h2>
@@ -225,6 +238,7 @@ function calcWater(){
   document.getElementById('result').classList.add('show');
 }
 </script>
-  <script src="/assets/consent.js" defer></script>
+  <script src="/assets/ga-events.js" defer></script>
+<script src="/assets/consent.js" defer></script>
 </body>
 </html>

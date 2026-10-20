@@ -85,7 +85,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Find Your Hair Type Quiz: Free, Honest Result","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.lookauramax.com/tools/hair-type-quiz","dateModified":"2026-10-17"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/base.css?v=20261105">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
@@ -176,8 +176,8 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 
 <div class="cta">
 <h2>Build your grooming routine around your hair</h2>
-<p>Lookauramax gives you a daily Aura Routine matched to your goals, plus 2D hair guidance in Aura Style Lab. Join and claim your one-time Join Reward — 1 scan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser. No card needed.</p>
-<a class="btn" href="https://www.lookauramax.com/#pricing">See plans →</a>
+<p>Lookauramax gives you a daily Aura Routine matched to your goals, plus 2D hair guidance in Aura Style Lab. Join the launch list and get one email on launch day — that is the whole offer. No counters, no discounts, no noise.</p>
+<a class="btn" href="https://www.lookauramax.com/#launch">Join the launch list →</a>
 </div>
 
 
@@ -191,6 +191,19 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <li><strong>No fake promises</strong> — 90-day Aura Cycles, no guaranteed transformations, and our own cons published in the <a href="/blog/best-glow-up-apps">comparisons</a>.</li>
 </ul>
 </aside>
+
+<div class="methodology">
+<h2>How this tool works</h2>
+<p>This quiz asks six questions about your hair — texture, thickness, oil, and behaviour — and matches your answers to a hair type, with the care checklist that fits that type.</p>
+<h3>Rules and assumptions</h3>
+<ul>
+<li>Answers are matched to type profiles written from standard hair-care practice.</li>
+<li>The result is a care guide: washing rhythm, conditioning, and styling notes for your type.</li>
+</ul>
+<h3>Limitations</h3>
+<p>Six questions cannot measure hair the way a stylist's hands can. Treat the result as a well-informed starting point, and adjust any step your hair disagrees with. The quiz does not assess hair loss or scalp conditions.</p>
+<p class="method-next"><strong>Next step:</strong> Put the care checklist into your day with the <a href="/tools/routine-builder">Routine Builder</a>. Background reading: <a href="https://www.lookauramax.com/blog/hair-grooming-guide">Hair + Grooming: The Fastest Honest Wins</a>.</p>
+</div>
 
 <div class="faq">
 <h2>Frequently asked questions</h2>
@@ -256,6 +269,7 @@ function showResult(){
   tool.addEventListener('change',upd); upd();
 })();
 </script>
-  <script src="/assets/consent.js" defer></script>
+  <script src="/assets/ga-events.js" defer></script>
+<script src="/assets/consent.js" defer></script>
 </body>
 </html>

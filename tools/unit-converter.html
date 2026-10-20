@@ -75,7 +75,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Free Height & Weight Converter — cm, Feet, kg, lbs","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.lookauramax.com/tools/unit-converter","dateModified":"2026-10-17"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/base.css?v=20261105">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
@@ -150,8 +150,8 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 
 <div class="cta">
 <h2>Your glow-up, made real</h2>
-<p>Lookauramax gives you an honest starting point: an AuraScan, a 90-day plan, and a daily routine. Join and claim your one-time Join Reward — 1 scan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser. No card needed.</p>
-<a class="btn" href="https://www.lookauramax.com/#pricing">See plans →</a>
+<p>Lookauramax gives you an honest starting point: an AuraScan, a 90-day plan, and a daily routine. Join the launch list and get one email on launch day — that is the whole offer. No counters, no discounts, no noise.</p>
+<a class="btn" href="https://www.lookauramax.com/#launch">Join the launch list →</a>
 </div>
 
 
@@ -165,6 +165,19 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <li><strong>No fake promises</strong> — 90-day Aura Cycles, no guaranteed transformations, and our own cons published in the <a href="/blog/best-glow-up-apps">comparisons</a>.</li>
 </ul>
 </aside>
+
+<div class="methodology">
+<h2>How this tool works</h2>
+<p>This converter switches height and weight between metric and imperial using the exact defined factors: 1 inch = 2.54 cm, and 1 pound = 0.45359237 kg (equivalently, 1 kg = 2.20462 lb).</p>
+<h3>Rules and assumptions</h3>
+<ul>
+<li>Conversions use the exact factors above — no approximations in the maths.</li>
+<li>Results are rounded for display only; the underlying conversion stays exact.</li>
+</ul>
+<h3>Limitations</h3>
+<p>Display rounding means a converted-then-reconverted figure can differ in the last decimal. For anything official, use the unrounded factor.</p>
+<p class="method-next"><strong>Next step:</strong> Use the converted figures in the <a href="/tools/bmi-calculator">BMI Calculator</a>. Background reading: <a href="https://www.lookauramax.com/blog/height-truth">Height: The Honest Truth (and What You Can Control)</a>.</p>
+</div>
 
 <div class="faq">
 <h2>Frequently asked questions</h2>
@@ -239,6 +252,7 @@ function fromLbs(){
   showResult();
 }
 </script>
-  <script src="/assets/consent.js" defer></script>
+  <script src="/assets/ga-events.js" defer></script>
+<script src="/assets/consent.js" defer></script>
 </body>
 </html>

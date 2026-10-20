@@ -76,7 +76,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/base.css?v=20261105">
 <link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
@@ -168,7 +168,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 
 <div class="cta">
 <h2>Turn one estimate into a daily plan</h2>
-<p>Join Lookauramax for your one-time Join Reward: 1 AuraScan, 1 retake if confidence is low, a 3-day routine, a Preview teaser, and a Library teaser — no card.</p>
+<p>Join the launch list and get one email on launch day. Your honest starting point is one AuraScan away.</p>
 <a class="btn" href="https://www.lookauramax.com/#pricing">See plans →</a>
 </div>
 
@@ -183,6 +183,20 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <li><strong>No fake promises</strong> — 90-day Aura Cycles, no guaranteed transformations, and our own cons published in the <a href="/blog/best-glow-up-apps">comparisons</a>.</li>
 </ul>
 </aside>
+
+<div class="methodology">
+<h2>How this tool works</h2>
+<p>This calculator estimates body-fat percentage from tape measurements using the US Navy circumference method. For men: 86.010 × log₁₀(waist − neck) − 70.041 × log₁₀(height) + 36.76. For women: 163.205 × log₁₀(waist + hip − neck) − 97.684 × log₁₀(height) − 78.387 (measurements in centimetres).</p>
+<h3>Rules and assumptions</h3>
+<ul>
+<li>Measure the neck just below the larynx, the waist at the navel, and (for women) the hips at their widest.</li>
+<li>Keep the tape level and snug, not tight.</li>
+<li>As a rough reference, a healthy range is around 10–20% for men and 18–28% for women; athletes often sit lower.</li>
+</ul>
+<h3>Limitations</h3>
+<p>This is an estimate, not a scan. Tape placement, posture, and time of day move the result by several points either way. Use it to track direction over weeks with the same measuring routine — not as a single exact figure.</p>
+<p class="method-next"><strong>Next step:</strong> Pair it with the <a href="/tools/bmi-calculator">BMI Calculator</a> for the second half of the picture. Background reading: <a href="https://www.lookauramax.com/blog/fat-loss-guide">Fat Loss: The Honest Guide</a>, <a href="https://www.lookauramax.com/blog/build-muscle-guide">How to Build Muscle: The Honest Beginner Guide</a>.</p>
+</div>
 
 <div class="faq">
 <h2>Frequently asked questions</h2>
@@ -271,6 +285,7 @@ function calcBF(){
   document.getElementById('result').classList.add('show');
 }
 </script>
-  <script src="/assets/consent.js" defer></script>
+  <script src="/assets/ga-events.js" defer></script>
+<script src="/assets/consent.js" defer></script>
 </body>
 </html>

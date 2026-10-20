@@ -10,18 +10,18 @@
 (function () {
   'use strict';
 
-  /* LOCKED price table — totals as charged: Monthly / 3-Month / 6-Month / Yearly. */
+  /* LOCKED price table — totals as charged: Monthly / 3-Month / Yearly. */
   var MARKETS = {
-    US: { symbol: '$',    monthly: 9.99,  q: 19.99,  h: 29.99,  y: 49.99,  decimals: 2 },
-    IN: { symbol: '₹',    monthly: 199,   q: 399,    h: 599,    y: 999,    decimals: 2 },
-    GB: { symbol: '£',    monthly: 6.99,  q: 13.99,  h: 20.99,  y: 34.99,  decimals: 2 },
-    BR: { symbol: 'R$',   monthly: 24.99, q: 49.99,  h: 74.99,  y: 124.99, decimals: 2 },
-    ID: { symbol: 'Rp',   monthly: 53000, q: 106000, h: 160000, y: 266000, decimals: 0 },
-    PH: { symbol: '₱',    monthly: 219,   q: 439,    h: 659,    y: 1099,   decimals: 2 },
-    MX: { symbol: 'Mex$', monthly: 99,    q: 199,    h: 299,    y: 499,    decimals: 2 },
-    NG: { symbol: '₦',    monthly: 4299,  q: 8599,   h: 12899,  y: 21499,  decimals: 2 },
-    PK: { symbol: 'Rs',   monthly: 699,   q: 1399,   h: 2099,   y: 3499,   decimals: 2 },
-    BD: { symbol: '৳',    monthly: 319,   q: 639,    h: 959,    y: 1599,   decimals: 2 }
+    US: { symbol: '$',    monthly: 9.99,  q: 19.99,  y: 49.99,  decimals: 2 },
+    IN: { symbol: '₹',    monthly: 199,   q: 399,    y: 999,    decimals: 2 },
+    GB: { symbol: '£',    monthly: 6.99,  q: 13.99,  y: 34.99,  decimals: 2 },
+    BR: { symbol: 'R$',   monthly: 24.99, q: 49.99,  y: 124.99, decimals: 2 },
+    ID: { symbol: 'Rp',   monthly: 53000, q: 106000, y: 266000, decimals: 0 },
+    PH: { symbol: '₱',    monthly: 219,   q: 439,    y: 1099,   decimals: 2 },
+    MX: { symbol: 'Mex$', monthly: 99,    q: 199,    y: 499,    decimals: 2 },
+    NG: { symbol: '₦',    monthly: 4299,  q: 8599,   y: 21499,  decimals: 2 },
+    PK: { symbol: 'Rs',   monthly: 699,   q: 1399,   y: 3499,   decimals: 2 },
+    BD: { symbol: '৳',    monthly: 319,   q: 639,    y: 1599,   decimals: 2 }
   };
 
   /* IANA timezone -> market. Only the 10 launch markets are mapped;
@@ -159,26 +159,19 @@
     var roll = !!(opts && opts.roll);
     var m = MARKETS[code] || MARKETS.US;
     var qSave = savePct(3, m.monthly, m.q);
-    var hSave = savePct(6, m.monthly, m.h);
     var ySave = savePct(12, m.monthly, m.y);
-    var save2x = Math.floor((2 * m.q - m.h) / (2 * m.q) * 100);
 
     setPriceText('[data-price="monthly"]', fmt(m, m.monthly), roll);
     setPrice('[data-price="quarterly"]', fmt(m, m.q) + ' <small>total</small>', roll);
-    setPrice('[data-price="halfyearly"]', fmt(m, m.h) + ' <small>total</small>', roll);
     setPrice('[data-price="yearly"]', fmt(m, m.y) + ' <small>total</small>', roll);
 
     setPriceText('[data-per="monthly"]', fmt(m, m.monthly) + ' / month · billed monthly', roll);
     setPrice('[data-per="quarterly"]',
       fmt(m, m.q / 3, true) + ' / month · Save ' + qSave + '%<br>One full 90-day cycle', roll);
-    setPrice('[data-per="halfyearly"]',
-      fmt(m, m.h / 6, true) + ' / month · Save ' + hSave + '%<br>Two full 90-day cycles', roll);
     setPrice('[data-per="yearly"]',
       fmt(m, m.y / 12, true) + ' / month · Save ' + ySave + '%<br>Lowest per-month cost', roll);
-    setText('[data-save2x]', 'Save ' + save2x + '% vs 2× 3-Month');
     setText('[data-renew="monthly"]', 'then ' + fmt(m, m.monthly) + ' every month unless you cancel');
     setText('[data-renew="quarterly"]', 'then ' + fmt(m, m.q) + ' every 3 months unless you cancel');
-    setText('[data-renew="halfyearly"]', 'then ' + fmt(m, m.h) + ' every 6 months unless you cancel');
     setText('[data-renew="yearly"]', 'then ' + fmt(m, m.y) + ' every year unless you cancel');
   }
 
