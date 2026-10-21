@@ -1154,7 +1154,7 @@ body dd{margin:6px 0 0 20px;color:var(--mut)}
   .brand-tag{font-size:7.5px;letter-spacing:.14em}
   .menu-btn{width:44px;height:44px}
   /* 320px: hero CTAs stay one line — the 18px bump + 44px padding
-     wraps "See plans & free trial" at this width. */
+     wraps "See plans" at this width. */
   .hero-ctas .btn{font-size:16px;padding:18px 20px}
   #hero-cta{padding:18px 36px}
   .hero h1{font-size:38px}

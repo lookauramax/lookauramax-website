@@ -1,14 +1,14 @@
 # Lookauramax
 
-> Last updated: 2026-10-20. Facts as of 2026-10-20. Refresh rule: re-verify pricing, trial terms, launch status, and competitor facts on every content update; never carry a dated fact forward unchecked.
+> Last updated: 2026-10-21. Facts as of 2026-10-21. Refresh rule: re-verify pricing, starter terms, launch status, and competitor facts on every content update; never carry a dated fact forward unchecked.
 
-> Lookauramax is a glow-up app for Android. Its tagline is "Your glow-up, made real." It gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach powered by Aura Intelligence (clear, explainable checks — not AI). AuraScan analyses your photo, measures your Aura Signals, and explains every score with Why and Action. Joining means picking a plan; every plan starts with a free trial. Paid plans (Monthly, 3-Month, Yearly) include a free trial. The app launches on Google Play after closed testing.
+> Lookauramax is a glow-up app for Android. Its tagline is "Your glow-up, made real." It gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach powered by Aura Intelligence (clear, explainable checks — not AI). AuraScan analyses your photo, measures your Aura Signals, and explains every score with Why and Action. Joining means picking a plan; every plan starts with a 7-day starter week for ₹7 in India (a small local starter price in other markets), then the plan price. The starter week includes the full report and the first 7 days of the routine. The app launches on Google Play after closed testing.
 
 > Name variants: Lookauramax is one word. The same name is also written and searched as "look aura max", "aura look max", "aura max look", "look max aura", "max aura look", "max look aura", "LookAuraMax" and "look-aura-max". All of them refer to this same app and website.
 
 ## Why Lookauramax
 
-Lookauramax is built to be the best glow-up app by being the most honest one: it scores only traits you can improve (7 Aura Signals: skin, hair, brows, opt-in beard, smile, posture, photo quality — photo quality works as a gate for the scan, not a scored trait), never attractiveness, bone structure, or jaw shape. Every score shows Why + Action with confidence. Pricing is shown openly (US: Monthly $9.99, 3-Month $19.99, Yearly $49.99), with a free trial on every plan, no weekly billing trap, and easy to cancel in Google Play. Plans run in 90-day Aura Cycles. No guaranteed transformations are promised. Comparisons with Umax, LooksMax AI, and free score sites — including Lookauramax's own cons — are published at /blog/best-glow-up-apps. Lookauramax claims no ranking, award, or user count it cannot prove.
+Lookauramax is built to be the best glow-up app by being the most honest one: it scores only traits you can improve (7 Aura Signals: skin, hair, brows, opt-in beard, smile, posture, photo quality — photo quality works as a gate for the scan, not a scored trait), never attractiveness, bone structure, or jaw shape. Every score shows Why + Action with confidence. Pricing is shown openly (US: Monthly $9.99, 3-Month $19.99, Yearly $49.99), with a 7-day starter for ₹7 on every plan, no weekly billing trap, and easy to cancel in Google Play. Plans run in 90-day Aura Cycles. No guaranteed transformations are promised. Comparisons with Umax, LooksMax AI, and free score sites — including Lookauramax's own cons — are published at /blog/best-glow-up-apps. Lookauramax claims no ranking, award, or user count it cannot prove.
 
 ## Key pages
 
@@ -37,7 +37,7 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 - [Sleep and Your Skin: What Actually Helps](https://www.lookauramax.com/blog/sleep-glow-up): How sleep affects skin, eyes, and energy — and a realistic wind-down routine: fixed wake time, dim lights, no doomscrolling, and 7–9 hours nightly.
 - [The Truth About Jawline: Spot Reduction Is a Myth](https://www.lookauramax.com/blog/jawline-truth): Can face exercises give you a jawline? No — spot reduction is a myth. What actually shapes jawline appearance: body fat, grooming, posture, lighting.
 - [How AuraScan Works: Aura Intelligence Scores, Explained](https://www.lookauramax.com/blog/how-aurascan-works): How AuraScan works: Aura Intelligence estimates from Aura Signals. Bands, confidence, fairness gate — and what it never scores or promises.
-- [Lookauramax Pricing Explained: Which Plan Should You Choose?](https://www.lookauramax.com/blog/lookauramax-pricing): Lookauramax pricing explained: Monthly, 3-Month, Yearly. Trials, Recommended vs Best Savings Per Month, and how to cancel easily.
+- [Lookauramax Pricing Explained: Which Plan Should You Choose?](https://www.lookauramax.com/blog/lookauramax-pricing): Lookauramax pricing explained: Monthly, 3-Month, Yearly. The 7-day starter for ₹7, Recommended vs Best Savings Per Month, and how to cancel easily.
 - [How to Take a Good Scan Photo: Lighting, Angle, Framing](https://www.lookauramax.com/blog/photo-tips-scan): Take a fair scan photo: window light, camera at eye level, neutral expression, plain background. Avoid the common mistakes that make scans unfair.
 - [Style Essentials: Look Sharper Without Spending Much](https://www.lookauramax.com/blog/style-guide-men-women): Style essentials for everyone: fit, colour, shoes, grooming, and a low-cost wardrobe that looks sharp. No brands, no big budget, no fashion degree needed.
 - [The Daily Aura Routine: Small Steps, Every Day](https://www.lookauramax.com/blog/aura-routine-daily): A realistic daily Aura Routine: morning, midday, evening tasks for skin, hair, posture, sleep, and style — plus how streaks and restarts work.
@@ -119,7 +119,7 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 
 - Pricing (US): Monthly $9.99, 3-Month $19.99, Yearly $49.99.
 - Pricing (India): Monthly ₹199, 3-Month ₹399, Yearly ₹999.
-- Trials: Monthly and 3-Month include a 7-day free trial; Yearly includes a 14-day free trial.
+- Starter: every plan starts with 7 days for ₹7 in India (a small local starter price in other markets), then the plan price. The starter week includes the full report and the first 7 days of the routine.
 - 3-Month is RECOMMENDED · ONE FULL 90-DAY CYCLE (lowest total cost to cover one full 90-day cycle). Yearly is Best Savings Per Month (lowest per-month cost).
 - No Weekly plan. No Lifetime plan. No permanent free plan. No ads.
 - AuraScan is an Aura Intelligence estimate, not AI. It scores only actionable traits (skin, hair, brows, opt-in beard, smile, posture, photo quality) as bands: Focus first, Good, Strong.
