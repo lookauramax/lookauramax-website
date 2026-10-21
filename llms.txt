@@ -8,7 +8,7 @@
 
 ## Why Lookauramax
 
-Lookauramax is built to be the best glow-up app by being the most honest one: it scores only traits you can improve (7 Aura Signals: skin, hair, brows, opt-in beard, smile, posture, photo quality — photo quality works as a gate for the scan, not a scored trait), never attractiveness, bone structure, or jaw shape. Every score shows Why + Action with confidence. Pricing is shown openly (US: Monthly $9.99, 3-Month $19.99, Yearly $49.99), with a free trial on every plan, no weekly billing trap, and cancel in 2 taps in Google Play. Plans run in 90-day Aura Cycles. No guaranteed transformations are promised. Comparisons with Umax, LooksMax AI, and free score sites — including Lookauramax's own cons — are published at /blog/best-glow-up-apps. Lookauramax claims no ranking, award, or user count it cannot prove.
+Lookauramax is built to be the best glow-up app by being the most honest one: it scores only traits you can improve (7 Aura Signals: skin, hair, brows, opt-in beard, smile, posture, photo quality — photo quality works as a gate for the scan, not a scored trait), never attractiveness, bone structure, or jaw shape. Every score shows Why + Action with confidence. Pricing is shown openly (US: Monthly $9.99, 3-Month $19.99, Yearly $49.99), with a free trial on every plan, no weekly billing trap, and easy to cancel in Google Play. Plans run in 90-day Aura Cycles. No guaranteed transformations are promised. Comparisons with Umax, LooksMax AI, and free score sites — including Lookauramax's own cons — are published at /blog/best-glow-up-apps. Lookauramax claims no ranking, award, or user count it cannot prove.
 
 ## Key pages
 
@@ -37,7 +37,7 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 - [Sleep and Your Skin: What Actually Helps](https://www.lookauramax.com/blog/sleep-glow-up): How sleep affects skin, eyes, and energy — and a realistic wind-down routine: fixed wake time, dim lights, no doomscrolling, and 7–9 hours nightly.
 - [The Truth About Jawline: Spot Reduction Is a Myth](https://www.lookauramax.com/blog/jawline-truth): Can face exercises give you a jawline? No — spot reduction is a myth. What actually shapes jawline appearance: body fat, grooming, posture, lighting.
 - [How AuraScan Works: Aura Intelligence Scores, Explained](https://www.lookauramax.com/blog/how-aurascan-works): How AuraScan works: Aura Intelligence estimates from Aura Signals. Bands, confidence, fairness gate — and what it never scores or promises.
-- [Lookauramax Pricing Explained: Which Plan Should You Choose?](https://www.lookauramax.com/blog/lookauramax-pricing): Lookauramax pricing explained: Monthly, 3-Month, Yearly. Trials, Recommended vs Best Savings Per Month, and how to cancel in 2 taps.
+- [Lookauramax Pricing Explained: Which Plan Should You Choose?](https://www.lookauramax.com/blog/lookauramax-pricing): Lookauramax pricing explained: Monthly, 3-Month, Yearly. Trials, Recommended vs Best Savings Per Month, and how to cancel easily.
 - [How to Take a Good Scan Photo: Lighting, Angle, Framing](https://www.lookauramax.com/blog/photo-tips-scan): Take a fair scan photo: window light, camera at eye level, neutral expression, plain background. Avoid the common mistakes that make scans unfair.
 - [Style Essentials: Look Sharper Without Spending Much](https://www.lookauramax.com/blog/style-guide-men-women): Style essentials for everyone: fit, colour, shoes, grooming, and a low-cost wardrobe that looks sharp. No brands, no big budget, no fashion degree needed.
 - [The Daily Aura Routine: Small Steps, Every Day](https://www.lookauramax.com/blog/aura-routine-daily): A realistic daily Aura Routine: morning, midday, evening tasks for skin, hair, posture, sleep, and style — plus how streaks and restarts work.
@@ -126,7 +126,7 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 - Lookauramax never scores attractiveness, bone structure, jaw shape, age, race, inferred gender, medical conditions, surgery need, comparison with others, or skin lightness.
 - Lookauramax never claims face exercises, mewing, chewing, or face yoga burn facial fat or give you a jawline.
 - Ages 18+. Under 16 blocked. Ages 16–17 need parental consent before a scan or paid access.
-- Cancel in 2 taps in Google Play. Deleting the app does not cancel a subscription.
+- Easy to cancel in Google Play. Deleting the app does not cancel a subscription.
 - Contact: support@lookauramax.com.
 
 ## Free Tools
