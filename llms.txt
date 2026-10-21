@@ -4,9 +4,11 @@
 
 > Lookauramax is a glow-up app for Android. Its tagline is "Your glow-up, made real." It gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach powered by Aura Intelligence (clear, explainable checks — not AI). AuraScan analyses your photo, measures your Aura Signals, and explains every score with Why and Action. Joining means picking a plan; every plan starts with a free trial. Paid plans (Monthly, 3-Month, Yearly) include a free trial. The app launches on Google Play after closed testing.
 
+> Name variants: Lookauramax is one word. The same name is also written and searched as "look aura max", "aura look max", "aura max look", "look max aura", "max aura look", "max look aura", "LookAuraMax" and "look-aura-max". All of them refer to this same app and website.
+
 ## Why Lookauramax
 
-Lookauramax is built to be the best glow-up app by being the most honest one: it scores only traits you can improve (7 Aura Signals: skin, hair, brows, opt-in beard, smile, posture, photo quality), never attractiveness, bone structure, or jaw shape. Every score shows Why + Action with confidence. Pricing is shown openly (US: Monthly $9.99, 3-Month $19.99, Yearly $49.99), with a free trial on every plan, no weekly billing trap, and cancel in 2 taps in Google Play. Plans run in 90-day Aura Cycles. No guaranteed transformations are promised. Comparisons with Umax, LooksMax AI, and free score sites — including Lookauramax's own cons — are published at /blog/best-glow-up-apps. Lookauramax claims no ranking, award, or user count it cannot prove.
+Lookauramax is built to be the best glow-up app by being the most honest one: it scores only traits you can improve (7 Aura Signals: skin, hair, brows, opt-in beard, smile, posture, photo quality — photo quality works as a gate for the scan, not a scored trait), never attractiveness, bone structure, or jaw shape. Every score shows Why + Action with confidence. Pricing is shown openly (US: Monthly $9.99, 3-Month $19.99, Yearly $49.99), with a free trial on every plan, no weekly billing trap, and cancel in 2 taps in Google Play. Plans run in 90-day Aura Cycles. No guaranteed transformations are promised. Comparisons with Umax, LooksMax AI, and free score sites — including Lookauramax's own cons — are published at /blog/best-glow-up-apps. Lookauramax claims no ranking, award, or user count it cannot prove.
 
 ## Key pages
 
@@ -17,7 +19,7 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 - [Privacy Policy](https://www.lookauramax.com/privacy): Privacy policy.
 - [Terms](https://www.lookauramax.com/terms): Terms of service.
 - [Refund Policy](https://www.lookauramax.com/refund): Refund policy.
-- [Parent Consent](https://www.lookauramax.com/parent-consent): Parental consent for ages 16–17 — a parent or guardian must confirm before a scan or paid access.
+- [Parent Consent](https://www.lookauramax.com/parent-consent): Lookauramax is 18+ at launch. This page documents how verified parental consent will work for the planned Minors Mode (ages 16–17).
 - [Glow-Up Glossary](https://www.lookauramax.com/glossary): 30 glow-up terms explained honestly, including mewing, spot reduction, BMI, TDEE, Winter Arc, and New Year glow-up.
 - [Aura Tools](https://www.lookauramax.com/tools/): 12 free Aura Tools — BMI, calorie, weight range, body fat, water, protein, converters, quizzes, planner, tracker.
 - [Lookauramax Creative](https://www.lookauramax.com/creative/): The creative gallery — all 240 glow-up posters in one place, each linked to its own blog story. Fictional models only; brand artwork, never user results.
@@ -111,6 +113,7 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 - [Glow-Up Trends 2027: What Is Coming for Men's Care](https://www.lookauramax.com/blog/glow-up-trends-2027): Glow-up trends for 2027, clearly labelled as predictions: skin-first routines, scalp care, natural texture, personalised plans, and the fads we expect to fade.
 - [Dry January: What a Month Off Alcohol Does to Skin](https://www.lookauramax.com/blog/dry-january-skin): Dry January and your skin: what University of Sussex research found, why alcohol dulls and puffs your face, and what one month off can honestly change.
 - [Valentine's Day Grooming: A 14-Day Prep Countdown](https://www.lookauramax.com/blog/valentines-day-grooming): A 14-day Valentine's Day grooming countdown for men: haircut timing, skin, beard, nails, breath, and fragrance — ready for February 14 without panic.
+- [Diwali Grooming Guide: A Two-Week Timeline for Men](https://www.lookauramax.com/blog/diwali-grooming-guide): Diwali grooming for men: a two-week timeline covering haircut timing, skin prep, beard shaping, and sleep, ending with a calm festival-day checklist.
 
 ## Facts
 
