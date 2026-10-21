@@ -41,7 +41,7 @@
   var shuffleEl = document.querySelector('.value-shuffle-word');
   if (shuffleEl && !reduce) {
     var values = ['Never scores attractiveness', 'Every score shows Why + Action',
-      'Honest pricing, shown openly', 'Cancel in 2 taps', 'No weekly billing trap'];
+      'Honest pricing, shown openly', 'Easy to cancel', 'No weekly billing trap'];
     var vIdx = 0, vSwaps = 0, vTimer = null, vVisible = false, vHover = false;
     var shuffleBox = document.querySelector('.value-shuffle');
     function vSchedule() {
