@@ -1611,3 +1611,6 @@ body.has-capsule.hub .scroll-progress{
 .sig-ledger-lead{font-family:var(--serif);font-size:clamp(19px,2.4vw,23px);line-height:1.35;color:var(--ink);margin:0 0 10px}
 .sig-ledger p{color:var(--mut);font-size:15px;margin:0 0 8px}
 .sig-ledger p:last-child{margin-bottom:0}
+
+/* ===== R2 Phase-3 fix: hero figure breathing room on small screens (arc end labels touched the viewport edges) ===== */
+@media (max-width:640px){ .r2-fig-wrap{width:88%} }
