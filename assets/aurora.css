@@ -1096,3 +1096,124 @@ body.has-capsule.hub .scroll-progress{
 /* ===== R2 Phase-1 fix: capsule mobile menu button hugs the pill's right edge
    (nav + CTA hidden ≤900px left it stranded beside the wordmark) ===== */
 @media (max-width:900px){ .capsule-head .menu-btn{margin-left:auto} }
+
+/* ================= ROUND 2 — PRICING (VERDIGRIS) + FAQ CLUSTERS ================= */
+/* Lookauramax — Round-2 pricing fragment CSS (Phase 2, pricing stream).
+ * Coordinator: append to assets/aurora.css AFTER the existing pricing
+ * block (these rules override the ivory-era pricing styles for the new
+ * .sec-pricing section only; the old .ivory rules stay for any other
+ * page still using them). FAQ cluster titles at the end are used by
+ * faq-section.html.
+ *
+ * Colour discipline for this section: black / gold / ink / muted +
+ * Verdigris ONLY, in exactly the five locked micro-doses:
+ *   (1) 3-Month badge — fill #143B31, ink #56C9A8, hairline border
+ *   (2) "Every plan includes" checkmarks — #56C9A8
+ *   (3) terms marker/divider — rgba(86,201,168,.35)
+ *   (4) CTA hover ring — rgba(86,201,168,.5), 2px
+ *   (5) reassurance icon strokes — #56C9A8
+ * No other colour appears in this section.
+ */
+
+/* ---------- pricing on black (kills the ivory treatment here) ------ */
+.sec-pricing{background:var(--black);color:var(--ink)}
+.sec-pricing .kicker{color:var(--acc)}
+.sec-pricing .kicker::before{background:var(--acc)}
+.sec-pricing .sec-title{color:var(--ink)}
+.sec-pricing .sec-title em{color:var(--gold-hi)}
+.sec-pricing .lede{color:var(--mut)}
+
+.sec-pricing .ladder{border:1px solid var(--line);background:var(--panel)}
+.sec-pricing .lad-row{border-bottom:1px solid var(--line-soft)}
+.sec-pricing .lad-row.head{color:var(--mut-2)}
+.sec-pricing .lad-name small{color:var(--mut)}
+.sec-pricing .lad-price small{color:var(--mut)}
+.sec-pricing .lad-per{color:var(--mut)}
+.sec-pricing .lad-per b{color:var(--ink)}
+/* hero row lifted: panel-2 surface + gold border (gold, not Verdigris) */
+.sec-pricing .lad-row.feature{background:var(--panel-2);color:var(--ink);
+  box-shadow:inset 0 0 0 1px var(--gold-line)}
+.sec-pricing .lad-row.feature .lad-name small,
+.sec-pricing .lad-row.feature .lad-per{color:var(--mut)}
+.sec-pricing .lad-row.feature .lad-per b{color:var(--ink)}
+.sec-pricing .lad-row.feature .lad-price small{color:var(--mut)}
+.sec-pricing .lad-row.plan:hover{background:var(--panel-2)}
+.sec-pricing .lad-row.plan:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.sec-pricing .lad-row.plan.selected{box-shadow:inset 0 0 0 2px var(--gold-deep)}
+.sec-pricing .lad-row.feature.plan.selected{box-shadow:inset 0 0 0 2px var(--gold)}
+.sec-pricing .lad-dot{border-color:rgba(242,239,233,.45)}
+.sec-pricing .lad-dot::after{background:var(--gold)}
+.sec-pricing .free-row{cursor:default}
+
+/* Verdigris dose 1 — the 3-Month badge */
+.sec-pricing .r2-verdi-badge{background:#143B31;color:#56C9A8;
+  border:1px solid rgba(86,201,168,.35)}
+
+/* region selector on black */
+.sec-pricing .region-line{color:var(--mut)}
+.sec-pricing .region-line select{background:var(--panel-2);color:var(--ink);
+  border:1px solid var(--line)}
+
+/* CTA block on black */
+.sec-pricing .cta-block{background:var(--panel);color:var(--ink);
+  border:1px solid var(--line)}
+.sec-pricing .cta-terms{color:var(--mut)}
+.sec-pricing .cta-terms b{color:var(--gold-hi)}
+/* Verdigris dose 4 — CTA hover ring (resting state stays gold) */
+.sec-pricing .cta-start:hover{box-shadow:0 14px 34px rgba(223,163,60,.30),
+  0 0 0 2px rgba(86,201,168,.5)}
+.sec-pricing .cta-start:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* struck price: the STATIC struck state is the default — correct with
+   JS disabled and under reduced motion. The animated strike is an
+   enhancement gated behind no-preference + the JS-added .strike-in. */
+.sec-pricing .cta-was{text-decoration:line-through;text-decoration-thickness:2px;
+  opacity:.62;font-weight:600}
+.sec-pricing .cta-now{font-weight:800}
+@media (prefers-reduced-motion: no-preference){
+  .sec-pricing .cta-block.strike-in .cta-was{text-decoration:none;position:relative;opacity:1}
+  .sec-pricing .cta-block.strike-in .cta-was::after{content:"";position:absolute;
+    left:-3%;right:-3%;top:54%;height:2.4px;background:currentColor;
+    transform-origin:0 50%;animation:r2-strike .32s var(--ease) forwards}
+  .sec-pricing .cta-block.strike-in .cta-now{display:inline-block;
+    animation:r2-nowin .35s var(--ease) .34s both}
+}
+@keyframes r2-strike{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes r2-nowin{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+
+/* ---------- shared "Every plan includes" list ----------------------- */
+.r2-includes{margin-top:30px}
+.r2-includes-title{font-family:var(--serif);font-weight:600;font-size:26px;margin:0 0 14px}
+.r2-includes-list{list-style:none;margin:0;padding:0;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px 28px}
+.r2-includes-list li{display:flex;gap:10px;align-items:baseline;color:var(--mut);font-size:15.5px}
+/* Verdigris dose 2 — the checkmarks */
+.r2-check{color:#56C9A8;font-weight:700}
+
+/* ---------- reassurance icon row ------------------------------------ */
+.r2-reassure{margin-top:26px;display:flex;gap:14px 34px;flex-wrap:wrap}
+.r2-reassure-item{display:flex;gap:10px;align-items:center;color:var(--ink);font-size:14.5px;font-weight:600}
+/* Verdigris dose 5 — the icon strokes */
+.r2-reassure-item svg{width:22px;height:22px;flex:none;fill:none;
+  stroke:#56C9A8;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- fuller terms (locked <li> copy, marker treatment) ------- */
+/* Verdigris dose 3 — summary markers + divider hairline */
+.sec-pricing .r2-price-terms{border-top:1px solid rgba(86,201,168,.35);padding-top:18px}
+.sec-pricing .r2-price-terms li::marker{color:#56C9A8}
+
+/* ---------- embedded cost Q&A (AI-citation target) ------------------- */
+.r2-cost-block{margin-top:34px;border:1px solid var(--line);border-radius:18px;
+  background:var(--panel);padding:26px 28px;max-width:760px}
+.r2-cost-block h3{font-family:var(--serif);font-weight:600;font-size:26px;margin:0 0 10px}
+.r2-cost-block p{color:var(--mut);margin:0;font-size:16px}
+
+/* ---------- per-month + renew small print ---------------------------- */
+.sec-pricing .lad-per{font-size:15px}
+.sec-pricing .lad-name small{font-size:13px}
+
+/* ---------- FAQ cluster headings (faq-section.html) ------------------ */
+.r2-faq-cluster-title{font-family:var(--serif);font-weight:600;font-size:27px;
+  margin:38px 0 4px;color:var(--ink)}
+.faq-cluster:first-of-type .r2-faq-cluster-title{margin-top:34px}
+.faq-cluster .faq-list{margin-top:14px}

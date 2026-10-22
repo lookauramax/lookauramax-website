@@ -168,96 +168,178 @@
     update();
   }
 
-  /* ---------- region pricing (plans only) ----------
-     Locked manual prices for the 10 launch markets — never auto-FX.
-     Per-month figures are floored, never rounded up. The ₹7 start is a
-     property of every plan (stated in the section copy), not a plan. */
-  var MARKETS = {
-    US: { s: '$', m: 9.99, q: 19.99, y: 49.99, d: 2 }, IN: { s: '₹', m: 199, q: 399, y: 999, d: 2 },
-    GB: { s: '£', m: 6.99, q: 13.99, y: 34.99, d: 2 }, BR: { s: 'R$', m: 24.99, q: 49.99, y: 124.99, d: 2 },
-    ID: { s: 'Rp', m: 53000, q: 106000, y: 266000, d: 0 }, PH: { s: '₱', m: 219, q: 439, y: 1099, d: 2 },
-    MX: { s: 'Mex$', m: 99, q: 199, y: 499, d: 2 }, NG: { s: '₦', m: 4299, q: 8599, y: 21499, d: 2 },
-    PK: { s: 'Rs', m: 699, q: 1399, y: 3499, d: 2 }, BD: { s: '৳', m: 319, q: 639, y: 1599, d: 2 }
+  /* Lookauramax — Round-2 pricing fragment (Phase 2, pricing stream).
+ *
+ * REPLACES the "region pricing (plans only)" block inside assets/aurora.js
+ * at integration (see MANIFEST.md for the exact span to remove). Append
+ * this block where that block was; it is a self-contained guarded IIFE
+ * that no-ops when the pricing elements are absent.
+ *
+ * Data: reads window.LAM_DATA (assets/site-data.js, loaded before
+ * aurora.js). FALLBACK DECISION: if LAM_DATA failed to load, an embedded
+ * copy of the IN + US rows only is used, so the section still renders
+ * truthful locked prices for the two most-documented markets; any other
+ * selected/detected market falls back to the IN row rather than
+ * inventing a price. This is documented in MANIFEST.md.
+ *
+ * Preserved live behaviours (ported from the current aurora.js block):
+ *  - initial render = detected market (timezone map below, ported
+ *    verbatim; any other America/* timezone => US; default IN);
+ *  - #pricing-region change re-renders;
+ *  - .lad-row.plan click / Enter / Space selects the plan (selected
+ *    class + aria-checked) and the CTA follows the selected plan;
+ *  - strike animation on first view (IntersectionObserver) — now via
+ *    the .strike-in class from frag-pricing.css;
+ *  - price-roll hook: on a USER region change only, price/per figures
+ *    route through window.__lamPriceRoll when present (the hook the
+ *    legacy pricing.js used; initial render and renew lines never roll).
+ *
+ * Fixes vs the live block:
+ *  - per-month = WHOLE-UNIT FLOOR of total / months, formatted with no
+ *    decimals (₹83, $4) — the live code floored only to 2 decimals and
+ *    rendered ₹83.25 / $4.16;
+ *  - terms line follows the SELECTED plan in the SELECTED market, in
+ *    the locked shape: "[starter] for your first 7 days, then [price]
+ *    every [month|3 months|year]. Cancel easily anytime in Google Play.";
+ *  - struck CTA animates on plan switch AND on first view (.strike-in,
+ *    re-armed on every plan switch; transform/opacity only in CSS).
+ */
+(function () {
+  'use strict';
+
+  var sel = document.getElementById('pricing-region');
+  var ctaBlock = document.getElementById('cta-block');
+  var planRows = document.querySelectorAll('.lad-row.plan');
+  if (!sel && !ctaBlock && !planRows.length) return;
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- data (LAM_DATA, with embedded IN+US fallback) ---------- */
+  var FALLBACK = {
+    markets: {
+      IN: { symbol: '₹', monthly: 199, q: 399, y: 999, decimals: 2, starter: '₹7' },
+      US: { symbol: '$', monthly: 9.99, q: 19.99, y: 49.99, decimals: 2, starter: '$0.99' }
+    },
+    plans: [
+      { id: 'monthly', months: 1, totalKey: 'monthly', period: 'month', perSuffix: ' / month · billed monthly' },
+      { id: 'quarterly', months: 3, totalKey: 'q', period: '3 months', perSuffix: ' a month · one full 90-day cycle' },
+      { id: 'yearly', months: 12, totalKey: 'y', period: 'year', perSuffix: ' a month · lowest per-month cost' }
+    ],
+    defaultMarket: 'IN'
   };
+  var DATA = (window.LAM_DATA && window.LAM_DATA.markets && window.LAM_DATA.plans)
+    ? window.LAM_DATA : FALLBACK;
+  var PLANS = {};
+  DATA.plans.forEach(function (p) { PLANS[p.id] = p; });
+
+  function marketRow(code) {
+    return DATA.markets[code] || DATA.markets[DATA.defaultMarket || 'IN'];
+  }
+  function planTotal(mk, planId) {
+    var p = PLANS[planId] || PLANS.quarterly;
+    return mk[p.totalKey];
+  }
+
+  /* ---------- detection (ported verbatim from live aurora.js) ------- */
   var TZ2M = { 'Asia/Kolkata': 'IN', 'Asia/Calcutta': 'IN', 'Europe/London': 'GB', 'America/Sao_Paulo': 'BR',
     'Asia/Jakarta': 'ID', 'Asia/Pontianak': 'ID', 'Asia/Makassar': 'ID', 'Asia/Jayapura': 'ID',
     'Asia/Manila': 'PH', 'America/Mexico_City': 'MX', 'America/Cancun': 'MX', 'Africa/Lagos': 'NG',
     'Asia/Karachi': 'PK', 'Asia/Dhaka': 'BD' };
-  function grp(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
-  function fmt(mk, v, floorIt) {
-    if (mk.d === 0) return mk.s + grp(Math.round(v));
-    if (Number.isInteger(v)) return mk.s + grp(v);
-    var r = (floorIt ? Math.floor(v * 100 + 1e-9) : Math.round(v * 100)) / 100;
-    var p = r.toFixed(2).split('.');
-    return mk.s + grp(p[0]) + '.' + p[1];
-  }
-  /* Locked starter prices (the 7-day verification cost) — ALL 10 launch
-     markets locked 2026-10-22, each above Google Play's official
-     per-country minimum price. The generic fallback in updateCTA survives
-     only as a safety net for an unmapped market. */
-  var STARTERS = { IN: '₹7', US: '$0.99', GB: '£0.99', BR: 'R$4.99', ID: 'Rp9,900',
-    PH: '₱49', MX: 'Mex$19', NG: '₦499', PK: 'Rs249', BD: '৳99' };
-  var sel = document.getElementById('pricing-region');
-  var ctaBlock = document.getElementById('cta-block');
-  var market = 'IN', plan = 'quarterly';
-  var planTotal = function (mk, p) { return p === 'monthly' ? mk.m : (p === 'yearly' ? mk.y : mk.q); };
-  var cadence = function (mk, p) {
-    return p === 'monthly' ? fmt(mk, mk.m) + ' a month'
-      : (p === 'yearly' ? fmt(mk, mk.y) + ' a year' : fmt(mk, mk.q) + ' every 3 months');
-  };
-  var updateCTA = function (animate) {
-    if (!ctaBlock) return;
-    var mk = MARKETS[market] || MARKETS.IN;
-    var starter = STARTERS[market];
-    var was = ctaBlock.querySelector('[data-cta-was]');
-    var now = ctaBlock.querySelector('[data-cta-now]');
-    var terms = ctaBlock.querySelector('[data-cta-terms]');
-    if (was) was.textContent = fmt(mk, planTotal(mk, plan));
-    if (now) now.textContent = starter || 'small starter price';
-    if (terms) {
-      var sTxt = starter ? starter + ' for your first 7 days' : 'A small starter price for your first 7 days';
-      terms.innerHTML = '<b>' + sTxt + '</b>, then ' + cadence(mk, plan) +
-        '. Cancel easily anytime in Google Play.';
-    }
-    if (animate && !reduce) {
-      ctaBlock.classList.remove('playing');
-      void ctaBlock.offsetWidth; /* restart the strike animation */
-      ctaBlock.classList.add('playing');
-      setTimeout(function () { ctaBlock.classList.remove('playing'); }, 1400);
-    }
-  };
-  if (sel) {
-    var render = function (code) {
-      market = code;
-      var mk = MARKETS[code] || MARKETS.IN;
-      var set = function (kind, key, txt) {
-        var el = document.querySelector('[data-' + kind + '="' + key + '"]');
-        if (el) el.textContent = txt;
-      };
-      set('price', 'monthly', fmt(mk, mk.m));
-      set('price', 'quarterly', fmt(mk, mk.q));
-      set('price', 'yearly', fmt(mk, mk.y));
-      set('per', 'monthly', fmt(mk, mk.m) + ' / month · billed monthly');
-      set('per', 'quarterly', fmt(mk, mk.q / 3, true) + ' a month · one full 90-day cycle');
-      set('per', 'yearly', fmt(mk, mk.y / 12, true) + ' a month · lowest per-month cost');
-      set('renew', 'monthly', 'then ' + fmt(mk, mk.m) + ' every month unless you cancel');
-      set('renew', 'quarterly', 'then ' + fmt(mk, mk.q) + ' every 3 months unless you cancel');
-      set('renew', 'yearly', 'then ' + fmt(mk, mk.y) + ' every year unless you cancel');
-      updateCTA(false);
-    };
+  function detectMarket() {
     var detected = 'IN';
     try {
       var tz = (Intl.DateTimeFormat().resolvedOptions() || {}).timeZone || '';
       if (TZ2M[tz]) detected = TZ2M[tz];
       else if (tz.indexOf('America/') === 0) detected = 'US';
     } catch (e) { /* keep IN default */ }
-    sel.value = detected;
-    render(detected);
-    sel.addEventListener('change', function () { render(sel.value); updateCTA(true); });
+    /* With the fallback data set, an unmapped detected market renders
+       the IN row (marketRow) — the select is left as detected so the
+       visitor sees their market named; prices stay truthful. */
+    return detected;
   }
-  /* plan selection: the CTA always reflects the chosen plan's real price */
-  var planRows = document.querySelectorAll('.lad-row.plan');
+
+  /* ---------- formatting -------------------------------------------- */
+  function grp(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  /* Totals: whole amounts show no decimals (₹199, Mex$99); fractional
+     totals show 2 decimals ($9.99); zero-decimal markets round whole. */
+  function fmtTotal(mk, v) {
+    if (mk.decimals === 0) return mk.symbol + grp(Math.round(v));
+    if (Number.isInteger(v)) return mk.symbol + grp(v);
+    var p = (Math.round(v * 100) / 100).toFixed(2).split('.');
+    return mk.symbol + grp(p[0]) + '.' + p[1];
+  }
+  /* Per-month: WHOLE-UNIT FLOOR of total / months — never fractional. */
+  function fmtPerMonth(mk, total, months) {
+    return mk.symbol + grp(Math.floor(total / months));
+  }
+
+  /* ---------- state + rendering ------------------------------------- */
+  var market = detectMarket();
+  var plan = 'quarterly';
+
+  function setText(kind, key, txt, roll) {
+    var el = document.querySelector('[data-' + kind + '="' + key + '"]');
+    if (!el) return;
+    if (roll && window.__lamPriceRoll) { window.__lamPriceRoll(el, txt); return; }
+    el.textContent = txt;
+  }
+
+  function playStrike() {
+    if (!ctaBlock || reduce) return;
+    ctaBlock.classList.remove('strike-in');
+    void ctaBlock.offsetWidth; /* restart the one-shot animation */
+    ctaBlock.classList.add('strike-in');
+  }
+
+  function updateCTA(animate) {
+    if (!ctaBlock) return;
+    var mk = marketRow(market);
+    var p = PLANS[plan] || PLANS.quarterly;
+    var was = ctaBlock.querySelector('[data-cta-was]');
+    var now = ctaBlock.querySelector('[data-cta-now]');
+    var terms = ctaBlock.querySelector('[data-cta-terms]');
+    if (was) was.textContent = fmtTotal(mk, planTotal(mk, plan));
+    if (now) now.textContent = mk.starter;
+    if (terms) {
+      terms.innerHTML = '<b>' + mk.starter + ' for your first 7 days</b>, then ' +
+        fmtTotal(mk, planTotal(mk, plan)) + ' every ' + p.period +
+        '. Cancel easily anytime in Google Play.';
+    }
+    if (animate) playStrike();
+  }
+
+  function render(code, opts) {
+    market = code;
+    var roll = !!(opts && opts.roll);
+    var mk = marketRow(code);
+    DATA.plans.forEach(function (p) {
+      var total = mk[p.totalKey];
+      setText('price', p.id, fmtTotal(mk, total), roll);
+      setText('per', p.id,
+        p.months === 1
+          ? fmtTotal(mk, total) + p.perSuffix
+          : fmtPerMonth(mk, total, p.months) + p.perSuffix,
+        roll);
+      setText('renew', p.id,
+        'then ' + fmtTotal(mk, total) + ' every ' + p.period + ' unless you cancel', false);
+    });
+    updateCTA(false);
+  }
+
+  if (sel) {
+    sel.value = market;
+    render(market);
+    sel.addEventListener('change', function () { render(sel.value, { roll: true }); });
+  } else {
+    render(market);
+  }
+
+  /* ---------- plan selection ---------------------------------------- */
   planRows.forEach(function (row) {
+    if (row.classList.contains('selected')) {
+      plan = row.getAttribute('data-plan') || 'quarterly';
+      updateCTA(false);
+    }
     var choose = function () {
       planRows.forEach(function (r) {
         r.classList.toggle('selected', r === row);
@@ -271,15 +353,17 @@
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(); }
     });
   });
+
   /* strike animation fires when the pricing section first comes into view */
   if (ctaBlock && 'IntersectionObserver' in window && !reduce) {
     var io3 = new IntersectionObserver(function (entries) {
-      if (entries[0].isIntersecting) { updateCTA(true); io3.disconnect(); }
+      if (entries[0].isIntersecting) { playStrike(); io3.disconnect(); }
     }, { threshold: 0.25 });
     io3.observe(ctaBlock);
   }
+})();
 
-  /* ---------- article template: TOC jump links ----------
+/* ---------- article template: TOC jump links ----------
      Source HTML is untouched; ids are assigned at runtime only.
      Phase 2 fix: the inserted modules (the TOC itself and the two CTA
      cards) carry their own h2 elements inside #main, so the target list

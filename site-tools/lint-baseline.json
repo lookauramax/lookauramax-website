@@ -40,26 +40,6 @@
   "match": "factors: 1 inch = 2.54"
  },
  {
-  "rule": "ml-blanket",
-  "file": "glossary.html",
-  "match": "not AI, not machine learning"
- },
- {
-  "rule": "ml-blanket",
-  "file": "glossary.html",
-  "match": "not machine learning"
- },
- {
-  "rule": "ml-blanket",
-  "file": "index.html",
-  "match": "not AI, not machine learning"
- },
- {
-  "rule": "ml-blanket",
-  "file": "index.html",
-  "match": "not machine learning"
- },
- {
   "rule": "premium-banned",
   "file": "about.html",
   "match": "fake"
@@ -3533,11 +3513,6 @@
   "rule": "premium-banned",
   "file": "tools/water-intake-calculator.html",
   "match": "guaranteed"
- },
- {
-  "rule": "schema-offers",
-  "file": "index.html",
-  "match": "\"offers\""
  },
  {
   "rule": "score-percents",
