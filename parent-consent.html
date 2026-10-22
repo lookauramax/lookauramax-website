@@ -1,27 +1,22 @@
 <!doctype html>
 <!--
-  Lookauramax — parent-consent confirm page (static).
+  Lookauramax — parental consent page (static notice).
 
-  HOSTING: published at https://lookauramax.com/parent-consent
-  (exact path — the confirmation email links here; apex 308-redirects
-  to www, and the Edge Function answers CORS for both origins).
-  The Edge Function rejects confirmation_url values that do not match
-  https://lookauramax.com/parent-consent?token=...
-
-  BEHAVIOUR: reads ?token= from the URL, shows a Confirm button,
-  POSTs { action: 'confirm', token } as JSON to the
-  parental-consent-email Edge Function, and renders the result.
-  No teen data is shown, no cookies, no analytics, no tracking.
-  A missing/invalid token shows "Link invalid" without calling
-  the function. Not indexed (robots noindex) — token links are
-  private to the parent who received the email.
+  While Lookauramax is 18+ only, this page carries a static notice:
+  a Minors Mode with parental consent is planned for a later release
+  and is not available yet, so no consent can be requested, given, or
+  confirmed here. The original confirmation page — which confirmed
+  consent via the parental-consent-email Edge Function — is preserved
+  in staging as parent-consent-original.html.bak and can be restored
+  if Minors Mode launches. No script on this page confirms anything.
+  Not indexed (robots noindex).
 -->
 <html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Confirm parental consent — Lookauramax</title>
-<meta name="description" content="Confirm parental consent for a teen aged 16–17 to use Lookauramax.">
+<title>Lookauramax — Adults 18 and over</title>
+<meta name="description" content="Lookauramax is currently available to adults aged 18 and over. Parental consent for a planned Minors Mode is not available yet.">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="/favicon.ico?v=20261031">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,9 +30,6 @@
   h1{font-size:30px;line-height:1.25;margin-bottom:14px}
   p{color:#B3ABA0;margin:12px 0}
   p strong{color:#F7F3EA}
-  #status{color:#F7F3EA;background:#121212;border:1px solid rgba(225,154,45,.35);border-radius:12px;padding:16px 18px;margin:20px 0}
-  #confirmBtn{font-size:16px;font-weight:700;padding:14px 30px;border:1px solid rgba(255,209,78,.65);border-radius:10px;cursor:pointer;color:#000000;background:linear-gradient(180deg,#FFE9A3 0%,#FFD14E 30%,#E19A2D 70%,#B07E1F 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(0,0,0,.28),0 10px 28px rgba(225,154,45,.35)}
-  #confirmBtn:disabled{opacity:.45;cursor:default}
   .note{font-size:14px}
   a{color:#FFD14E}
 </style>
@@ -63,12 +55,12 @@
 <a class="btn btn-gold" href="/#pricing">See plans &rarr;</a>
 </nav>
 <main>
-<h1>Confirm parental consent</h1>
-<p>A teen (aged 16–17) entered your email address in Lookauramax and asked for your consent for them to use the app.</p>
-<p id="status">To confirm, press the button below. The link expires 7 days after it was requested.</p>
-<button id="confirmBtn" type="button">Confirm consent</button>
-<p class="note">If you did not expect this email, you can safely ignore it — nothing will be confirmed.</p>
-<p class="note"><a href="https://www.lookauramax.com/privacy">Privacy Policy</a></p>
+<h1>Lookauramax is for adults aged 18 and over</h1>
+<p>Lookauramax is currently available to adults aged 18 and over. Sign-up is blocked for anyone under 18, and no account can be created without passing the age gate.</p>
+<p>A Minors Mode for ages 16–17, with parental consent, is planned for a later release and is not available yet. Until it launches, parental consent cannot be requested, given, or confirmed — including on this page.</p>
+<p class="note">If you received an email asking you to confirm parental consent for Lookauramax, no action is needed — nothing will be confirmed.</p>
+<p class="note">Questions? Contact us at <a href="mailto:support@lookauramax.com">support@lookauramax.com</a>.</p>
+<p class="note"><a href="https://www.lookauramax.com/privacy">Privacy Policy</a> · <a href="https://www.lookauramax.com/terms">Terms of Service</a></p>
 </main>
 <footer><div class="wrap">
 <div class="foot-hero"><img src="/logo-small.png" alt="Lookauramax founder logo" width="64" height="64"><div><p class="foot-wordmark">LOOK<em>AURA</em>MAX</p><p class="foot-tag">Your glow-up, made real.</p></div></div>
@@ -82,49 +74,6 @@
 <div class="social-row"><a href="https://www.instagram.com/lookauramax" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg></a><a href="https://www.youtube.com/@lookauramax" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@lookauramax" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="17" r="3.5"/><path d="M12 17V4"/><path d="M12 4c.5 3 2.5 4.5 6 5"/></svg></a><a href="https://www.facebook.com/lookauramax" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.3-1.3H17V2.5h-2.6A3.9 3.9 0 0 0 10.5 6.4v2.1H8V12h2.5v9.5H14V12h2.4l.4-3.5z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.threads.net/@lookauramax" target="_blank" rel="noopener" aria-label="Threads"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="M15.5 4.5v8"/></svg></a><a href="https://x.com/Lookauramax" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.2l7.3-8.3L2 2h6.5l4.4 5.9L18.9 2zm-1.1 18h1.7L7.6 3.9H5.7L17.8 20z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.linkedin.com/company/lookauramax" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.pinterest.com/lookauramax/" target="_blank" rel="noopener" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.08 2.45 7.58 5.96 9.12-.08-.78-.16-1.98.03-2.83.18-.78 1.16-4.95 1.16-4.95s-.3-.6-.3-1.48c0-1.38.8-2.42 1.8-2.42.85 0 1.26.64 1.26 1.4 0 .85-.54 2.13-.82 3.31-.23.98.49 1.78 1.46 1.78 1.75 0 3.1-1.85 3.1-4.51 0-2.36-1.7-4.01-4.12-4.01-2.8 0-4.45 2.1-4.45 4.28 0 .85.32 1.75.73 2.25.08.1.09.19.07.29l-.27 1.1c-.04.18-.14.22-.33.13-1.24-.58-2.01-2.38-2.01-3.83 0-3.12 2.27-5.99 6.54-5.99 3.43 0 6.1 2.44 6.1 5.71 0 3.42-2.16 6.17-5.15 6.17-1.01 0-1.95-.52-2.27-1.14l-.62 2.36c-.22.87-.83 1.96-1.24 2.62.93.29 1.92.44 2.95.44 5.52 0 10-4.48 10-10S17.52 2 12 2z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.reddit.com/user/lookauramax/" target="_blank" rel="noopener" aria-label="Reddit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.562-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.688-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z" fill="currentColor" stroke="none"/></svg></a></div>
 <div class="foot-bottom"><p>&copy; 2026 Lookauramax. All rights reserved.</p><span data-cookie-settings-slot></span></div>
 </div></footer>
-<script>
-(function () {
-  var FUNCTIONS_BASE_URL = 'https://coszigoxchlqokletzem.supabase.co/functions/v1';
-  var params = new URLSearchParams(window.location.search);
-  var token = params.get('token');
-  var uuidPattern = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
-  var statusEl = document.getElementById('status');
-  var btn = document.getElementById('confirmBtn');
-  if (!token || !uuidPattern.test(token)) {
-    statusEl.textContent = 'This confirmation link is invalid. Please ask for a new link.';
-    btn.disabled = true;
-    return;
-  }
-  btn.addEventListener('click', function () {
-    btn.disabled = true;
-    statusEl.textContent = 'Confirming…';
-    fetch(FUNCTIONS_BASE_URL + '/parental-consent-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'confirm', token: token })
-    }).then(function (res) {
-      return res.json().then(function (data) {
-        return { status: res.status, data: data };
-      });
-    }).then(function (result) {
-      if (result.status === 200 && result.data.confirmed) {
-        statusEl.textContent = 'Thank you — parental consent is confirmed. The teen can now continue in Lookauramax. You can close this page.';
-        btn.style.display = 'none';
-      } else if (result.status === 410 || (result.data && result.data.reason === 'link_expired')) {
-        statusEl.textContent = 'This confirmation link has expired. Please ask for a new link.';
-      } else if (result.status === 404) {
-        statusEl.textContent = 'This confirmation link is invalid or has already been used. Please ask for a new link.';
-      } else {
-        statusEl.textContent = 'The confirmation could not be completed. Please try again later.';
-        btn.disabled = false;
-      }
-    }).catch(function () {
-      statusEl.textContent = 'The confirmation could not be completed. Please check your connection and try again.';
-      btn.disabled = false;
-    });
-  });
-})();
-</script>
 <script src="/assets/menu.js?v=20261102" defer></script>
 </body>
 </html>
