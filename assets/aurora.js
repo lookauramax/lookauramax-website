@@ -191,10 +191,12 @@
     var p = r.toFixed(2).split('.');
     return mk.s + grp(p[0]) + '.' + p[1];
   }
-  /* Locked starter prices (the 7-day verification cost). Markets without
-     a locked starter yet show the honest generic wording — their starter
-     price is fixed at Play Console setup. */
-  var STARTERS = { IN: '₹7', US: '$0.99', GB: '£0.99' };
+  /* Locked starter prices (the 7-day verification cost) — ALL 10 launch
+     markets locked 2026-10-22, each above Google Play's official
+     per-country minimum price. The generic fallback in updateCTA survives
+     only as a safety net for an unmapped market. */
+  var STARTERS = { IN: '₹7', US: '$0.99', GB: '£0.99', BR: 'R$4.99', ID: 'Rp9,900',
+    PH: '₱49', MX: 'Mex$19', NG: '₦499', PK: 'Rs249', BD: '৳99' };
   var sel = document.getElementById('pricing-region');
   var ctaBlock = document.getElementById('cta-block');
   var market = 'IN', plan = 'quarterly';

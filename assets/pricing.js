@@ -24,6 +24,11 @@
     BD: { symbol: '৳',    monthly: 319,   q: 639,    y: 1599,   decimals: 2 }
   };
 
+  /* LOCKED starter prices (the 7-day verification cost) — all 10 markets,
+   * locked 2026-10-22, kept in sync with the STARTERS table in aurora.js. */
+  var STARTERS = { IN: '₹7', US: '$0.99', GB: '£0.99', BR: 'R$4.99', ID: 'Rp9,900',
+    PH: '₱49', MX: 'Mex$19', NG: '₦499', PK: 'Rs249', BD: '৳99' };
+
   /* IANA timezone -> market. Only the 10 launch markets are mapped;
    * everything else falls through to the USD default. */
   var TZ = {
