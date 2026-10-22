@@ -492,3 +492,603 @@ body.glossary #main dt:hover{color:var(--acc)}
   body.blog-index #main .card,body.hub .hub-card,
   body.lam-tools #main .tool,body.glossary #main dl{animation:none}
 }
+
+/* ================= ROUND 2 — FOUNDATION TOKENS ================= */
+/* ==========================================================================
+   ROUND 2 · FOUNDATION FRAGMENT 1 of 2 — TOKENS + MOTION ALPHABET
+   Integration: APPEND to assets/aurora.css BEFORE the capsule, pricing
+   and hero fragments (see foundation/MANIFEST.md). Additive only: this
+   block redefines no existing Aurora token and styles no existing class.
+   Rules honoured: static final state is the DEFAULT; every animated
+   start-state lives inside @media (prefers-reduced-motion: no-preference)
+   AND behind the .js class aurora.js already sets, so no-JS and
+   reduced-motion visitors always see finished content. Transform and
+   opacity only. The marquee (owned by another stream) is the only loop.
+   ========================================================================== */
+
+:root{
+  /* --- Verdigris: pricing-section accent ONLY (Decision 2 / P1) --- */
+  --verdigris:#56C9A8;
+  --verdigris-fill:#143B31;
+  --verdigris-line:rgba(86,201,168,.35);
+  --verdigris-ring:rgba(86,201,168,.5);
+
+  /* --- Motion durations: the four-move alphabet's only timings --- */
+  --mv-fast:150ms;
+  --mv:240ms;
+  --mv-slow:400ms;
+  --mv-xl:700ms;
+
+  /* --- Spacing scale (4px base grid) --- */
+  --sp-1:4px;
+  --sp-2:8px;
+  --sp-3:12px;
+  --sp-4:16px;
+  --sp-5:24px;
+  --sp-6:32px;
+  --sp-7:48px;
+  --sp-8:64px;
+
+  /* --- Radius scale --- */
+  --rad-chip:12px;
+  --rad-card:20px;
+  --rad-pill:999px;
+}
+
+/* ==========================================================================
+   THE FOUR MOVES (ZAI §8.2 / Decision 5)
+   Trigger contract (shared with aurora.js IntersectionObserver code):
+   an element carrying .mv-rise / .mv-wipe / .r2-in starts visible.
+   Supporting JS adds .is-in ONCE when the element enters the viewport,
+   then unobserves it. Without JS, or under reduced motion, no start
+   state is ever applied — content is simply there.
+   ========================================================================== */
+
+/* ---------- Move 1 · RISE — opacity 0→1 + translateY(12px→0) ---------- */
+@media (prefers-reduced-motion: no-preference){
+  .js .mv-rise:not(.is-in),
+  .js .r2-in:not(.is-in){
+    opacity:0;
+    transform:translateY(12px);
+  }
+  .js .mv-rise,
+  .js .r2-in{
+    transition:opacity var(--mv-slow) var(--ease),transform var(--mv-slow) var(--ease);
+  }
+  .js .mv-rise.is-in,
+  .js .r2-in.is-in{
+    opacity:1;
+    transform:translateY(0);
+  }
+  /* Optional stagger, mirroring aurora's .reveal[data-delay] steps */
+  .js .mv-rise[data-delay="1"],.js .r2-in[data-delay="1"]{transition-delay:.08s}
+  .js .mv-rise[data-delay="2"],.js .r2-in[data-delay="2"]{transition-delay:.16s}
+  .js .mv-rise[data-delay="3"],.js .r2-in[data-delay="3"]{transition-delay:.24s}
+}
+
+/* ---------- Move 2 · WIPE — mask/translate reveal helper ----------
+   Structure: <div class="mv-wipe"><div class="mv-wipe__cover"></div>…content…</div>
+   (or any element with .mv-wipe; the ::after cover is automatic).
+   Default: no cover, content fully visible. Armed state (JS + motion
+   allowed): a canvas-coloured cover sits over the block and translates
+   off to the right when .is-in lands, wiping the content into view.
+   The wipe distance is transform-only; the cover never affects layout. */
+.mv-wipe{position:relative}
+@media (prefers-reduced-motion: no-preference){
+  .js .mv-wipe::after{
+    content:"";position:absolute;inset:0;background:var(--black);
+    transform:translateX(0);pointer-events:none;
+    transition:transform var(--mv-xl) var(--ease);
+  }
+  .js .mv-wipe.is-in::after{transform:translateX(101%)}
+}
+
+/* ---------- Move 3 · SWEEP — one-shot scan line ----------
+   .mv-sweep is the line element itself, placed inside a positioned
+   parent (hero stage, capture frame, readout card). It is decorative:
+   its resting state is invisible, so no-JS / reduced-motion lose
+   nothing. When JS adds .is-in (to the line or to an .r2-in ancestor),
+   the line travels once from the top of its parent and fades out.
+   Set --sweep-travel on the parent to the travel distance in px;
+   it defaults to 240px. */
+.mv-sweep{
+  position:absolute;left:0;right:0;top:0;height:2px;opacity:0;
+  background:linear-gradient(90deg,transparent,var(--gold-hi) 18%,var(--gold-hi) 82%,transparent);
+  box-shadow:0 0 18px rgba(240,205,138,.35);
+  pointer-events:none;
+}
+@media (prefers-reduced-motion: no-preference){
+  .mv-sweep.is-in,
+  .r2-in.is-in .mv-sweep{
+    animation:r2-sweep var(--mv-xl) var(--ease) 1 forwards;
+  }
+}
+@keyframes r2-sweep{
+  0%{transform:translateY(0);opacity:0}
+  10%{opacity:1}
+  88%{opacity:1}
+  100%{transform:translateY(var(--sweep-travel,240px));opacity:0}
+}
+
+/* ---------- Move 4 · PRESS — active scale .98, 120ms ----------
+   Apply to any tappable card/button-like element. Cheap, always on;
+   the global reduced-motion block in aurora.css already flattens the
+   transition for visitors who ask for that. */
+.mv-press{transition:transform 120ms var(--ease)}
+.mv-press:active{transform:scale(.98)}
+
+/* ================= ROUND 2 — FOUNDATION COMPONENTS ================= */
+/* ==========================================================================
+   ROUND 2 · FOUNDATION FRAGMENT 2 of 2 — SHARED COMPONENTS (FOUNDATION SET)
+   Integration: APPEND to assets/aurora.css AFTER frag-tokens.css and
+   BEFORE the capsule, pricing and hero fragments (see MANIFEST.md).
+   Owned here: ReadoutCard, AnswerBlock, ArticleCard, ToolCard (r2-),
+   FaqItem cluster, SignalDeck ledger, CycleScrubber (r2-).
+   NOT styled here (other streams own them): capsule header, marquee,
+   pricing internals, hero internals, LensStage, PlanCard/StarterButton.
+   Everything renders complete with JS disabled; hover/press motion is
+   transform/opacity only and reduced-motion safe via aurora's global
+   reduced-motion block.
+   Naming: names with no live collision keep their component name;
+   .tool-card and .scrubber ALREADY EXIST in base.css with unrelated
+   meanings, so those two components are r2- prefixed (see MANIFEST).
+   ========================================================================== */
+
+/* ==========================================================================
+   1 · ReadoutCard — one signal's read: name, band, Why, Action, checks.
+   Reused by the hero readout, How-it-works artifacts and articles.
+   Bands are words, never numbers; chips are neutral with a gold outline.
+   ========================================================================== */
+.readout-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--rad-card);
+  padding:26px 28px;position:relative;overflow:hidden;
+}
+.readout-card__head{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 16px;
+}
+.readout-card__signal{
+  font-family:var(--serif);font-weight:600;font-size:27px;line-height:1.1;margin:0;
+}
+.readout-card__note{
+  margin-left:auto;color:var(--mut-2);font-size:12px;letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.readout-row{display:grid;grid-template-columns:74px 1fr;gap:16px;padding:11px 0;
+  border-top:1px solid var(--line-soft)}
+.readout-row:first-of-type{border-top:none}
+.readout-row__label{
+  font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--acc);padding-top:3px;
+}
+.readout-row p{margin:0;color:var(--mut);font-size:15px}
+.readout-row p b{color:var(--ink);font-weight:600}
+.readout-checks{list-style:none;margin:16px 0 0;padding:16px 0 0;
+  border-top:1px solid var(--line-soft);display:grid;gap:9px}
+.readout-checks li{display:flex;gap:11px;align-items:baseline;color:var(--mut);font-size:14.5px}
+.readout-checks li::before{
+  content:"✓";color:var(--gold-hi);font-weight:700;font-size:13px;flex:none;
+}
+
+/* Band chips — one component, three word-variants. Neutral surface,
+   gold outline; the word always carries the meaning, never colour alone. */
+.band-chip{
+  display:inline-flex;align-items:center;gap:7px;border-radius:var(--rad-pill);
+  border:1px solid var(--gold-line);color:var(--gold-hi);background:rgba(223,163,60,.07);
+  font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 12px;white-space:nowrap;
+}
+.band-chip::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.band-chip--focus{border-color:var(--gold-line)}
+.band-chip--good{border-color:rgba(223,163,60,.55)}
+.band-chip--strong{border-color:var(--gold);color:var(--gold-hi);background:rgba(223,163,60,.13)}
+
+/* ==========================================================================
+   2 · AnswerBlock — answer-first box for articles and tools (AEO shape:
+   the direct answer leads, detail follows).
+   ========================================================================== */
+.answer-block{
+  background:var(--panel-2);border:1px solid var(--line);border-left:3px solid var(--acc);
+  border-radius:var(--rad-card);padding:24px 28px;margin:28px 0;
+}
+.answer-block__q{
+  font-family:var(--serif);font-weight:600;font-size:24px;line-height:1.2;margin:0 0 8px;
+}
+.answer-block__a{margin:0;color:var(--ink);font-size:16.5px}
+.answer-block__a b{color:var(--gold-hi);font-weight:600}
+.answer-block__more{margin:12px 0 0;color:var(--mut);font-size:15px}
+
+/* ==========================================================================
+   3 · ArticleCard — journal card. Harmonises with aurora's .post-card
+   (same panel, radius, lift) and adds the R2 fields: signal tag chip,
+   answer-first summary, read time.
+   ========================================================================== */
+.article-card{
+  display:flex;flex-direction:column;background:var(--panel);
+  border:1px solid var(--line-soft);border-radius:var(--rad-card);overflow:hidden;
+  text-decoration:none;height:100%;
+  transition:transform var(--mv) var(--ease),border-color var(--mv) var(--ease);
+}
+.article-card:hover{transform:translateY(-5px);border-color:var(--acc)}
+.article-card:active{transform:scale(.99)}
+.article-card__media{overflow:hidden;background:var(--panel-3)}
+.article-card__media img{
+  width:100%;aspect-ratio:16/10;object-fit:cover;
+  transition:transform var(--mv-slow) var(--ease);
+}
+.article-card:hover .article-card__media img{transform:scale(1.05)}
+.article-card__body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:9px;flex:1}
+.article-card__tag{
+  align-self:flex-start;font-size:11px;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);
+  border-radius:var(--rad-pill);padding:3px 10px;
+}
+.article-card__title{
+  font-family:var(--serif);font-weight:600;font-size:24px;line-height:1.2;margin:0;
+}
+.article-card__summary{color:var(--mut);font-size:14.5px;margin:0}
+.article-card__meta{margin-top:auto;color:var(--mut-2);font-size:13px;letter-spacing:.04em}
+
+/* ==========================================================================
+   4 · ToolCard — r2- prefixed: base.css already owns .tool-card for the
+   legacy tools grid (different markup). This is the R2 card: name,
+   one-line outcome, signal chip, press state. Pairs with aurora's
+   .tool-row list pattern; use cards where a grid serves better.
+   ========================================================================== */
+.r2-tool-card{
+  display:flex;flex-direction:column;gap:9px;background:var(--panel);
+  border:1px solid var(--line-soft);border-radius:var(--rad-card);
+  padding:24px 26px;text-decoration:none;height:100%;
+  transition:transform var(--mv) var(--ease),border-color var(--mv) var(--ease);
+}
+.r2-tool-card:hover{transform:translateY(-4px);border-color:var(--acc)}
+.r2-tool-card:active{transform:scale(.99)}
+.r2-tool-card__name{font-family:var(--serif);font-weight:600;font-size:24px;line-height:1.15;margin:0}
+.r2-tool-card__line{color:var(--mut);font-size:14.5px;margin:0}
+.r2-tool-card__foot{margin-top:auto;display:flex;align-items:center;gap:12px}
+.r2-tool-card__go{color:var(--acc);font-weight:600;font-size:14px;margin-left:auto}
+
+/* ==========================================================================
+   5 · FaqItem cluster — a titled group of native <details> questions.
+   Item styling deliberately reuses aurora's .faq-list hooks (border,
+   summary row, +/× toggle) so clustered and flat FAQs look identical;
+   this block only adds the cluster frame and heading.
+   Structure: <section class="faq-cluster"><h3 class="faq-cluster__title">
+   …</h3><div class="faq-list"> <details class="faq-item">… </div></section>
+   ========================================================================== */
+.faq-cluster{margin-top:44px}
+.faq-cluster:first-of-type{margin-top:36px}
+.faq-cluster__title{
+  display:flex;align-items:center;gap:14px;margin:0 0 6px;
+  font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--acc);
+}
+.faq-cluster__title::after{content:"";flex:1;height:1px;background:var(--line-soft)}
+.faq-cluster .faq-list{margin-top:0;border-top:none}
+.faq-item{scroll-margin-top:96px} /* anchored deep-links clear the capsule */
+
+/* ==========================================================================
+   6 · SignalDeck ledger — the full 15-check ledger as a real table.
+   Signal groups are ordinary rows; the photo-quality GATE row is
+   visually distinct (dashed border, hatched tint, key marker) and is
+   never styled as a score row — no band chip belongs in it.
+   ========================================================================== */
+.ledger-table{width:100%;border-collapse:collapse;margin-top:36px;font-size:15px}
+.ledger-table caption{
+  text-align:left;color:var(--mut);font-size:14.5px;padding:0 0 16px;caption-side:top;
+}
+.ledger-table th,.ledger-table td{
+  text-align:left;vertical-align:top;padding:15px 16px;
+  border-bottom:1px solid var(--line-soft);
+}
+.ledger-table thead th{
+  font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--mut-2);border-bottom:1px solid var(--line);
+}
+.ledger-table__group th{
+  font-family:var(--serif);font-weight:600;font-size:21px;color:var(--ink);
+  padding-top:24px;border-bottom:1px solid var(--line);
+}
+.ledger-table__group .ledger-table__count{
+  font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--acc);white-space:nowrap;
+}
+.ledger-table td{color:var(--mut)}
+.ledger-table td b{color:var(--ink);font-weight:600}
+.ledger-table__gate th,.ledger-table__gate td{
+  border-top:1px dashed var(--gold-line);border-bottom:1px dashed var(--gold-line);
+  background:repeating-linear-gradient(-45deg,rgba(223,163,60,.045) 0 10px,transparent 10px 20px);
+  color:var(--mut);
+}
+.ledger-table__gate th{color:var(--gold-hi);font-weight:600}
+.ledger-gate-badge{
+  display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);
+  border:1px dashed var(--gold-line);border-radius:var(--rad-pill);padding:4px 11px;
+  white-space:nowrap;
+}
+@media (max-width:720px){
+  .ledger-table,.ledger-table tbody,.ledger-table tr,.ledger-table th,.ledger-table td{display:block}
+  .ledger-table thead{display:none}
+  .ledger-table th,.ledger-table td{border-bottom:none;padding:6px 4px}
+  .ledger-table tr{border-bottom:1px solid var(--line-soft);padding:10px 0}
+  .ledger-table__group th{padding-top:18px}
+}
+
+/* ==========================================================================
+   7 · CycleScrubber — r2- prefixed: base.css already owns .scrubber for
+   the legacy before/after image comparison (different component).
+   A Day 1→90 track: stops are real buttons (≥44px targets), the active
+   stop's card sits below. Static default = Day 1 active, all stops and
+   the card readable with no JS; JS moves .is-active between stops.
+   ========================================================================== */
+.r2-scrubber{margin-top:48px}
+.r2-scrubber__track{
+  position:relative;display:flex;justify-content:space-between;align-items:flex-start;
+  padding:0 4px;
+}
+.r2-scrubber__track::before{
+  content:"";position:absolute;left:22px;right:22px;top:21px;height:2px;background:var(--line);
+}
+.r2-scrubber__fill{
+  position:absolute;left:22px;top:21px;height:2px;width:0;
+  background:linear-gradient(90deg,var(--acc),var(--gold));
+}
+.r2-scrubber__stop{
+  position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:9px;
+  min-width:44px;min-height:44px;padding:0;background:none;border:none;cursor:pointer;
+  color:var(--mut);font-family:inherit;
+}
+.r2-scrubber__dot{
+  width:44px;height:44px;border-radius:50%;border:2px solid var(--line);
+  background:var(--black);display:flex;align-items:center;justify-content:center;
+  transition:border-color var(--mv) var(--ease),transform 120ms var(--ease);
+}
+.r2-scrubber__dot::after{
+  content:"";width:10px;height:10px;border-radius:50%;background:var(--mut-2);
+  transition:background var(--mv) var(--ease);
+}
+.r2-scrubber__stop:hover .r2-scrubber__dot{border-color:var(--acc)}
+.r2-scrubber__stop:active .r2-scrubber__dot{transform:scale(.96)}
+.r2-scrubber__stop.is-active{color:var(--ink)}
+.r2-scrubber__stop.is-active .r2-scrubber__dot{border-color:var(--gold)}
+.r2-scrubber__stop.is-active .r2-scrubber__dot::after{background:var(--gold)}
+.r2-scrubber__day{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1}
+.r2-scrubber__card{
+  margin-top:30px;background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--rad-card);padding:26px 30px;max-width:640px;
+}
+.r2-scrubber__card h3{font-family:var(--serif);font-weight:600;font-size:25px;margin:0 0 6px}
+.r2-scrubber__card p{color:var(--mut);font-size:15px;margin:0}
+.r2-scrubber__card p + p{margin-top:10px}
+.r2-scrubber__card .r2-scrubber__flag{
+  display:inline-block;margin-top:14px;font-size:11px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold-hi);border:1px solid var(--gold-line);
+  padding:3px 9px;border-radius:var(--rad-pill);
+}
+@media (max-width:640px){
+  .r2-scrubber__day{font-size:16px}
+  .r2-scrubber__card{padding:22px 22px}
+}
+
+/* ================= ROUND 2 — CAPSULE C1 ================= */
+/* ==========================================================================
+   Lookauramax Round 2 — C1 CAPSULE HEADER (frag-capsule.css)
+   Coordinator: append to assets/aurora.css AFTER the existing header rules
+   (this fragment overrides header.site-head / .masthead-era rules by
+   specificity + source order). Tokens are the LIVE Aurora tokens
+   (BUILD-SPEC §7): --gold #DFA33C, --gold-line rgba(223,163,60,.38),
+   --ink #F2EFE9, --mut #A79E8E, --ease cubic-bezier(.22,.8,.28,1).
+   Spec: DECISIONS.md Decision 3 (C1) + Z.ai §4, rebased on live tokens —
+   the border alpha uses the live gold (223,163,60), not Z.ai's draft
+   (201,168,76). Shrink = height 64px -> 52px per Z.ai §4.2's explicit
+   one-shot height transition on this small fixed element.
+   ========================================================================== */
+
+/* ---------- reserved top inset: the fixed pill never covers content --- */
+body.has-capsule{
+  padding-top:calc(64px + 22px + env(safe-area-inset-top));
+}
+/* Anchored headings clear the pill (10px offset + 64px pill + 24px air). */
+body.has-capsule main [id],
+body.has-capsule section[id]{
+  scroll-margin-top:calc(98px + env(safe-area-inset-top));
+}
+
+/* ---------- skip link: visually hidden until focused ------------------- */
+.skip-link{
+  position:fixed;top:calc(10px + env(safe-area-inset-top));left:16px;z-index:200;
+  background:var(--gold);color:#1A1206;font-family:var(--sans);
+  font-size:14px;font-weight:600;text-decoration:none;
+  padding:12px 20px;border-radius:999px;
+  transform:translateY(calc(-100% - 24px - env(safe-area-inset-top)));
+}
+.skip-link:focus,.skip-link:focus-visible{
+  transform:translateY(0);outline:2px solid var(--ink);outline-offset:2px;
+}
+
+/* ---------- the pill ---------------------------------------------------- */
+header.site-head.capsule-head{
+  position:fixed;z-index:60;
+  top:calc(10px + env(safe-area-inset-top));
+  left:0;right:0;margin-inline:auto;
+  width:min(1152px,calc(100% - 32px));max-width:1152px;height:64px;
+  border-radius:999px;
+  /* Solid fallback FIRST (engines without composited backdrop-filter). */
+  background:rgba(12,12,12,.92);
+  border:1px solid rgba(223,163,60,.22);
+  box-shadow:0 10px 30px rgba(0,0,0,.45);
+  transition:height .22s var(--ease),background-color .22s var(--ease),
+    border-color .22s var(--ease),box-shadow .22s var(--ease);
+}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+  header.site-head.capsule-head{
+    background:rgba(12,12,12,.66);
+    -webkit-backdrop-filter:blur(16px) saturate(1.25);
+    backdrop-filter:blur(16px) saturate(1.25);
+  }
+  header.site-head.capsule-head.is-scrolled{background:rgba(12,12,12,.85)}
+}
+header.site-head.capsule-head.is-scrolled{
+  height:52px;
+  border-color:rgba(223,163,60,.34);
+  box-shadow:0 14px 34px rgba(0,0,0,.55);
+}
+/* Scroll sentinel (inserted by frag-capsule.js): 32px tall at doc top. */
+.capsule-sentinel{position:absolute;top:0;left:0;width:1px;height:32px;pointer-events:none}
+
+.capsule-inner{
+  display:flex;align-items:center;gap:24px;height:100%;
+  padding:0 10px 0 20px;margin:0 auto;
+}
+
+/* Brand: 36px logo + wordmark, NO tagline inside the pill. */
+.capsule-head .brand{margin-right:0;gap:10px;flex:none}
+.capsule-head .brand img{width:36px;height:36px}
+.capsule-head .brand-text b{font-size:15.5px}
+
+/* Centre nav (reuses .hlinks underline from aurora.css). */
+.capsule-nav{margin-inline:auto}
+.capsule-nav a{white-space:nowrap}
+/* Active-section gold dot (homepage; .is-active set by frag-capsule.js). */
+.capsule-nav a.is-active{color:var(--gold-hi)}
+.capsule-nav a.is-active::before{
+  content:"";position:absolute;left:50%;bottom:-3px;
+  width:4px;height:4px;border-radius:50%;background:var(--gold);
+  transform:translateX(-50%);
+}
+
+/* Right CTA: small gold pill, >=44px touch height. */
+.capsule-head .capsule-cta{
+  padding:10px 20px;font-size:14px;min-height:44px;flex:none;
+}
+
+/* Visible focus everywhere inside the pill (Z.ai §4.5). */
+.capsule-head a:focus-visible,.capsule-head button:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px;
+}
+
+/* "Top" ghost button — article-type pages only; injected + toggled
+   (.show after 700px scroll) by frag-capsule.js. */
+.capsule-top{
+  flex:none;display:inline-flex;align-items:center;justify-content:center;
+  height:40px;min-width:44px;padding:0 14px;border-radius:999px;
+  background:transparent;border:1px solid var(--gold-line);
+  color:var(--gold-hi);font-family:var(--sans);font-size:13px;font-weight:600;
+  letter-spacing:.04em;cursor:pointer;
+  opacity:0;visibility:hidden;transform:translateY(4px);
+  transition:opacity .22s var(--ease),transform .22s var(--ease),visibility .22s;
+}
+.capsule-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.capsule-top:active{transform:scale(.98)}
+@media (pointer:coarse){.capsule-top{height:44px}}
+
+/* Overlay CTA as first menu item (Z.ai §4.3; overlay itself is styled
+   by aurora.css at <=900px — this only adds spacing). */
+.nav-overlay .nav-cta{margin:0 0 20px}
+
+/* ---------- mobile pill: wordmark + >=44px menu button ------------------
+   Breakpoint matches aurora.css (max-width:900px), where .hlinks and
+   .head-cta hide and .menu-btn + .nav-overlay take over. aurora.css
+   already hides .hlinks/.head-cta and shows .menu-btn at this width;
+   the rules below only tighten the pill's inner spacing. */
+@media (max-width:900px){
+  .capsule-inner{gap:12px;padding:0 8px 0 16px}
+  .capsule-head .brand-text b{font-size:14px;letter-spacing:.11em}
+  .capsule-head .menu-btn{flex:none}
+  .capsule-top{margin-left:auto}
+}
+
+/* ---------- article reading-progress hairline, restyled -----------------
+   The EXISTING .scroll-progress element (driven by aurora.js, scaleX)
+   moves from the viewport top to the capsule's bottom inner edge on
+   article-type bodies. Centring uses the independent `translate`
+   property (NOT `transform`) so aurora.js's inline scaleX transform
+   composes with it instead of clobbering it. Approximation per brief:
+   the hairline spans the centred 1152px pill width. */
+body.has-capsule.article .scroll-progress,
+body.has-capsule.lam-tools .scroll-progress,
+body.has-capsule.glossary .scroll-progress,
+body.has-capsule.hub .scroll-progress{
+  top:calc(10px + env(safe-area-inset-top) + 64px);
+  left:50%;translate:-50% 0;
+  width:min(1152px,calc(100% - 32px));
+  height:1.5px;z-index:61;
+}
+
+/* ---------- breadcrumb row (in-flow, below the pill) -------------------- */
+.crumbs{
+  max-width:1180px;margin:0 auto;padding:14px 24px 0;
+  font-family:var(--sans);font-size:13px;line-height:1.5;color:var(--mut);
+}
+.crumbs ol{display:flex;flex-wrap:wrap;align-items:center;gap:4px 0;
+  list-style:none;margin:0;padding:0}
+.crumbs li{display:inline-flex;align-items:center;min-width:0}
+.crumbs li+li::before{
+  content:"›";margin:0 8px;color:var(--gold);font-weight:600;
+}
+.crumbs a{color:var(--mut);text-decoration:none}
+.crumbs a:hover{color:var(--gold-hi);text-decoration:underline}
+.crumbs [aria-current="page"]{color:var(--ink)}
+
+/* ---------- reduced motion: shrink + Top become instant ----------------- */
+@media (prefers-reduced-motion:reduce){
+  header.site-head.capsule-head{transition:none}
+  .capsule-top{transition:none;transform:none}
+  .capsule-top:not(.show){transform:none}
+}
+
+/* ================= ROUND 2 — MARQUEE (ORIGINAL) ================= */
+/* ==========================================================================
+   Lookauramax Round 2 — ORIGINAL MARQUEE restoration (frag-marquee.css)
+   Coordinator: append to assets/aurora.css.
+
+   CASE CHECK (verified 2026-10-22 against the live tree): the §5b rules
+   DO already exist in assets/base.css (lines 498–506, + §5c at line
+   1190) — BUT the homepage does not load base.css at all (index.html
+   links only consent.css, fonts.css and aurora.css), and aurora.css
+   contains no marquee rules. So on the one page the marquee ships, the
+   §5b rules DO NOT load. This fragment therefore carries the FULL §5b +
+   §5c rule set (verbatim values from MARQUEE-FINDING.md §5) PLUS the
+   Round-2 additions (pause toggle, .paused state, focus-within pause).
+   On article/tool pages (which load base.css AND aurora.css) these rules
+   would merely duplicate base.css's copy with identical values — the
+   marquee markup only ever ships on the homepage, so there is no
+   conflict; the literal border colour below is deliberate: base.css's
+   var(--line) is rgba(225,154,45,.20), but aurora.css redefines --line
+   to rgba(255,255,255,.09), so the original gold hairline is written as
+   the literal value (BUILD-SPEC §7 marquee tokens).
+   ========================================================================== */
+
+/* --- Marquee: Aura feature names, slow + elegant, pauses on hover.
+       (§5b verbatim, border colour as the literal original value.) --- */
+.marquee{overflow:hidden;border-top:1px solid rgba(225,154,45,.20);border-bottom:1px solid rgba(225,154,45,.20);
+  padding:16px 0;background:#050403}
+.marquee-track{display:flex;gap:0;width:max-content;animation:marquee 46s linear infinite;will-change:transform}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{font-family:"Space Grotesk",sans-serif;font-size:15px;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:#C9C2B2;white-space:nowrap;padding-right:14px}
+.marquee-track span i{font-style:normal;color:#E19A2D;padding-left:14px}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* --- Round-2 additions: WCAG 2.2.2 pause toggle + paused state.
+       .marquee needs a positioning context for the pinned toggle. --- */
+.marquee{position:relative}
+.marquee:focus-within .marquee-track{animation-play-state:paused}
+.marquee.paused .marquee-track{animation-play-state:paused}
+.marquee-toggle{
+  position:absolute;right:10px;top:50%;transform:translateY(-50%);z-index:2;
+  width:44px;height:44px;padding:0;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(5,4,3,.78);border:1px solid rgba(225,154,45,.35);
+  cursor:pointer;
+}
+.marquee-toggle svg{width:18px;height:18px;fill:#E19A2D;display:block}
+.marquee-toggle .icon-play{display:none}
+.marquee-toggle[aria-pressed="true"] .icon-play{display:block}
+.marquee-toggle[aria-pressed="true"] .icon-pause{display:none}
+.marquee-toggle:focus-visible{outline:2px solid #E19A2D;outline-offset:2px}
+.marquee-toggle:active{transform:translateY(-50%) scale(.98)}
+
+/* --- §5c reduced-motion companion (verbatim rule from base.css). --- */
+@media (prefers-reduced-motion:reduce){
+  .marquee-track{animation:none!important;flex-wrap:wrap;width:auto}
+}

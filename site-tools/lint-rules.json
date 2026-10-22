@@ -1,0 +1,283 @@
+{
+  "$comment": "Lookauramax honesty linter — SINGLE source of truth for every lint rule. The linter (honesty-lint.mjs) contains no rules of its own; edit rules HERE. Locked sources: BUILD-SPEC.md hard rules 3+6, DECISIONS.md Decisions 5+6+7, SYNTHESIS-WORKING.md §2 KILLED list, ZAI.md §8.4, premium language pass (MEMORY.md, Oct 18).",
+  "playListingLive": false,
+  "playListingLiveNote": "While false, the schema-offers rule is ACTIVE: no SoftwareApplication block may carry offers / aggregateRating / review keys, because no Google Play listing exists yet (Decision 6 / schema discipline S3; KILLED #21-23). The day the Play listing goes live, set this to true — the rule then disables itself — and build the offers markup per-market in the same change.",
+  "rules": [
+    {
+      "description": "Premium language pass (Oct 18): banned in user-facing copy everywhere. Per-pattern severity overrides live on the patterns themselves: overnight is WARN (see its note), the demo/test/sample/placeholder family and 'algorithm' are WARN (too fuzzy for fail).",
+      "id": "premium-banned",
+      "patterns": [
+        {
+          "flags": "gi",
+          "note": "Frame: best value, never cheap.",
+          "regex": "\\bcheap\\b"
+        },
+        {
+          "flags": "gi",
+          "regex": "\\bhacks?\\b"
+        },
+        {
+          "flags": "gi",
+          "note": "Honest negations ('no tricks') still hit and are baselined — the word itself is banned from copy, negated or not.",
+          "regex": "\\btricks?\\b"
+        },
+        {
+          "flags": "gi",
+          "regex": "\\bquick\\s+fix(es)?\\b"
+        },
+        {
+          "flags": "gi",
+          "regex": "\\binstant\\s+results?\\b"
+        },
+        {
+          "flags": "gi",
+          "note": "WARN, not fail — verified against the live tree 2026-10-22: articles use 'overnight' honestly and constantly ('no overnight cure', 'cannot force a pimple away overnight', 'no miracle promises'). As a standalone word it is not a results claim; the banned RESULTS-CLAIM forms are covered by 'instant results' / 'quick fix' / 'guaranteed'. Promote to fail only if a pass ever finds it used as a promise.",
+          "regex": "\\bovernight\\b",
+          "severity": "warn"
+        },
+        {
+          "flags": "gi",
+          "note": "Fail. The one legitimate home for guarantee language is the refund policy, which lives on the frozen legal pages — already out of copy scope.",
+          "regex": "\\bguaranteed\\b"
+        },
+        {
+          "flags": "gi",
+          "note": "Honest negations ('no fake transformations') still hit and are baselined.",
+          "regex": "\\bfake\\b"
+        },
+        {
+          "flags": "gi",
+          "note": "Anchor-text form: matches when 'click here' is link text.",
+          "regex": ">\\s*click\\s+here\\b"
+        },
+        {
+          "flags": "gi",
+          "note": "Anchor-text form only ('Learn more' as link text is banned; the phrase inside a sentence is not). The leading '>' anchors the match to the start of an element's text — in practice, a link.",
+          "regex": ">\\s*learn\\s+more\\b"
+        },
+        {
+          "flags": "gi",
+          "regex": "\\bcoming\\s+soon\\b"
+        },
+        {
+          "flags": "gi",
+          "note": "Warn family: demo/test/sample/placeholder are too fuzzy for fail ('patch test', 'closed testing', 'sample' in a legitimate sense). A human judges warn hits.",
+          "regex": "\\bdemo\\b",
+          "severity": "warn"
+        },
+        {
+          "flags": "gi",
+          "regex": "\\btest\\b",
+          "severity": "warn"
+        },
+        {
+          "flags": "gi",
+          "regex": "\\bsample\\b",
+          "severity": "warn"
+        },
+        {
+          "flags": "gi",
+          "regex": "\\bplaceholder\\b",
+          "severity": "warn"
+        },
+        {
+          "flags": "gi",
+          "note": "Word-boundaried so robots.txt mentions, 'both', etc. do not match. Crawler names like PerplexityBot have no boundary before 'Bot' and do not match.",
+          "regex": "\\bbot\\b"
+        },
+        {
+          "flags": "gi",
+          "note": "Warn: banned in user-facing copy, but articles legitimately discuss platforms' algorithms. A human judges.",
+          "regex": "\\balgorithm\\b",
+          "severity": "warn"
+        },
+        {
+          "flags": "gi",
+          "note": "'loading...' as user-visible text. Code identifiers like 'loading=lazy' do not match (no trailing dots).",
+          "regex": "loading\\s*(\\.\\.\\.|…)"
+        }
+      ],
+      "scope": "copy",
+      "severity": "fail"
+    },
+    {
+      "description": "Founder rule 2026-10-21: NEVER headline 'cancel in 2 taps'. The approved phrasing is 'easy to cancel' / 'Cancel easily anytime in Google Play.' (KILLED-adjacent; website + listing were swept 2026-10-21, commit 218b1ed — this rule keeps it dead.)",
+      "id": "cancel-2-taps",
+      "patterns": [
+        {
+          "flags": "gi",
+          "note": "Any case. The 'two' spelling is included so the phrase cannot return respelled.",
+          "regex": "cancel\\s+in\\s+(2|two)\\s+taps"
+        }
+      ],
+      "scope": "copy",
+      "severity": "fail"
+    },
+    {
+      "description": "There is no free trial. Every plan starts with a PAID 7-day starter (₹7 in India) that auto-renews (₹7 starter ruling 2026-10-21; KILLED #15). 'Free trial' is false in every direction — even negations ('no free trial') fail at lint level, because the honest sentence is 'no permanent free plan' / 'the scan is free'. Negations found in the current tree are baselined, not blessed.",
+      "id": "free-trial",
+      "patterns": [
+        {
+          "flags": "gi",
+          "regex": "\\bfree\\s+trial\\b"
+        }
+      ],
+      "scope": "copy",
+      "severity": "fail"
+    },
+    {
+      "description": "Audited counts ONLY (FACTOR-AUDIT, locked wordings W1/W2/W3): 15 individual checks total, 12 measurements on the face photo, 10 personal inputs. Any number >= 16 (or 'hundreds') within 40 characters of checks / measurements / factors / signals is an invented count (KILLED #1, #3, #6). 'Hundreds of factors' is the canonical lie this rule exists to kill. Also kills 'checks behind every signal' (per-signal depth is uneven — Skin 5, Hair 1, Brows 1).",
+      "id": "count-claims",
+      "patterns": [
+        {
+          "flags": "gi",
+          "note": "Number first, noun within 40 chars. Two Day guards: the (?<!Day ) lookbehind excludes a number directly after 'Day', and the gap may not cross the word 'Day' at all — Day 30/60/90 check-in language is locked product copy, never a check count.",
+          "regex": "(?<!Day\\s)\\b(1[6-9]|[2-9][0-9]|[0-9]{3,})\\+?(?:(?!\\bDay\\b)[\\s\\S]){0,40}?\\b(checks|measurements|factors|signals)\\b"
+        },
+        {
+          "flags": "gi",
+          "note": "Noun first, number within 40 chars. Same Day guards — they kill the systematic false positive 'checks at Day 30, 60 and 90' (Aura Check-in copy repeated across 300+ pages) while real claims ('signals: 42', 'checks — all 200 of them') still fail.",
+          "regex": "\\b(checks|measurements|factors|signals)\\b(?:(?!\\bDay\\b)[\\s\\S]){0,40}?(?<!Day\\s)\\b(1[6-9]|[2-9][0-9]|[0-9]{3,})\\+?\\b"
+        },
+        {
+          "flags": "gi",
+          "note": "'hundreds' counts only when tied to the count nouns. Bare 'hundreds of' is deliberately NOT matched: articles legitimately write 'hundreds of crunches / sit-ups' (exercise reps — verified in the live tree 2026-10-22).",
+          "regex": "\\bhundreds\\b[\\s\\S]{0,40}?\\b(checks|measurements|factors|signals)\\b"
+        },
+        {
+          "flags": "gi",
+          "note": "KILLED #6 verbatim (Z.ai marquee fallback variant).",
+          "regex": "\\bchecks\\s+behind\\s+every\\s+signal\\b"
+        }
+      ],
+      "scope": "copy",
+      "severity": "fail"
+    },
+    {
+      "description": "Scores are BANDS ONLY (Focus first / Good / Strong) — never percentages, never x/100, never a numeric score (KILLED #7, #9). A signal name within 40 chars of a % figure, any 'n / 100', or 'score of n' fails.",
+      "id": "score-percents",
+      "patterns": [
+        {
+          "flags": "gi",
+          "note": "Signal name, then a % figure within 40 chars.",
+          "regex": "\\b(skin|hair|brows|beard|smile|posture)\\b[\\s\\S]{0,40}?\\d+\\s*%"
+        },
+        {
+          "flags": "gi",
+          "note": "% figure, then a signal name within 40 chars.",
+          "regex": "\\d+\\s*%[\\s\\S]{0,40}?\\b(skin|hair|brows|beard|smile|posture)\\b"
+        },
+        {
+          "flags": "g",
+          "note": "x/100 score form, any context.",
+          "regex": "\\b\\d+\\s*/\\s*100\\b"
+        },
+        {
+          "flags": "gi",
+          "note": "'score of 87' form. ('Aura Score' the defined band term is fine — it carries no number.)",
+          "regex": "\\bscore\\s+of\\s+\\d+"
+        }
+      ],
+      "scope": "copy",
+      "severity": "fail"
+    },
+    {
+      "description": "Schema discipline (Decision 6 / S3; Claude P0; KILLED #21-23): while no Google Play listing exists, NO SoftwareApplication JSON-LD block may contain 'offers', 'aggregateRating' or 'review' keys — no offers/availability/ratings markup for an app that is not yet purchasable. Applies to ALL files INCLUDING the frozen legal pages (schema is not copy). Disables itself when playListingLive becomes true.",
+      "gatedBy": "playListingLive",
+      "id": "schema-offers",
+      "patterns": [],
+      "schemaKeys": [
+        "\"offers\"",
+        "\"aggregateRating\"",
+        "\"review\"",
+        "\"reviews\""
+      ],
+      "scope": "all",
+      "severity": "fail",
+      "type": "schema"
+    },
+    {
+      "description": "Decision 7 (M2): the blanket 'not AI, not machine learning' line is RETIRED on marketing surfaces — it is technically false (ML Kit pose detection reads posture; ML Kit face detection guides capture; FACTOR-AUDIT §11D/E). The locked replacement: 'Clear, explainable checks — no learned score, no face rating, ever.' Legal pages keep their own precise wording (out of copy scope).",
+      "id": "ml-blanket",
+      "patterns": [
+        {
+          "flags": "gi",
+          "regex": "not\\s+AI,\\s*not\\s+machine\\s+learning"
+        },
+        {
+          "flags": "gi",
+          "regex": "not\\s+machine\\s+learning"
+        }
+      ],
+      "scope": "copy",
+      "severity": "fail"
+    },
+    {
+      "description": "'Rule-based' / 'rules-based' is banned in user-facing copy (Aura Intelligence hard line, Oct 18) — say 'clear, explainable checks'. KILLED #35-37. Legal scope excluded (the locked legal drafts carry their own wording); articles ARE included and current hits are baselined for the copy pass.",
+      "id": "rule-based",
+      "patterns": [
+        {
+          "flags": "gi",
+          "regex": "\\brules?-based\\b"
+        }
+      ],
+      "scope": "copy",
+      "severity": "fail"
+    },
+    {
+      "description": "Never claim AI-powered (Aura Intelligence hard line; KILLED family). Patterns require the literal token 'AI', so the legitimate line 'powered by Aura Intelligence' can NEVER match.",
+      "id": "ai-powered",
+      "patterns": [
+        {
+          "flags": "gi",
+          "regex": "\\bAI[-\\s]powered\\b"
+        },
+        {
+          "flags": "gi",
+          "regex": "\\bpowered\\s+by\\s+AI\\b"
+        }
+      ],
+      "scope": "copy",
+      "severity": "fail"
+    },
+    {
+      "description": "WARN ONLY, by design: 'best' is claimable ONLY through true, verifiable differentiators (Oct-18 positioning line), and settled usages exist on the live site (the FAQ 'Why is Lookauramax the best glow-up app?' already carries the no-ranking caveat — DECISIONS.md, settled by the main agent). '#1' also has a locked legitimate use: the '#1 finding' in free results (gate decision D5). A human judges each hit; the linter must never auto-fail settled copy. What stays banned as FACT — fake '#1 in the world' rankings, awards, counts — is a review judgement, not a regex.",
+      "id": "best-claim",
+      "patterns": [
+        {
+          "flags": "gi",
+          "regex": "\\bbest\\s+glow-up\\b"
+        },
+        {
+          "flags": "g",
+          "note": "Negative lookahead keeps CSS hex colours (#143B31, #1A1A1D) from matching: in a hex colour the '1' is always followed by another hex character.",
+          "regex": "#1(?![0-9A-Za-z])"
+        },
+        {
+          "flags": "gi",
+          "regex": "\\bnumber\\s+one\\b"
+        }
+      ],
+      "scope": "copy",
+      "severity": "warn"
+    }
+  ],
+  "scan": {
+    "extensions": [
+      ".html"
+    ],
+    "frozenLegalFiles": [
+      "privacy.html",
+      "terms.html",
+      "refund.html",
+      "parent-consent.html"
+    ],
+    "frozenLegalNote": "Legal pages are FROZEN (BUILD-SPEC rule 6 / Decision 7: legal keeps its own precise wording). They are excluded from every 'copy'-scope rule but are STILL scanned by 'all'-scope rules (schema-offers) — structured data must obey the honesty floor everywhere.",
+    "skipDirs": [
+      ".git",
+      ".github",
+      "node_modules"
+    ]
+  },
+  "version": 1
+}

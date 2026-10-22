@@ -41,16 +41,53 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/aurora.css">
 </head>
-<body>
+<body class="has-capsule">
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="scroll-progress" aria-hidden="true"></div>
-<header class="site-head"><div class="masthead">
-<a class="brand" href="/"><img src="/logo-small.png" alt="Lookauramax logo" width="64" height="64"><span class="brand-text"><b>LOOK<em>AURA</em>MAX</b><small class="brand-tag">Your glow-up, made real.</small></span></a>
-<nav class="hlinks"><a href="/tools/">Tools</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a></nav>
-<a class="btn btn-gold head-cta" href="#pricing">See plans</a>
+<header class="site-head capsule-head" data-r2="capsule"><div class="capsule-inner">
+<a class="brand" href="/"><img src="/logo-small.png" alt="Lookauramax logo" width="36" height="36"><span class="brand-text"><b>LOOK<em>AURA</em>MAX</b></span></a>
+<nav class="hlinks capsule-nav" aria-label="Primary"><a href="/tools/">Tools</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a></nav>
+<a class="btn btn-gold head-cta capsule-cta" href="#pricing">See plans</a>
 <button class="menu-btn" aria-expanded="false" aria-controls="nav-overlay" aria-label="Open menu"><span></span><span></span><span></span></button>
 </div></header>
+<noscript><style>/* r2-capsule-noscript */
+/* Lookauramax Round 2 — capsule NO-JS overrides (frag-capsule-noscript.css).
+   NOT a standalone stylesheet. rollout_capsule.py wraps this file's
+   contents in a noscript style block and inserts it immediately after
+   the capsule header element on every rolled page (see MANIFEST.md).
+   Purpose: with JavaScript disabled the overlay menu can never open,
+   so at mobile widths the pill itself expands in-flow and every
+   destination stays reachable (Z.ai §4.5 no-JS rule).
+   Breakpoint is 900px to match aurora.css, where .hlinks/.head-cta
+   hide and .menu-btn appears (the stream brief said 860px; the live
+   breakpoint is 900px — see MANIFEST.md conflicts).
+   NOTE: never write literal style/noscript tag names inside this
+   comment — this file is embedded in a raw-text style element, where
+   a literal closing style tag in ANY text would end the block. */
+@media (max-width:900px){
+  header.site-head.capsule-head{
+    position:static;width:auto;max-width:1152px;height:auto;
+    margin:10px 16px 0;border-radius:24px;
+  }
+  body.has-capsule{padding-top:0}
+  .capsule-inner{flex-wrap:wrap;height:auto;padding:12px 16px;row-gap:10px}
+  .capsule-head .hlinks{
+    display:flex !important;flex-wrap:wrap;gap:4px 18px;
+    order:3;flex-basis:100%;margin:0;
+  }
+  .capsule-head .capsule-cta{display:inline-flex !important;order:2;margin-left:auto}
+  .capsule-head .menu-btn{display:none !important}
+  .capsule-head .capsule-top{display:none !important}
+  .nav-overlay{display:none !important}
+  body.has-capsule.article .scroll-progress,
+  body.has-capsule.lam-tools .scroll-progress,
+  body.has-capsule.glossary .scroll-progress,
+  body.has-capsule.hub .scroll-progress{top:0}
+}
+</style></noscript>
 <nav class="nav-overlay" id="nav-overlay" aria-hidden="true">
-<button class="nav-close" data-nav-close aria-label="Close menu">×</button>
+<button class="nav-close" data-nav-close aria-label="Close menu">&times;</button>
+<a class="btn btn-gold nav-cta" href="#pricing">See plans &rarr;</a>
 <a class="nav-link" href="/tools/"><span class="nav-num">01</span><span>Tools</span></a>
 <a class="nav-link" href="#how"><span class="nav-num">02</span><span>How it works</span></a>
 <a class="nav-link" href="#pricing"><span class="nav-num">03</span><span>Pricing</span></a>
@@ -81,6 +118,14 @@
 <figure class="hero-phone" data-plx="0.05" style="margin:0"><img src="/images/app/scan.png" alt="Illustration of the AuraScan results screen in the Lookauramax app" width="780" height="1688" fetchpriority="high"><figcaption>AuraScan — illustrated screen</figcaption></figure>
 </div>
 </div></div></section>
+     comment. (In the pre-rebuild page the strip sat INSIDE the hero after
+     .hero-badges; the Round-2 brief anchors it after the hero — see
+     MANIFEST.md.) Requires frag-marquee.css (full §5b rules — the
+     homepage does not load base.css) + frag-marquee.js (pause toggle).
+     The single addition to the §5a markup is the pause <button> inside
+     .marquee (the founder-accepted WCAG upgrade): pause icon = two gold
+     bars; frag-marquee.css swaps it to a play triangle while paused. -->
+<div class="marquee" aria-label="Aura features"><div class="marquee-track"><span>AuraScan <i>·</i> Aura Plan <i>·</i> Aura Routine <i>·</i> Aura Coach <i>·</i> Aura Library <i>·</i> Aura Progress <i>·</i> Aura Badges <i>·</i> Aura Check-in <i>·</i> Aura Streak <i>·</i> Aura Signals <i>·</i> Aura Cycles <i>·</i> </span><span aria-hidden="true">AuraScan <i>·</i> Aura Plan <i>·</i> Aura Routine <i>·</i> Aura Coach <i>·</i> Aura Library <i>·</i> Aura Progress <i>·</i> Aura Badges <i>·</i> Aura Check-in <i>·</i> Aura Streak <i>·</i> Aura Signals <i>·</i> Aura Cycles <i>·</i> </span></div><button class="marquee-toggle" type="button" aria-pressed="false" aria-label="Pause the Aura features line"><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg><svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div>
 
 <!-- S2 HOW IT WORKS -->
 <section class="chapter sec-how" id="how"><div class="shell">

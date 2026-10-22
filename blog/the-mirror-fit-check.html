@@ -73,24 +73,61 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0 44px;color:#A9A2
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://www.lookauramax.com/#org","name":"Lookauramax","alternateName":["Look Aura Max","Aura Look Max","Aura Max Look","Look Max Aura","Max Aura Look","Max Look Aura","LookAuraMax","look-aura-max"],"slogan":"Your glow-up, made real.","logo":"https://www.lookauramax.com/logo.png","url":"https://www.lookauramax.com/","sameAs":["https://www.instagram.com/lookauramax","https://www.youtube.com/@lookauramax","https://www.tiktok.com/@lookauramax","https://www.facebook.com/lookauramax","https://www.threads.net/@lookauramax","https://x.com/Lookauramax","https://www.linkedin.com/company/lookauramax","https://www.pinterest.com/lookauramax/","https://www.reddit.com/user/lookauramax/"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://www.lookauramax.com/#website","name":"Lookauramax","alternateName":["Look Aura Max","Aura Look Max","Aura Max Look","Look Max Aura","Max Aura Look","Max Look Aura","LookAuraMax","look-aura-max"],"url":"https://www.lookauramax.com/","inLanguage":"en"}</script>
 </head>
-<body class="article">
+<body class="article has-capsule">
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="scroll-progress" id="scroll-progress"></div>
-<header class="site-head"><div class="masthead">
-<a class="brand" href="/"><img src="/logo-small.png" alt="Lookauramax logo" width="64" height="64"><span class="brand-text"><b>LOOK<em>AURA</em>MAX</b><small class="brand-tag">Your glow-up, made real.</small></span></a>
-<nav class="hlinks"><a href="/tools/">Tools</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a></nav>
-<a class="btn btn-gold head-cta" href="/#pricing">See plans</a>
-<button class="menu-btn" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+<header class="site-head capsule-head" data-r2="capsule"><div class="capsule-inner">
+<a class="brand" href="/"><img src="/logo-small.png" alt="Lookauramax logo" width="36" height="36"><span class="brand-text"><b>LOOK<em>AURA</em>MAX</b></span></a>
+<nav class="hlinks capsule-nav" aria-label="Primary"><a href="/tools/">Tools</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a></nav>
+<a class="btn btn-gold head-cta capsule-cta" href="/#pricing">See plans</a>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav-overlay" aria-label="Open menu"><span></span><span></span><span></span></button>
 </div></header>
+<noscript><style>/* r2-capsule-noscript */
+/* Lookauramax Round 2 — capsule NO-JS overrides (frag-capsule-noscript.css).
+   NOT a standalone stylesheet. rollout_capsule.py wraps this file's
+   contents in a noscript style block and inserts it immediately after
+   the capsule header element on every rolled page (see MANIFEST.md).
+   Purpose: with JavaScript disabled the overlay menu can never open,
+   so at mobile widths the pill itself expands in-flow and every
+   destination stays reachable (Z.ai §4.5 no-JS rule).
+   Breakpoint is 900px to match aurora.css, where .hlinks/.head-cta
+   hide and .menu-btn appears (the stream brief said 860px; the live
+   breakpoint is 900px — see MANIFEST.md conflicts).
+   NOTE: never write literal style/noscript tag names inside this
+   comment — this file is embedded in a raw-text style element, where
+   a literal closing style tag in ANY text would end the block. */
+@media (max-width:900px){
+  header.site-head.capsule-head{
+    position:static;width:auto;max-width:1152px;height:auto;
+    margin:10px 16px 0;border-radius:24px;
+  }
+  body.has-capsule{padding-top:0}
+  .capsule-inner{flex-wrap:wrap;height:auto;padding:12px 16px;row-gap:10px}
+  .capsule-head .hlinks{
+    display:flex !important;flex-wrap:wrap;gap:4px 18px;
+    order:3;flex-basis:100%;margin:0;
+  }
+  .capsule-head .capsule-cta{display:inline-flex !important;order:2;margin-left:auto}
+  .capsule-head .menu-btn{display:none !important}
+  .capsule-head .capsule-top{display:none !important}
+  .nav-overlay{display:none !important}
+  body.has-capsule.article .scroll-progress,
+  body.has-capsule.lam-tools .scroll-progress,
+  body.has-capsule.glossary .scroll-progress,
+  body.has-capsule.hub .scroll-progress{top:0}
+}
+</style></noscript>
 <nav class="nav-overlay" id="nav-overlay" aria-hidden="true">
 <button class="nav-close" data-nav-close aria-label="Close menu">&times;</button>
+<a class="btn btn-gold nav-cta" href="/#pricing">See plans &rarr;</a>
 <a class="nav-link" href="/tools/"><span class="nav-num">01</span><span>Tools</span></a>
 <a class="nav-link" href="/#how"><span class="nav-num">02</span><span>How it works</span></a>
 <a class="nav-link" href="/#pricing"><span class="nav-num">03</span><span>Pricing</span></a>
 <a class="nav-link" href="/#faq"><span class="nav-num">04</span><span>FAQ</span></a>
 <a class="nav-link" href="/blog/"><span class="nav-num">05</span><span>Blog</span></a>
 <div class="nav-secondary"><a href="/about">About</a><a href="/glossary">Glossary</a><a href="/tools/">Aura Tools</a><a href="https://www.lookauramax.com/privacy">Privacy Policy</a><a href="https://www.lookauramax.com/terms">Terms</a><a href="https://www.lookauramax.com/refund">Refund Policy</a></div>
-<a class="btn btn-gold" href="/#pricing">See plans &rarr;</a>
 </nav>
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">The Mirror Fit Check</li></ol></nav>
 <main id="main" class="wrap narrow"><<div class="art-toc reveal" data-aurora-insert>
 <h2>In this guide</h2>
 <ol>

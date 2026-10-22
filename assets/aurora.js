@@ -298,3 +298,153 @@
     });
   }
 })();
+
+/* ================= ROUND 2 — CAPSULE C1 ================= */
+/* Lookauramax Round 2 — capsule header behaviour (frag-capsule.js).
+   Coordinator: append to assets/aurora.js. Self-contained guarded block:
+   no-ops when the capsule markup is absent. Transform/opacity only;
+   passive listeners + rAF throttling; no layout reads in scroll handlers
+   beyond scrollY. (a) shrink-in-place at 32px, (b) article "Top" ghost
+   button after 700px, (c) homepage active-section gold dot. */
+(function () {
+  'use strict';
+  var header = document.querySelector('.capsule-head');
+  if (!header) return;
+  var reduce = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- (a) shrink in place: .is-scrolled at 32px ---------- */
+  var setScrolled = function (on) {
+    header.classList.toggle('is-scrolled', !!on);
+  };
+  if ('IntersectionObserver' in window) {
+    var sentinel = document.createElement('div');
+    sentinel.className = 'capsule-sentinel';
+    sentinel.setAttribute('aria-hidden', 'true');
+    document.body.insertBefore(sentinel, document.body.firstChild);
+    var sio = new IntersectionObserver(function (entries) {
+      setScrolled(!entries[0].isIntersecting);
+    }, { threshold: 0 });
+    sio.observe(sentinel);
+  } else {
+    var sTick = false;
+    var onScrollA = function () {
+      if (sTick) return;
+      sTick = true;
+      requestAnimationFrame(function () {
+        setScrolled(window.scrollY > 32);
+        sTick = false;
+      });
+    };
+    window.addEventListener('scroll', onScrollA, { passive: true });
+    onScrollA();
+  }
+
+  /* ---------- (b) "Top" ghost button on article-type pages ---------- */
+  var ARTICLE_BODIES = ['article', 'lam-tools', 'glossary', 'hub'];
+  var isArticle = ARTICLE_BODIES.some(function (c) {
+    return document.body.classList.contains(c);
+  });
+  var inner = header.querySelector('.capsule-inner');
+  if (isArticle && inner) {
+    var topBtn = document.createElement('button');
+    topBtn.type = 'button';
+    topBtn.className = 'capsule-top';
+    topBtn.textContent = 'Top ↑';
+    topBtn.setAttribute('aria-label', 'Back to top');
+    var cta = inner.querySelector('.capsule-cta');
+    if (cta) inner.insertBefore(topBtn, cta);
+    else inner.appendChild(topBtn);
+    var tTick = false;
+    var onScrollB = function () {
+      if (tTick) return;
+      tTick = true;
+      requestAnimationFrame(function () {
+        topBtn.classList.toggle('show', window.scrollY > 700);
+        tTick = false;
+      });
+    };
+    window.addEventListener('scroll', onScrollB, { passive: true });
+    onScrollB();
+    topBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  }
+
+  /* ---------- (c) homepage: active-section gold dot ---------- */
+  var isHome = window.location.pathname === '/' ||
+    window.location.pathname === '/index.html';
+  var nav = header.querySelector('.capsule-nav');
+  if (isHome && nav && 'IntersectionObserver' in window) {
+    var SECTION_IDS = ['how', 'lens', 'signals', 'cycle', 'pricing', 'faq'];
+    var linkFor = {};
+    nav.querySelectorAll('a').forEach(function (a) {
+      var href = a.getAttribute('href') || '';
+      var hash = href.split('#')[1];
+      if (hash && SECTION_IDS.indexOf(hash) !== -1) linkFor[hash] = a;
+    });
+    var setActive = function (id) {
+      Object.keys(linkFor).forEach(function (k) {
+        var on = k === id;
+        linkFor[k].classList.toggle('is-active', on);
+        if (on) linkFor[k].setAttribute('aria-current', 'true');
+        else linkFor[k].removeAttribute('aria-current');
+      });
+    };
+    var hio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) setActive(e.target.id);
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    SECTION_IDS.forEach(function (id) {
+      var sec = document.getElementById(id);
+      if (sec && linkFor[id]) hio.observe(sec);
+    });
+  }
+})();
+
+/* ================= ROUND 2 — MARQUEE PAUSE ================= */
+/* Lookauramax Round 2 — marquee pause toggle (frag-marquee.js).
+   Coordinator: append to assets/aurora.js. The original marquee was
+   pure CSS (MARQUEE-FINDING §5d: no JS); this block exists ONLY for the
+   Round-2 WCAG 2.2.2 pause button. Guarded: no-ops without .marquee. */
+(function () {
+  'use strict';
+  var mq = document.querySelector('.marquee');
+  if (!mq) return;
+  var btn = mq.querySelector('.marquee-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var paused = mq.classList.toggle('paused');
+    btn.setAttribute('aria-pressed', String(paused));
+    btn.setAttribute('aria-label',
+      paused ? 'Resume the Aura features line' : 'Pause the Aura features line');
+    /* Icon swap (pause bars <-> play triangle) is CSS-driven off
+       [aria-pressed="true"] in frag-marquee.css — no DOM swap needed. */
+  });
+})();
+
+/* ===== R2 foundation: one-shot reveal observer (coordinator glue) =====
+   Adds .is-in once to the Round-2 motion utilities (.mv-rise, .mv-wipe,
+   .r2-in, .mv-sweep) when they first enter the viewport, then unobserves.
+   Enhancement only: without IO (or with reduced motion) every element is
+   put straight into its final state — the CSS start-states are gated
+   behind .js + prefers-reduced-motion: no-preference, so content is never
+   hidden waiting for this block. */
+(function () {
+  'use strict';
+  var SEL = '.mv-rise, .mv-wipe, .r2-in, .mv-sweep';
+  var els = document.querySelectorAll(SEL);
+  if (!els.length) return;
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced || !('IntersectionObserver' in window)) {
+    els.forEach(function (el) { el.classList.add('is-in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function (el) { io.observe(el); });
+})();

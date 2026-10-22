@@ -1,0 +1,3583 @@
+[
+ {
+  "rule": "count-claims",
+  "file": "index.html",
+  "match": "60, and 90 to re-read your signals"
+ },
+ {
+  "rule": "count-claims",
+  "file": "index.html",
+  "match": "signals. A 90"
+ },
+ {
+  "rule": "count-claims",
+  "file": "tools/body-fat-calculator.html",
+  "match": "70){ showErr('Those measurements"
+ },
+ {
+  "rule": "count-claims",
+  "file": "tools/body-fat-calculator.html",
+  "match": "97.684 \u00d7 log\u2081\u2080(height) \u2212 78.387 (measurements"
+ },
+ {
+  "rule": "count-claims",
+  "file": "tools/body-fat-calculator.html",
+  "match": "measurements.'); return; } bf = 163"
+ },
+ {
+  "rule": "count-claims",
+  "file": "tools/body-fat-calculator.html",
+  "match": "measurements.'); return; } bf = 86"
+ },
+ {
+  "rule": "count-claims",
+  "file": "tools/index.html",
+  "match": "Signals and turns them into a 90"
+ },
+ {
+  "rule": "count-claims",
+  "file": "tools/unit-converter.html",
+  "match": "factors: 1 inch = 2.54"
+ },
+ {
+  "rule": "ml-blanket",
+  "file": "glossary.html",
+  "match": "not AI, not machine learning"
+ },
+ {
+  "rule": "ml-blanket",
+  "file": "glossary.html",
+  "match": "not machine learning"
+ },
+ {
+  "rule": "ml-blanket",
+  "file": "index.html",
+  "match": "not AI, not machine learning"
+ },
+ {
+  "rule": "ml-blanket",
+  "file": "index.html",
+  "match": "not machine learning"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "about.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-beard-is-shaped-by.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-beard-is-shaped-by.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-clear-path-forward-makes-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-clear-path-forward-makes-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-clearer-way-to-wake-up.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-clearer-way-to-wake-up.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-fresh-hour-every-single-day.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-fresh-hour-every-single-day.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-great-barber-studies-your.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-great-barber-studies-your.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-mapped-out-day-leaves-room.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-mapped-out-day-leaves-room.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-photo-says-what-words.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-photo-says-what-words.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-plan-in-order-is-a.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-plan-in-order-is-a.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-quiet-moment-all-yours.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-quiet-moment-all-yours.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-real-smile-photographs-better.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-real-smile-photographs-better.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-watch-speaks-quietly.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/a-watch-speaks-quietly.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/acne-pimples-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/acne-pimples-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/aura-routine-daily.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/aura-routine-daily.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/auramaxing-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/auramaxing-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/auramaxing-guide.html",
+  "match": "trick"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/beard-growth-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/beard-growth-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/before-a-word-they-read.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/before-a-word-they-read.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/before-the-noise-there-is-a.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/before-the-noise-there-is-a.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/begin-with-a-plan-and-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/begin-with-a-plan-and-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/best-glow-up-apps.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/best-glow-up-apps.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/black-on-black-done-properly.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/black-on-black-done-properly.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/body-language-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/body-language-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/body-language-guide.html",
+  "match": "trick"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/body-language-guide.html",
+  "match": "tricks"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/breathe-in-begin.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/breathe-in-begin.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/build-muscle-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/build-muscle-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/calm-colours-strong-presence.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/calm-colours-strong-presence.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/calm-is-a-place-to-start.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/calm-is-a-place-to-start.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/calm-on-entry.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/calm-on-entry.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/carry-yourself-with-respect.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/carry-yourself-with-respect.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/check-the-back-check-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/check-the-back-check-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/clarity-comes-first-everything-else-follows.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/clarity-comes-first-everything-else-follows.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/clean-nails-fresh-breath-tidy.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/clean-nails-fresh-breath-tidy.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/clear-eyes-clear-moment.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/clear-eyes-clear-moment.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/clear-skin-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/clear-skin-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/clear-steps-make-steady-days-steady.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/clear-steps-make-steady-days-steady.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/composure-is-charisma.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/composure-is-charisma.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/confidence-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/confidence-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/confidence-guide.html",
+  "match": "tricks"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/confidence-is-quiet.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/confidence-is-quiet.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/confidence-is-the-best-fit.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/confidence-is-the-best-fit.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/consistency-beats-chance.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/consistency-beats-chance.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/consistency-never-goes-out-of-style.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/consistency-never-goes-out-of-style.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dampen-comb-set-then-leave.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dampen-comb-set-then-leave.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dark-circles-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dark-circles-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dating-profile-photos-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dating-profile-photos-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dating-profile-photos-guide.html",
+  "match": "tricks"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dawn-is-a-clean-page.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dawn-is-a-clean-page.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/day-in-day-out-that-is.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/day-in-day-out-that-is.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/day-one-energy-is-easy.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/day-one-energy-is-easy.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/details-are-the-difference.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/details-are-the-difference.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/discipline-is-selfrespect-you-can.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/discipline-is-selfrespect-you-can.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/discipline-looks-good-on-you.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/discipline-looks-good-on-you.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/diwali-grooming-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/diwali-grooming-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/do-it-again-tomorrow.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/do-it-again-tomorrow.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/double-cleansing-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/double-cleansing-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/doubt-fades-when-direction-is-clear.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/doubt-fades-when-direction-is-clear.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/doubt-stays-behind.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/doubt-stays-behind.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dress-for-the-room.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dress-for-the-room.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dress-the-body-you-have.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dress-the-body-you-have.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dry-january-skin.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/dry-january-skin.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/early-hours-hold-the-whole-day.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/early-hours-hold-the-whole-day.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/early-morning-the-driver-asked-it.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/early-morning-the-driver-asked-it.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/edges-frame-the-face.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/edges-frame-the-face.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/every-day-counts.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/every-day-counts.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/every-day-has-a-starting-point.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/every-day-has-a-starting-point.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/every-morning-the-same-face-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/every-morning-the-same-face-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/every-step-in-its-place-and.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/every-step-in-its-place-and.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/eye-contact-calm-and-steady.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/eye-contact-calm-and-steady.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/eye-to-eye-with-yourself.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/eye-to-eye-with-yourself.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/eyebrow-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/eyebrow-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/eyes-up-phone-down-first.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/eyes-up-phone-down-first.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/eyes-up.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/eyes-up.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/face-to-face-no-hiding.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/face-to-face-no-hiding.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/face-wash-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/face-wash-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/fat-loss-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/fat-loss-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/first-impression-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/first-impression-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/first-impression-guide.html",
+  "match": "tricks"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/first-impressions-start-with-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/first-impressions-start-with-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/fit-beats-logos-every-time.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/fit-beats-logos-every-time.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/five-minutes-is-all-it.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/five-minutes-is-all-it.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/five-seconds-to-make-an.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/five-seconds-to-make-an.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/focus-starts-in-the-first-hour.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/focus-starts-in-the-first-hour.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/forget-the-long-lists-and.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/forget-the-long-lists-and.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/fully-here.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/fully-here.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/gain-weight-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/gain-weight-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/get-up-get-going.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/get-up-get-going.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glass-skin-men.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glass-skin-men.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glow-up-checklist.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glow-up-checklist.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glow-up-guide-90-days.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glow-up-guide-90-days.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glow-up-guide-for-men.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glow-up-guide-for-men.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glow-up-guide-for-men.html",
+  "match": "quick fix"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glow-up-guide-men.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glow-up-guide-men.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glow-up-guide-men.html",
+  "match": "quick fix"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glow-up-guide-men.html",
+  "match": "tricks"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glow-up-trends-2027.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/glow-up-trends-2027.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/good-tools-earn-their-place.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/good-tools-earn-their-place.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/grand-gestures-fade-habits-stay.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/grand-gestures-fade-habits-stay.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/great-conversations-happen-before-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/great-conversations-happen-before-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/great-cuts-are-built-over.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/great-cuts-are-built-over.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/great-days-are-built-from.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/great-days-are-built-from.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/grooming-felt-like-guessing-in-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/grooming-felt-like-guessing-in-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/grooming-is-not-vanity-it.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/grooming-is-not-vanity-it.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/gym-beginners-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/gym-beginners-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/habits-compound-quietly.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/habits-compound-quietly.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/habits-stack-quietly-one-on.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/habits-stack-quietly-one-on.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/hair-fall-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/hair-fall-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/hair-grooming-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/hair-grooming-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/hair-growth-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/hair-growth-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/haircut-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/haircut-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/height-truth.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/height-truth.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/hold-your-gaze-hold-your-ground.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/hold-your-gaze-hold-your-ground.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/home-workout-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/home-workout-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/honesty-looks-good-on-you.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/honesty-looks-good-on-you.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-aurascan-works.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-aurascan-works.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-be-attractive.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-be-attractive.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-be-attractive.html",
+  "match": "trick"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-be-attractive.html",
+  "match": "tricks"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-become-better.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-become-better.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-get-girlfriend.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-get-girlfriend.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-get-girlfriend.html",
+  "match": "trick"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-get-girlfriend.html",
+  "match": "tricks"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-look-good.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-look-good.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-make-friends.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-make-friends.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-smell-good.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-smell-good.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-talk-to-boys.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-talk-to-boys.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-talk-to-boys.html",
+  "match": "tricks"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-talk-to-girls.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-talk-to-girls.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-talk-to-girls.html",
+  "match": "tricks"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-avoided-my-own-reflection-for.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-avoided-my-own-reflection-for.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-bought-six-products-i-used.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-bought-six-products-i-used.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-copied-a-routine-from-a.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-copied-a-routine-from-a.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-owned-every-product-except-a.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-owned-every-product-except-a.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-practiced-grinning-at-the-mirror.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-practiced-grinning-at-the-mirror.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-shaved-in-a-rush-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-shaved-in-a-rush-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-stared-at-the-mirror-and.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-stared-at-the-mirror-and.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-stopped-looking-that-was-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-stopped-looking-that-was-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-washed-my-face-with-whatever.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/i-washed-my-face-with-whatever.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/index.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/index.html",
+  "match": "tricks"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/intensity-makes-a-day-consistency.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/intensity-makes-a-day-consistency.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/jawline-appearance-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/jawline-appearance-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/jawline-truth.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/jawline-truth.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/keep-the-streak-alive.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/keep-the-streak-alive.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/knowing-what-comes-next-changes-how.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/knowing-what-comes-next-changes-how.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/korean-skincare-routine-men.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/korean-skincare-routine-men.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/layers-add-depth.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/layers-add-depth.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/length-comes-to-those-who.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/length-comes-to-those-who.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/less-noise-more-direction-the-day.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/less-noise-more-direction-the-day.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/let-the-camera-look-up.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/let-the-camera-look-up.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/let-your-hair-make-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/let-your-hair-make-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/light-first-then-movement.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/light-first-then-movement.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/lighter-on-the-way-out.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/lighter-on-the-way-out.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/long-night-my-coworker-asked-every.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/long-night-my-coworker-asked-every.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-again-you-might-like-what.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-again-you-might-like-what.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-at-the-lens.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-at-the-lens.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-good-in-photos.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-good-in-photos.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-here-the-photographer-said-i.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-here-the-photographer-said-i.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-ready-feel-ready.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-ready-feel-ready.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-slimmer-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-slimmer-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-taller-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/look-taller-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/lookauramax-pricing.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/lookauramax-pricing.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/lookauramax-vs-looksmax-ai.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/lookauramax-vs-looksmax-ai.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/lookauramax-vs-umax.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/lookauramax-vs-umax.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/looksmaxing-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/looksmaxing-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/make-it-a-habit-the-rest.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/make-it-a-habit-the-rest.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/minimal-wardrobe-maximum-presence.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/minimal-wardrobe-maximum-presence.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/morning-light-clear-head.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/morning-light-clear-head.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/morning-routine-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/morning-routine-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/mornings-without-the-panic.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/mornings-without-the-panic.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/motivation-comes-and-goes-standards.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/motivation-comes-and-goes-standards.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/movember-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/movember-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/my-reflection-looked-more-tired-than.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/my-reflection-looked-more-tired-than.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/my-shelf-was-full-my-routine.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/my-shelf-was-full-my-routine.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/nails-grooming-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/nails-grooming-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/neutrals-never-miss.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/neutrals-never-miss.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/new-haircut-nobody-asked-that-said.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/new-haircut-nobody-asked-that-said.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/new-season-new-silhouette.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/new-season-new-silhouette.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/new-year-glow-up-2027.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/new-year-glow-up-2027.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/new-year-makeover-checklist-2027.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/new-year-makeover-checklist-2027.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/new-year-resolutions-2027.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/new-year-resolutions-2027.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/new-year-resolutions-that-stick.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/new-year-resolutions-that-stick.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/night-routine-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/night-routine-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/no-more-standing-still-wondering-where.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/no-more-standing-still-wondering-where.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/no-nut-november-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/no-nut-november-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/no-rush-still-ready.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/no-rush-still-ready.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/no-rushing-no-noise-no.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/no-rushing-no-noise-no.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/no-twelvestep-maze-cleanse-hydrate.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/no-twelvestep-maze-cleanse-hydrate.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/nothing-loud-nothing-forced.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/nothing-loud-nothing-forced.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/occasionready-never-overdone.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/occasionready-never-overdone.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/oily-skin-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/oily-skin-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-calm-hour-carries-the-day.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-calm-hour-carries-the-day.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-clear-moment-before-the-day.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-clear-moment-before-the-day.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-cycle-one-focus-ninety.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-cycle-one-focus-ninety.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-hour-can-change-the-day.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-hour-can-change-the-day.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-look-can-change-the-whole.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-look-can-change-the-whole.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-look-in-the-mirror-changed.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-look-in-the-mirror-changed.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-quiet-hour-to-reset.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-quiet-hour-to-reset.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-routine-every-single-day.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-routine-every-single-day.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-step-forward-then-another.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-step-forward-then-another.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-step-then-the-next-that.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-step-then-the-next-that.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-step-then-the-next.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/one-step-then-the-next.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/out-in-the-open-at-ease.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/out-in-the-open-at-ease.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/outer-order-inner-order.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/outer-order-inner-order.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/outfit-planned-hair-planned.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/outfit-planned-hair-planned.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/own-the-daily-grind.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/own-the-daily-grind.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/own-the-group-photo.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/own-the-group-photo.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/party-season-grooming-checklist.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/party-season-grooming-checklist.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/patience-is-part-of-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/patience-is-part-of-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/photo-tips-scan.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/photo-tips-scan.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/plan-it-then-live-it-in.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/plan-it-then-live-it-in.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/posture-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/posture-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/posture-is-a-hello.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/posture-is-a-hello.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/presence-before-words.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/presence-before-words.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/presence-is-built-day-by.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/presence-is-built-day-by.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/presence-over-volume.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/presence-over-volume.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/progress-loves-a-routine.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/progress-loves-a-routine.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/protein-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/protein-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/put-things-in-order-and-everything.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/put-things-in-order-and-everything.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/quality-over-quantity-always.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/quality-over-quantity-always.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/quiet-men-get-noticed.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/quiet-men-get-noticed.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/quiet-now-the-day-can-wait.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/quiet-now-the-day-can-wait.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/quiet-routines-carry-the-loudest-days.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/quiet-routines-carry-the-loudest-days.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/quiet-work-visible-standards.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/quiet-work-visible-standards.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/ready-for-any-room.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/ready-for-any-room.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/ready-i-said-yes-i-wasn.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/ready-i-said-yes-i-wasn.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/resolutions-fade-rituals-stay.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/resolutions-fade-rituals-stay.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/restraint-is-a-skill.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/restraint-is-a-skill.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/rice-water-hair-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/rice-water-hair-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/rise-early-move-easy.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/rise-early-move-easy.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/room-enough-to-be-yourself.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/room-enough-to-be-yourself.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/rough-week-everyone-could-see-it.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/rough-week-everyone-could-see-it.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/same-mirror-different-monday.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/same-mirror-different-monday.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/see-where-you-are-headed-before.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/see-where-you-are-headed-before.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/sharp-on-day-one-is.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/sharp-on-day-one-is.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/shoes-finish-the-look.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/shoes-finish-the-look.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/shoulders-down-chin-level.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/shoulders-down-chin-level.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/six-pack-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/six-pack-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/sixty-minutes-kept-for-yourself.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/sixty-minutes-kept-for-yourself.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/skin-hair-and-habits-all.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/skin-hair-and-habits-all.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/skincare-glow-up.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/skincare-glow-up.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/skincare-glow-up.html",
+  "match": "quick fixes"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/skincare-ingredients-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/skincare-ingredients-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/skincare-routine-beginners.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/skincare-routine-beginners.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/sleep-glow-up.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/sleep-glow-up.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/sleep-is-where-the-discipline.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/sleep-is-where-the-discipline.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/sleeves-rolled-standards-high.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/sleeves-rolled-standards-high.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/slow-clear-step-by-step-that.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/slow-clear-step-by-step-that.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/slow-start-strong-finish.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/slow-start-strong-finish.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/small-details-carry-the-whole.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/small-details-carry-the-whole.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/small-steps-big-mornings.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/small-steps-big-mornings.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/small-steps-taken-daily.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/small-steps-taken-daily.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/snail-mucin-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/snail-mucin-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/some-mornings-ask-you-to-pause.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/some-mornings-ask-you-to-pause.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/space-reads-as-confidence.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/space-reads-as-confidence.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/stand-a-little-taller-today.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/stand-a-little-taller-today.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/stand-like-you-mean-it.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/stand-like-you-mean-it.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/stand-tall-in-every-photo.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/stand-tall-in-every-photo.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/standards-are-earned-never-gifted.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/standards-are-earned-never-gifted.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/staples-done-right.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/staples-done-right.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/start-glow-up-december.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/start-glow-up-december.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/start-today-stay-patient-both.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/start-today-stay-patient-both.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/steady-out-the-door-181.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/steady-out-the-door-181.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/steady-out-the-door.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/steady-out-the-door.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/steady-where-you-stand.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/steady-where-you-stand.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/steamed-beats-expensive.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/steamed-beats-expensive.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/stick-to-the-plan-the-plan.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/stick-to-the-plan-the-plan.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/style-guide-men-women.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/style-guide-men-women.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/style-is-a-habit.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/style-is-a-habit.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/sunscreen-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/sunscreen-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/tailoring-changes-everything.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/tailoring-changes-everything.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/taking-care-of-yourself-is.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/taking-care-of-yourself-is.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/tall-is-a-habit.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/tall-is-a-habit.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/teeth-care-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/teeth-care-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/texture-decides-the-playbook.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/texture-decides-the-playbook.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-basics-done-daily-beat-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-basics-done-daily-beat-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-bathroom-light-showed-everything.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-bathroom-light-showed-everything.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-best-routine-is-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-best-routine-is-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-calm-before-the-day.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-calm-before-the-day.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-chair-sees-every-version.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-chair-sees-every-version.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-comb-and-i-disagreed-every.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-comb-and-i-disagreed-every.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-cut-is-not-an.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-cut-is-not-an.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-day-ends-at-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-day-ends-at-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-day-feels-lighter-when-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-day-feels-lighter-when-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-day-is-decided-before-it.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-day-is-decided-before-it.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-days-you-repeat-become-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-days-you-repeat-become-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-door-is-open.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-door-is-open.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-instructions-said-daily-i-did.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-instructions-said-daily-i-did.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-long-game-looks-good.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-long-game-looks-good.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-man-you-see-is-you.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-man-you-see-is-you.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-mirror-and-the-shelf-disagreed.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-mirror-and-the-shelf-disagreed.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-mirror-fit-check.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-mirror-fit-check.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-mirror-was-honest-this-morning.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-mirror-was-honest-this-morning.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-morning-edge.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-morning-edge.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-neckline-is-where-a.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-neckline-is-where-a.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-plain-days-count-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-plain-days-count-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-plan-comes-first-the-day.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-plan-comes-first-the-day.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-project-in-the-mirror.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-project-in-the-mirror.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-room-notices-calm.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-room-notices-calm.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-routine-you-ll-keep.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-routine-you-ll-keep.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-tone-is-set-early.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-tone-is-set-early.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-world-is-still-asleep.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/the-world-is-still-asleep.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/there-is-no-finish-line.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/there-is-no-finish-line.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/this-hour-belongs-to-you.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/this-hour-belongs-to-you.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/this-morning-is-yours-to-hold.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/this-morning-is-yours-to-hold.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/three-moves-one-direction-nothing-extra.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/three-moves-one-direction-nothing-extra.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/tomorrow-starts-tonight.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/tomorrow-starts-tonight.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/treat-your-shave-like-a.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/treat-your-shave-like-a.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/trending-now.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/trending-now.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/trends-expire-classics-compound.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/trends-expire-classics-compound.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/turn-ordinary-days-into-a-habit.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/turn-ordinary-days-into-a-habit.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/upright-reads-attractive.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/upright-reads-attractive.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/valentines-day-grooming.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/valentines-day-grooming.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/vitamin-c-serum-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/vitamin-c-serum-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/walk-in-unhurried.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/walk-in-unhurried.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/walk-in-with-intent.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/walk-in-with-intent.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/wardrobe-essentials-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/wardrobe-essentials-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/wedding-season-glow-up.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/wedding-season-glow-up.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/weight-loss-guide.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/weight-loss-guide.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/what-is-lookauramax.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/what-is-lookauramax.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/what-works-repeated-becomes-who-you.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/what-works-repeated-becomes-who-you.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/what-you-see-is-only-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/what-you-see-is-only-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/when-the-day-is-clear-in.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/when-the-day-is-clear-in.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/win-the-first-hour.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/win-the-first-hour.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/winter-skincare-men.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/winter-skincare-men.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-already-know-this-man.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-already-know-this-man.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-arrived.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-arrived.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-carry-this-face-everywhere.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-carry-this-face-everywhere.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-changed-something-he-said-i.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-changed-something-he-said-i.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-look-sharp-today-i-wanted.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-look-sharp-today-i-wanted.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-look-tired-my-friend-said.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-look-tired-my-friend-said.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-need-less-than-you.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-need-less-than-you.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-okay-i-said-fine-i.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/you-okay-i-said-fine-i.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-face-keeps-a-record.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-face-keeps-a-record.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-first-hour-sets-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-first-hour-sets-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-habit-is-your-edge.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-habit-is-your-edge.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-next-chapter-starts-in-the.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-next-chapter-starts-in-the.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-plan-is-waiting.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-plan-is-waiting.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-posture-speaks-before-you.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-posture-speaks-before-you.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-reflection-has-been-patient-with.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-reflection-has-been-patient-with.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-routine-is-your-signature.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-routine-is-your-signature.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-walk-enters-before-you.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/your-walk-enters-before-you.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "hubs/confidence.html",
+  "match": "tricks"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "hubs/style.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "hubs/style.html",
+  "match": "tricks"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "index.html",
+  "match": "tricks"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/90-day-planner.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/90-day-planner.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/bmi-calculator.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/bmi-calculator.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/body-fat-calculator.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/body-fat-calculator.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/calorie-calculator.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/calorie-calculator.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/habit-streak-tracker.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/habit-streak-tracker.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/hair-type-quiz.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/hair-type-quiz.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/healthy-weight-range.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/healthy-weight-range.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/protein-calculator.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/protein-calculator.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/routine-builder.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/routine-builder.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/skin-type-quiz.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/skin-type-quiz.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/unit-converter.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/unit-converter.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/water-intake-calculator.html",
+  "match": "fake"
+ },
+ {
+  "rule": "premium-banned",
+  "file": "tools/water-intake-calculator.html",
+  "match": "guaranteed"
+ },
+ {
+  "rule": "schema-offers",
+  "file": "index.html",
+  "match": "\"offers\""
+ },
+ {
+  "rule": "score-percents",
+  "file": "blog/dry-january-skin.html",
+  "match": "54% reported better skin"
+ },
+ {
+  "rule": "score-percents",
+  "file": "blog/dry-january-skin.html",
+  "match": "58% lost weight, and 54% reported better skin"
+ },
+ {
+  "rule": "score-percents",
+  "file": "blog/dry-january-skin.html",
+  "match": "skin \u2014 while 88%"
+ },
+ {
+  "rule": "score-percents",
+  "file": "blog/hair-fall-guide.html",
+  "match": "15% of your hair"
+ },
+ {
+  "rule": "score-percents",
+  "file": "blog/vitamin-c-serum-guide.html",
+  "match": "10% for beginners and sensitive skin"
+ },
+ {
+  "rule": "score-percents",
+  "file": "blog/vitamin-c-serum-guide.html",
+  "match": "20% once skin"
+ },
+ {
+  "rule": "score-percents",
+  "file": "blog/vitamin-c-serum-guide.html",
+  "match": "skin. Move to 15\u201320%"
+ },
+ {
+  "rule": "count-claims",
+  "file": "styleguide.html",
+  "match": "signals\">Signals</a><a href=\"/#cycle\">90",
+  "reason": "False positive: site nav link text '90-Day Cycle' adjacent to the 'Signals' nav link (same pattern already baselined on index.html). Not a check-count claim. Added by coordinator, Phase 1 integration, 2026-10-22."
+ }
+]
