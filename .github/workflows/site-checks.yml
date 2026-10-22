@@ -1,0 +1,79 @@
+# Site checks — Lookauramax (Website Round 2 governance, Decisions 5 + 6).
+#
+# INTEGRATION: this file belongs at the SITE REPO ROOT as
+#   .github/workflows/site-checks.yml
+# with tools/ at the repo root next to it. Paths below are repo-root relative.
+#
+# Job 1 (honesty-lint) is the build-fail honesty gate: it runs the linter
+# against the repo's committed lint-baseline.json, so any NEW banned copy,
+# invented count, premature schema or retired ML line fails the build.
+# Job 2 (lighthouse) enforces the CWV budgets on three representative pages
+# and keeps the raw JSON reports as artifacts for inspection.
+
+name: Site checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  honesty-lint:
+    name: Honesty lint (build-fail)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run the honesty linter
+        # Exit 1 from the linter fails this job — that is the gate working.
+        # NOTE: never add --write-baseline here; the baseline only ever
+        # shrinks, in reviewed commits (see tools/README.md).
+        run: node site-tools/honesty-lint.mjs .
+
+  lighthouse:
+    name: Lighthouse budgets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Set up Chrome
+        id: chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Serve the repo root
+        # `serve` resolves extensionless URLs the way Vercel does
+        # (/blog/<slug> -> blog/<slug>.html), so the audited URLs are the
+        # real production URL forms.
+        run: |
+          npx -y serve@14 -l 4173 . &
+          for i in $(seq 1 30); do
+            curl -sf http://127.0.0.1:4173/ >/dev/null && break || sleep 1
+          done
+
+      - name: Run Lighthouse budgets (homepage + article + tool)
+        env:
+          CHROME_PATH: ${{ steps.chrome.outputs.chrome-path }}
+        run: >-
+          node site-tools/run-lighthouse.mjs
+          --base http://127.0.0.1:4173
+          --out lighthouse-reports
+          / /blog/glow-up-guide-90-days /tools/bmi-calculator
+
+      - name: Upload Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: lighthouse-reports/
+          if-no-files-found: ignore
