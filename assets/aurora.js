@@ -278,10 +278,16 @@
   }
 
   /* ---------- article template: TOC jump links ----------
-     Source HTML is untouched; ids are assigned at runtime only. */
+     Source HTML is untouched; ids are assigned at runtime only.
+     Phase 2 fix: the inserted modules (the TOC itself and the two CTA
+     cards) carry their own h2 elements inside #main, so the target list
+     must exclude any h2 inside a [data-aurora-insert] module — otherwise
+     every entry lands on the wrong section (the Phase 1 article too). */
   var toc = document.querySelector('.art-toc');
   if (toc) {
-    var heads = document.querySelectorAll('#main h2');
+    var heads = Array.prototype.filter.call(
+      document.querySelectorAll('#main h2'),
+      function (h) { return !h.closest('[data-aurora-insert]'); });
     toc.querySelectorAll('[data-toc]').forEach(function (a) {
       a.addEventListener('click', function (e) {
         var i = parseInt(a.getAttribute('data-toc'), 10);

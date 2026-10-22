@@ -437,3 +437,58 @@ body.article #main h2{scroll-margin-top:24px}
   .tl-dot::after{transform:scale(1)}
   .dc-check svg{stroke-dashoffset:0}
 }
+
+/* ---------- PHASE 2 ROLLOUT: family chrome, accents, calm motion ----------
+   The article chrome from Phase 1, extended to the other page families.
+   Each family carries one restrained accent (--acc): rose for the journal
+   family (articles, blog index, hubs), indigo for tools, taupe for the
+   glossary. Motion is transform/opacity only, one-shot, and the global
+   reduced-motion block above neutralises every animation here. */
+body.blog-index,body.lam-tools,body.glossary,body.hub,body.page{--acc:var(--gold)}
+body.article,body.blog-index,body.hub{--acc:#C79CA6}
+body.lam-tools{--acc:#9AA7D4}
+body.glossary{--acc:#B8A88F}
+body.article .art-toc h2{color:var(--acc)}
+
+body.blog-index header.site-head,body.lam-tools header.site-head,
+body.glossary header.site-head,body.hub header.site-head,
+body.page header.site-head{position:relative;top:0;max-width:none;margin:0;
+  border-radius:0;border:none;border-bottom:1px solid var(--line-soft);
+  background:rgba(0,0,0,.86);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none}
+body.blog-index .masthead,body.lam-tools .masthead,body.glossary .masthead,
+body.hub .masthead,body.page .masthead{max-width:1180px;margin:0 auto;padding:14px 24px}
+body.blog-index .brand-text b,body.lam-tools .brand-text b,body.glossary .brand-text b,
+body.hub .brand-text b,body.page .brand-text b{font-size:17px}
+body.blog-index .brand-tag,body.lam-tools .brand-tag,body.glossary .brand-tag,
+body.hub .brand-tag,body.page .brand-tag{letter-spacing:.04em;text-transform:none}
+@media (max-width:900px){
+  body.blog-index .hlinks,body.lam-tools .hlinks,body.glossary .hlinks,
+  body.hub .hlinks,body.page .hlinks{display:none;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;gap:0;background:#050505;border-bottom:1px solid var(--line);
+    padding:10px 24px 18px}
+  body.blog-index .hlinks.open,body.lam-tools .hlinks.open,body.glossary .hlinks.open,
+  body.hub .hlinks.open,body.page .hlinks.open{display:flex}
+  body.blog-index .hlinks a,body.lam-tools .hlinks a,body.glossary .hlinks a,
+  body.hub .hlinks a,body.page .hlinks a{padding:11px 0;border-bottom:1px solid var(--line-soft)}
+  body.blog-index header.site-head,body.lam-tools header.site-head,
+  body.glossary header.site-head,body.hub header.site-head,
+  body.page header.site-head{position:relative}
+}
+
+@keyframes rollout-rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+body.blog-index #main .card{animation:rollout-rise .6s var(--ease);
+  transition:transform .3s var(--ease),border-color .3s var(--ease)}
+body.blog-index #main .card:hover{transform:translateY(-4px);border-color:var(--acc)}
+body.hub .hub-card{animation:rollout-rise .6s var(--ease);
+  transition:transform .3s var(--ease),border-color .3s var(--ease)}
+body.hub .hub-card:hover{transform:translateY(-4px);border-color:var(--acc)}
+body.lam-tools #main .tool{animation:rollout-rise .55s var(--ease)}
+body.lam-tools .related a{transition:color .25s var(--ease)}
+body.lam-tools .related a:hover{color:var(--acc)}
+body.glossary #main dl{animation:rollout-rise .55s var(--ease)}
+body.glossary #main dt{transition:color .25s var(--ease)}
+body.glossary #main dt:hover{color:var(--acc)}
+@media (prefers-reduced-motion: reduce){
+  body.blog-index #main .card,body.hub .hub-card,
+  body.lam-tools #main .tool,body.glossary #main dl{animation:none}
+}
