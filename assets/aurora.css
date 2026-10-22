@@ -1095,4 +1095,4 @@ body.has-capsule.hub .scroll-progress{
 
 /* ===== R2 Phase-1 fix: capsule mobile menu button hugs the pill's right edge
    (nav + CTA hidden ≤900px left it stranded beside the wordmark) ===== */
-@media (max-width:900px){ .capsule .menu-btn{margin-left:auto} }
+@media (max-width:900px){ .capsule-head .menu-btn{margin-left:auto} }
