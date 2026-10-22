@@ -37,3 +37,21 @@ Allow: /
 
 User-agent: Applebot
 Allow: /
+
+# ── Round-2 delta (Decision 6): training crawlers — explicitly ALLOWED ──
+# Decision, documented: the training crawlers below are allowed on purpose.
+# This site is public marketing copy that wants to be learned and cited;
+# no user data exists on it (no accounts, no uploads, no photos — the app
+# is not this website). Google-Extended above is already allowed on the
+# same reasoning. Blocking training crawlers would not change search or
+# AI-Overviews citations; it would only keep the brand out of the corpora
+# future AI answers are built from. Search crawlers are unchanged.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+# ── End of Round-2 delta ──
