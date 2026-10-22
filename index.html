@@ -114,8 +114,232 @@
 <circle cx="300" cy="300" r="290" stroke="#F0CD8A" stroke-opacity=".07" stroke-width="22"/>
 <circle cx="485" cy="300" r="4" fill="#F0CD8A"/><circle cx="300" cy="45" r="3" fill="#DFA33C"/>
 <circle cx="128" cy="392" r="3" fill="#DFA33C" fill-opacity=".7"/></svg></div>
-<canvas id="aura3d" aria-hidden="true"></canvas>
-<figure class="hero-phone" data-plx="0.05" style="margin:0"><img src="/images/app/scan.png" alt="Illustration of the AuraScan results screen in the Lookauramax app" width="780" height="1688" fetchpriority="high"><figcaption>AuraScan — illustrated screen</figcaption></figure>
+
+<div class="r2-read" id="r2-read">
+  <div class="r2-fig-wrap">
+    <svg class="r2-fig" viewBox="0 0 600 620" role="group"
+      aria-label="Illustrative diagram, The Read: a faceless gold-line figure. First a photo-quality gate checks light, sharpness and framing. Six signals are then read — skin, hair, brows, beard (opt-in), smile and posture — and their lines converge into a 90-day arc, Day 1 to Day 90. Select a signal to see its checks, its bands, and its Why and Action.">
+      <defs>
+        <clipPath id="r2-gate-clip"><rect x="110" y="42" width="380" height="26" rx="13"/></clipPath>
+        <mask id="r2-wipe-y" maskUnits="userSpaceOnUse" x="0" y="120" width="600" height="500">
+          <rect class="r2-wipey-rect" x="0" y="120" width="600" height="500" fill="#fff"/>
+        </mask>
+        <mask id="r2-wipe-x" maskUnits="userSpaceOnUse" x="30" y="550" width="540" height="70">
+          <rect class="r2-wipex-rect" x="30" y="550" width="540" height="70" fill="#fff"/>
+        </mask>
+      </defs>
+
+      <!-- ======== photo-quality GATE (a gate — never a scored signal) ======== -->
+      <g class="r2-gate">
+        <text class="r2-gate-cap" x="300" y="27" text-anchor="middle">Photo quality — checked first</text>
+        <rect class="r2-gate-track" x="110" y="42" width="380" height="26" rx="13"/>
+        <g clip-path="url(#r2-gate-clip)"><rect class="r2-gate-fill" x="110" y="42" width="380" height="26"/></g>
+        <g class="r2-gate-ticks">
+          <text class="r2-gate-tick" style="--d:.45s" x="168" y="94" text-anchor="middle">Light <tspan class="r2-tickmark">✓</tspan></text>
+          <text class="r2-gate-tick" style="--d:.60s" x="300" y="94" text-anchor="middle">Sharpness <tspan class="r2-tickmark">✓</tspan></text>
+          <text class="r2-gate-tick" style="--d:.75s" x="432" y="94" text-anchor="middle">Framing <tspan class="r2-tickmark">✓</tspan></text>
+        </g>
+      </g>
+
+      <!-- ======== connectors: nodes converge through the neck into the arc ======== -->
+      <g class="r2-converge" mask="url(#r2-wipe-y)" aria-hidden="true" focusable="false">
+        <path d="M308 152 C326 250, 318 370, 300 448"/>
+        <path d="M236 258 C262 340, 284 400, 300 448"/>
+        <path d="M344 312 C334 375, 316 415, 300 448"/>
+        <path d="M294 348 C293 390, 296 420, 300 448"/>
+        <path d="M332 386 C324 415, 310 435, 300 448"/>
+        <path d="M234 466 C262 460, 284 454, 300 448"/>
+        <path class="r2-stem" d="M300 448 L300 598"/>
+      </g>
+
+      <!-- ======== the faceless figure (decorative — no facial features, ever) ======== -->
+      <g class="r2-figure" aria-hidden="true" focusable="false">
+        <path class="r2-outline" d="M300 140
+          C350 140, 386 178, 390 246
+          C392 286, 388 324, 374 356
+          C362 382, 336 398, 300 398
+          C264 398, 238 382, 226 356
+          C212 324, 208 286, 210 246
+          C214 178, 250 140, 300 140 Z"/>
+        <path class="r2-outline" d="M112 572
+          C122 516, 168 488, 222 474
+          C240 469, 250 458, 252 440
+          L254 390
+          M346 390
+          L348 440
+          C350 458, 360 469, 378 474
+          C432 488, 478 516, 488 572"/>
+        <path class="r2-hem" d="M112 572 L488 572"/>
+      </g>
+
+      <!-- ======== six signal nodes (interactive) ======== -->
+      <g class="read-node r2-node" data-node="hair" style="--d:.80s" tabindex="0" role="button" aria-pressed="false"
+        aria-label="Hair — show its checks, bands, Why and Action">
+        <title>Hair</title>
+        <circle class="r2-node-ring" cx="300" cy="140" r="13"/>
+        <circle class="r2-node-dot" cx="300" cy="140" r="4.5"/>
+        <text class="r2-node-label" x="322" y="127">Hair</text>
+      </g>
+      <g class="read-node r2-node" data-node="brows" style="--d:.98s" tabindex="0" role="button" aria-pressed="false"
+        aria-label="Brows — show its checks, bands, Why and Action">
+        <title>Brows</title>
+        <line class="r2-guide" x1="229" y1="250" x2="194" y2="252"/>
+        <circle class="r2-node-ring" cx="242" cy="250" r="13"/>
+        <circle class="r2-node-dot" cx="242" cy="250" r="4.5"/>
+        <text class="r2-node-label" x="188" y="256" text-anchor="end">Brows</text>
+      </g>
+      <g class="read-node r2-node" data-node="skin" style="--d:1.16s" tabindex="0" role="button" aria-pressed="true"
+        aria-label="Skin — show its checks, bands, Why and Action">
+        <title>Skin</title>
+        <line class="r2-guide" x1="363" y1="300" x2="398" y2="303"/>
+        <circle class="r2-node-ring" cx="350" cy="300" r="13"/>
+        <circle class="r2-node-dot" cx="350" cy="300" r="4.5"/>
+        <text class="r2-node-label" x="404" y="306">Skin</text>
+      </g>
+      <g class="read-node r2-node" data-node="smile" style="--d:1.34s" tabindex="0" role="button" aria-pressed="false"
+        aria-label="Smile — show its checks, bands, Why and Action">
+        <title>Smile</title>
+        <line class="r2-guide" x1="287" y1="338" x2="194" y2="341"/>
+        <circle class="r2-node-ring" cx="300" cy="338" r="13"/>
+        <circle class="r2-node-dot" cx="300" cy="338" r="4.5"/>
+        <text class="r2-node-label" x="188" y="344" text-anchor="end">Smile</text>
+      </g>
+      <g class="read-node r2-node" data-node="beard" style="--d:1.52s" tabindex="0" role="button" aria-pressed="false"
+        aria-label="Beard, opt-in — show its checks, bands, Why and Action">
+        <title>Beard (opt-in)</title>
+        <line class="r2-guide" x1="351" y1="378" x2="398" y2="377"/>
+        <circle class="r2-node-ring r2-node-ring--dash" cx="338" cy="378" r="13"/>
+        <circle class="r2-node-dot" cx="338" cy="378" r="4.5"/>
+        <text class="r2-node-label" x="404" y="377">Beard</text>
+        <text class="r2-node-micro" x="404" y="395">opt-in</text>
+      </g>
+      <g class="read-node r2-node" data-node="posture" style="--d:1.70s" tabindex="0" role="button" aria-pressed="false"
+        aria-label="Posture — show its checks, bands, Why and Action">
+        <title>Posture</title>
+        <line class="r2-guide" x1="215" y1="474" x2="176" y2="476"/>
+        <circle class="r2-node-ring" cx="228" cy="474" r="13"/>
+        <circle class="r2-node-dot" cx="228" cy="474" r="4.5"/>
+        <text class="r2-node-label" x="170" y="480" text-anchor="end">Posture</text>
+      </g>
+
+      <!-- ======== 90-day arc ======== -->
+      <g class="r2-arc" mask="url(#r2-wipe-x)">
+        <path class="r2-arc-path" d="M84 580 Q300 632 516 580"/>
+        <g class="r2-arc-dots">
+          <circle cx="84" cy="580" r="5"/><circle cx="192" cy="600" r="5"/>
+          <circle cx="408" cy="600" r="5"/><circle cx="516" cy="580" r="5"/>
+        </g>
+        <g class="r2-arc-labels">
+          <text x="84" y="560" text-anchor="middle">Day 1</text>
+          <text x="192" y="584" text-anchor="middle">Day 30</text>
+          <text x="408" y="584" text-anchor="middle">Day 60</text>
+          <text x="516" y="560" text-anchor="middle">Day 90</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="r2-read-side">
+    <p class="r2-read-kicker">The read — signal by signal</p>
+    <div class="r2-read-stack">
+
+      <article class="readout-card r2-read-card" data-card="skin" aria-label="Skin">
+        <h3 class="r2-card-name">Skin</h3>
+        <p class="r2-checks-label">What is checked</p>
+        <ul class="r2-checks">
+          <li style="--n:0"><span class="r2-tick" aria-hidden="true">✓</span>Centre texture</li>
+          <li style="--n:1"><span class="r2-tick" aria-hidden="true">✓</span>Colour variation</li>
+          <li style="--n:2"><span class="r2-tick" aria-hidden="true">✓</span>Lighting evenness</li>
+          <li style="--n:3"><span class="r2-tick" aria-hidden="true">✓</span>Highlight share</li>
+          <li style="--n:4"><span class="r2-tick" aria-hidden="true">✓</span>Shadow share</li>
+        </ul>
+        <div class="r2-bands" role="group" aria-label="Bands for Skin — all shown neutral; a scan assigns one">
+          <span class="band-chip">Focus first</span><span class="band-chip">Good</span><span class="band-chip">Strong</span>
+        </div>
+        <p class="r2-bands-note">Bands, never a number.</p>
+        <p class="r2-why"><span class="r2-wa-label">Why</span>Clarity, evenness, and texture are visible in most well-lit photos — and they respond to a steady routine.</p>
+        <p class="r2-action"><span class="r2-wa-label">Action</span>A gentle cleanser, moisturiser, and SPF in the morning; a cleanser and moisturiser at night.</p>
+      </article>
+
+      <article class="readout-card r2-read-card" data-card="hair" aria-label="Hair">
+        <h3 class="r2-card-name">Hair</h3>
+        <p class="r2-checks-label">What is checked</p>
+        <ul class="r2-checks">
+          <li style="--n:0"><span class="r2-tick" aria-hidden="true">✓</span>Hair-area texture</li>
+        </ul>
+        <div class="r2-bands" role="group" aria-label="Bands for Hair — all shown neutral; a scan assigns one">
+          <span class="band-chip">Focus first</span><span class="band-chip">Good</span><span class="band-chip">Strong</span>
+        </div>
+        <p class="r2-bands-note">Bands, never a number.</p>
+        <p class="r2-why"><span class="r2-wa-label">Why</span>Texture in the hair area — flyaway and unevenness — shows clearly at the angles a selfie captures.</p>
+        <p class="r2-action"><span class="r2-wa-label">Action</span>A cut that suits your hair type, and a wash rhythm matched to your scalp.</p>
+      </article>
+
+      <article class="readout-card r2-read-card" data-card="brows" aria-label="Brows">
+        <h3 class="r2-card-name">Brows</h3>
+        <p class="r2-checks-label">What is checked</p>
+        <ul class="r2-checks">
+          <li style="--n:0"><span class="r2-tick" aria-hidden="true">✓</span>Brow-area texture</li>
+        </ul>
+        <div class="r2-bands" role="group" aria-label="Bands for Brows — all shown neutral; a scan assigns one">
+          <span class="band-chip">Focus first</span><span class="band-chip">Good</span><span class="band-chip">Strong</span>
+        </div>
+        <p class="r2-bands-note">Bands, never a number.</p>
+        <p class="r2-why"><span class="r2-wa-label">Why</span>Brow-area texture — stray, uneven hairs — is plainly visible, and grooming it is a fast, visible win.</p>
+        <p class="r2-action"><span class="r2-wa-label">Action</span>Tidy the strays and keep the natural line — the plan sets the order.</p>
+      </article>
+
+      <article class="readout-card r2-read-card" data-card="beard" aria-label="Beard">
+        <h3 class="r2-card-name">Beard</h3>
+        <p class="r2-card-note">Opt-in only — read only when you ask for it, never scored unasked.</p>
+        <p class="r2-checks-label">What is checked</p>
+        <ul class="r2-checks">
+          <li style="--n:0"><span class="r2-tick" aria-hidden="true">✓</span>Lower-face texture</li>
+        </ul>
+        <div class="r2-bands" role="group" aria-label="Bands for Beard — all shown neutral; a scan assigns one">
+          <span class="band-chip">Focus first</span><span class="band-chip">Good</span><span class="band-chip">Strong</span>
+        </div>
+        <p class="r2-bands-note">Bands, never a number.</p>
+        <p class="r2-why"><span class="r2-wa-label">Why</span>Lower-face texture is read only when you opt in.</p>
+        <p class="r2-action"><span class="r2-wa-label">Action</span>A defined neckline and cheek line, trimmed on a set day each week.</p>
+      </article>
+
+      <article class="readout-card r2-read-card" data-card="smile" aria-label="Smile">
+        <h3 class="r2-card-name">Smile</h3>
+        <p class="r2-checks-label">What is checked</p>
+        <ul class="r2-checks">
+          <li style="--n:0"><span class="r2-tick" aria-hidden="true">✓</span>Lower-face symmetry</li>
+          <li style="--n:1"><span class="r2-tick" aria-hidden="true">✓</span>Lower-face texture</li>
+        </ul>
+        <div class="r2-bands" role="group" aria-label="Bands for Smile — all shown neutral; a scan assigns one">
+          <span class="band-chip">Focus first</span><span class="band-chip">Good</span><span class="band-chip">Strong</span>
+        </div>
+        <p class="r2-bands-note">Bands, never a number.</p>
+        <p class="r2-why"><span class="r2-wa-label">Why</span>The lower face — its symmetry and texture — is visible in every photo you are in, and it is read as a rough guide only.</p>
+        <p class="r2-action"><span class="r2-wa-label">Action</span>Daily lip care and a twice-daily brush — small habits, kept daily.</p>
+      </article>
+
+      <article class="readout-card r2-read-card" data-card="posture" aria-label="Posture">
+        <h3 class="r2-card-name">Posture</h3>
+        <p class="r2-card-note">Read from your side photo — a short, guided second photo.</p>
+        <p class="r2-checks-label">What is checked</p>
+        <ul class="r2-checks">
+          <li style="--n:0"><span class="r2-tick" aria-hidden="true">✓</span>Forward-head ratio</li>
+          <li style="--n:1"><span class="r2-tick" aria-hidden="true">✓</span>Trunk lean</li>
+          <li style="--n:2"><span class="r2-tick" aria-hidden="true">✓</span>Pose readability</li>
+        </ul>
+        <div class="r2-bands" role="group" aria-label="Bands for Posture — all shown neutral; a scan assigns one">
+          <span class="band-chip">Focus first</span><span class="band-chip">Good</span><span class="band-chip">Strong</span>
+        </div>
+        <p class="r2-bands-note">Bands, never a number.</p>
+        <p class="r2-why"><span class="r2-wa-label">Why</span>Forward-head and trunk-lean angles, read from your side photo, change how every other signal reads.</p>
+        <p class="r2-action"><span class="r2-wa-label">Action</span>A two-minute daily reset — chin tuck, shoulder roll, chest open.</p>
+      </article>
+
+    </div>
+    <p class="r2-illus">Illustrative — every scan is personal. Bands are shown neutral here; your scan assigns yours.</p>
+  </div>
+</div>
 </div>
 </div></div></section>
 
@@ -129,13 +353,53 @@
 <div class="steps">
 <article class="step reveal"><div class="step-num">01</div>
 <div><h3>Scan</h3><p>Take one well-lit photo. AuraScan checks photo quality first — light, sharpness, framing — then reads the seven signals. A photo that cannot be read fairly asks for a retake instead of a score.</p></div>
-<div class="step-shot" data-tilt><img src="/images/how-selfie.jpg" alt="Illustration — AI-generated image of a fictional man holding a smartphone up at eye level, taking a well-lit self photo against a plain wall." loading="lazy" width="1200" height="630"></div></article>
+<div class="step-shot" data-tilt>
+  <div class="r2-capture">
+    <span class="r2-corner tl" aria-hidden="true"></span><span class="r2-corner tr" aria-hidden="true"></span>
+    <span class="r2-corner bl" aria-hidden="true"></span><span class="r2-corner br" aria-hidden="true"></span>
+    <span class="r2-chip-illus">Illustrative</span>
+    <div class="r2-capture-photo" aria-hidden="true">
+      <svg viewBox="0 0 120 110" fill="none" role="presentation">
+        <defs><linearGradient id="r2-sil" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#F0CD8A" stop-opacity=".5"/><stop offset="1" stop-color="#DFA33C" stop-opacity=".12"/>
+        </linearGradient></defs>
+        <circle cx="60" cy="34" r="21" fill="url(#r2-sil)"/>
+        <path d="M14 108c4-26 22-38 46-38s42 12 46 38" fill="url(#r2-sil)"/>
+      </svg>
+    </div>
+    <div class="r2-sweep" aria-hidden="true"></div>
+    <div class="r2-gate-row" aria-label="Photo-quality gate checks: light, sharpness, framing">
+      <span>Gate</span><span><b>✓</b> Light</span><span><b>✓</b> Sharpness</span><span><b>✓</b> Framing</span>
+    </div>
+  </div>
+</div></article>
 <article class="step reveal"><div class="step-num">02</div>
 <div><h3>Understand</h3><p>Every signal comes back as a band — Focus first, Good, or Strong — with its Why and its Action: what the read means, and what to do about it. Low confidence means no score, never a low score.</p></div>
-<div class="step-shot" data-tilt><img src="/images/app/progress.png" alt="Illustration of the Aura Progress screen in the Lookauramax app" loading="lazy" width="780" height="1688"></div></article>
+<div class="step-shot" data-tilt>
+  <div class="r2-readout" role="group" aria-label="Illustrative readout for the Skin signal">
+    <div class="r2-readout-head"><span class="r2-readout-name">Skin</span><span class="r2-chip-illus">Illustrative</span></div>
+    <div class="r2-band-row" aria-label="Band scale: Focus first, Good, Strong. Example band: Good.">
+      <span class="r2-band">Focus first</span><span class="r2-band r2-band-example" aria-current="true">Good · example</span><span class="r2-band">Strong</span>
+    </div>
+    <h4>Why</h4>
+    <p>Clarity, evenness, and texture are visible in most well-lit photos — and they respond to a steady routine.</p>
+    <h4>Action</h4>
+    <p>A gentle cleanser, moisturiser, and SPF in the morning; a cleanser and moisturiser at night.</p>
+    <p class="r2-checks">Checks behind this signal: centre-region texture · colour variation · lighting evenness · highlight fraction · shadow fraction.</p>
+    <p class="r2-conf">Low confidence means no score, never a low score.</p>
+  </div>
+</div></article>
 <article class="step reveal"><div class="step-num">03</div>
 <div><h3>Do today</h3><p>Your Aura Plan turns the findings into a daily routine inside a 90-day Aura Cycle, with an Aura Check-in at Day 30, 60, and 90 to measure real change.</p></div>
-<div class="step-shot" data-tilt><img src="/images/app/routine.png" alt="Illustration of the Aura Routine screen in the Lookauramax app" loading="lazy" width="780" height="1688"></div></article>
+<div class="step-shot" data-tilt>
+  <div class="r2-plan" role="group" aria-label="Illustrative plan card: week 1 to 2, and the day 30 check-in">
+    <div class="r2-plan-head"><span class="r2-plan-week">Week 1–2</span><span class="r2-chip-illus">Illustrative</span></div>
+    <div class="r2-plan-row"><span class="r2-tick" aria-hidden="true"><svg viewBox="0 0 14 14"><path d="M2 7.5 5.5 11 12 3"/></svg></span><p>Gentle face wash<small>Start clean — lukewarm water, thirty seconds.</small></p></div>
+    <div class="r2-plan-row"><span class="r2-tick" aria-hidden="true"><svg viewBox="0 0 14 14"><path d="M2 7.5 5.5 11 12 3"/></svg></span><p>Moisturiser + SPF<small>The morning seal — SPF protects every other step.</small></p></div>
+    <div class="r2-plan-row"><span class="r2-tick" aria-hidden="true"><svg viewBox="0 0 14 14"><path d="M2 7.5 5.5 11 12 3"/></svg></span><p>2-minute posture reset<small>Chin tuck + shoulder roll, once before work.</small></p></div>
+    <div class="r2-plan-checkin"><b>Day 30 · Aura Check-in</b> — first re-scan under matched light where possible; the plan adjusts around what has moved — and what has not.</div>
+  </div>
+</div></article>
 </div></div></section>
 
 <!-- S3 ANALYSIS LENS -->
@@ -143,13 +407,29 @@
 <p class="kicker reveal">The Analysis Lens · Interactive</p>
 <h2 class="sec-title reveal" data-delay="1">Light decides what a photo <em>can say.</em></h2>
 <p class="lede reveal" data-delay="2">A scan is only as honest as the photo behind it. Drag the lens across this portrait and watch the read change with the light — the same check AuraScan runs before any signal is scored.</p>
+<div class="r2-lens-bar reveal">
+  <p class="r2-lens-label" id="r2-lens-label">Lighting preset</p>
+  <div class="r2-lens-presets" role="radiogroup" aria-labelledby="r2-lens-label">
+    <button type="button" class="r2-preset" role="radio" aria-checked="true" data-preset="window">Window</button>
+    <button type="button" class="r2-preset" role="radio" aria-checked="false" tabindex="-1" data-preset="golden">Golden hour</button>
+    <button type="button" class="r2-preset" role="radio" aria-checked="false" tabindex="-1" data-preset="overhead">Overhead</button>
+    <button type="button" class="r2-preset" role="radio" aria-checked="false" tabindex="-1" data-preset="lowlight">Low light</button>
+  </div>
+</div>
 <div class="lens-wrap reveal">
 <img class="base" src="/images/how-selfie.jpg" alt="Illustration — AI-generated image of a fictional man holding a smartphone up at eye level, taking a well-lit self photo against a plain wall." width="1200" height="630">
+<div class="r2-lens-tint" aria-hidden="true"></div>
 <div class="lens-top" aria-hidden="true"><img src="/images/how-selfie.jpg" alt="" width="1200" height="630"></div>
 <div class="lens-ring" aria-hidden="true"></div>
 <span class="lens-tag">Illustrative — drag the lens</span>
 </div>
 <p class="lens-read reveal"><span class="lr-label">The read</span><span data-lens-read>Balanced light — the read stays even.</span></p>
+<ul class="r2-lens-notes reveal">
+  <li data-preset-note="window"><b>Window.</b> Window light — soft, even front light. Texture and colour read at their most honest, which is why the gate asks for a window-facing photo.</li>
+  <li data-preset-note="golden"><b>Golden hour.</b> Golden hour — warm, angled sun. It flatters, but it shifts colour and throws long shadows, so the gate checks the light before any signal is read from it.</li>
+  <li data-preset-note="overhead"><b>Overhead.</b> Overhead light — eye sockets and under-eyes read darker, even when skin is fine. The gate asks for front light instead of guessing.</li>
+  <li data-preset-note="lowlight"><b>Low light.</b> Low light — the photo turns grainy and flat, and texture disappears into noise. Rather than guess, the gate asks for a brighter retake.</li>
+</ul>
 <p class="lens-caption reveal"><b>Illustrative.</b> A fictional portrait — not a user, not a result, and never a score. In the app, this quality check runs on your own photo before a single signal is read.</p>
 </div></section>
 
@@ -161,52 +441,77 @@
 <div class="sig-list">
 <div class="sig-row" data-acc>
 <button class="sig-head" aria-expanded="true"><span class="sig-num">01</span>
-<span><span class="sig-name">Skin</span><span class="sig-line">Reads: clarity, evenness, texture signals. Never: skin tone or lightness.</span></span>
+<span><span class="sig-name">Skin</span><span class="sig-line">Reads: texture, colour variation, and light across the face area — five checks. Never: skin tone or lightness.</span></span>
 <span class="sig-toggle" aria-hidden="true"></span></button>
 <div class="sig-detail"><div><div class="sig-cols">
 <div><h4>Why it is read</h4><p>Clarity, evenness, and texture are visible in most well-lit photos — and they respond to a steady routine.</p></div>
 <div><h4>The action</h4><p>A gentle cleanser, moisturiser, and SPF in the morning; a cleanser and moisturiser at night.</p></div>
-</div></div></div></div>
+</div>
+<div class="sig-checks"><h4>The checks</h4><ul>
+<li>Centre-region texture</li>
+<li>Colour variation</li>
+<li>Lighting evenness</li>
+<li>Highlight fraction</li>
+<li>Shadow fraction</li>
+</ul></div></div></div></div>
 <div class="sig-row" data-acc>
 <button class="sig-head" aria-expanded="true"><span class="sig-num">02</span>
-<span><span class="sig-name">Hair</span><span class="sig-line">Reads: fullness, hairline shape, grooming. Never: promises about regrowth.</span></span>
+<span><span class="sig-name">Hair</span><span class="sig-line">Reads: texture in the hair area — flyaway and unevenness. Never: hairline measurement or regrowth promises.</span></span>
 <span class="sig-toggle" aria-hidden="true"></span></button>
 <div class="sig-detail"><div><div class="sig-cols">
-<div><h4>Why it is read</h4><p>Fullness and grooming show clearly at the angles a selfie captures.</p></div>
+<div><h4>Why it is read</h4><p>Texture in the hair area — flyaway and unevenness — shows clearly at the angles a selfie captures.</p></div>
 <div><h4>The action</h4><p>A cut that suits your hair type, and a wash rhythm matched to your scalp.</p></div>
-</div></div></div></div>
+</div>
+<div class="sig-checks"><h4>The checks</h4><ul>
+<li>Top-band texture</li>
+</ul></div></div></div></div>
 <div class="sig-row" data-acc>
 <button class="sig-head" aria-expanded="true"><span class="sig-num">03</span>
-<span><span class="sig-name">Brows</span><span class="sig-line">Reads: shape, grooming, fullness. Never: bone structure.</span></span>
+<span><span class="sig-name">Brows</span><span class="sig-line">Reads: brow-area texture — stray, uneven hairs. Never: bone structure.</span></span>
 <span class="sig-toggle" aria-hidden="true"></span></button>
 <div class="sig-detail"><div><div class="sig-cols">
-<div><h4>Why it is read</h4><p>Shape and grooming frame the eyes more than almost any other single detail.</p></div>
+<div><h4>Why it is read</h4><p>Brow-area texture — stray, uneven hairs — is plainly visible, and grooming it is a fast, visible win.</p></div>
 <div><h4>The action</h4><p>Tidy the strays and keep the natural line — the plan sets the order.</p></div>
-</div></div></div></div>
+</div>
+<div class="sig-checks"><h4>The checks</h4><ul>
+<li>Brow-area texture</li>
+</ul></div></div></div></div>
 <div class="sig-row" data-acc>
 <button class="sig-head" aria-expanded="true"><span class="sig-num">04</span>
-<span><span class="sig-name">Beard</span><span class="sig-line">Reads: density, neckline, edges. Never: scored without your opt-in.</span></span>
+<span><span class="sig-name">Beard</span><span class="sig-line">Reads: lower-face texture. Never: scored without your opt-in.</span></span>
 <span class="sig-toggle" aria-hidden="true"></span></button>
 <div class="sig-detail"><div><div class="sig-cols">
-<div><h4>Why it is read</h4><p>Density, neckline, and edges are read only when you opt in — never scored unasked.</p></div>
+<div><h4>Why it is read</h4><p>Lower-face texture is read only when you opt in — never scored unasked.</p></div>
 <div><h4>The action</h4><p>A defined neckline and cheek line, trimmed on a set day each week.</p></div>
-</div></div></div></div>
+</div>
+<div class="sig-checks"><h4>The checks</h4><ul>
+<li>Lower-face texture</li>
+</ul></div></div></div></div>
 <div class="sig-row" data-acc>
 <button class="sig-head" aria-expanded="true"><span class="sig-num">05</span>
-<span><span class="sig-name">Smile</span><span class="sig-line">Reads: teeth visibility, lip care, expression. Never: dental diagnosis.</span></span>
+<span><span class="sig-name">Smile</span><span class="sig-line">Reads: lower-face symmetry and texture — a rough guide only. Never: dental diagnosis.</span></span>
 <span class="sig-toggle" aria-hidden="true"></span></button>
 <div class="sig-detail"><div><div class="sig-cols">
-<div><h4>Why it is read</h4><p>Teeth visibility, lip care, and expression are plainly visible in every photo you are in.</p></div>
+<div><h4>Why it is read</h4><p>The lower face — its symmetry and texture — is visible in every photo you are in, and it is read as a rough guide only.</p></div>
 <div><h4>The action</h4><p>Daily lip care and a twice-daily brush — small habits, kept daily.</p></div>
-</div></div></div></div>
+</div>
+<div class="sig-checks"><h4>The checks</h4><ul>
+<li>Lower-face symmetry</li>
+<li>Lower-face texture (shared with Beard)</li>
+</ul></div></div></div></div>
 <div class="sig-row" data-acc>
 <button class="sig-head" aria-expanded="true"><span class="sig-num">06</span>
-<span><span class="sig-name">Posture</span><span class="sig-line">Reads: head position, shoulder line, stance. Never: medical diagnosis.</span></span>
+<span><span class="sig-name">Posture</span><span class="sig-line">Reads: forward-head and trunk-lean ratios, from your side photo. Never: medical diagnosis.</span></span>
 <span class="sig-toggle" aria-hidden="true"></span></button>
 <div class="sig-detail"><div><div class="sig-cols">
-<div><h4>Why it is read</h4><p>Head position and shoulder line change how every other signal reads.</p></div>
+<div><h4>Why it is read</h4><p>Forward-head and trunk-lean angles, read from your side photo, change how every other signal reads.</p></div>
 <div><h4>The action</h4><p>A two-minute daily reset — chin tuck, shoulder roll, chest open.</p></div>
-</div></div></div></div>
+</div>
+<div class="sig-checks"><h4>The checks</h4><ul>
+<li>Forward-head ratio</li>
+<li>Trunk-lean ratio</li>
+<li>Pose-readability check</li>
+</ul></div></div></div></div>
 <div class="sig-row gate" data-acc>
 <button class="sig-head" aria-expanded="true"><span class="sig-num">07</span>
 <span><span class="sig-name">Photo Quality<span class="gate-chip">The gate — checked first, never scored</span></span><span class="sig-line">Gate: light, sharpness, framing — checked before scoring. Never: scored as a trait.</span></span>
@@ -214,7 +519,17 @@
 <div class="sig-detail"><div><div class="sig-cols">
 <div><h4>Why it is read</h4><p>A photo in poor light cannot be read fairly, so nothing is scored from it.</p></div>
 <div><h4>The action</h4><p>Face a window, hold the phone at eye level, and retake — the app asks for a retake instead of guessing.</p></div>
-</div></div></div></div>
+</div>
+<div class="sig-checks"><h4>The checks</h4><ul>
+<li>Average brightness</li>
+<li>Sharpness</li>
+<li>Overall contrast</li>
+</ul><p>Checked first — a photo that fails is never scored.</p></div></div></div></div>
+</div>
+<div class="sig-ledger">
+<p class="sig-ledger-lead">12 individual measurements on your photo — texture, colour, light and sharpness, region by region — behind your 7 signals.</p>
+<p>15 individual checks in the full scan (face photo + side photo). Every one is listed, with what it measures, on the methodology page.</p>
+<p><a class="text-link" href="/aura-intelligence">How AuraScan works — every check, listed in full</a></p>
 </div>
 <p class="sig-foot">AuraScan reads visible, actionable signals only. It is not a medical assessment, and it never rates attractiveness. Bands are Focus first, Good, and Strong — never a single attractiveness number.</p>
 </div></section>
@@ -231,6 +546,11 @@
 <div class="tl-node"><div class="tl-dot"></div><div class="tl-day">Day 60</div><p>Second re-scan. The plan adjusts around what has moved — and what has not.</p><span class="tl-flag">Check-in</span></div>
 <div class="tl-node"><div class="tl-dot"></div><div class="tl-day">Day 90</div><p>The cycle closes. What held becomes your standard; the next cycle starts from a new baseline.</p><span class="tl-flag">Cycle review</span></div>
 </div></div>
+<div class="r2-cycle-detail" data-cycle-detail aria-live="polite">
+  <span class="r2-cd-day">Day 1</span><span class="r2-cd-flag">Baseline</span>
+  <p>Your AuraScan sets the baseline — seven bands, each with its Why and Action.</p>
+</div>
+<p class="r2-cycle-hint">The marker shows where you are in the cycle — time and process, never a promised result.</p>
 <div class="day-card reveal">
 <h3>A day on the routine</h3><p class="dc-sub">About five minutes, morning and evening. Nothing extreme — a routine built to be kept.</p>
 <div class="dc-task"><span class="dc-check"><svg viewBox="0 0 14 14"><path d="M2 7.5 5.5 11 12 3"/></svg></span><p>Gentle face wash<small>Start clean — lukewarm water, thirty seconds.</small></p></div>
@@ -247,13 +567,13 @@
 <div class="post-grid">
 <a class="post-card reveal" data-delay="1" href="/blog/glow-up-guide-for-men">
 <div class="pc-img"><img src="/images/blog/glow-up-guide-men.jpg" alt="Illustration — AI-generated image of a fictional man. Not a real user or result." loading="lazy" width="800" height="500"></div>
-<div class="pc-body"><span class="pc-cat">The Guide</span><h3>The Complete Men’s Glow-Up Guide: Skin, Hair, Style &amp; Habits</h3><p>The full 90-day picture — skin, hair, style, and the habits that hold them together.</p></div></a>
+<div class="pc-body"><span class="pc-cat">The Guide</span><span class="r2-readtime">9 min read</span><h3>The Complete Men’s Glow-Up Guide: Skin, Hair, Style &amp; Habits</h3><p>The full 90-day picture — skin, hair, style, and the habits that hold them together.</p></div></a>
 <a class="post-card reveal" data-delay="2" href="/blog/clear-skin-guide">
 <div class="pc-img"><img src="/images/blog/clear-skin-guide.jpg" alt="Illustration — AI-generated image of a fictional man. Not a real user or result." loading="lazy" width="800" height="500"></div>
-<div class="pc-body"><span class="pc-cat">Skin</span><h3>How to Get Clear Skin: The Honest Guide</h3><p>What drives breakouts, and the routine order that keeps skin calm.</p></div></a>
+<div class="pc-body"><span class="pc-cat">Skin</span><span class="r2-readtime">8 min read</span><h3>How to Get Clear Skin: The Honest Guide</h3><p>What drives breakouts, and the routine order that keeps skin calm.</p></div></a>
 <a class="post-card reveal" data-delay="3" href="/blog/haircut-guide">
 <div class="pc-img"><img src="/images/blog/haircut-guide.jpg" alt="Illustration — AI-generated image of a fictional man. Not a real user or result." loading="lazy" width="800" height="500"></div>
-<div class="pc-body"><span class="pc-cat">Hair</span><h3>How to Get the Right Haircut</h3><p>How to choose a cut for your hair type — and what to say in the chair.</p></div></a>
+<div class="pc-body"><span class="pc-cat">Hair</span><span class="r2-readtime">8 min read</span><h3>How to Get the Right Haircut</h3><p>How to choose a cut for your hair type — and what to say in the chair.</p></div></a>
 </div>
 <div class="manifesto reveal">
 <blockquote>What Lookauramax will <em>never</em> do.</blockquote>
@@ -403,6 +723,5 @@
 <script src="/assets/consent.js" defer></script>
 <script src="/assets/site-data.js" defer></script>
 <script src="/assets/aurora.js" defer></script>
-<script src="/assets/hero3d.js" defer></script>
 </body>
 </html>

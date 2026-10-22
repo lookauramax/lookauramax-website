@@ -3554,5 +3554,59 @@
   "file": "styleguide.html",
   "match": "signals\">Signals</a><a href=\"/#cycle\">90",
   "reason": "False positive: site nav link text '90-Day Cycle' adjacent to the 'Signals' nav link (same pattern already baselined on index.html). Not a check-count claim. Added by coordinator, Phase 1 integration, 2026-10-22."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "journal/comparisons.html",
+  "match": "fake",
+  "reason": "Negation context copied verbatim from the blog index shell/card descriptions (already baselined there): 'no fake promises', 'no tricks'. New hub pages, Phase 3 \u2014 coordinator, 2026-10-22."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "journal/confidence.html",
+  "match": "fake",
+  "reason": "Negation context copied verbatim from the blog index shell/card descriptions (already baselined there): 'no fake promises', 'no tricks'. New hub pages, Phase 3 \u2014 coordinator, 2026-10-22."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "journal/fitness.html",
+  "match": "fake",
+  "reason": "Negation context copied verbatim from the blog index shell/card descriptions (already baselined there): 'no fake promises', 'no tricks'. New hub pages, Phase 3 \u2014 coordinator, 2026-10-22."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "journal/hair.html",
+  "match": "fake",
+  "reason": "Negation context copied verbatim from the blog index shell/card descriptions (already baselined there): 'no fake promises', 'no tricks'. New hub pages, Phase 3 \u2014 coordinator, 2026-10-22."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "journal/routine.html",
+  "match": "fake",
+  "reason": "Negation context copied verbatim from the blog index shell/card descriptions (already baselined there): 'no fake promises', 'no tricks'. New hub pages, Phase 3 \u2014 coordinator, 2026-10-22."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "journal/skin.html",
+  "match": "fake",
+  "reason": "Negation context copied verbatim from the blog index shell/card descriptions (already baselined there): 'no fake promises', 'no tricks'. New hub pages, Phase 3 \u2014 coordinator, 2026-10-22."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "journal/style.html",
+  "match": "fake",
+  "reason": "Negation context copied verbatim from the blog index shell/card descriptions (already baselined there): 'no fake promises', 'no tricks'. New hub pages, Phase 3 \u2014 coordinator, 2026-10-22."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "journal/confidence.html",
+  "match": "tricks",
+  "reason": "Negation context copied verbatim from the blog index shell/card descriptions (already baselined there): 'no fake promises', 'no tricks'. New hub pages, Phase 3 \u2014 coordinator, 2026-10-22."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "journal/style.html",
+  "match": "tricks",
+  "reason": "Negation context in a card description copied verbatim from the blog index ('no tricks, no filters') \u2014 already baselined there. Phase 3 \u2014 coordinator, 2026-10-22."
  }
 ]

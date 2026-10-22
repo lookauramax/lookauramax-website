@@ -532,3 +532,310 @@
   }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
   els.forEach(function (el) { io.observe(el); });
 })();
+
+/* ================= ROUND 2 — HERO: THE READ ================= */
+/* Round-2 hero "The Read" — guarded block for assets/aurora.js.
+   Plays the one-shot sequence on first view, pauses it offscreen,
+   and wires the six SVG signal nodes to the readout cards.
+   No-ops when the hero is absent. No-JS keeps every card visible. */
+(function () {
+  'use strict';
+  var read = document.getElementById('r2-read');
+  if (!read) return;
+  var hero = read.closest('.hero') || read;
+  var nodes = Array.prototype.slice.call(read.querySelectorAll('.read-node'));
+  var cards = {};
+  read.querySelectorAll('.r2-read-card').forEach(function (c) {
+    cards[c.getAttribute('data-card')] = c;
+  });
+  if (!nodes.length) return;
+
+  var current = 'skin';
+  function select(key, focus, user) {
+    if (!cards[key]) return;
+    current = key;
+    nodes.forEach(function (n) {
+      n.setAttribute('aria-pressed', String(n.getAttribute('data-node') === key));
+    });
+    Object.keys(cards).forEach(function (k) {
+      var on = k === key, card = cards[k];
+      card.hidden = !on;
+      card.classList.toggle('is-active', on);
+      if (on && user) card.classList.add('r2-switched');
+    });
+    if (focus) {
+      var t = nodes.filter(function (n) { return n.getAttribute('data-node') === key; })[0];
+      if (t && t.focus) t.focus();
+    }
+  }
+  read.classList.add('r2-enhanced');
+  select('skin', false, false);
+
+  nodes.forEach(function (n, i) {
+    n.addEventListener('click', function () { select(n.getAttribute('data-node'), false, true); });
+    n.addEventListener('keydown', function (e) {
+      var k = e.key, j = null;
+      if (k === 'Enter' || k === ' ' || k === 'Spacebar') {
+        e.preventDefault(); select(n.getAttribute('data-node'), false, true); return;
+      }
+      if (k === 'ArrowRight' || k === 'ArrowDown') j = (i + 1) % nodes.length;
+      else if (k === 'ArrowLeft' || k === 'ArrowUp') j = (i + nodes.length - 1) % nodes.length;
+      else if (k === 'Home') j = 0;
+      else if (k === 'End') j = nodes.length - 1;
+      if (j !== null) { e.preventDefault(); select(nodes[j].getAttribute('data-node'), true, true); }
+    });
+  });
+
+  /* --- one-shot play sequence --- */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function play() { read.classList.add('hero-play'); hero.classList.add('hero-play'); }
+  if (reduce || !('IntersectionObserver' in window)) { play(); return; }
+  var played = false;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting && !played) { played = true; play(); }
+      var paused = played && !e.isIntersecting;
+      read.classList.toggle('r2-paused', paused);
+      hero.classList.toggle('r2-paused', paused);
+    });
+  }, { threshold: 0.2 });
+  io.observe(read);
+  /* failsafe: the fully-drawn state must never stay hidden */
+  setTimeout(function () { if (!played) { played = true; play(); } }, 4000);
+})();
+
+/* ================= ROUND 2 — HOW ARTIFACTS ================= */
+/* Round-2 · Sections stream · HOW artifacts: one-shot Sweep + connector Wipe.
+   Append to assets/aurora.js. Self-contained guarded block; no-ops when absent.
+   Static final state is the default — this only plays the one-shot passes,
+   once, via IntersectionObserver, then unobserves (spec §8). */
+(function () {
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+
+  var cap = document.querySelector('.r2-capture');
+  if (cap) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { cap.classList.add('r2-swept'); io.unobserve(cap); }
+      });
+    }, { threshold: 0.35 });
+    io.observe(cap);
+  }
+
+  var steps = document.querySelector('#how .steps');
+  if (steps) {
+    var io2 = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { steps.classList.add('r2-wiped'); io2.unobserve(steps); }
+      });
+    }, { threshold: 0.15 });
+    io2.observe(steps);
+  }
+})();
+
+/* ================= ROUND 2 — LENS PRESETS ================= */
+/* Round-2 · Sections stream · ANALYSIS LENS presets + keyboard lens control.
+   Append to assets/aurora.js AFTER the existing Analysis Lens block.
+   Self-contained guarded block; no-ops when the lens is absent.
+
+   INTEGRATION NOTE (see MANIFEST): aurora.js keeps its lens `move()` and
+   `setRead()` inside a closure — there is NO exposed setter. This fragment
+   therefore moves the lens by dispatching synthetic pointer events, which
+   run the existing code's own clamping + CSS-var writes + zone read:
+     pointerdown on .lens-wrap (sets dragging, calls move) -> pointerup on window.
+   Preset captions and drag-zone captions share the one [data-lens-read] line:
+   selecting a preset writes the preset caption; the next drag reverts to the
+   existing zone captions. That precedence is intentional and documented. */
+(function () {
+  'use strict';
+  var lens = document.querySelector('.lens-wrap');
+  if (!lens) return;
+  var section = document.getElementById('lens');
+  var readEl = document.querySelector('[data-lens-read]');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var PRESETS = {
+    window:   { tint: 'linear-gradient(105deg, rgba(147,183,204,.12), rgba(240,205,138,.05) 55%, rgba(0,0,0,.10))',
+                caption: 'Window light — soft, even front light. Texture and colour read at their most honest, which is why the gate asks for a window-facing photo.' },
+    golden:   { tint: 'radial-gradient(90% 120% at 18% 30%, rgba(223,163,60,.26), rgba(122,94,14,.10) 55%, rgba(0,0,0,.16))',
+                caption: 'Golden hour — warm, angled sun. It flatters, but it shifts colour and throws long shadows, so the gate checks the light before any signal is read from it.' },
+    overhead: { tint: 'linear-gradient(180deg, rgba(0,0,0,.42), rgba(0,0,0,.05) 46%, rgba(0,0,0,.20))',
+                caption: 'Overhead light — eye sockets and under-eyes read darker, even when skin is fine. The gate asks for front light instead of guessing.' },
+    lowlight: { tint: 'linear-gradient(180deg, rgba(8,10,18,.48), rgba(8,10,18,.40))',
+                caption: 'Low light — the photo turns grainy and flat, and texture disappears into noise. Rather than guess, the gate asks for a brighter retake.' }
+  };
+
+  /* --- enhance: collapse the static caption list into the single read line --- */
+  if (section) section.classList.add('r2-lens-live');
+  var tint = lens.querySelector('.r2-lens-tint');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.r2-preset[role="radio"]'));
+  if (tint) tint.style.setProperty('--lens-tint', PRESETS.window.tint);
+
+  function applyTint(name) {
+    if (!tint) return;
+    if (reduce) { tint.style.setProperty('--lens-tint', PRESETS[name].tint); return; }
+    tint.classList.add('r2-fading');
+    setTimeout(function () {
+      tint.style.setProperty('--lens-tint', PRESETS[name].tint);
+      tint.classList.remove('r2-fading');
+    }, 150);
+  }
+  function select(chip, focus) {
+    chips.forEach(function (c) {
+      var on = c === chip;
+      c.setAttribute('aria-checked', String(on));
+      c.tabIndex = on ? 0 : -1;
+    });
+    var name = chip.getAttribute('data-preset');
+    if (PRESETS[name]) {
+      applyTint(name);
+      if (readEl) readEl.textContent = PRESETS[name].caption;
+    }
+    if (focus) chip.focus();
+  }
+  chips.forEach(function (chip, i) {
+    chip.addEventListener('click', function () { select(chip, false); });
+    chip.addEventListener('keydown', function (e) {
+      var j = null;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') j = (i + 1) % chips.length;
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') j = (i - 1 + chips.length) % chips.length;
+      else if (e.key === 'Home') j = 0;
+      else if (e.key === 'End') j = chips.length - 1;
+      if (j !== null) { e.preventDefault(); select(chips[j], true); }
+    });
+  });
+
+  /* --- keyboard control for the lens itself (Z.ai §7.2: 8px steps) ---
+     Reuses aurora.js's own pointer math via synthetic events (see note above). */
+  lens.setAttribute('tabindex', '0');
+  lens.setAttribute('role', 'slider');
+  lens.setAttribute('aria-label', 'Analysis lens position. Arrow keys move the lens.');
+  lens.setAttribute('aria-valuemin', '0');
+  lens.setAttribute('aria-valuemax', '100');
+  function currentPct() {
+    var x = parseFloat((lens.style.getPropertyValue('--lx') || '62%'));
+    var y = parseFloat((lens.style.getPropertyValue('--ly') || '44%'));
+    return { x: isNaN(x) ? 62 : x, y: isNaN(y) ? 44 : y };
+  }
+  function syncAria() {
+    var p = currentPct();
+    lens.setAttribute('aria-valuenow', String(Math.round(p.x)));
+    lens.setAttribute('aria-valuetext', 'Lens at ' + Math.round(p.x) + '% across, ' + Math.round(p.y) + '% down');
+  }
+  syncAria();
+  lens.addEventListener('keydown', function (e) {
+    var keys = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'];
+    if (keys.indexOf(e.key) === -1) return;
+    e.preventDefault();
+    var r = lens.getBoundingClientRect();
+    var p = currentPct();
+    var cx = r.left + (p.x / 100) * r.width;
+    var cy = r.top + (p.y / 100) * r.height;
+    var step = 8; /* px, per Z.ai §7.2 */
+    if (e.key === 'ArrowLeft') cx -= step;
+    if (e.key === 'ArrowRight') cx += step;
+    if (e.key === 'ArrowUp') cy -= step;
+    if (e.key === 'ArrowDown') cy += step;
+    if (e.key === 'Home') cx = r.left + r.width * 0.04;
+    if (e.key === 'End') cx = r.left + r.width * 0.96;
+    var opts = { bubbles: true, cancelable: true, clientX: cx, clientY: cy, pointerId: 991, pointerType: 'mouse', isPrimary: true };
+    lens.dispatchEvent(new PointerEvent('pointerdown', opts));
+    window.dispatchEvent(new PointerEvent('pointerup', opts));
+    syncAria();
+  });
+})();
+
+/* ================= ROUND 2 — CYCLE SCRUBBER ================= */
+/* Round-2 · Sections stream · CYCLE SCRUBBER (Z.ai §7.4 / Decision 5).
+   Append to assets/aurora.js. Self-contained guarded block; no-ops when absent.
+   PROCESS ONLY: the playhead marks TIME (Day 1→90). It never shows a band
+   improving, an outcome, or a percentage. No autoplay, ever. Movement is
+   transform-only; reduced motion = instant jumps (no transition is used). */
+(function () {
+  'use strict';
+  var tl = document.querySelector('#cycle .tl');
+  var detail = document.querySelector('[data-cycle-detail]');
+  if (!tl || !detail) return;
+  var nodes = Array.prototype.slice.call(tl.querySelectorAll('.tl-node'));
+  if (nodes.length !== 4) return;
+  var fill = tl.querySelector('.tl-fill');
+  var track = tl.querySelector('.tl-track');
+
+  /* Stops are read from the DOM (day label + flag + paragraph), never duplicated copy. */
+  var DAYS = [1, 30, 60, 90];
+  var stops = nodes.map(function (node, i) {
+    var flagEl = node.querySelector('.tl-flag');
+    var p = node.querySelector('p');
+    return {
+      day: DAYS[i],
+      label: (node.querySelector('.tl-day') || {}).textContent || ('Day ' + DAYS[i]),
+      flag: flagEl ? flagEl.textContent.trim() : (i === 0 ? 'Baseline' : ''),
+      text: p ? p.textContent.trim() : '',
+      pos: i / (nodes.length - 1) /* 0, 1/3, 2/3, 1 — nodes are equal grid columns */
+    };
+  });
+  function valueText(s) {
+    /* e.g. "Day 30 — first Check-in" */
+    var suffix = s.day === 1 ? 'baseline' : (s.day === 90 ? 'Cycle review' : (s.day === 30 ? 'first Check-in' : 'second Check-in'));
+    return 'Day ' + s.day + ' — ' + suffix;
+  }
+
+  tl.classList.add('r2-scrub');
+  var head = document.createElement('button');
+  head.type = 'button';
+  head.className = 'r2-playhead';
+  head.setAttribute('role', 'slider');
+  head.setAttribute('aria-label', 'Cycle day');
+  head.setAttribute('aria-valuemin', '1');
+  head.setAttribute('aria-valuemax', '90');
+  tl.appendChild(head);
+
+  var dayEl = detail.querySelector('.r2-cd-day');
+  var flagEl2 = detail.querySelector('.r2-cd-flag');
+  var pEl = detail.querySelector('p');
+  var current = 0;
+
+  function render(i, announce) {
+    current = Math.max(0, Math.min(stops.length - 1, i));
+    var s = stops[current];
+    head.style.transform = 'translateX(' + (s.pos * tl.clientWidth) + 'px)';
+    head.setAttribute('aria-valuenow', String(s.day));
+    head.setAttribute('aria-valuetext', valueText(s));
+    if (fill) { fill.style.transition = 'none'; fill.style.transform = 'scaleX(' + s.pos + ')'; }
+    nodes.forEach(function (n, j) { n.classList.toggle('r2-active', j === current); });
+    if (dayEl) dayEl.textContent = s.label;
+    if (flagEl2) flagEl2.textContent = s.flag || valueText(s).split(' — ')[1];
+    if (pEl) pEl.textContent = s.text;
+    if (announce) head.setAttribute('aria-valuetext', valueText(s));
+  }
+  function nearestStop(clientX) {
+    var r = tl.getBoundingClientRect();
+    var frac = Math.max(0, Math.min(1, (clientX - r.left) / r.width));
+    var best = 0, bd = Infinity;
+    stops.forEach(function (s, i) { var d = Math.abs(s.pos - frac); if (d < bd) { bd = d; best = i; } });
+    return best;
+  }
+
+  var dragging = false;
+  head.addEventListener('pointerdown', function (e) { e.preventDefault(); dragging = true; head.setPointerCapture && head.setPointerCapture(e.pointerId); });
+  head.addEventListener('pointermove', function (e) { if (dragging) render(nearestStop(e.clientX), false); });
+  head.addEventListener('pointerup', function () { dragging = false; });
+  head.addEventListener('pointercancel', function () { dragging = false; });
+  tl.addEventListener('pointerdown', function (e) {
+    if (e.target === head || head.contains(e.target)) return;
+    render(nearestStop(e.clientX), true);
+  });
+  head.addEventListener('keydown', function (e) {
+    var j = null;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === 'ArrowDown') j = current + 1;
+    else if (e.key === 'ArrowLeft') j = current - 1;
+    else if (e.key === 'Home') j = 0;
+    else if (e.key === 'End') j = stops.length - 1;
+    if (j !== null) { e.preventDefault(); render(j, true); }
+  });
+  window.addEventListener('resize', function () { render(current, false); }, { passive: true });
+
+  render(0, false);
+})();

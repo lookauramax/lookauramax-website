@@ -125,16 +125,10 @@ section.chapter:first-of-type{border-top:none}
 .hero-note{margin:26px 0 0;color:var(--mut);font-size:14.5px;max-width:480px}
 .hero-note b{color:var(--gold-hi);font-weight:600}
 .hero-stage{position:relative;min-height:560px;display:flex;align-items:center;justify-content:center}
-#aura3d{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity 1.2s ease}
-.hero-stage.live #aura3d{opacity:1}
 .aura-poster{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
 .aura-poster svg{width:min(560px,92%);height:auto;animation:breathe 7s ease-in-out infinite}
 @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
-.hero-phone{position:relative;width:min(300px,74vw);border:1px solid var(--line);border-radius:38px;
-  padding:10px;background:var(--panel);box-shadow:0 40px 90px rgba(0,0,0,.65);will-change:transform}
-.hero-phone img{border-radius:29px;width:100%}
-.hero-phone figcaption{position:absolute;left:0;right:0;bottom:-30px;text-align:center;
-  color:var(--mut-2);font-size:12px;letter-spacing:.06em}
+
 @media (max-width:900px){
   .hero{padding:56px 0 84px}
   .hero-grid{grid-template-columns:1fr;gap:64px}
@@ -1217,3 +1211,403 @@ body.has-capsule.hub .scroll-progress{
   margin:38px 0 4px;color:var(--ink)}
 .faq-cluster:first-of-type .r2-faq-cluster-title{margin-top:34px}
 .faq-cluster .faq-list{margin-top:14px}
+
+/* ================= ROUND 2 — HERO: THE READ ================= */
+/* ============================================================
+   ROUND-2 HERO — "The Read" (Phase 3, Decision 1 / H1)
+   Coordinator: append to assets/aurora.css AFTER the existing
+   hero block (source order wins the .hero-stage overrides below).
+   Static final state is the DEFAULT. Every animated start-state
+   lives inside @media (prefers-reduced-motion: no-preference)
+   AND under .js (class on <html>, added by aurora.js) AND is
+   keyed off .hero-play (added by frag-hero.js). No-JS and
+   reduced-motion therefore render the fully-drawn hero.
+   Motion alphabet only: Rise / Wipe / Sweep / Press —
+   transform, opacity, background-position. Nothing loops.
+   ============================================================ */
+
+/* ---------- stage integration ---------- */
+.hero-stage:has(.r2-read){display:block;min-height:0}
+/* Give the diagram + card room: widen the stage column only when
+   the Read is present. No :has() support -> grid stays 1.02/.98
+   and .r2-read simply stacks (see breakpoints) — still correct. */
+@media (min-width:901px){
+  .hero-grid:has(.r2-read){grid-template-columns:.84fr 1.16fr;gap:48px;align-items:start}
+}
+
+.r2-read{position:relative;z-index:1;display:grid;
+  grid-template-columns:minmax(0,52fr) minmax(0,48fr);
+  gap:8px 22px;align-items:start;text-align:left}
+.r2-fig-wrap{aspect-ratio:600/620;width:100%;max-width:460px;margin:0 auto}
+.r2-fig{display:block;width:100%;height:auto;overflow:visible}
+/* black halo lifts every SVG label off the poster rings behind it */
+.r2-fig text{paint-order:stroke;stroke:#000;stroke-width:3px;stroke-linejoin:round}
+
+/* ---------- the figure (gold line on black) ---------- */
+.r2-outline{fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round;opacity:.92}
+.r2-hem{fill:none;stroke:var(--gold);stroke-width:1.5;opacity:.28}
+.r2-guide{stroke:var(--gold);stroke-width:1;opacity:.32}
+.r2-converge path{fill:none;stroke:var(--gold);stroke-width:1;opacity:.38}
+.r2-converge .r2-stem{opacity:.5}
+
+/* gate bar */
+.r2-gate-cap{font-family:var(--sans);font-size:13px;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;fill:var(--mut)}
+.r2-gate-track{fill:var(--panel-2);stroke:var(--gold-line);stroke-width:1}
+.r2-gate-fill{fill:var(--gold)}
+.r2-gate-tick{font-family:var(--sans);font-size:15px;fill:var(--ink)}
+.r2-tickmark{fill:var(--gold-hi);font-weight:700}
+
+/* nodes */
+.r2-node{cursor:pointer;outline:none}
+.r2-node-ring{fill:var(--black);stroke:var(--gold);stroke-width:1.6}
+.r2-node-ring--dash{stroke-dasharray:4 4}
+.r2-node-dot{fill:var(--gold-hi)}
+.r2-node-label{font-family:var(--sans);font-size:20px;font-weight:600;fill:var(--ink)}
+.r2-node-micro{font-family:var(--sans);font-size:12.5px;letter-spacing:.14em;
+  text-transform:uppercase;fill:var(--mut)}
+.r2-node:hover .r2-node-ring,.r2-node:focus-visible .r2-node-ring{stroke:var(--gold-hi);stroke-width:2.4}
+.r2-node:focus-visible .r2-node-label{fill:var(--gold-hi)}
+.r2-node[aria-pressed="true"] .r2-node-ring{stroke:var(--gold-hi);stroke-width:2.4}
+.r2-node[aria-pressed="true"] .r2-node-dot{fill:#fff}
+.r2-node:active .r2-node-ring{stroke-width:2.4} /* Press, via stroke — no transform on the group, keeps geometry still */
+
+/* 90-day arc */
+.r2-arc-path{fill:none;stroke:var(--gold);stroke-width:1.5;opacity:.85}
+.r2-arc-dots circle{fill:var(--black);stroke:var(--gold);stroke-width:1.6}
+.r2-arc-labels text{font-family:var(--serif);font-weight:600;font-size:21px;fill:var(--gold-hi)}
+
+/* ---------- readout side ---------- */
+.r2-read-side{min-width:0}
+.r2-read-kicker{margin:6px 0 14px;font-size:11.5px;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.r2-read-stack{position:relative}
+/* Reserve the tallest card's height once JS collapses the stack,
+   so the swap cannot shift the page (CLS guard). */
+.r2-read.r2-enhanced .r2-read-stack{min-height:472px}
+.r2-read-card{background:var(--panel);border:1px solid var(--line);
+  border-radius:20px;padding:24px 26px 26px}
+.r2-read-stack .r2-read-card + .r2-read-card{margin-top:18px}
+.r2-read.r2-enhanced .r2-read-card + .r2-read-card{margin-top:0}
+.r2-read-card[hidden]{display:none!important}
+.r2-card-name{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.1;margin:0}
+.r2-card-note{margin:8px 0 0;color:var(--gold-hi);font-size:13.5px}
+.r2-checks-label{margin:18px 0 8px;font-size:11px;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.r2-checks{list-style:none;margin:0;padding:0}
+.r2-checks li{display:flex;gap:10px;align-items:baseline;padding:5px 0;
+  font-size:15px;color:var(--ink);border-bottom:1px solid var(--line-soft)}
+.r2-checks li:last-child{border-bottom:none}
+.r2-tick{color:var(--gold-hi);font-weight:700;font-size:13px}
+.r2-bands{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+/* Foundation owns .band-chip; this is the hero-local fallback shape
+   only — if foundation's chip lands first, delete this one rule. */
+
+.r2-bands-note{margin:9px 0 0;color:var(--mut-2);font-size:12.5px}
+.r2-why,.r2-action{margin:14px 0 0;color:var(--mut);font-size:14.5px;line-height:1.55}
+.r2-action{margin-top:8px}
+.r2-wa-label{display:inline-block;margin-right:10px;font-size:11px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.r2-illus{grid-column:1/-1;margin:14px 0 0;color:var(--mut-2);
+  font-size:12.5px;letter-spacing:.05em;text-align:center}
+
+/* ---------- responsive: stack figure over cards ---------- */
+@media (max-width:1100px){
+  .r2-read{grid-template-columns:1fr;gap:4px}
+  .r2-fig-wrap{max-width:440px}
+  .r2-read.r2-enhanced .r2-read-stack{min-height:0}
+  .r2-illus{text-align:left}
+}
+@media (max-width:760px){
+  .r2-fig-wrap{max-width:400px}
+  .r2-read-card{padding:20px 20px 22px}
+  .r2-card-name{font-size:27px}
+}
+
+/* ============================================================
+   THE SEQUENCE (~3.1s, once) — animated start-states exist ONLY
+   in this block: no-preference + JS present + not yet played.
+   frag-hero.js adds .hero-play to .r2-read and to .hero.
+   ============================================================ */
+@media (prefers-reduced-motion: no-preference){
+  /* "Grow" gold sweep — H1 text untouched; a sheen passes once. */
+  .js .hero h1 .gold-it{background:linear-gradient(100deg,var(--gold-hi) 38%,#FFF6DE 50%,var(--gold-hi) 62%);
+    background-size:220% 100%;background-position:115% 0;
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .js .hero.hero-play h1 .gold-it{animation:r2-sweep 1.15s var(--ease) 1.05s both}
+  @keyframes r2-sweep{from{background-position:115% 0}to{background-position:-115% 0}}
+
+  /* gate fill (Wipe, left -> right) */
+  .js .r2-gate-fill{transform:scaleX(0);transform-box:fill-box;transform-origin:0 50%}
+  .js .hero-play .r2-gate-fill{animation:r2-gatefill .7s var(--ease) .1s both}
+  @keyframes r2-gatefill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  .js .r2-gate-tick{opacity:0}
+  .js .hero-play .r2-gate-tick{animation:r2-rise .35s var(--ease) var(--d,0s) both}
+
+  /* nodes wake in sequence (Rise) */
+  .js .r2-node{opacity:0}
+  .js .r2-node .r2-node-ring,.js .r2-node .r2-node-dot{transform:scale(.35);
+    transform-box:fill-box;transform-origin:center}
+  .js .hero-play .r2-node{animation:r2-rise .45s var(--ease) var(--d,0s) both}
+  .js .hero-play .r2-node .r2-node-ring,
+  .js .hero-play .r2-node .r2-node-dot{animation:r2-pop .45s var(--ease) var(--d,0s) both}
+  @keyframes r2-rise{from{opacity:0}to{opacity:1}}
+  @keyframes r2-pop{from{transform:scale(.35)}to{transform:scale(1)}}
+
+  /* check ticks in the active card (Rise, staggered by --n) */
+  .js .r2-read-card.is-active .r2-checks li{animation:r2-tickin .4s var(--ease) both;
+    animation-delay:calc(1.05s + var(--n,0)*.11s)}
+  /* on user-driven switches the same tick-in replays, fast */
+  .js .r2-read-card.is-active.r2-switched .r2-checks li{animation-delay:calc(var(--n,0)*.07s)}
+  @keyframes r2-tickin{from{opacity:0;transform:translateX(-7px)}to{opacity:1;transform:translateX(0)}}
+
+  /* connectors wipe down, then the arc wipes across (pre-drawn, mask reveal) */
+  .js .r2-wipey-rect{transform:scaleY(0);transform-box:fill-box;transform-origin:50% 0}
+  .js .hero-play .r2-wipey-rect{animation:r2-wipey .6s var(--ease) 1.95s both}
+  @keyframes r2-wipey{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  .js .r2-wipex-rect{transform:scaleX(0);transform-box:fill-box;transform-origin:0 50%}
+  .js .hero-play .r2-wipex-rect{animation:r2-wipex .7s var(--ease) 2.4s both}
+  @keyframes r2-wipex{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+  /* pause the sequence while the hero is offscreen (JS toggles) */
+  .js .r2-read.r2-paused .r2-gate-fill,
+  .js .r2-read.r2-paused .r2-gate-tick,
+  .js .r2-read.r2-paused .r2-node,
+  .js .r2-read.r2-paused .r2-node .r2-node-ring,
+  .js .r2-read.r2-paused .r2-node .r2-node-dot,
+  .js .r2-read.r2-paused .r2-wipey-rect,
+  .js .r2-read.r2-paused .r2-wipex-rect,
+  .js .hero.r2-paused h1 .gold-it{animation-play-state:paused}
+}
+
+/* reduced motion: force the final state even if a class lingers */
+@media (prefers-reduced-motion: reduce){
+  .r2-gate-fill,.r2-wipey-rect,.r2-wipex-rect{transform:none!important}
+  .r2-node,.r2-gate-tick{opacity:1!important}
+  .r2-node .r2-node-ring,.r2-node .r2-node-dot{transform:none!important}
+}
+
+/* ================= ROUND 2 — HOW ARTIFACTS ================= */
+/* Round-2 · Sections stream · HOW-IT-WORKS artifacts + shared card bits
+   Append to assets/aurora.css AFTER the foundation stream's block.
+   Static-visible by default; animated start states exist only under
+   (prefers-reduced-motion: no-preference) + html.js (spec §8).
+   Class prefix r2- avoids collisions with aurora.css / base.css. */
+
+/* ---- connector line between steps (desktop, CSS layout + JS wipe) ---- */
+@media (min-width: 901px) {
+  .steps { position: relative; }
+  .steps::before {
+    content: ""; position: absolute; left: 55px; top: 12px; bottom: 12px;
+    width: 1px; background: linear-gradient(180deg, transparent, var(--gold-line) 12%, var(--gold-line) 88%, transparent);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html.js .steps::before { transform: scaleY(0); transform-origin: 50% 0; transition: transform 1.1s var(--ease); }
+    html.js .steps.r2-wiped::before { transform: scaleY(1); }
+  }
+}
+
+/* ---- shared bits ---- */
+.r2-chip-illus {
+  display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--gold-hi); border: 1px solid var(--gold-line);
+  border-radius: 999px; padding: 3px 10px; background: rgba(5,5,5,.72);
+}
+.r2-band-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 14px; }
+.r2-band {
+  font-size: 11.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; color: var(--mut);
+}
+.r2-band.r2-band-example { color: #1A1206; background: linear-gradient(180deg, var(--gold-hi), var(--gold)); border-color: transparent; }
+
+/* ---- Step 1 · capture frame ---- */
+.r2-capture { position: relative; aspect-ratio: 4/3; background: radial-gradient(120% 90% at 50% 0%, var(--panel-3), var(--panel) 70%); overflow: hidden; }
+.r2-corner { position: absolute; width: 26px; height: 26px; border: 0 solid var(--gold); }
+.r2-corner.tl { top: 14px; left: 14px; border-top-width: 2px; border-left-width: 2px; border-top-left-radius: 8px; }
+.r2-corner.tr { top: 14px; right: 14px; border-top-width: 2px; border-right-width: 2px; border-top-right-radius: 8px; }
+.r2-corner.bl { bottom: 14px; left: 14px; border-bottom-width: 2px; border-left-width: 2px; border-bottom-left-radius: 8px; }
+.r2-corner.br { bottom: 14px; right: 14px; border-bottom-width: 2px; border-right-width: 2px; border-bottom-right-radius: 8px; }
+.r2-capture-photo { position: absolute; inset: 30px 52px 46px; display: flex; align-items: flex-end; justify-content: center; }
+.r2-capture-photo svg { width: 62%; height: auto; }
+.r2-sweep {
+  position: absolute; left: 8%; right: 8%; top: 0; height: 2px; opacity: 0; pointer-events: none;
+  background: linear-gradient(90deg, transparent, var(--gold-hi), transparent);
+  box-shadow: 0 0 18px rgba(240,205,138,.55);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html.js .r2-capture.r2-swept .r2-sweep { animation: r2-sweep-pass 1.15s var(--ease) .15s 1 forwards; }
+}
+@keyframes r2-sweep-pass {
+  0% { opacity: 0; transform: translateY(18px); }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(215px); }
+}
+.r2-gate-row {
+  position: absolute; left: 0; right: 0; bottom: 0; display: flex; gap: 6px; justify-content: center;
+  padding: 9px 10px; border-top: 1px solid var(--line-soft); background: rgba(5,5,5,.55);
+  font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--mut);
+}
+.r2-gate-row b { color: var(--gold-hi); font-weight: 700; }
+.r2-capture .r2-chip-illus { position: absolute; top: 12px; right: 52px; z-index: 2; }
+
+/* ---- Step 2 · ReadoutCard (foundation mapping: .r2-readout == ReadoutCard) ---- */
+.r2-readout { padding: 20px 20px 18px; background: linear-gradient(180deg, var(--panel-2), var(--panel)); }
+.r2-readout-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.r2-readout-name { font-family: var(--serif); font-weight: 600; font-size: 25px; line-height: 1.1; }
+.r2-readout h4 { margin: 12px 0 4px; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--acc); }
+.r2-readout p { margin: 0; color: var(--mut); font-size: 13.5px; line-height: 1.55; max-width: none; }
+.r2-readout .r2-checks { color: var(--mut-2); font-size: 12px; margin-top: 12px; border-top: 1px solid var(--line-soft); padding-top: 10px; }
+.r2-readout .r2-conf { color: var(--mut-2); font-size: 12px; margin-top: 6px; }
+
+/* ---- Step 3 · PlanCard mini (foundation mapping: .r2-plan == PlanCard) ---- */
+.r2-plan { padding: 20px 20px 16px; background: linear-gradient(180deg, var(--panel-2), var(--panel)); }
+.r2-plan-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.r2-plan-week { font-family: var(--serif); font-weight: 600; font-size: 23px; }
+.r2-plan-row { display: flex; gap: 11px; align-items: flex-start; padding: 9px 0; border-top: 1px solid var(--line-soft); }
+.r2-plan-row p { margin: 0; font-size: 13.5px; color: var(--ink); max-width: none; }
+.r2-plan-row small { display: block; color: var(--mut); font-size: 12px; }
+.r2-tick {
+  flex: none; width: 21px; height: 21px; border-radius: 50%; border: 1.6px solid var(--acc);
+  background: var(--acc); display: flex; align-items: center; justify-content: center; margin-top: 1px;
+}
+.r2-tick svg { width: 11px; height: 11px; stroke: var(--black); stroke-width: 3; fill: none; }
+.r2-plan-checkin {
+  margin-top: 12px; border: 1px dashed var(--gold-line); border-radius: 12px; padding: 11px 13px;
+  font-size: 13px; color: var(--mut);
+}
+.r2-plan-checkin b { color: var(--gold-hi); font-weight: 600; }
+
+/* ================= ROUND 2 — LENS PRESETS ================= */
+/* Round-2 · Sections stream · ANALYSIS LENS presets.
+   Append to assets/aurora.css after frag-how.css.
+   Tint crossfades use opacity only; the tint layer itself never moves layout. */
+.r2-lens-bar { margin-top: 34px; }
+.r2-lens-label { font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--acc); margin: 0 0 10px; }
+.r2-lens-presets { display: flex; gap: 9px; flex-wrap: wrap; }
+.r2-preset {
+  font: inherit; font-size: 13.5px; font-weight: 600; color: var(--ink); cursor: pointer;
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 999px; padding: 9px 18px;
+  transition: transform .18s var(--ease), border-color .18s var(--ease), background .18s var(--ease);
+}
+.r2-preset:hover { border-color: var(--acc); }
+.r2-preset:active { transform: scale(.97); }
+.r2-preset:focus-visible { outline: 2px solid var(--acc); outline-offset: 2px; }
+.r2-preset[aria-checked="true"] { background: var(--panel-3); border-color: var(--acc); color: var(--gold-hi); }
+/* tint overlay sits above .base, below .lens-top / .lens-ring */
+.r2-lens-tint {
+  position: absolute; inset: 0; pointer-events: none; opacity: 1;
+  background: var(--lens-tint, transparent); transition: opacity .28s var(--ease);
+}
+.r2-lens-tint.r2-fading { opacity: 0; transition-duration: .14s; }
+@media (prefers-reduced-motion: reduce) { .r2-lens-tint { transition: none; } }
+/* no-JS / pre-enhancement: all four captions visible as a static list.
+   frag-lens.js adds .r2-lens-live to <html>-scoped wrapper to collapse it. */
+.r2-lens-notes { margin: 14px 2px 0; padding: 0; list-style: none; }
+.r2-lens-notes li { color: var(--mut); font-size: 14px; padding: 7px 0; border-top: 1px solid var(--line-soft); }
+.r2-lens-notes b { color: var(--ink); font-weight: 600; }
+.r2-lens-live .r2-lens-notes { display: none; }
+.r2-lens-live .r2-lens-bar { margin-bottom: 0; }
+.lens-wrap:focus-visible { outline: 2px solid var(--acc); outline-offset: 3px; }
+
+/* ================= ROUND 2 — CYCLE SCRUBBER ================= */
+/* Round-2 · Sections stream · CYCLE SCRUBBER.
+   Append to assets/aurora.css after frag-lens.css.
+   The .tl-fill intro animation in aurora.css fills the track on first view;
+   once the scrubber enhances, frag-cycle.js sets the fill inline (scaleX to
+   the playhead) and the inline style governs from then on. */
+.tl.r2-scrub { padding-bottom: 6px; }
+.r2-playhead {
+  position: absolute; top: 10px; left: 0; width: 30px; height: 30px; margin: -15px 0 0 -15px;
+  border-radius: 50%; border: 2px solid var(--gold-hi); background: var(--black);
+  box-shadow: 0 0 0 5px rgba(240,205,138,.14), 0 6px 18px rgba(0,0,0,.5);
+  cursor: grab; z-index: 3; touch-action: none; padding: 0;
+}
+.r2-playhead::after { content: ""; position: absolute; inset: 8px; border-radius: 50%; background: var(--gold); }
+.r2-playhead:active { cursor: grabbing; }
+.r2-playhead:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px; }
+/* No :active scale here: the playhead's transform is its position (set inline by frag-cycle.js). */
+.tl-node { transition: opacity .3s var(--ease); }
+.tl-node.r2-active .tl-day { color: var(--gold-hi); }
+.tl-node.r2-active .tl-dot { border-color: var(--gold-hi); box-shadow: 0 0 0 5px rgba(240,205,138,.13); }
+.r2-cycle-detail {
+  margin: 20px 2px 0; padding: 16px 20px; max-width: 640px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 16px;
+}
+.r2-cycle-detail .r2-cd-day { font-family: var(--serif); font-weight: 600; font-size: 21px; color: var(--gold-hi); margin-right: 10px; }
+.r2-cycle-detail .r2-cd-flag {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold-hi); border: 1px solid var(--gold-line); border-radius: 999px; padding: 3px 9px; vertical-align: 3px;
+}
+.r2-cycle-detail p { margin: 7px 0 0; color: var(--mut); font-size: 14.5px; }
+.r2-cycle-hint { color: var(--mut-2); font-size: 12.5px; margin: 10px 2px 0; }
+@media (max-width: 640px) { .r2-cycle-detail { padding: 14px 16px; } }
+
+/* ================= ROUND 2 — TOOLS HONESTY ================= */
+/* Round-2 · Sections stream · TOOLS honesty headers (Z.ai §7.6).
+   Append to assets/aurora.css after frag-cycle.css.
+   Dedicated .tool-honesty block: no .answer-block class exists in the live
+   CSS (verified — base.css has .methodology only), so this block mirrors
+   .methodology's surface treatment in Aurora tokens. Tool pages are
+   body.lam-tools pages whose in-page <style> predates Aurora; these rules
+   are specific enough (two classes + element selectors) to win cleanly. */
+.tool-honesty {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 26px 0 6px;
+  background: #0B0B0C; border: 1px solid rgba(255,255,255,.09); border-radius: 16px; overflow: hidden;
+  font-family: "Inter", system-ui, sans-serif;
+}
+.tool-honesty > div { padding: 20px 22px; }
+.tool-honesty > div + div { border-left: 1px solid rgba(255,255,255,.09); }
+.tool-honesty h2, .tool-honesty h3 {
+  margin: 0 0 8px; font-size: 11.5px; font-weight: 700; letter-spacing: .18em;
+  text-transform: uppercase; color: #9AA7D4; font-family: "Inter", system-ui, sans-serif;
+}
+.tool-honesty p { margin: 0; color: #A79E8E; font-size: 14.5px; line-height: 1.6; }
+.tool-honesty b, .tool-honesty strong { color: #F2EFE9; font-weight: 600; }
+@media (max-width: 640px) {
+  .tool-honesty { grid-template-columns: 1fr; }
+  .tool-honesty > div + div { border-left: none; border-top: 1px solid rgba(255,255,255,.09); }
+}
+
+/* ================= ROUND 2 — JOURNAL ================= */
+/* Round-2 · Sections stream · JOURNAL ArticleCard additions + Read next.
+   Append to assets/aurora.css after frag-tools.css.
+   Works on BOTH card systems: homepage .post-card (Aurora) and blog-index /
+   hub .card (base.css layer) — colours use currentColor-safe tokens with
+   fallbacks so the chip reads correctly on either layer. */
+.r2-tag-chip {
+  display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--gold-hi, #FFD14E);
+  border: 1px solid var(--gold-line, rgba(255,209,78,.45)); border-radius: 999px;
+  padding: 3px 10px; margin-left: 10px; vertical-align: 2px; white-space: nowrap;
+}
+.r2-readtime { color: var(--mut, #A9A29A); font-size: 12.5px; letter-spacing: .04em; white-space: nowrap; }
+.post-card .r2-readtime { margin-left: 10px; }
+.card .r2-readtime { margin-left: 10px; }
+/* Read next module (inserted by readnext.py into article pages) */
+.r2-readnext {
+  margin: 34px 0 6px; border: 1px solid var(--line, rgba(255,255,255,.1)); border-radius: 16px;
+  background: var(--panel, #121214); padding: 20px 24px;
+}
+.r2-readnext h3 {
+  margin: 0 0 10px; font-size: 11.5px; font-weight: 700; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--acc, #C79CA6);
+}
+.r2-readnext ul { margin: 0; padding: 0; list-style: none; }
+.r2-readnext li { padding: 8px 0; border-top: 1px solid var(--line-soft, rgba(255,255,255,.06)); }
+.r2-readnext li:first-child { border-top: none; }
+.r2-readnext a { color: var(--ink, #F7F3EA); text-decoration: none; font-weight: 600; }
+.r2-readnext a:hover { color: var(--gold-hi, #FFD14E); }
+
+/* ===== R2 Phase 3 (coordinator): signals checks lists + ledger block — mirrors .sig-cols label styling ===== */
+.sig-checks{padding:0 6px 26px 86px;margin-top:-8px}
+.sig-checks h4{margin:0 0 8px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc)}
+.sig-checks ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 20px}
+.sig-checks li{color:var(--mut);font-size:14.5px}
+.sig-checks li::before{content:"·";color:var(--gold);font-weight:700;margin-right:7px}
+.sig-checks p{color:var(--mut);font-size:13.5px;margin:10px 0 0}
+@media (max-width:640px){.sig-checks{padding-left:6px}}
+.sig-ledger{margin:30px 0 6px;border:1px solid var(--line);border-radius:18px;padding:24px 26px;background:var(--panel)}
+.sig-ledger-lead{font-family:var(--serif);font-size:clamp(19px,2.4vw,23px);line-height:1.35;color:var(--ink);margin:0 0 10px}
+.sig-ledger p{color:var(--mut);font-size:15px;margin:0 0 8px}
+.sig-ledger p:last-child{margin-bottom:0}
