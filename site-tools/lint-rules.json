@@ -241,6 +241,24 @@
       "severity": "fail"
     },
     {
+      "description": "Photo quality is a GATE — checked first, never scored (FACTOR-AUDIT §7; locked framing: 6 banded traits + photo-quality GATE). It must never appear as an item in a scored/actionable-traits list. The patterns match a sequence of two or more of the six trait names that ends with 'photo quality' as the final list item, with or without 'and'/'or'. Legitimate gate framings cannot match: the canonical sentence 'Photo quality is a gate: checked first, never scored' has no trait sequence before it, and gate-first phrasings ('with photo quality checked first as a gate'; 'posture — photo quality is a gate') never place 'photo quality' after a comma inside a trait sequence. Added 2026-10-23 (Round 4 Wave 1) after the scored-gate sweep. Zero hits is the passing state — never baseline a hit of this rule; fix the copy.",
+      "id": "scored-gate",
+      "patterns": [
+        {
+          "flags": "gi",
+          "note": "Trait sequence ending ', and photo quality' / ', or photo quality': 'skin, hair, brows, opt-in beard, smile, posture, and photo quality'.",
+          "regex": "\\b(?:skin|hair|brows|opt-in beard|beard|smile|posture)(?:,\\s*(?:skin|hair|brows|opt-in beard|beard|smile|posture))+,\\s*(?:and|or)\\s+photo quality\\b"
+        },
+        {
+          "flags": "gi",
+          "note": "Trait sequence ending ', photo quality' with no conjunction (comparison tables, dash-separated lists): 'smile, posture, photo quality'.",
+          "regex": "\\b(?:skin|hair|brows|opt-in beard|beard|smile|posture)(?:,\\s*(?:skin|hair|brows|opt-in beard|beard|smile|posture))+,\\s+photo quality\\b"
+        }
+      ],
+      "scope": "copy",
+      "severity": "fail"
+    },
+    {
       "description": "WARN ONLY, by design: 'best' is claimable ONLY through true, verifiable differentiators (Oct-18 positioning line), and settled usages exist on the live site (the FAQ 'Why is Lookauramax the best glow-up app?' already carries the no-ranking caveat — DECISIONS.md, settled by the main agent). '#1' also has a locked legitimate use: the '#1 finding' in free results (gate decision D5). A human judges each hit; the linter must never auto-fail settled copy. What stays banned as FACT — fake '#1 in the world' rankings, awards, counts — is a review judgement, not a regex.",
       "id": "best-claim",
       "patterns": [

@@ -195,9 +195,9 @@
  *    legacy pricing.js used; initial render and renew lines never roll).
  *
  * Fixes vs the live block:
- *  - per-month = WHOLE-UNIT FLOOR of total / months, formatted with no
- *    decimals (₹83, $4) — the live code floored only to 2 decimals and
- *    rendered ₹83.25 / $4.16;
+ *  - per-month = total / months FLOORED to 2 decimal places (₹83.25,
+ *    $6.66, $4.16), formatted with no decimals when whole (₹133) — the
+ *    locked convention, identical to the pricing article;
  *  - terms line follows the SELECTED plan in the SELECTED market, in
  *    the locked shape: "[starter] for your first 7 days, then [price]
  *    every [month|3 months|year]. Cancel easily anytime in Google Play.";
@@ -268,9 +268,16 @@
     var p = (Math.round(v * 100) / 100).toFixed(2).split('.');
     return mk.symbol + grp(p[0]) + '.' + p[1];
   }
-  /* Per-month: WHOLE-UNIT FLOOR of total / months — never fractional. */
+  /* Per-month: total / months FLOORED to 2 decimal places — never
+     rounded up, identical to the pricing article (₹83.25, $6.66,
+     $4.16). Whole results show no decimals (₹133); zero-decimal
+     markets floor to whole units (Rp22,166). */
   function fmtPerMonth(mk, total, months) {
-    return mk.symbol + grp(Math.floor(total / months));
+    if (mk.decimals === 0) return mk.symbol + grp(Math.floor(total / months));
+    var v = Math.floor((total / months) * 100 + 1e-9) / 100;
+    if (Number.isInteger(v)) return mk.symbol + grp(v);
+    var p = v.toFixed(2).split('.');
+    return mk.symbol + grp(p[0]) + '.' + p[1];
   }
 
   /* ---------- state + rendering ------------------------------------- */
