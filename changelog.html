@@ -97,6 +97,14 @@
 <main id="main" class="wrap">
 <h1>Changelog</h1>
 <p class="lede">What changed on this website, and when. Only changes that actually shipped are listed here — nothing announced before it is live.</p>
+<h2>23 October 2026 — Images, contrast, and structured-data checks</h2>
+<ul>
+<li><strong>Every content image now loads as WebP first.</strong> 2,363 image tags across the site were converted to the picture pattern our articles already used — modern browsers download the WebP (about 60% lighter), older browsers still get the JPG. The 19 images that had no WebP version were encoded at the same quality standard as the existing set. Social-card and structured-data images stay JPG, as platforms prefer.</li>
+<li><strong>Muted text is brighter.</strong> The smallest grey text tone failed contrast checks on our dark panels; it is now a lighter shade of the same warm grey (5.75:1 on black, up from 4.74:1), so small print is easier to read everywhere.</li>
+<li><strong>A semantic structured-data check joins our site tools.</strong> Our lint already proved every JSON-LD block parses; the new check also proves the value types are what Google expects (numbers as numbers, dates in ISO format, absolute URLs). It passes on all 369 pages — including the five pages Search Console flagged from an older crawl.</li>
+<li><strong>Blog index completed:</strong> the Diwali and Chhath guides now have their cards (they were missing), the hair-washing guide card sits with the guides instead of the poster stories, and the post-count line adds up exactly.</li>
+<li><strong>Framing completed:</strong> the eyebrow guide is now written for men throughout, and the friendship guide no longer carries a teen section or teen FAQ — the site and the app are 18+.</li>
+</ul>
 <h2>23 October 2026 — Reading order, descriptions, and framing pass</h2>
 <ul>
 <li><strong>Heading order fixed on every page.</strong> Article pages used to show the "In this guide" contents label as a heading before the page title; it is now a styled label, and the homepage's signal labels follow the same rule — every page now reads in proper order for search engines and screen readers.</li>

@@ -13,7 +13,7 @@
   --line-soft:rgba(255,255,255,.055);
   --ink:#F2EFE9;
   --mut:#A79E8E;
-  --mut-2:#7E776B;
+  --mut-2:#8D8577;
   --gold:#DFA33C;
   --gold-hi:#F0CD8A;
   --gold-deep:#7A5E0E;
@@ -1643,3 +1643,5 @@ body.has-capsule.hub .scroll-progress{
 
 /* ===== R2 Phase-3 fix: hero figure breathing room on small screens (arc end labels touched the viewport edges) ===== */
 @media (max-width:640px){ .r2-fig-wrap{width:88%} }
+/* Wave 2 Batch 3: picture wrapper inside sized image containers keeps the img layout box */
+.card-thumb picture,.lens-top picture{display:contents}
