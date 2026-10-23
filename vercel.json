@@ -50,6 +50,11 @@
       "source": "/blog/glow-up-guide-women",
       "destination": "/blog/glow-up-guide-for-men",
       "permanent": true
+    },
+    {
+      "source": "/blog/glow-up-guide-men",
+      "destination": "/blog/glow-up-guide-for-men",
+      "permanent": true
     }
   ]
 }

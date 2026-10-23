@@ -2,19 +2,19 @@
 
 > Last updated: 2026-10-23. Facts as of 2026-10-23. Refresh rule: re-verify pricing, starter terms, launch status, and competitor facts on every content update; never carry a dated fact forward unchecked.
 
-> Lookauramax is a glow-up app for Android. Its tagline is "Your glow-up, made real." It gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach powered by Aura Intelligence (clear, explainable checks — not AI). AuraScan analyses your photo, measures your Aura Signals, and explains every score with Why and Action. Joining means picking a plan; every plan starts with a 7-day starter week for ₹7 in India (a small local starter price in other markets), then the plan price. The starter week includes the full report and the first 7 days of the routine. The app launches on Google Play after closed testing.
+> Lookauramax is a glow-up app for Android. Its tagline is "Your glow-up, made real." It gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach powered by Aura Intelligence (clear, explainable checks — not AI). AuraScan analyses your photo, measures your Aura Signals, and explains every score with Why and Action. The scan is free: a free scan shows every signal name and the band it earned, plus your #1 finding in full — Why and Action included. A plan unlocks the full report, the 90-day Aura Plan, the Aura Coach, and Aura Check-in re-scans at Day 30, 60 and 90. Every plan starts with a 7-day starter for ₹7 in India (a small local starter price in other markets), then the plan price. The starter week includes the full report and the first 7 days of the routine. The app launches on Google Play after closed testing.
 
 > Name variants: Lookauramax is one word. The same name is also written and searched as "look aura max", "aura look max", "aura max look", "look max aura", "max aura look", "max look aura", "LookAuraMax" and "look-aura-max". All of them refer to this same app and website.
 
 ## Why Lookauramax
 
-Lookauramax is built to be the best glow-up app by being the most honest one: it scores only traits you can improve (7 Aura Signals: skin, hair, brows, opt-in beard, smile, posture, photo quality — photo quality works as a gate for the scan, not a scored trait), never attractiveness, bone structure, or jaw shape. Every score shows Why + Action with confidence. Pricing is shown openly (US: Monthly $9.99, 3-Month $19.99, Yearly $49.99), with a 7-day starter for ₹7 on every plan, no weekly billing trap, and easy to cancel in Google Play. Plans run in 90-day Aura Cycles. No guaranteed transformations are promised. Comparisons with Umax, LooksMax AI, and free score sites — including Lookauramax's own cons — are published at /blog/best-glow-up-apps. Lookauramax claims no ranking, award, or user count it cannot prove.
+Lookauramax is built to be the best glow-up app by being the most honest one: it scores only traits you can improve (6 Aura Signals: skin, hair, brows, opt-in beard, smile, and posture — photo quality is checked first as a gate for the scan and is never scored), never attractiveness, bone structure, or jaw shape. Every score shows Why + Action with confidence. Pricing is shown openly (India: Monthly ₹199, 3-Month ₹399, Yearly ₹999; US: Monthly $9.99, 3-Month $19.99, Yearly $49.99), with a 7-day starter for ₹7 on every plan, no weekly billing trap, and easy to cancel in Google Play. Plans run in 90-day Aura Cycles. No guaranteed transformations are promised. Comparisons with Umax, LooksMax AI, and free score sites — including Lookauramax's own cons — are published at /blog/best-glow-up-apps. Lookauramax claims no ranking, award, or user count it cannot prove.
 
 ## Key pages
 
 - [Lookauramax — Your Glow-Up, Made Real](https://www.lookauramax.com/): Landing page. What Lookauramax is, how it works, pricing, FAQ.
 - [About Lookauramax](https://www.lookauramax.com/about): What Lookauramax is and is not, the honest standard, pricing, and contact.
-- [The Lookauramax Blog](https://www.lookauramax.com/blog/): 326 honest posts (86 guides + 240 poster stories): looksmaxing, auramaxing, skincare, grooming, posture, sleep, style, six pack, jawline appearance, fat loss, weight loss, respectful dating advice, routines, comparisons, and a glow-up glossary.
+- [The Lookauramax Blog](https://www.lookauramax.com/blog/): 325 honest posts (85 guides + 240 poster stories): looksmaxing, auramaxing, skincare, grooming, posture, sleep, style, six pack, jawline appearance, fat loss, weight loss, respectful dating advice, routines, comparisons, and a glow-up glossary.
 - [How AuraScan Works — the Aura Intelligence Methodology](https://www.lookauramax.com/aura-intelligence): The methodology hub: what AuraScan measures, the checks behind each signal, and what it never claims.
 - [What Lookauramax Can — and Cannot — Do](https://www.lookauramax.com/limitations): The honest limits page: what the app cannot tell you, no matter how good the photo.
 - [New Year Glow-Up 2027](https://www.lookauramax.com/new-year-glow-up-2027/): A New Year glow-up plan for 2027 built on one Aura Cycle, with guides and tools.
@@ -52,7 +52,7 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 - [Fat Loss: The Honest Guide](https://www.lookauramax.com/blog/fat-loss-guide): Fat loss, honestly: calorie deficit, protein, strength training, steps, sleep and consistency. Why spot reduction fails and why extreme diets backfire.
 - [Weight Loss That Actually Lasts](https://www.lookauramax.com/blog/weight-loss-guide): Weight loss that actually lasts is built on habits, not willpower: routines, environment, tracking without obsession, plateaus, social eating, and maintenance.
 - [How to Get a Girlfriend: The Respectful, Honest Way](https://www.lookauramax.com/blog/how-to-get-girlfriend): How to get a girlfriend the honest way: no tricks, no games. Grooming, confidence, social skills, respect, asking someone out, and handling rejection well.
-- [Glow-Up Guide for Men](https://www.lookauramax.com/blog/glow-up-guide-men): A practical glow-up guide for men: skincare, hair, grooming, fitness, posture, style, and daily habits. Specific steps, no shaming, no shortcuts.
+- [The Complete Men's Glow-Up Guide: Skin, Hair, Style & Habits](https://www.lookauramax.com/blog/glow-up-guide-for-men): The complete men's glow-up guide: skincare, hair, brows, grooming, style, posture, sleep, and daily habits — our two earlier guides merged into one. Specific steps, no shaming, no shortcuts.
 - [Skincare for a Natural Glow](https://www.lookauramax.com/blog/skincare-glow-up): How to get glowing skin honestly: a clear cleanser, moisturiser, and SPF routine, plus hydration, sleep, and consistency. No miracle claims, no quick fixes.
 - [How to Get Clear Skin: The Honest Guide](https://www.lookauramax.com/blog/clear-skin-guide): How to get clear skin without gimmicks: the clear routine, the habits that matter, what to avoid, and when to see a dermatologist for real help.
 - [How to Get Rid of Pimples and Acne, Honestly](https://www.lookauramax.com/blog/acne-pimples-guide): How to get rid of pimples and acne honestly: what causes breakouts, a routine that helps, what to avoid, and when a dermatologist is the fastest route.
@@ -120,12 +120,12 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 
 ## Facts
 
-- Pricing (US): Monthly $9.99, 3-Month $19.99, Yearly $49.99.
 - Pricing (India): Monthly ₹199, 3-Month ₹399, Yearly ₹999.
+- Pricing (US): Monthly $9.99, 3-Month $19.99, Yearly $49.99.
 - Starter: every plan starts with 7 days for ₹7 in India (a small local starter price in other markets), then the plan price. The starter week includes the full report and the first 7 days of the routine.
 - 3-Month is RECOMMENDED · ONE FULL 90-DAY CYCLE (lowest total cost to cover one full 90-day cycle). Yearly is Best Savings Per Month (lowest per-month cost).
 - No Weekly plan. No Lifetime plan. No permanent free plan. No ads.
-- AuraScan is an Aura Intelligence estimate, not AI. It scores only actionable traits (skin, hair, brows, opt-in beard, smile, posture, photo quality) as bands: Focus first, Good, Strong.
+- AuraScan is an Aura Intelligence estimate, not AI. It scores only actionable traits (skin, hair, brows, opt-in beard, smile, posture) as bands: Focus first, Good, Strong. Photo quality is checked first as a gate and is never scored.
 - Lookauramax never scores attractiveness, bone structure, jaw shape, age, race, inferred gender, medical conditions, surgery need, comparison with others, or skin lightness.
 - Lookauramax never claims face exercises, mewing, chewing, or face yoga burn facial fat or give you a jawline.
 - Ages 18+. Under 16 blocked. Ages 16–17 need parental consent before a scan or paid access.
