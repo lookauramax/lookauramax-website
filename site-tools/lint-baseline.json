@@ -1216,11 +1216,6 @@
  },
  {
   "rule": "premium-banned",
-  "file": "blog/how-to-talk-to-boys.html",
-  "match": "tricks"
- },
- {
-  "rule": "premium-banned",
   "file": "blog/how-to-talk-to-girls.html",
   "match": "fake"
  },
