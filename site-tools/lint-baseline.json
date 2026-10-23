@@ -6,11 +6,6 @@
  },
  {
   "rule": "count-claims",
-  "file": "index.html",
-  "match": "signals. A 90"
- },
- {
-  "rule": "count-claims",
   "file": "tools/body-fat-calculator.html",
   "match": "70){ showErr('Those measurements"
  },
@@ -928,26 +923,6 @@
   "rule": "premium-banned",
   "file": "blog/glow-up-guide-for-men.html",
   "match": "quick fix"
- },
- {
-  "rule": "premium-banned",
-  "file": "blog/glow-up-guide-men.html",
-  "match": "fake"
- },
- {
-  "rule": "premium-banned",
-  "file": "blog/glow-up-guide-men.html",
-  "match": "guaranteed"
- },
- {
-  "rule": "premium-banned",
-  "file": "blog/glow-up-guide-men.html",
-  "match": "quick fix"
- },
- {
-  "rule": "premium-banned",
-  "file": "blog/glow-up-guide-men.html",
-  "match": "tricks"
  },
  {
   "rule": "premium-banned",
@@ -3391,11 +3366,6 @@
  },
  {
   "rule": "premium-banned",
-  "file": "index.html",
-  "match": "tricks"
- },
- {
-  "rule": "premium-banned",
   "file": "tools/90-day-planner.html",
   "match": "fake"
  },
@@ -3608,5 +3578,41 @@
   "file": "journal/style.html",
   "match": "tricks",
   "reason": "Negation context in a card description copied verbatim from the blog index ('no tricks, no filters') \u2014 already baselined there. Phase 3 \u2014 coordinator, 2026-10-22."
+ },
+ {
+  "rule": "free-trial",
+  "file": "index.html",
+  "match": "free trial",
+  "reason": "Honest DENIAL in the homepage pricing FAQ (visible L652 + FAQ JSON-LD L33, added by the citability pass b3af755): 'There is no weekly plan and no free trial'. The free-trial rule fails negations by design; the sentence states the locked truth (paid 7-day starter, no trial). Reviewed 2026-10-23, honesty-lint cleanup."
+ },
+ {
+  "rule": "free-trial",
+  "file": "reviews.html",
+  "match": "free trial",
+  "reason": "Honest DENIAL on the reviews page (L105, citability pass b3af755): 'there is no free trial, no weekly plan, and no permanent free plan'. States the locked pricing truth; kept, not reworded. Reviewed 2026-10-23, honesty-lint cleanup."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/chhath-puja-grooming-guide.html",
+  "match": "fake",
+  "reason": "Negation in the shared 'Why Lookauramax' block: 'No fake promises \u2014 90-day Aura Cycles, no guaranteed transformations'. Identical block already baselined on 300+ pages; this post published after the last baseline generation. Reviewed 2026-10-23, honesty-lint cleanup."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/chhath-puja-grooming-guide.html",
+  "match": "guaranteed",
+  "reason": "Negation in the shared 'Why Lookauramax' block: 'no guaranteed transformations'. Same block, same disposition as the baselined copies site-wide. Reviewed 2026-10-23, honesty-lint cleanup."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-often-wash-hair-men.html",
+  "match": "fake",
+  "reason": "Negation in the shared 'Why Lookauramax' block: 'No fake promises \u2014 90-day Aura Cycles, no guaranteed transformations'. Daily Answers post #1, published after the last baseline generation. Reviewed 2026-10-23, honesty-lint cleanup."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-often-wash-hair-men.html",
+  "match": "guaranteed",
+  "reason": "Negation in the shared 'Why Lookauramax' block: 'no guaranteed transformations'. Same block, same disposition as the baselined copies site-wide. Reviewed 2026-10-23, honesty-lint cleanup."
  }
 ]
