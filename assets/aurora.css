@@ -146,7 +146,7 @@ section.chapter:first-of-type{border-top:none}
 .hero-note b{color:var(--gold-hi);font-weight:600}
 .hero-stage{position:relative;min-height:560px;display:flex;align-items:center;justify-content:center}
 .aura-poster{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
-.aura-poster svg{width:min(560px,92%);height:auto;animation:breathe 7s ease-in-out infinite}
+.aura-poster svg{width:min(560px,92%);height:auto;aspect-ratio:1/1;animation:breathe 7s ease-in-out infinite}
 @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
 
 @media (max-width:900px){
