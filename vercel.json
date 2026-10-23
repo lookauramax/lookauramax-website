@@ -47,6 +47,16 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/pricing",
+      "destination": "/blog/lookauramax-pricing",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/#faq",
+      "permanent": true
+    },
+    {
       "source": "/blog/glow-up-guide-women",
       "destination": "/blog/glow-up-guide-for-men",
       "permanent": true
