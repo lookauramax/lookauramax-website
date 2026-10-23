@@ -959,9 +959,14 @@ header.site-head.capsule-head.is-scrolled{
    that flips Flipkart-style on a slow loop; both faces carry the coin art
    (logo-coin.webp, circular-cropped with transparent corners, never the
    square plate) so it never reads mirrored mid-flip. */
+/* Capsule brand rules are SELF-CONTAINED on purpose: inner pages also
+   load base.css, whose .brand b (Space Grotesk) and .brand-tag
+   (uppercase, gold) rules must never bleed into the capsule — the
+   wordmark uses the aurora body stack and the tagline is sentence-case
+   muted, so the header renders identically on every page. */
 .capsule-head .brand{margin-right:0;gap:12px;flex:none}
-.capsule-head .brand-text b{font-size:16.5px}
-.capsule-head .brand-tag{display:block;font-size:11px;letter-spacing:.03em;margin-top:3px;white-space:nowrap}
+.capsule-head .brand-text b{font-size:16.5px;font-family:var(--sans)}
+.capsule-head .brand-tag{display:block;font-size:11px;letter-spacing:.03em;margin-top:3px;white-space:nowrap;text-transform:none;color:var(--mut)}
 .coin{display:block;width:64px;height:64px;flex:none;perspective:700px;
   transition:width .22s var(--ease),height .22s var(--ease)}
 .coin-inner{display:block;position:relative;width:100%;height:100%;

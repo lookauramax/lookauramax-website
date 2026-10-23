@@ -1,6 +1,6 @@
 # Lookauramax
 
-> Last updated: 2026-10-21. Facts as of 2026-10-21. Refresh rule: re-verify pricing, starter terms, launch status, and competitor facts on every content update; never carry a dated fact forward unchecked.
+> Last updated: 2026-10-23. Facts as of 2026-10-23. Refresh rule: re-verify pricing, starter terms, launch status, and competitor facts on every content update; never carry a dated fact forward unchecked.
 
 > Lookauramax is a glow-up app for Android. Its tagline is "Your glow-up, made real." It gives you an AuraScan, a 90-day Aura Plan, a daily Aura Routine, and an Aura Coach powered by Aura Intelligence (clear, explainable checks — not AI). AuraScan analyses your photo, measures your Aura Signals, and explains every score with Why and Action. Joining means picking a plan; every plan starts with a 7-day starter week for ₹7 in India (a small local starter price in other markets), then the plan price. The starter week includes the full report and the first 7 days of the routine. The app launches on Google Play after closed testing.
 
@@ -14,7 +14,9 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 
 - [Lookauramax — Your Glow-Up, Made Real](https://www.lookauramax.com/): Landing page. What Lookauramax is, how it works, pricing, FAQ.
 - [About Lookauramax](https://www.lookauramax.com/about): What Lookauramax is and is not, the honest standard, pricing, and contact.
-- [The Lookauramax Blog](https://www.lookauramax.com/blog/): 313 honest posts (73 guides + 240 poster stories): looksmaxing, auramaxing, skincare, grooming, posture, sleep, style, six pack, jawline appearance, fat loss, weight loss, respectful dating advice, routines, comparisons, and a glow-up glossary.
+- [The Lookauramax Blog](https://www.lookauramax.com/blog/): 326 honest posts (86 guides + 240 poster stories): looksmaxing, auramaxing, skincare, grooming, posture, sleep, style, six pack, jawline appearance, fat loss, weight loss, respectful dating advice, routines, comparisons, and a glow-up glossary.
+- [How AuraScan Works — the Aura Intelligence Methodology](https://www.lookauramax.com/aura-intelligence): The methodology hub: what AuraScan measures, the checks behind each signal, and what it never claims.
+- [What Lookauramax Can — and Cannot — Do](https://www.lookauramax.com/limitations): The honest limits page: what the app cannot tell you, no matter how good the photo.
 - [New Year Glow-Up 2027](https://www.lookauramax.com/new-year-glow-up-2027/): A New Year glow-up plan for 2027 built on one Aura Cycle, with guides and tools.
 - [Privacy Policy](https://www.lookauramax.com/privacy): Privacy policy.
 - [Terms](https://www.lookauramax.com/terms): Terms of service.
@@ -51,7 +53,6 @@ Lookauramax is built to be the best glow-up app by being the most honest one: it
 - [Weight Loss That Actually Lasts](https://www.lookauramax.com/blog/weight-loss-guide): Weight loss that actually lasts is built on habits, not willpower: routines, environment, tracking without obsession, plateaus, social eating, and maintenance.
 - [How to Get a Girlfriend: The Respectful, Honest Way](https://www.lookauramax.com/blog/how-to-get-girlfriend): How to get a girlfriend the honest way: no tricks, no games. Grooming, confidence, social skills, respect, asking someone out, and handling rejection well.
 - [Glow-Up Guide for Men](https://www.lookauramax.com/blog/glow-up-guide-men): A practical glow-up guide for men: skincare, hair, grooming, fitness, posture, style, and daily habits. Specific steps, no shaming, no shortcuts.
-- [Glow-Up Guide for Women](https://www.lookauramax.com/blog/glow-up-guide-for-men): A practical glow-up guide for women: skincare, hair, brows, style, posture, sleep, and habits. Specific steps, no shaming, no miracle promises.
 - [Skincare for a Natural Glow](https://www.lookauramax.com/blog/skincare-glow-up): How to get glowing skin honestly: a clear cleanser, moisturiser, and SPF routine, plus hydration, sleep, and consistency. No miracle claims, no quick fixes.
 - [How to Get Clear Skin: The Honest Guide](https://www.lookauramax.com/blog/clear-skin-guide): How to get clear skin without gimmicks: the clear routine, the habits that matter, what to avoid, and when to see a dermatologist for real help.
 - [How to Get Rid of Pimples and Acne, Honestly](https://www.lookauramax.com/blog/acne-pimples-guide): How to get rid of pimples and acne honestly: what causes breakouts, a routine that helps, what to avoid, and when a dermatologist is the fastest route.
