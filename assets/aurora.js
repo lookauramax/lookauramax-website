@@ -408,6 +408,9 @@
   /* ---------- (a) shrink in place: .is-scrolled at 32px ---------- */
   var setScrolled = function (on) {
     header.classList.toggle('is-scrolled', !!on);
+    /* Mirror the state on <body> so pill-attached chrome (the
+       scroll-progress hairline) can follow the 88px -> 72px shrink. */
+    document.body.classList.toggle('capsule-scrolled', !!on);
   };
   if ('IntersectionObserver' in window) {
     var sentinel = document.createElement('div');

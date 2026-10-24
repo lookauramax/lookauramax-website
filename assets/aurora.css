@@ -1041,6 +1041,16 @@ body.has-capsule.hub .scroll-progress{
   width:min(1152px,calc(100% - 32px));
   height:1.5px;z-index:61;
 }
+/* When the pill shrinks on scroll (88px -> 72px) the hairline must
+   move up with its bottom edge, or it floats 16px below the pill on
+   tools/article pages. .capsule-scrolled is mirrored onto <body> by
+   aurora.js's setScrolled; higher specificity (4 classes) wins. */
+body.has-capsule.capsule-scrolled.article .scroll-progress,
+body.has-capsule.capsule-scrolled.lam-tools .scroll-progress,
+body.has-capsule.capsule-scrolled.glossary .scroll-progress,
+body.has-capsule.capsule-scrolled.hub .scroll-progress{
+  top:calc(10px + env(safe-area-inset-top) + 72px);
+}
 
 /* ---------- breadcrumb row (in-flow, below the pill) -------------------- */
 .crumbs{

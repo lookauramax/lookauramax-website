@@ -63,7 +63,13 @@
   (function () {
     if (reduce) return;
     var logo = document.querySelector('.brand img');
-    if (!logo || logo.closest('.brand-coin')) return;
+    /* Capsule pages already carry their own two-face .coin (aurora.css
+       coinFlip): wrapping that logo a second time in .brand-coin put a
+       fixed 64px coin inside the capsule coin, which shrinks to 54px
+       on scroll — the coin then overflowed its face and sat visibly
+       off-centre on every menu.js page (tools, blog, articles), while
+       the homepage (no menu.js) stayed perfect. Skip .coin logos. */
+    if (!logo || logo.closest('.brand-coin') || logo.closest('.coin')) return;
     var coin = document.createElement('span');
     coin.className = 'brand-coin';
     var front = document.createElement('span');
