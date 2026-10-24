@@ -232,7 +232,7 @@ section.chapter:first-of-type{border-top:none}
   background:linear-gradient(90deg,var(--acc),var(--gold));transform:scaleX(0);transform-origin:0 50%;
   transition:transform 1.4s var(--ease) .2s}
 .tl.in .tl-fill{transform:scaleX(1)}
-.tl-nodes{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.tl-nodes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:relative}
 .tl-node{padding-right:14px}
 .tl-dot{width:20px;height:20px;border-radius:50%;border:2px solid var(--acc);background:var(--black);
   display:flex;align-items:center;justify-content:center;margin-bottom:16px}
@@ -1051,6 +1051,18 @@ body.has-capsule.capsule-scrolled.glossary .scroll-progress,
 body.has-capsule.capsule-scrolled.hub .scroll-progress{
   top:calc(10px + env(safe-area-inset-top) + 72px);
 }
+/* "Page" tables must scroll inside themselves (polish audit 2026-10-24).
+   Bare <table>s on page-template pages — the privacy data table and
+   the terms pricing table — are wider than a phone viewport and have
+   no scroll wrapper, so they pushed the whole page sideways (privacy
+   +142px, terms +572px at 390px). display:block + overflow-x:auto
+   turns the table itself into an inner horizontal scroller, so the
+   document never scrolls sideways and every column stays reachable.
+   Legal HTML bytes are untouched by this fix. Monthly-plan tables
+   already scroll via .mp-scroll; about/compare/aura-intelligence
+   tables were rendered-checked with this rule (no document overflow). */
+body.page main table{display:block;overflow-x:auto;max-width:100%;
+  -webkit-overflow-scrolling:touch}
 
 /* ---------- breadcrumb row (in-flow, below the pill) -------------------- */
 .crumbs{

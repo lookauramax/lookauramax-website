@@ -3514,12 +3514,7 @@
   "file": "blog/vitamin-c-serum-guide.html",
   "match": "skin. Move to 15\u201320%"
  },
- {
-  "rule": "count-claims",
-  "file": "styleguide.html",
-  "match": "signals\">Signals</a><a href=\"/#cycle\">90",
-  "reason": "False positive: site nav link text '90-Day Cycle' adjacent to the 'Signals' nav link (same pattern already baselined on index.html). Not a check-count claim. Added by coordinator, Phase 1 integration, 2026-10-22."
- },
+ 
  {
   "rule": "premium-banned",
   "file": "journal/comparisons.html",
