@@ -384,7 +384,7 @@
     toc.querySelectorAll('[data-toc]').forEach(function (a) {
       a.addEventListener('click', function (e) {
         var i = parseInt(a.getAttribute('data-toc'), 10);
-        if (heads[i]) { e.preventDefault(); heads[i].scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+        if (heads[i]) { e.preventDefault(); heads[i].scrollIntoView({ behavior: reduce ? 'instant' : 'smooth', block: 'start' }); }
       });
     });
   }
@@ -395,8 +395,9 @@
    Coordinator: append to assets/aurora.js. Self-contained guarded block:
    no-ops when the capsule markup is absent. Transform/opacity only;
    passive listeners + rAF throttling; no layout reads in scroll handlers
-   beyond scrollY. (a) shrink-in-place at 32px, (b) article "Top" ghost
-   button after 700px, (c) homepage active-section gold dot. */
+   beyond scrollY. (a) shrink-in-place at 32px, (b) "Top" ghost
+   button after 700px on every capsule page (Round 5), (c) homepage
+   active-section gold dot. */
 (function () {
   'use strict';
   var header = document.querySelector('.capsule-head');
@@ -431,13 +432,14 @@
     onScrollA();
   }
 
-  /* ---------- (b) "Top" ghost button on article-type pages ---------- */
-  var ARTICLE_BODIES = ['article', 'lam-tools', 'glossary', 'hub'];
-  var isArticle = ARTICLE_BODIES.some(function (c) {
-    return document.body.classList.contains(c);
-  });
+  /* ---------- (b) "Top" ghost button — EVERY capsule page ----------
+     Round 5 (founder order, 2026-10-24): was restricted to article-type
+     bodies (article / lam-tools / glossary / hub); the founder asked for
+     the tools-page behaviour on all pages. This block only runs when
+     the capsule header exists (guard at the top of this IIFE), so the
+     gate is now simply: capsule header present -> Top button. */
   var inner = header.querySelector('.capsule-inner');
-  if (isArticle && inner) {
+  if (inner) {
     var topBtn = document.createElement('button');
     topBtn.type = 'button';
     topBtn.className = 'capsule-top';
@@ -458,7 +460,7 @@
     window.addEventListener('scroll', onScrollB, { passive: true });
     onScrollB();
     topBtn.addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      window.scrollTo({ top: 0, behavior: reduce ? 'instant' : 'smooth' });
     });
   }
 
@@ -492,27 +494,6 @@
       if (sec && linkFor[id]) hio.observe(sec);
     });
   }
-})();
-
-/* ================= ROUND 2 — MARQUEE PAUSE ================= */
-/* Lookauramax Round 2 — marquee pause toggle (frag-marquee.js).
-   Coordinator: append to assets/aurora.js. The original marquee was
-   pure CSS (MARQUEE-FINDING §5d: no JS); this block exists ONLY for the
-   Round-2 WCAG 2.2.2 pause button. Guarded: no-ops without .marquee. */
-(function () {
-  'use strict';
-  var mq = document.querySelector('.marquee');
-  if (!mq) return;
-  var btn = mq.querySelector('.marquee-toggle');
-  if (!btn) return;
-  btn.addEventListener('click', function () {
-    var paused = mq.classList.toggle('paused');
-    btn.setAttribute('aria-pressed', String(paused));
-    btn.setAttribute('aria-label',
-      paused ? 'Resume the Aura features line' : 'Pause the Aura features line');
-    /* Icon swap (pause bars <-> play triangle) is CSS-driven off
-       [aria-pressed="true"] in frag-marquee.css — no DOM swap needed. */
-  });
 })();
 
 /* ===== R2 foundation: one-shot reveal observer (coordinator glue) =====

@@ -437,7 +437,9 @@ body.article #main h2{scroll-margin-top:24px}
 
 /* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto}
+  /* html:focus-within included: line 31's rule outranks bare `html` on
+     specificity, which silently killed this override (Round 5 fix). */
+  html,html:focus-within{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;
     transition-duration:.01ms!important}
   .js .reveal:not(.in){opacity:1;transform:none}
@@ -906,7 +908,11 @@ body.has-capsule section[id]{
 header.site-head.capsule-head{
   position:fixed;z-index:60;
   top:calc(10px + env(safe-area-inset-top));
-  left:0;right:0;margin-inline:auto;
+  /* margin:0 auto (NOT margin-inline): base.css's legacy bare `header`
+     rule sets margin-top (12px desktop, 10px <=480px, 8px <=360px) and
+     margin-inline alone never overrode it — the pill floated lower on
+     every base.css page than on the homepage. Round 5 unification. */
+  left:0;right:0;margin:0 auto;
   width:min(1152px,calc(100% - 32px));max-width:1152px;height:88px;
   border-radius:999px;
   /* Solid fallback FIRST (engines without composited backdrop-filter). */
@@ -975,7 +981,9 @@ header.site-head.capsule-head.is-scrolled .coin{width:54px;height:54px}
 
 /* Right CTA: small gold pill, >=44px touch height. */
 .capsule-head .capsule-cta{
-  padding:10px 20px;font-size:14px;min-height:44px;flex:none;
+  /* line-height pinned: base.css .btn sets 1.25, the homepage inherits
+     1.65 — without this the CTA rendered 1px shorter on inner pages. */
+  padding:10px 20px;font-size:14px;line-height:1.65;min-height:44px;flex:none;
 }
 
 /* Visible focus everywhere inside the pill (Z.ai §4.5). */
@@ -983,8 +991,9 @@ header.site-head.capsule-head.is-scrolled .coin{width:54px;height:54px}
   outline:2px solid var(--gold);outline-offset:2px;
 }
 
-/* "Top" ghost button — article-type pages only; injected + toggled
-   (.show after 700px scroll) by frag-capsule.js. */
+/* "Top" ghost button — every capsule page (Round 5, founder order;
+   was article-type bodies only); injected + toggled (.show after
+   700px scroll) by frag-capsule.js. */
 .capsule-top{
   flex:none;display:inline-flex;align-items:center;justify-content:center;
   height:40px;min-width:44px;padding:0 14px;border-radius:999px;
@@ -1090,24 +1099,10 @@ body.has-capsule.hub .scroll-progress{
 .marquee-track span i{font-style:normal;color:#E19A2D;padding-left:14px}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* --- Round-2 additions: WCAG 2.2.2 pause toggle + paused state.
-       .marquee needs a positioning context for the pinned toggle. --- */
-.marquee{position:relative}
-.marquee:focus-within .marquee-track{animation-play-state:paused}
-.marquee.paused .marquee-track{animation-play-state:paused}
-.marquee-toggle{
-  position:absolute;right:10px;top:50%;transform:translateY(-50%);z-index:2;
-  width:44px;height:44px;padding:0;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  background:rgba(5,4,3,.78);border:1px solid rgba(225,154,45,.35);
-  cursor:pointer;
-}
-.marquee-toggle svg{width:18px;height:18px;fill:#E19A2D;display:block}
-.marquee-toggle .icon-play{display:none}
-.marquee-toggle[aria-pressed="true"] .icon-play{display:block}
-.marquee-toggle[aria-pressed="true"] .icon-pause{display:none}
-.marquee-toggle:focus-visible{outline:2px solid #E19A2D;outline-offset:2px}
-.marquee-toggle:active{transform:translateY(-50%) scale(.98)}
+/* --- Round 5 (founder order, 2026-10-24): the visible pause toggle
+       was removed (markup + CSS + JS). The marquee itself is unchanged:
+       hover pause (above) and the prefers-reduced-motion companion
+       (below) remain as the invisible, standard motion handling. --- */
 
 /* --- §5c reduced-motion companion (verbatim rule from base.css). --- */
 @media (prefers-reduced-motion:reduce){

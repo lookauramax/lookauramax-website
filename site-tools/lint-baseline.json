@@ -3609,5 +3609,17 @@
   "file": "blog/how-often-wash-hair-men.html",
   "match": "guaranteed",
   "reason": "Negation in the shared 'Why Lookauramax' block: 'no guaranteed transformations'. Same block, same disposition as the baselined copies site-wide. Reviewed 2026-10-23, honesty-lint cleanup."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-get-rid-of-razor-bumps.html",
+  "match": "fake",
+  "reason": "Negation in the shared 'Why Lookauramax' block: 'No fake promises \u2014 90-day Aura Cycles, no guaranteed transformations'. Daily Answers post #2, carried into the Round 5 commit (2026-10-24) after the engine's own push stalled; same block, same disposition as the baselined copies site-wide incl. post #1."
+ },
+ {
+  "rule": "premium-banned",
+  "file": "blog/how-to-get-rid-of-razor-bumps.html",
+  "match": "guaranteed",
+  "reason": "Negation in the shared 'Why Lookauramax' block: 'no guaranteed transformations'. Daily Answers post #2, carried into the Round 5 commit (2026-10-24); same block, same disposition as the baselined copies site-wide incl. post #1."
  }
 ]
